@@ -215,6 +215,8 @@ const costScore: Record<string, number> = {
   高: 36,
 };
 
+const FAVORITE_RECOMMEND_PERCENT = 50;
+
 const monthlySeason = shenzhenSeason.monthly as Record<string, string[]>;
 const priceByName = new Map(
   (priceBaseline as {
@@ -227,6 +229,44 @@ const priceByName = new Map(
 
 function seasonalNamesForCurrentMonth(): Set<string> {
   return new Set(monthlySeason[String(new Date().getMonth() + 1)] ?? []);
+}
+
+function currentDateKey(): string {
+  const now = new Date();
+
+  return `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, "0")}-${String(
+    now.getDate()
+  ).padStart(2, "0")}`;
+}
+
+function recommendationDateKey(req: GenerateRequest): string {
+  return /^\d{4}-\d{2}-\d{2}$/.test(req.recommendation_date ?? "")
+    ? req.recommendation_date!
+    : currentDateKey();
+}
+
+function hashText(value: string): number {
+  let hash = 2166136261;
+
+  for (const char of value) {
+    hash ^= char.charCodeAt(0);
+    hash = Math.imul(hash, 16777619);
+  }
+
+  return hash >>> 0;
+}
+
+function normalizeFavoriteFoods(value: GenerateRequest["favorite_foods"]): string[] {
+  if (!Array.isArray(value)) return [];
+
+  return Array.from(
+    new Set(
+      value
+        .map((item) => item.trim())
+        .filter(Boolean)
+        .map((item) => item.slice(0, 24))
+    )
+  ).slice(0, 12);
 }
 
 function ingredientPriceTier(name: string): "便宜" | "正常" | "偏贵" | "很贵" {
@@ -256,6 +296,115 @@ function blockedByRequest(dish: SeedDish, req: GenerateRequest): boolean {
   );
 
   return req.avoid.some((tag) => avoidText.includes(tag));
+}
+
+function matchesFavoriteFood(dish: SeedDish, favorite: string): boolean {
+  return (
+    dish.dish_name.includes(favorite) ||
+    dish.main_ingredients.some(
+      (ingredient) => ingredient === favorite || ingredient.includes(favorite)
+    )
+  );
+}
+
+function favoritePick(req: GenerateRequest): { favorite: string; dish: SeedDish } | null {
+  const favorites = normalizeFavoriteFoods(req.favorite_foods);
+  if (favorites.length === 0) return null;
+
+  const baseSeed = `${recommendationDateKey(req)}|${req.user_id ?? ""}|${favorites.join("|")}`;
+  const roll = hashText(baseSeed) % 100;
+  if (roll >= FAVORITE_RECOMMEND_PERCENT) return null;
+
+  const firstFavoriteIndex = hashText(`${baseSeed}|favorite`) % favorites.length;
+  const orderedFavorites = favorites
+    .slice(firstFavoriteIndex)
+    .concat(favorites.slice(0, firstFavoriteIndex));
+
+  for (const favorite of orderedFavorites) {
+    const candidates = (dishesSeed as SeedDish[])
+      .filter((dish) => matchesFavoriteFood(dish, favorite))
+      .filter((dish) => !blockedByRequest(dish, req))
+      .sort((a, b) => scoreDish(b, req, "营养均衡型") - scoreDish(a, req, "营养均衡型"));
+
+    if (candidates.length > 0) {
+      const dish = candidates[hashText(`${baseSeed}|${favorite}|dish`) % candidates.length];
+      return { favorite, dish };
+    }
+  }
+
+  return null;
+}
+
+function withFavoriteReason(reason: string): string {
+  return reason.includes("喜欢") ? reason : `今天抽中你的喜欢 · ${reason}`;
+}
+
+function withDailyFavorite(plans: MealPlan[], req: GenerateRequest): MealPlan[] {
+  const pick = favoritePick(req);
+  if (!pick) return plans;
+
+  const existingPlanIndex = plans.findIndex((plan) =>
+    plan.dishes.some((dish) => {
+      const seedDish = (dishesSeed as SeedDish[]).find((item) => item.dish_name === dish.name);
+      return seedDish ? matchesFavoriteFood(seedDish, pick.favorite) : dish.name.includes(pick.favorite);
+    })
+  );
+  if (existingPlanIndex >= 0) {
+    return plans.map((plan, planIndex) =>
+      planIndex === existingPlanIndex
+        ? {
+            ...plan,
+            dishes: plan.dishes.map((dish) =>
+              (() => {
+                const seedDish = (dishesSeed as SeedDish[]).find(
+                  (item) => item.dish_name === dish.name
+                );
+                return (seedDish && matchesFavoriteFood(seedDish, pick.favorite)) ||
+                  dish.name.includes(pick.favorite)
+                  ? { ...dish, reason: withFavoriteReason(dish.reason) }
+                  : dish;
+              })()
+            ),
+          }
+        : plan
+    );
+  }
+
+  const targetPlanIndex = 0;
+  const targetPlan = plans[targetPlanIndex];
+  if (!targetPlan) return plans;
+
+  const replacementIndex = targetPlan.dishes.findIndex(
+    (dish) => dish.category === (pick.dish.category as DishCategory)
+  );
+  const dishIndex = replacementIndex >= 0 ? replacementIndex : targetPlan.dishes.length - 1;
+  const favoriteDish = toPlanDish(pick.dish, req);
+  const nextDishes = targetPlan.dishes.slice();
+  nextDishes[dishIndex] = {
+    ...favoriteDish,
+    reason: withFavoriteReason(favoriteDish.reason),
+  };
+  const selectedSeedDishes = nextDishes
+    .map((dish) => (dishesSeed as SeedDish[]).find((seed) => seed.dish_name === dish.name))
+    .filter((dish): dish is SeedDish => Boolean(dish));
+  const nextPlan: MealPlan = {
+    ...targetPlan,
+    title: nextDishes.map((dish) => dish.name).slice(0, 2).join(" + "),
+    dishes: nextDishes,
+    shopping_list: buildShoppingList(selectedSeedDishes),
+    cooking_order: [
+      "先洗米煮饭，顺手把汤锅或蒸锅准备好",
+      ...selectedSeedDishes
+        .slice()
+        .sort((a, b) => b.time_minutes - a.time_minutes)
+        .map((dish) => `${dish.dish_name}：${dish.steps[0]}`),
+      "最后集中炒青菜、调味收尾，上桌前尝咸淡",
+    ],
+  };
+
+  return plans.map((plan, index) =>
+    index === targetPlanIndex ? withCookingSchedule(nextPlan, req) : plan
+  );
 }
 
 function scoreDish(dish: SeedDish, req: GenerateRequest, type: MealPlan["type"]): number {
@@ -525,11 +674,11 @@ function buildCuratedPlans(req: GenerateRequest): MealPlan[] {
   const thirdType: MealPlan["type"] =
     req.has_child || req.has_elder ? "孩子老人友好型" : "改善伙食型";
 
-  return [
+  return withDailyFavorite([
     buildCuratedPlan(req, "省钱快手型", used),
     buildCuratedPlan(req, "营养均衡型", used),
     buildCuratedPlan(req, thirdType, used),
-  ];
+  ], req);
 }
 
 /**

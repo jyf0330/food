@@ -53,6 +53,41 @@ describe("buildGenerateResponse", () => {
     assert.notDeepEqual(swappedNames, firstNames);
   });
 
+  it("recommends one favorite food on a deterministic half of days", () => {
+    const response = buildGenerateResponse({
+      ...baseRequest,
+      favorite_foods: ["豆腐"],
+      recommendation_date: "2026-04-27",
+      user_id: "jtcsm_tester",
+    } as GenerateRequest);
+
+    const dishes = response.plans.flatMap((plan) => plan.dishes);
+
+    assert.ok(
+      dishes.some((dish) => dish.name.includes("豆腐")),
+      "expected a tofu dish to be recommended on a favorite day"
+    );
+    assert.ok(
+      dishes.some((dish) => dish.reason.includes("喜欢")),
+      "expected the favorite dish to explain why it was picked"
+    );
+  });
+
+  it("does not force favorite foods on the other half of days", () => {
+    const response = buildGenerateResponse({
+      ...baseRequest,
+      favorite_foods: ["豆腐"],
+      recommendation_date: "2026-04-25",
+      user_id: "jtcsm_tester",
+    } as GenerateRequest);
+    const names = response.plans.flatMap((plan) => plan.dishes.map((dish) => dish.name));
+
+    assert.ok(
+      names.every((name) => !name.includes("豆腐")),
+      "expected tofu to stay out of the menu on a non-favorite day"
+    );
+  });
+
   it("includes detailed cooking steps for every dish", () => {
     const response = buildGenerateResponse(baseRequest);
 

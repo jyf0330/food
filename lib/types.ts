@@ -68,6 +68,8 @@ export interface GenerateRequest {
   cook_speed?: "normal" | "slow" | "beginner";
   variant?: number;
   user_id?: string;
+  favorite_foods?: string[];
+  recommendation_date?: string;
   shopping_channel: string;
   kitchen_tools: string[];
 }
