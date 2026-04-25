@@ -221,6 +221,84 @@ button {
   background: #fff5ee;
 }
 
+.plan-switcher {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.plan-tab {
+  min-width: 0;
+  min-height: 66px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  background: #fff;
+  padding: 10px 12px;
+  text-align: left;
+  color: var(--text);
+  box-shadow: 0 2px 8px rgba(255, 107, 53, 0.04);
+  transition: border-color 0.15s ease, background 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.plan-tab:hover,
+.plan-tab.active {
+  border-color: var(--primary);
+  background: #fff5ee;
+}
+
+.plan-tab.active {
+  box-shadow: 0 4px 14px rgba(255, 107, 53, 0.1);
+}
+
+.plan-tab-letter {
+  width: 28px;
+  height: 28px;
+  flex: 0 0 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--bg);
+  color: var(--primary);
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.plan-tab.active .plan-tab-letter {
+  background: var(--primary);
+  color: #fff;
+}
+
+.plan-tab-copy {
+  min-width: 0;
+  display: grid;
+  gap: 2px;
+}
+
+.plan-tab-title {
+  overflow: hidden;
+  color: var(--text);
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.25;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.plan-tab-meta {
+  overflow: hidden;
+  color: var(--text-muted);
+  font-size: 12px;
+  line-height: 1.35;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
 .summary-good {
   margin: 8px 0 12px;
   color: var(--text);
@@ -459,6 +537,27 @@ button {
     border-radius: 12px;
     padding: 14px;
     margin-bottom: 12px;
+  }
+
+  .plan-switcher {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    margin-bottom: 12px;
+  }
+
+  .plan-tab {
+    min-height: 58px;
+    padding: 9px 11px;
+    border-radius: 12px;
+  }
+
+  .plan-tab-title {
+    font-size: 14px;
+    white-space: normal;
+  }
+
+  .plan-tab-meta {
+    white-space: normal;
   }
 
   .memory-section {

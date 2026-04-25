@@ -84,12 +84,21 @@ function buildResultUrl(form) {
     .join("&")}`;
 }
 
+function withPlanState(plans, currentPlanIndex) {
+  return plans.map((plan, index) => ({
+    ...plan,
+    label: String.fromCharCode(65 + index),
+    active: index === currentPlanIndex
+  }));
+}
+
 Page({
   data: {
     form: null,
     request: null,
     dailyRecommended: [],
     dailyNotRecommended: [],
+    currentPlanIndex: 0,
     plans: []
   },
 
@@ -107,13 +116,24 @@ Page({
       request,
       dailyRecommended: response.daily_recommended.join("、"),
       dailyNotRecommended: response.daily_not_recommended,
-      plans: response.plans
+      currentPlanIndex: 0,
+      plans: withPlanState(response.plans, 0)
+    });
+  },
+
+  selectPlan(event) {
+    const index = Number(event.currentTarget.dataset.index);
+    if (!Number.isFinite(index)) return;
+    this.setData({
+      currentPlanIndex: index,
+      plans: withPlanState(this.data.plans, index)
     });
   },
 
   rememberPlan(event) {
     const index = Number(event.currentTarget.dataset.index);
     const plan = this.data.plans[index];
+    if (!plan) return;
     wx.setStorageSync(LAST_CHOICE_KEY, {
       planIndex: index,
       planTitle: plan.title,

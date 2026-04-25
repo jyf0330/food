@@ -20,6 +20,73 @@
   margin-top: 14rpx;
 }
 
+.plan-tabs {
+  display: grid;
+  gap: 12rpx;
+  margin-bottom: 18rpx;
+}
+
+.plan-tab {
+  min-height: 104rpx;
+  display: flex;
+  align-items: center;
+  gap: 18rpx;
+  border: 2rpx solid #ffe4d3;
+  border-radius: 20rpx;
+  background: #fff;
+  padding: 16rpx 20rpx;
+  color: #1a1a1a;
+  text-align: left;
+  line-height: 1.3;
+}
+
+.plan-tab::after {
+  border: 0;
+}
+
+.plan-tab-active {
+  border-color: #ff6b35;
+  background: #fff5ee;
+}
+
+.plan-tab-letter {
+  width: 52rpx;
+  height: 52rpx;
+  flex: 0 0 52rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #fff8f2;
+  color: #ff6b35;
+  font-size: 26rpx;
+  font-weight: 800;
+}
+
+.plan-tab-active .plan-tab-letter {
+  background: #ff6b35;
+  color: #fff;
+}
+
+.plan-tab-copy {
+  min-width: 0;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4rpx;
+}
+
+.plan-tab-title {
+  color: #1a1a1a;
+  font-size: 28rpx;
+  font-weight: 800;
+}
+
+.plan-tab-meta {
+  color: #6b6b6b;
+  font-size: 24rpx;
+}
+
 .plan-title {
   color: #ff6b35;
   font-size: 36rpx;

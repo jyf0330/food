@@ -11,8 +11,18 @@
     <view wx:for="{{dailyNotRecommended}}" wx:key="name" class="muted">{{item.name}}：{{item.reason}}</view>
   </view>
 
-  <view wx:for="{{plans}}" wx:for-item="plan" wx:for-index="planIndex" wx:key="title" class="plan-card">
-    <view class="plan-title">{{planIndex + 1}}. {{plan.type}}</view>
+  <view class="plan-tabs">
+    <button wx:for="{{plans}}" wx:for-item="plan" wx:for-index="planIndex" wx:key="title" class="plan-tab {{plan.active ? 'plan-tab-active' : ''}}" data-index="{{planIndex}}" bindtap="selectPlan">
+      <text class="plan-tab-letter">{{plan.label}}</text>
+      <text class="plan-tab-copy">
+        <text class="plan-tab-title">{{plan.type}}</text>
+        <text class="plan-tab-meta">约 {{plan.estimated_cost}} 元 · {{plan.total_time}} 分钟</text>
+      </text>
+    </button>
+  </view>
+
+  <view wx:for="{{plans}}" wx:for-item="plan" wx:for-index="planIndex" wx:key="title" wx:if="{{plan.active}}" class="plan-card">
+    <view class="plan-title">{{plan.label}}. {{plan.type}}</view>
     <view class="plan-meta">
       <text>约 {{plan.estimated_cost}} 元</text>
       <text>约 {{plan.total_time}} 分钟</text>

@@ -2,16 +2,12 @@ import Link from "next/link";
 import { buildGenerateResponse } from "@/lib/mealPlanGenerator";
 import type { GenerateRequest } from "@/lib/types";
 import { buildPrefixedUserId, getUserIdDisplay } from "@/lib/userIdentity";
-import PlanMemoryActions, { type PlanMemoryForm } from "./PlanMemoryActions";
+import type { PlanMemoryForm } from "./PlanMemoryActions";
+import PlanSwitcher from "./PlanSwitcher";
 
 export const dynamic = "force-dynamic";
 
 type SP = Record<string, string | string[] | undefined>;
-type ScheduleNode = string | { time: string; task: string };
-type MealPlanWithOptionalSchedule = ReturnType<typeof buildGenerateResponse>["plans"][number] & {
-  cooking_schedule?: ScheduleNode[];
-};
-
 const readString = (sp: SP, key: string) =>
   typeof sp[key] === "string" ? (sp[key] as string) : "";
 
@@ -80,7 +76,6 @@ export default function ResultPage({ searchParams }: { searchParams: SP }) {
   const form = parseForm(searchParams);
   const currentVariant = readNonNegativeNumber(searchParams, "variant", 0);
   const response = buildGenerateResponse(req);
-  const plans = response.plans as MealPlanWithOptionalSchedule[];
 
   return (
     <div className="container">
@@ -107,101 +102,11 @@ export default function ResultPage({ searchParams }: { searchParams: SP }) {
         </p>
       </section>
 
-      {plans.map((plan, i) => (
-        <article key={i} className="plan-card">
-          <h2>
-            {String.fromCharCode(65 + i)}. {plan.type}
-          </h2>
-          <div className="plan-meta">
-            <span>💰 约 {plan.estimated_cost} 元</span>
-            <span>⏱ 约 {plan.total_time} 分钟</span>
-            <span>🍽 {plan.dishes.length} 道菜</span>
-          </div>
-
-          <p className="plan-reason">{plan.reason}</p>
-
-          <PlanMemoryActions
-            planIndex={i}
-            planTitle={plan.title}
-            planType={plan.type}
-            form={form}
-            currentVariant={currentVariant}
-          />
-
-          <div className="section-title">🍲 菜单</div>
-          <ul className="dish-list">
-            {plan.dishes.map((d, j) => (
-              <li key={j}>
-                <div className="dish-name">{d.name}</div>
-                <div className="dish-reason">{d.reason}</div>
-              </li>
-            ))}
-          </ul>
-
-          <div className="section-title">🛒 买菜清单</div>
-          {plan.shopping_list.map((g, j) => (
-            <div key={j} className="shopping-group">
-              <div className="shopping-group-name">{g.category}</div>
-              <div className="shopping-items">
-                {g.items.map((it, k) => (
-                  <span key={k}>
-                    {it.name} · {it.amount}
-                  </span>
-                ))}
-              </div>
-            </div>
-          ))}
-
-          <div className="section-title">👩‍🍳 做饭顺序</div>
-          <ol className="cooking-order">
-            {plan.cooking_order.map((step, j) => (
-              <li key={j}>{step}</li>
-            ))}
-          </ol>
-
-          {plan.cooking_schedule?.length ? (
-            <>
-              <div className="section-title">按点上桌计划</div>
-              <ol className="cooking-schedule">
-                {plan.cooking_schedule.map((node, j) => (
-                  <li key={j}>
-                    {typeof node === "string" ? (
-                      node
-                    ) : (
-                      <>
-                        {node.time ? <strong>{node.time}</strong> : null}
-                        {node.time && node.task ? " · " : null}
-                        {node.task}
-                      </>
-                    )}
-                  </li>
-                ))}
-              </ol>
-            </>
-          ) : null}
-
-          <div className="section-title">📖 每道菜做法</div>
-          <div className="recipe-list">
-            {plan.dishes.map((dish, j) => (
-              <section key={j} className="recipe-item">
-                <div className="recipe-name">{dish.name}</div>
-                <ol className="recipe-steps">
-                  {(dish.steps || []).map((step, k) => (
-                    <li key={k}>{step}</li>
-                  ))}
-                </ol>
-                {dish.tips?.length ? (
-                  <div className="recipe-tips">
-                    {dish.tips.map((tip, k) => (
-                      <span key={k}>{tip}</span>
-                    ))}
-                  </div>
-                ) : null}
-              </section>
-            ))}
-          </div>
-        </article>
-      ))}
+      <PlanSwitcher
+        plans={response.plans}
+        form={form}
+        currentVariant={currentVariant}
+      />
 
       <p className="mock-note">
         当前为 mock 演示数据。接入 DeepSeek API 后将根据家庭情况动态生成。
