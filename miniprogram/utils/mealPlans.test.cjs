@@ -77,6 +77,25 @@ describe("mini program meal plan generator", () => {
     assert.notDeepEqual(swappedNames, firstNames);
   });
 
+  it("uses a higher budget to make the upgrade plan feel upgraded", () => {
+    const response = buildGenerateResponse({
+      ...baseRequest,
+      has_child: false,
+      has_elder: false,
+      budget: 200,
+      time_limit: 60
+    });
+    const upgradePlan = response.plans.find((plan) => plan.type === "改善伙食型");
+
+    assert.ok(upgradePlan);
+    assert.ok(upgradePlan.estimated_cost >= 110);
+    assert.ok(
+      upgradePlan.dishes.some((dish) =>
+        /牛腩|桂花鱼|蒸虾|扇贝|牛肉粒|豉汁蒸排骨/.test(dish.name)
+      )
+    );
+  });
+
   it("recommends one favorite food on a deterministic half of days", () => {
     const response = buildGenerateResponse({
       ...baseRequest,

@@ -95,6 +95,24 @@ function withPlanState(plans, currentPlanIndex) {
   }));
 }
 
+function recommendedInitialPlanIndex(plans, budget) {
+  if (!plans.length) return 0;
+  if (budget >= 150) {
+    const upgradeIndex = plans.findIndex((plan) => plan.type === "改善伙食型");
+    if (upgradeIndex >= 0) return upgradeIndex;
+    return plans.reduce(
+      (bestIndex, plan, index) =>
+        plan.estimated_cost > plans[bestIndex].estimated_cost ? index : bestIndex,
+      0
+    );
+  }
+  if (budget >= 110) {
+    const balancedIndex = plans.findIndex((plan) => plan.type === "营养均衡型");
+    if (balancedIndex >= 0) return balancedIndex;
+  }
+  return 0;
+}
+
 Page({
   data: {
     form: null,
@@ -110,6 +128,7 @@ Page({
     const prefixedUserId = buildPrefixedUserId(form.userId);
     const request = buildRequest(form);
     const response = buildGenerateResponse(request);
+    const currentPlanIndex = recommendedInitialPlanIndex(response.plans, form.budget);
     if (prefixedUserId) {
       wx.setStorageSync(USER_ID_KEY, prefixedUserId);
     }
@@ -119,8 +138,8 @@ Page({
       request,
       dailyRecommended: response.daily_recommended.join("、"),
       dailyNotRecommended: response.daily_not_recommended,
-      currentPlanIndex: 0,
-      plans: withPlanState(response.plans, 0)
+      currentPlanIndex,
+      plans: withPlanState(response.plans, currentPlanIndex)
     });
   },
 

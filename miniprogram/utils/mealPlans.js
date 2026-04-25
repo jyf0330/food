@@ -367,9 +367,9 @@ const ingredientCategory = new Map(
 );
 
 const costScore = {
-  低: 12,
-  中: 22,
-  高: 36
+  低: 18,
+  中: 32,
+  高: 58
 };
 
 const FAVORITE_RECOMMEND_PERCENT = 50;
@@ -533,9 +533,19 @@ function blockedByRequest(dish, request) {
 function scoreDish(dish, request, type) {
   let score = 0;
   const seasonalNames = new Set(MONTHLY_SEASON[currentMonth()] || []);
+  const budgetPerPerson = request.budget / Math.max(1, request.people_count || 1);
   if (dish.time_minutes <= request.time_limit) score += 3;
   if (dish.estimated_cost_level === "低") score += type === "省钱快手型" ? 4 : 1;
   if (dish.estimated_cost_level === "中") score += type === "营养均衡型" ? 2 : 1;
+  if (budgetPerPerson >= 50 && type !== "省钱快手型") {
+    if (dish.estimated_cost_level === "高") score += type === "改善伙食型" ? 14 : 8;
+    if (dish.estimated_cost_level === "中") score += 4;
+    if (dish.estimated_cost_level === "低") score -= type === "改善伙食型" ? 6 : 3;
+  } else if (budgetPerPerson >= 35 && type !== "省钱快手型") {
+    if (dish.estimated_cost_level === "高") score += 5;
+    if (dish.estimated_cost_level === "中") score += 3;
+    if (dish.estimated_cost_level === "低") score -= 2;
+  }
   if (request.has_child && dish.kid_friendly) score += type === "孩子老人友好型" ? 5 : 2;
   if (request.has_elder && dish.elder_friendly) score += type === "孩子老人友好型" ? 5 : 2;
   if ((request.taste || []).some((taste) => dish.taste.includes(taste))) score += 2;
@@ -555,7 +565,7 @@ function pickCuratedDish(pool, request, type, categories, used) {
     .filter((dish) => !blockedByRequest(dish, request))
     .sort((a, b) => scoreDish(b, request, type) - scoreDish(a, request, type));
   const selected =
-    candidates[(variant + used.size) % Math.max(1, candidates.length)] ||
+    candidates[variant % Math.max(1, candidates.length)] ||
     pool.find((dish) => !used.has(dish.dish_name)) ||
     pool[0];
   used.add(selected.dish_name);

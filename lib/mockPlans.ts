@@ -210,9 +210,9 @@ function withCookingSchedule(plan: MealPlan, req: GenerateRequest): MealPlan {
 }
 
 const costScore: Record<string, number> = {
-  低: 12,
-  中: 22,
-  高: 36,
+  低: 18,
+  中: 32,
+  高: 58,
 };
 
 const FAVORITE_RECOMMEND_PERCENT = 50;
@@ -410,10 +410,20 @@ function withDailyFavorite(plans: MealPlan[], req: GenerateRequest): MealPlan[] 
 function scoreDish(dish: SeedDish, req: GenerateRequest, type: MealPlan["type"]): number {
   let score = 0;
   const seasonalNames = seasonalNamesForCurrentMonth();
+  const budgetPerPerson = req.budget / Math.max(1, req.people_count);
 
   if (dish.time_minutes <= req.time_limit) score += 3;
   if (dish.estimated_cost_level === "低") score += type === "省钱快手型" ? 4 : 1;
   if (dish.estimated_cost_level === "中") score += type === "营养均衡型" ? 2 : 1;
+  if (budgetPerPerson >= 50 && type !== "省钱快手型") {
+    if (dish.estimated_cost_level === "高") score += type === "改善伙食型" ? 14 : 8;
+    if (dish.estimated_cost_level === "中") score += 4;
+    if (dish.estimated_cost_level === "低") score -= type === "改善伙食型" ? 6 : 3;
+  } else if (budgetPerPerson >= 35 && type !== "省钱快手型") {
+    if (dish.estimated_cost_level === "高") score += 5;
+    if (dish.estimated_cost_level === "中") score += 3;
+    if (dish.estimated_cost_level === "低") score -= 2;
+  }
   if (req.has_child && dish.kid_friendly) score += type === "孩子老人友好型" ? 5 : 2;
   if (req.has_elder && dish.elder_friendly) score += type === "孩子老人友好型" ? 5 : 2;
   if (req.taste.some((taste) => dish.taste.includes(taste))) score += 2;
@@ -441,7 +451,7 @@ function pickDish(
     .sort((a, b) => scoreDish(b, req, type) - scoreDish(a, req, type));
 
   const selected =
-    candidates[(variant + used.size) % Math.max(1, candidates.length)] ??
+    candidates[variant % Math.max(1, candidates.length)] ??
     pool.find((dish) => !used.has(dish.dish_name)) ??
     pool[0];
   used.add(selected.dish_name);

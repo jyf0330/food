@@ -225,6 +225,385 @@ module.exports = {
       ]
     },
     {
+      "dish_name": "清蒸桂花鱼",
+      "category": "荤菜",
+      "cuisine": "广东家常",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 2,
+      "time_minutes": 18,
+      "taste": [
+        "清淡",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "桂花鱼",
+        "姜",
+        "葱"
+      ],
+      "optional_ingredients": [
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "蒸锅"
+      ],
+      "cooking_methods": [
+        "蒸"
+      ],
+      "estimated_cost_level": "高",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [],
+      "steps": [
+        "桂花鱼、姜、葱处理干净，按入口大小切好。",
+        "主料用少许盐、生抽和姜葱抓匀，铺入浅盘。",
+        "水开后上锅蒸到熟透，出锅前倒掉多余水汽。",
+        "淋少许热油或蒸鱼豉油，保持清淡口味。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "桂花鱼",
+          "amount": "1 条"
+        },
+        {
+          "name": "姜",
+          "amount": "适量"
+        },
+        {
+          "name": "葱",
+          "amount": "适量"
+        }
+      ]
+    },
+    {
+      "dish_name": "蒜蓉粉丝蒸虾",
+      "category": "荤菜",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 2,
+      "time_minutes": 18,
+      "taste": [
+        "鲜香",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "基围虾",
+        "粉丝",
+        "蒜"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "姜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "蒸锅"
+      ],
+      "cooking_methods": [
+        "蒸"
+      ],
+      "estimated_cost_level": "高",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [
+        "海鲜"
+      ],
+      "steps": [
+        "基围虾、粉丝、蒜处理干净，按入口大小切好。",
+        "主料用少许盐、生抽和姜葱抓匀，铺入浅盘。",
+        "水开后上锅蒸到熟透，出锅前倒掉多余水汽。",
+        "淋少许热油或蒸鱼豉油，保持鲜香口味。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "基围虾",
+          "amount": "半斤"
+        },
+        {
+          "name": "粉丝",
+          "amount": "1 把"
+        },
+        {
+          "name": "蒜",
+          "amount": "适量"
+        }
+      ]
+    },
+    {
+      "dish_name": "芦笋牛肉粒",
+      "category": "荤菜",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 1,
+      "time_minutes": 12,
+      "taste": [
+        "咸香",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "芦笋",
+        "牛肉"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "姜",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "炒锅"
+      ],
+      "cooking_methods": [
+        "炒"
+      ],
+      "estimated_cost_level": "高",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [
+        "牛羊肉"
+      ],
+      "steps": [
+        "芦笋、牛肉洗净切好，肉类或水产提前用少许盐和淀粉抓匀。",
+        "热锅加油，先炒香姜蒜，再下不易熟的食材。",
+        "转大火快速翻炒，按顺序放入易熟食材。",
+        "加盐或生抽调味，保持咸香，断生后立刻出锅。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "芦笋",
+          "amount": "半斤"
+        },
+        {
+          "name": "牛肉",
+          "amount": "250g"
+        }
+      ]
+    },
+    {
+      "dish_name": "扇贝蒸粉丝",
+      "category": "荤菜",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 2,
+      "time_minutes": 18,
+      "taste": [
+        "鲜香",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "扇贝",
+        "粉丝",
+        "蒜"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "姜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "蒸锅"
+      ],
+      "cooking_methods": [
+        "蒸"
+      ],
+      "estimated_cost_level": "高",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [],
+      "steps": [
+        "扇贝、粉丝、蒜处理干净，按入口大小切好。",
+        "主料用少许盐、生抽和姜葱抓匀，铺入浅盘。",
+        "水开后上锅蒸到熟透，出锅前倒掉多余水汽。",
+        "淋少许热油或蒸鱼豉油，保持鲜香口味。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "扇贝",
+          "amount": "6 只"
+        },
+        {
+          "name": "粉丝",
+          "amount": "1 把"
+        },
+        {
+          "name": "蒜",
+          "amount": "适量"
+        }
+      ]
+    },
+    {
+      "dish_name": "豉汁蒸排骨",
+      "category": "荤菜",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 2,
+      "time_minutes": 18,
+      "taste": [
+        "咸香",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "排骨",
+        "蒜"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "姜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "蒸锅"
+      ],
+      "cooking_methods": [
+        "蒸"
+      ],
+      "estimated_cost_level": "高",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [],
+      "steps": [
+        "排骨、蒜处理干净，按入口大小切好。",
+        "主料用少许盐、生抽和姜葱抓匀，铺入浅盘。",
+        "水开后上锅蒸到熟透，出锅前倒掉多余水汽。",
+        "淋少许热油或蒸鱼豉油，保持咸香口味。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "排骨",
+          "amount": "半斤"
+        },
+        {
+          "name": "蒜",
+          "amount": "适量"
+        }
+      ]
+    },
+    {
       "dish_name": "冬瓜肉丸汤",
       "category": "汤",
       "cuisine": "广东家常",
@@ -7100,6 +7479,81 @@ module.exports = {
       ]
     },
     {
+      "dish_name": "鲜虾豆腐煲",
+      "category": "豆腐",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 2,
+      "time_minutes": 12,
+      "taste": [
+        "鲜甜",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "基围虾",
+        "豆腐"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "姜",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "汤锅"
+      ],
+      "cooking_methods": [
+        "煮"
+      ],
+      "estimated_cost_level": "高",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [
+        "海鲜"
+      ],
+      "steps": [
+        "基围虾、豆腐洗净切好，肉类先焯水或简单腌制。",
+        "锅里加水和姜片，先下耐煮食材煮出底味。",
+        "再放易熟食材，中小火煮到软熟。",
+        "最后加盐调味，尝味后撒葱花出锅。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "基围虾",
+          "amount": "半斤"
+        },
+        {
+          "name": "豆腐",
+          "amount": "1 盒"
+        }
+      ]
+    },
+    {
       "dish_name": "鸡胸玉米粒",
       "category": "荤菜",
       "cuisine": "广东家常",
@@ -9861,6 +10315,66 @@ module.exports = {
       }
     },
     {
+      "standard_name": "桂花鱼",
+      "aliases": [
+        "鳜鱼",
+        "桂鱼"
+      ],
+      "category": "水产",
+      "common_units": [
+        "斤",
+        "克",
+        "份"
+      ],
+      "storage_days": 1,
+      "season_months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "platform_keywords": {
+        "朴朴": [
+          "桂花鱼",
+          "鳜鱼",
+          "桂鱼"
+        ],
+        "沃尔玛": [
+          "桂花鱼",
+          "鳜鱼",
+          "桂鱼"
+        ],
+        "盒马": [
+          "桂花鱼",
+          "鳜鱼",
+          "桂鱼"
+        ],
+        "菜市场": [
+          "桂花鱼",
+          "鳜鱼",
+          "桂鱼"
+        ],
+        "美团买菜": [
+          "桂花鱼",
+          "鳜鱼",
+          "桂鱼"
+        ],
+        "楼下超市": [
+          "桂花鱼",
+          "鳜鱼",
+          "桂鱼"
+        ]
+      }
+    },
+    {
       "standard_name": "虾仁",
       "aliases": [
         "鲜虾仁",
@@ -9977,6 +10491,66 @@ module.exports = {
           "基围虾",
           "鲜虾",
           "活虾"
+        ]
+      }
+    },
+    {
+      "standard_name": "扇贝",
+      "aliases": [
+        "鲜扇贝",
+        "扇贝肉"
+      ],
+      "category": "水产",
+      "common_units": [
+        "斤",
+        "克",
+        "份"
+      ],
+      "storage_days": 1,
+      "season_months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "platform_keywords": {
+        "朴朴": [
+          "扇贝",
+          "鲜扇贝",
+          "扇贝肉"
+        ],
+        "沃尔玛": [
+          "扇贝",
+          "鲜扇贝",
+          "扇贝肉"
+        ],
+        "盒马": [
+          "扇贝",
+          "鲜扇贝",
+          "扇贝肉"
+        ],
+        "菜市场": [
+          "扇贝",
+          "鲜扇贝",
+          "扇贝肉"
+        ],
+        "美团买菜": [
+          "扇贝",
+          "鲜扇贝",
+          "扇贝肉"
+        ],
+        "楼下超市": [
+          "扇贝",
+          "鲜扇贝",
+          "扇贝肉"
         ]
       }
     },
@@ -14028,6 +14602,19 @@ module.exports = {
       "source_note": "结构化占位：后续可映射中国食物成分数据中心条目"
     },
     {
+      "name": "桂花鱼",
+      "category": "水产",
+      "energy_kcal_per_100g": 140,
+      "protein_g_per_100g": 16,
+      "fat_g_per_100g": 6,
+      "carb_g_per_100g": 2,
+      "fiber_g_per_100g": 0.5,
+      "tags": [
+        "高蛋白"
+      ],
+      "source_note": "结构化占位：后续可映射中国食物成分数据中心条目"
+    },
+    {
       "name": "虾仁",
       "category": "水产",
       "energy_kcal_per_100g": 140,
@@ -14042,6 +14629,19 @@ module.exports = {
     },
     {
       "name": "基围虾",
+      "category": "水产",
+      "energy_kcal_per_100g": 140,
+      "protein_g_per_100g": 16,
+      "fat_g_per_100g": 6,
+      "carb_g_per_100g": 2,
+      "fiber_g_per_100g": 0.5,
+      "tags": [
+        "高蛋白"
+      ],
+      "source_note": "结构化占位：后续可映射中国食物成分数据中心条目"
+    },
+    {
+      "name": "扇贝",
       "category": "水产",
       "energy_kcal_per_100g": 140,
       "protein_g_per_100g": 16,
@@ -14825,32 +15425,6 @@ module.exports = {
         "高蛋白"
       ],
       "source_note": "结构化占位：后续可映射中国食物成分数据中心条目"
-    },
-    {
-      "name": "鸭肉",
-      "category": "肉蛋",
-      "energy_kcal_per_100g": 140,
-      "protein_g_per_100g": 16,
-      "fat_g_per_100g": 6,
-      "carb_g_per_100g": 2,
-      "fiber_g_per_100g": 0.5,
-      "tags": [
-        "高蛋白"
-      ],
-      "source_note": "结构化占位：后续可映射中国食物成分数据中心条目"
-    },
-    {
-      "name": "肉片",
-      "category": "肉蛋",
-      "energy_kcal_per_100g": 140,
-      "protein_g_per_100g": 16,
-      "fat_g_per_100g": 6,
-      "carb_g_per_100g": 2,
-      "fiber_g_per_100g": 0.5,
-      "tags": [
-        "高蛋白"
-      ],
-      "source_note": "结构化占位：后续可映射中国食物成分数据中心条目"
     }
   ],
   "priceBaseline": [
@@ -14955,7 +15529,7 @@ module.exports = {
       "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
     },
     {
-      "name": "虾仁",
+      "name": "桂花鱼",
       "category": "水产",
       "unit": "斤",
       "normal_price": 32,
@@ -14965,7 +15539,7 @@ module.exports = {
       "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
     },
     {
-      "name": "基围虾",
+      "name": "虾仁",
       "category": "水产",
       "unit": "斤",
       "normal_price": 33.2,
@@ -14975,27 +15549,27 @@ module.exports = {
       "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
     },
     {
+      "name": "基围虾",
+      "category": "水产",
+      "unit": "斤",
+      "normal_price": 34.4,
+      "cheap_threshold": 28.2,
+      "expensive_threshold": 43,
+      "current_price": 34.4,
+      "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
+    },
+    {
+      "name": "扇贝",
+      "category": "水产",
+      "unit": "斤",
+      "normal_price": 35.6,
+      "cheap_threshold": 29.2,
+      "expensive_threshold": 44.5,
+      "current_price": 35.6,
+      "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
+    },
+    {
       "name": "豆腐",
-      "category": "豆制品",
-      "unit": "斤",
-      "normal_price": 10.4,
-      "cheap_threshold": 8.5,
-      "expensive_threshold": 13,
-      "current_price": 10.4,
-      "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
-    },
-    {
-      "name": "豆干",
-      "category": "豆制品",
-      "unit": "斤",
-      "normal_price": 11.6,
-      "cheap_threshold": 9.5,
-      "expensive_threshold": 14.5,
-      "current_price": 11.6,
-      "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
-    },
-    {
-      "name": "腐竹",
       "category": "豆制品",
       "unit": "斤",
       "normal_price": 12.8,
@@ -15005,27 +15579,27 @@ module.exports = {
       "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
     },
     {
+      "name": "豆干",
+      "category": "豆制品",
+      "unit": "斤",
+      "normal_price": 8,
+      "cheap_threshold": 6.6,
+      "expensive_threshold": 10,
+      "current_price": 6.2,
+      "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
+    },
+    {
+      "name": "腐竹",
+      "category": "豆制品",
+      "unit": "斤",
+      "normal_price": 9.2,
+      "cheap_threshold": 7.5,
+      "expensive_threshold": 11.5,
+      "current_price": 9.2,
+      "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
+    },
+    {
       "name": "土豆",
-      "category": "蔬菜",
-      "unit": "斤",
-      "normal_price": 6,
-      "cheap_threshold": 4.9,
-      "expensive_threshold": 7.5,
-      "current_price": 4.7,
-      "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
-    },
-    {
-      "name": "胡萝卜",
-      "category": "蔬菜",
-      "unit": "斤",
-      "normal_price": 7.2,
-      "cheap_threshold": 5.9,
-      "expensive_threshold": 9,
-      "current_price": 7.2,
-      "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
-    },
-    {
-      "name": "白萝卜",
       "category": "蔬菜",
       "unit": "斤",
       "normal_price": 8.4,
@@ -15035,7 +15609,7 @@ module.exports = {
       "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
     },
     {
-      "name": "冬瓜",
+      "name": "胡萝卜",
       "category": "蔬菜",
       "unit": "斤",
       "normal_price": 9.6,
@@ -15045,7 +15619,7 @@ module.exports = {
       "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
     },
     {
-      "name": "丝瓜",
+      "name": "白萝卜",
       "category": "蔬菜",
       "unit": "斤",
       "normal_price": 10.8,
@@ -15055,7 +15629,7 @@ module.exports = {
       "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
     },
     {
-      "name": "苦瓜",
+      "name": "冬瓜",
       "category": "蔬菜",
       "unit": "斤",
       "normal_price": 6,
@@ -15065,7 +15639,7 @@ module.exports = {
       "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
     },
     {
-      "name": "南瓜",
+      "name": "丝瓜",
       "category": "蔬菜",
       "unit": "斤",
       "normal_price": 7.2,
@@ -15075,7 +15649,7 @@ module.exports = {
       "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
     },
     {
-      "name": "茄子",
+      "name": "苦瓜",
       "category": "蔬菜",
       "unit": "斤",
       "normal_price": 8.4,
@@ -15085,7 +15659,7 @@ module.exports = {
       "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
     },
     {
-      "name": "青瓜",
+      "name": "南瓜",
       "category": "蔬菜",
       "unit": "斤",
       "normal_price": 9.6,
@@ -15095,7 +15669,7 @@ module.exports = {
       "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
     },
     {
-      "name": "西兰花",
+      "name": "茄子",
       "category": "蔬菜",
       "unit": "斤",
       "normal_price": 10.8,
@@ -15105,7 +15679,7 @@ module.exports = {
       "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
     },
     {
-      "name": "菜心",
+      "name": "青瓜",
       "category": "蔬菜",
       "unit": "斤",
       "normal_price": 6,
@@ -15115,7 +15689,7 @@ module.exports = {
       "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
     },
     {
-      "name": "生菜",
+      "name": "西兰花",
       "category": "蔬菜",
       "unit": "斤",
       "normal_price": 7.2,
@@ -15125,7 +15699,7 @@ module.exports = {
       "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
     },
     {
-      "name": "上海青",
+      "name": "菜心",
       "category": "蔬菜",
       "unit": "斤",
       "normal_price": 8.4,
@@ -15135,7 +15709,7 @@ module.exports = {
       "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
     },
     {
-      "name": "油麦菜",
+      "name": "生菜",
       "category": "蔬菜",
       "unit": "斤",
       "normal_price": 9.6,
@@ -15145,7 +15719,7 @@ module.exports = {
       "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
     },
     {
-      "name": "芥兰",
+      "name": "上海青",
       "category": "蔬菜",
       "unit": "斤",
       "normal_price": 10.8,
@@ -15155,7 +15729,7 @@ module.exports = {
       "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
     },
     {
-      "name": "菠菜",
+      "name": "油麦菜",
       "category": "蔬菜",
       "unit": "斤",
       "normal_price": 6,
@@ -15165,7 +15739,7 @@ module.exports = {
       "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
     },
     {
-      "name": "空心菜",
+      "name": "芥兰",
       "category": "蔬菜",
       "unit": "斤",
       "normal_price": 7.2,
@@ -15175,7 +15749,7 @@ module.exports = {
       "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
     },
     {
-      "name": "娃娃菜",
+      "name": "菠菜",
       "category": "蔬菜",
       "unit": "斤",
       "normal_price": 8.4,
@@ -15185,7 +15759,7 @@ module.exports = {
       "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
     },
     {
-      "name": "包菜",
+      "name": "空心菜",
       "category": "蔬菜",
       "unit": "斤",
       "normal_price": 9.6,
@@ -15195,7 +15769,7 @@ module.exports = {
       "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
     },
     {
-      "name": "莴笋",
+      "name": "娃娃菜",
       "category": "蔬菜",
       "unit": "斤",
       "normal_price": 10.8,
@@ -15205,7 +15779,7 @@ module.exports = {
       "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
     },
     {
-      "name": "莲藕",
+      "name": "包菜",
       "category": "蔬菜",
       "unit": "斤",
       "normal_price": 6,
@@ -15215,127 +15789,27 @@ module.exports = {
       "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
     },
     {
+      "name": "莴笋",
+      "category": "蔬菜",
+      "unit": "斤",
+      "normal_price": 7.2,
+      "cheap_threshold": 5.9,
+      "expensive_threshold": 9,
+      "current_price": 7.2,
+      "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
+    },
+    {
+      "name": "莲藕",
+      "category": "蔬菜",
+      "unit": "斤",
+      "normal_price": 8.4,
+      "cheap_threshold": 6.9,
+      "expensive_threshold": 10.5,
+      "current_price": 8.4,
+      "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
+    },
+    {
       "name": "山药",
-      "category": "蔬菜",
-      "unit": "斤",
-      "normal_price": 7.2,
-      "cheap_threshold": 5.9,
-      "expensive_threshold": 9,
-      "current_price": 7.2,
-      "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
-    },
-    {
-      "name": "玉米",
-      "category": "蔬菜",
-      "unit": "斤",
-      "normal_price": 8.4,
-      "cheap_threshold": 6.9,
-      "expensive_threshold": 10.5,
-      "current_price": 8.4,
-      "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
-    },
-    {
-      "name": "香菇",
-      "category": "菌菇",
-      "unit": "斤",
-      "normal_price": 13.6,
-      "cheap_threshold": 11.2,
-      "expensive_threshold": 17,
-      "current_price": 13.6,
-      "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
-    },
-    {
-      "name": "金针菇",
-      "category": "菌菇",
-      "unit": "斤",
-      "normal_price": 14.8,
-      "cheap_threshold": 12.1,
-      "expensive_threshold": 18.5,
-      "current_price": 14.8,
-      "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
-    },
-    {
-      "name": "杏鲍菇",
-      "category": "菌菇",
-      "unit": "斤",
-      "normal_price": 10,
-      "cheap_threshold": 8.2,
-      "expensive_threshold": 12.5,
-      "current_price": 7.8,
-      "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
-    },
-    {
-      "name": "木耳",
-      "category": "干货",
-      "unit": "斤",
-      "normal_price": 11.2,
-      "cheap_threshold": 9.2,
-      "expensive_threshold": 14,
-      "current_price": 11.2,
-      "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
-    },
-    {
-      "name": "海带",
-      "category": "干货",
-      "unit": "斤",
-      "normal_price": 12.4,
-      "cheap_threshold": 10.2,
-      "expensive_threshold": 15.5,
-      "current_price": 16.4,
-      "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
-    },
-    {
-      "name": "紫菜",
-      "category": "干货",
-      "unit": "斤",
-      "normal_price": 13.6,
-      "cheap_threshold": 11.2,
-      "expensive_threshold": 17,
-      "current_price": 13.6,
-      "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
-    },
-    {
-      "name": "绿豆芽",
-      "category": "蔬菜",
-      "unit": "斤",
-      "normal_price": 10.8,
-      "cheap_threshold": 8.9,
-      "expensive_threshold": 13.5,
-      "current_price": 10.8,
-      "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
-    },
-    {
-      "name": "黄豆芽",
-      "category": "蔬菜",
-      "unit": "斤",
-      "normal_price": 6,
-      "cheap_threshold": 4.9,
-      "expensive_threshold": 7.5,
-      "current_price": 4.7,
-      "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
-    },
-    {
-      "name": "洋葱",
-      "category": "蔬菜",
-      "unit": "斤",
-      "normal_price": 7.2,
-      "cheap_threshold": 5.9,
-      "expensive_threshold": 9,
-      "current_price": 7.2,
-      "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
-    },
-    {
-      "name": "青椒",
-      "category": "蔬菜",
-      "unit": "斤",
-      "normal_price": 8.4,
-      "cheap_threshold": 6.9,
-      "expensive_threshold": 10.5,
-      "current_price": 8.4,
-      "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
-    },
-    {
-      "name": "彩椒",
       "category": "蔬菜",
       "unit": "斤",
       "normal_price": 9.6,
@@ -15345,27 +15819,77 @@ module.exports = {
       "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
     },
     {
-      "name": "四季豆",
+      "name": "玉米",
       "category": "蔬菜",
       "unit": "斤",
       "normal_price": 10.8,
       "cheap_threshold": 8.9,
       "expensive_threshold": 13.5,
-      "current_price": 14.3,
+      "current_price": 10.8,
       "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
     },
     {
-      "name": "荷兰豆",
-      "category": "蔬菜",
+      "name": "香菇",
+      "category": "菌菇",
       "unit": "斤",
-      "normal_price": 6,
-      "cheap_threshold": 4.9,
-      "expensive_threshold": 7.5,
-      "current_price": 4.7,
+      "normal_price": 10,
+      "cheap_threshold": 8.2,
+      "expensive_threshold": 12.5,
+      "current_price": 7.8,
       "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
     },
     {
-      "name": "芹菜",
+      "name": "金针菇",
+      "category": "菌菇",
+      "unit": "斤",
+      "normal_price": 11.2,
+      "cheap_threshold": 9.2,
+      "expensive_threshold": 14,
+      "current_price": 11.2,
+      "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
+    },
+    {
+      "name": "杏鲍菇",
+      "category": "菌菇",
+      "unit": "斤",
+      "normal_price": 12.4,
+      "cheap_threshold": 10.2,
+      "expensive_threshold": 15.5,
+      "current_price": 16.4,
+      "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
+    },
+    {
+      "name": "木耳",
+      "category": "干货",
+      "unit": "斤",
+      "normal_price": 13.6,
+      "cheap_threshold": 11.2,
+      "expensive_threshold": 17,
+      "current_price": 13.6,
+      "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
+    },
+    {
+      "name": "海带",
+      "category": "干货",
+      "unit": "斤",
+      "normal_price": 14.8,
+      "cheap_threshold": 12.1,
+      "expensive_threshold": 18.5,
+      "current_price": 14.8,
+      "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
+    },
+    {
+      "name": "紫菜",
+      "category": "干货",
+      "unit": "斤",
+      "normal_price": 10,
+      "cheap_threshold": 8.2,
+      "expensive_threshold": 12.5,
+      "current_price": 7.8,
+      "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
+    },
+    {
+      "name": "绿豆芽",
       "category": "蔬菜",
       "unit": "斤",
       "normal_price": 7.2,
@@ -15375,7 +15899,7 @@ module.exports = {
       "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
     },
     {
-      "name": "韭菜",
+      "name": "黄豆芽",
       "category": "蔬菜",
       "unit": "斤",
       "normal_price": 8.4,
@@ -15385,27 +15909,77 @@ module.exports = {
       "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
     },
     {
+      "name": "洋葱",
+      "category": "蔬菜",
+      "unit": "斤",
+      "normal_price": 9.6,
+      "cheap_threshold": 7.9,
+      "expensive_threshold": 12,
+      "current_price": 9.6,
+      "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
+    },
+    {
+      "name": "青椒",
+      "category": "蔬菜",
+      "unit": "斤",
+      "normal_price": 10.8,
+      "cheap_threshold": 8.9,
+      "expensive_threshold": 13.5,
+      "current_price": 14.3,
+      "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
+    },
+    {
+      "name": "彩椒",
+      "category": "蔬菜",
+      "unit": "斤",
+      "normal_price": 6,
+      "cheap_threshold": 4.9,
+      "expensive_threshold": 7.5,
+      "current_price": 4.7,
+      "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
+    },
+    {
+      "name": "四季豆",
+      "category": "蔬菜",
+      "unit": "斤",
+      "normal_price": 7.2,
+      "cheap_threshold": 5.9,
+      "expensive_threshold": 9,
+      "current_price": 7.2,
+      "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
+    },
+    {
+      "name": "荷兰豆",
+      "category": "蔬菜",
+      "unit": "斤",
+      "normal_price": 8.4,
+      "cheap_threshold": 6.9,
+      "expensive_threshold": 10.5,
+      "current_price": 8.4,
+      "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
+    },
+    {
+      "name": "芹菜",
+      "category": "蔬菜",
+      "unit": "斤",
+      "normal_price": 9.6,
+      "cheap_threshold": 7.9,
+      "expensive_threshold": 12,
+      "current_price": 9.6,
+      "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
+    },
+    {
+      "name": "韭菜",
+      "category": "蔬菜",
+      "unit": "斤",
+      "normal_price": 10.8,
+      "cheap_threshold": 8.9,
+      "expensive_threshold": 13.5,
+      "current_price": 10.8,
+      "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
+    },
+    {
       "name": "葱",
-      "category": "调料",
-      "unit": "斤",
-      "normal_price": 13.6,
-      "cheap_threshold": 11.2,
-      "expensive_threshold": 17,
-      "current_price": 13.6,
-      "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
-    },
-    {
-      "name": "姜",
-      "category": "调料",
-      "unit": "斤",
-      "normal_price": 14.8,
-      "cheap_threshold": 12.1,
-      "expensive_threshold": 18.5,
-      "current_price": 14.8,
-      "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
-    },
-    {
-      "name": "蒜",
       "category": "调料",
       "unit": "斤",
       "normal_price": 10,
@@ -15415,8 +15989,8 @@ module.exports = {
       "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
     },
     {
-      "name": "米",
-      "category": "主食",
+      "name": "姜",
+      "category": "调料",
       "unit": "斤",
       "normal_price": 11.2,
       "cheap_threshold": 9.2,
@@ -15425,8 +15999,8 @@ module.exports = {
       "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
     },
     {
-      "name": "面条",
-      "category": "主食",
+      "name": "蒜",
+      "category": "调料",
       "unit": "斤",
       "normal_price": 12.4,
       "cheap_threshold": 10.2,
@@ -15435,7 +16009,7 @@ module.exports = {
       "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
     },
     {
-      "name": "粉丝",
+      "name": "米",
       "category": "主食",
       "unit": "斤",
       "normal_price": 13.6,
@@ -15445,7 +16019,7 @@ module.exports = {
       "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
     },
     {
-      "name": "河粉",
+      "name": "面条",
       "category": "主食",
       "unit": "斤",
       "normal_price": 14.8,

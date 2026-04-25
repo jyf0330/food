@@ -13,6 +13,7 @@ type PlanSwitcherProps = {
   plans: MealPlan[];
   form: PlanMemoryForm;
   currentVariant: number;
+  initialSelectedIndex: number;
 };
 
 const planLabel = (index: number) => String.fromCharCode(65 + index);
@@ -21,8 +22,9 @@ export default function PlanSwitcher({
   plans,
   form,
   currentVariant,
+  initialSelectedIndex,
 }: PlanSwitcherProps) {
-  const [selectedIndex, setSelectedIndex] = useState(0);
+  const [selectedIndex, setSelectedIndex] = useState(initialSelectedIndex);
   const plan = plans[selectedIndex] as PlanWithOptionalSchedule | undefined;
 
   if (!plan) {

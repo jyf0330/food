@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { buildGenerateResponse } from "@/lib/mealPlanGenerator";
+import { recommendedInitialPlanIndex } from "@/lib/planSelection";
 import type { GenerateRequest } from "@/lib/types";
 import { buildPrefixedUserId, getUserIdDisplay } from "@/lib/userIdentity";
 import type { PlanMemoryForm } from "./PlanMemoryActions";
@@ -108,6 +109,7 @@ export default function ResultPage({ searchParams }: { searchParams: SP }) {
         plans={response.plans}
         form={form}
         currentVariant={currentVariant}
+        initialSelectedIndex={recommendedInitialPlanIndex(response.plans, req.budget)}
       />
 
       <p className="mock-note">

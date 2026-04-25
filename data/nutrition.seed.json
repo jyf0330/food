@@ -130,6 +130,19 @@
     "source_note": "结构化占位：后续可映射中国食物成分数据中心条目"
   },
   {
+    "name": "桂花鱼",
+    "category": "水产",
+    "energy_kcal_per_100g": 140,
+    "protein_g_per_100g": 16,
+    "fat_g_per_100g": 6,
+    "carb_g_per_100g": 2,
+    "fiber_g_per_100g": 0.5,
+    "tags": [
+      "高蛋白"
+    ],
+    "source_note": "结构化占位：后续可映射中国食物成分数据中心条目"
+  },
+  {
     "name": "虾仁",
     "category": "水产",
     "energy_kcal_per_100g": 140,
@@ -144,6 +157,19 @@
   },
   {
     "name": "基围虾",
+    "category": "水产",
+    "energy_kcal_per_100g": 140,
+    "protein_g_per_100g": 16,
+    "fat_g_per_100g": 6,
+    "carb_g_per_100g": 2,
+    "fiber_g_per_100g": 0.5,
+    "tags": [
+      "高蛋白"
+    ],
+    "source_note": "结构化占位：后续可映射中国食物成分数据中心条目"
+  },
+  {
+    "name": "扇贝",
     "category": "水产",
     "energy_kcal_per_100g": 140,
     "protein_g_per_100g": 16,
@@ -917,32 +943,6 @@
   },
   {
     "name": "鸡翅",
-    "category": "肉蛋",
-    "energy_kcal_per_100g": 140,
-    "protein_g_per_100g": 16,
-    "fat_g_per_100g": 6,
-    "carb_g_per_100g": 2,
-    "fiber_g_per_100g": 0.5,
-    "tags": [
-      "高蛋白"
-    ],
-    "source_note": "结构化占位：后续可映射中国食物成分数据中心条目"
-  },
-  {
-    "name": "鸭肉",
-    "category": "肉蛋",
-    "energy_kcal_per_100g": 140,
-    "protein_g_per_100g": 16,
-    "fat_g_per_100g": 6,
-    "carb_g_per_100g": 2,
-    "fiber_g_per_100g": 0.5,
-    "tags": [
-      "高蛋白"
-    ],
-    "source_note": "结构化占位：后续可映射中国食物成分数据中心条目"
-  },
-  {
-    "name": "肉片",
     "category": "肉蛋",
     "energy_kcal_per_100g": 140,
     "protein_g_per_100g": 16,

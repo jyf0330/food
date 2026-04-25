@@ -224,6 +224,385 @@
     ]
   },
   {
+    "dish_name": "清蒸桂花鱼",
+    "category": "荤菜",
+    "cuisine": "广东家常",
+    "region_style": [
+      "深圳家常",
+      "广东家常"
+    ],
+    "suitable_people": [
+      "家庭",
+      "儿童",
+      "老人"
+    ],
+    "meal_type": [
+      "午餐",
+      "晚餐"
+    ],
+    "difficulty": 2,
+    "time_minutes": 18,
+    "taste": [
+      "清淡",
+      "不辣"
+    ],
+    "main_ingredients": [
+      "桂花鱼",
+      "姜",
+      "葱"
+    ],
+    "optional_ingredients": [
+      "蒜"
+    ],
+    "season": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "tools": [
+      "蒸锅"
+    ],
+    "cooking_methods": [
+      "蒸"
+    ],
+    "estimated_cost_level": "高",
+    "kid_friendly": true,
+    "elder_friendly": true,
+    "avoid_tags": [],
+    "steps": [
+      "桂花鱼、姜、葱处理干净，按入口大小切好。",
+      "主料用少许盐、生抽和姜葱抓匀，铺入浅盘。",
+      "水开后上锅蒸到熟透，出锅前倒掉多余水汽。",
+      "淋少许热油或蒸鱼豉油，保持清淡口味。"
+    ],
+    "shopping_amount_for_3_people": [
+      {
+        "name": "桂花鱼",
+        "amount": "1 条"
+      },
+      {
+        "name": "姜",
+        "amount": "适量"
+      },
+      {
+        "name": "葱",
+        "amount": "适量"
+      }
+    ]
+  },
+  {
+    "dish_name": "蒜蓉粉丝蒸虾",
+    "category": "荤菜",
+    "cuisine": "家常菜",
+    "region_style": [
+      "深圳家常",
+      "广东家常"
+    ],
+    "suitable_people": [
+      "家庭",
+      "儿童",
+      "老人"
+    ],
+    "meal_type": [
+      "午餐",
+      "晚餐"
+    ],
+    "difficulty": 2,
+    "time_minutes": 18,
+    "taste": [
+      "鲜香",
+      "不辣"
+    ],
+    "main_ingredients": [
+      "基围虾",
+      "粉丝",
+      "蒜"
+    ],
+    "optional_ingredients": [
+      "葱",
+      "姜"
+    ],
+    "season": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "tools": [
+      "蒸锅"
+    ],
+    "cooking_methods": [
+      "蒸"
+    ],
+    "estimated_cost_level": "高",
+    "kid_friendly": true,
+    "elder_friendly": true,
+    "avoid_tags": [
+      "海鲜"
+    ],
+    "steps": [
+      "基围虾、粉丝、蒜处理干净，按入口大小切好。",
+      "主料用少许盐、生抽和姜葱抓匀，铺入浅盘。",
+      "水开后上锅蒸到熟透，出锅前倒掉多余水汽。",
+      "淋少许热油或蒸鱼豉油，保持鲜香口味。"
+    ],
+    "shopping_amount_for_3_people": [
+      {
+        "name": "基围虾",
+        "amount": "半斤"
+      },
+      {
+        "name": "粉丝",
+        "amount": "1 把"
+      },
+      {
+        "name": "蒜",
+        "amount": "适量"
+      }
+    ]
+  },
+  {
+    "dish_name": "芦笋牛肉粒",
+    "category": "荤菜",
+    "cuisine": "家常菜",
+    "region_style": [
+      "深圳家常",
+      "广东家常"
+    ],
+    "suitable_people": [
+      "家庭",
+      "儿童",
+      "老人"
+    ],
+    "meal_type": [
+      "午餐",
+      "晚餐"
+    ],
+    "difficulty": 1,
+    "time_minutes": 12,
+    "taste": [
+      "咸香",
+      "不辣"
+    ],
+    "main_ingredients": [
+      "芦笋",
+      "牛肉"
+    ],
+    "optional_ingredients": [
+      "葱",
+      "姜",
+      "蒜"
+    ],
+    "season": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "tools": [
+      "炒锅"
+    ],
+    "cooking_methods": [
+      "炒"
+    ],
+    "estimated_cost_level": "高",
+    "kid_friendly": true,
+    "elder_friendly": true,
+    "avoid_tags": [
+      "牛羊肉"
+    ],
+    "steps": [
+      "芦笋、牛肉洗净切好，肉类或水产提前用少许盐和淀粉抓匀。",
+      "热锅加油，先炒香姜蒜，再下不易熟的食材。",
+      "转大火快速翻炒，按顺序放入易熟食材。",
+      "加盐或生抽调味，保持咸香，断生后立刻出锅。"
+    ],
+    "shopping_amount_for_3_people": [
+      {
+        "name": "芦笋",
+        "amount": "半斤"
+      },
+      {
+        "name": "牛肉",
+        "amount": "250g"
+      }
+    ]
+  },
+  {
+    "dish_name": "扇贝蒸粉丝",
+    "category": "荤菜",
+    "cuisine": "家常菜",
+    "region_style": [
+      "深圳家常",
+      "广东家常"
+    ],
+    "suitable_people": [
+      "家庭",
+      "儿童",
+      "老人"
+    ],
+    "meal_type": [
+      "午餐",
+      "晚餐"
+    ],
+    "difficulty": 2,
+    "time_minutes": 18,
+    "taste": [
+      "鲜香",
+      "不辣"
+    ],
+    "main_ingredients": [
+      "扇贝",
+      "粉丝",
+      "蒜"
+    ],
+    "optional_ingredients": [
+      "葱",
+      "姜"
+    ],
+    "season": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "tools": [
+      "蒸锅"
+    ],
+    "cooking_methods": [
+      "蒸"
+    ],
+    "estimated_cost_level": "高",
+    "kid_friendly": true,
+    "elder_friendly": true,
+    "avoid_tags": [],
+    "steps": [
+      "扇贝、粉丝、蒜处理干净，按入口大小切好。",
+      "主料用少许盐、生抽和姜葱抓匀，铺入浅盘。",
+      "水开后上锅蒸到熟透，出锅前倒掉多余水汽。",
+      "淋少许热油或蒸鱼豉油，保持鲜香口味。"
+    ],
+    "shopping_amount_for_3_people": [
+      {
+        "name": "扇贝",
+        "amount": "6 只"
+      },
+      {
+        "name": "粉丝",
+        "amount": "1 把"
+      },
+      {
+        "name": "蒜",
+        "amount": "适量"
+      }
+    ]
+  },
+  {
+    "dish_name": "豉汁蒸排骨",
+    "category": "荤菜",
+    "cuisine": "家常菜",
+    "region_style": [
+      "深圳家常",
+      "广东家常"
+    ],
+    "suitable_people": [
+      "家庭",
+      "儿童",
+      "老人"
+    ],
+    "meal_type": [
+      "午餐",
+      "晚餐"
+    ],
+    "difficulty": 2,
+    "time_minutes": 18,
+    "taste": [
+      "咸香",
+      "不辣"
+    ],
+    "main_ingredients": [
+      "排骨",
+      "蒜"
+    ],
+    "optional_ingredients": [
+      "葱",
+      "姜"
+    ],
+    "season": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "tools": [
+      "蒸锅"
+    ],
+    "cooking_methods": [
+      "蒸"
+    ],
+    "estimated_cost_level": "高",
+    "kid_friendly": true,
+    "elder_friendly": true,
+    "avoid_tags": [],
+    "steps": [
+      "排骨、蒜处理干净，按入口大小切好。",
+      "主料用少许盐、生抽和姜葱抓匀，铺入浅盘。",
+      "水开后上锅蒸到熟透，出锅前倒掉多余水汽。",
+      "淋少许热油或蒸鱼豉油，保持咸香口味。"
+    ],
+    "shopping_amount_for_3_people": [
+      {
+        "name": "排骨",
+        "amount": "半斤"
+      },
+      {
+        "name": "蒜",
+        "amount": "适量"
+      }
+    ]
+  },
+  {
     "dish_name": "冬瓜肉丸汤",
     "category": "汤",
     "cuisine": "广东家常",
@@ -7095,6 +7474,81 @@
       {
         "name": "鸡蛋",
         "amount": "4 个"
+      }
+    ]
+  },
+  {
+    "dish_name": "鲜虾豆腐煲",
+    "category": "豆腐",
+    "cuisine": "家常菜",
+    "region_style": [
+      "深圳家常",
+      "广东家常"
+    ],
+    "suitable_people": [
+      "家庭",
+      "儿童",
+      "老人"
+    ],
+    "meal_type": [
+      "午餐",
+      "晚餐"
+    ],
+    "difficulty": 2,
+    "time_minutes": 12,
+    "taste": [
+      "鲜甜",
+      "不辣"
+    ],
+    "main_ingredients": [
+      "基围虾",
+      "豆腐"
+    ],
+    "optional_ingredients": [
+      "葱",
+      "姜",
+      "蒜"
+    ],
+    "season": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "tools": [
+      "汤锅"
+    ],
+    "cooking_methods": [
+      "煮"
+    ],
+    "estimated_cost_level": "高",
+    "kid_friendly": true,
+    "elder_friendly": true,
+    "avoid_tags": [
+      "海鲜"
+    ],
+    "steps": [
+      "基围虾、豆腐洗净切好，肉类先焯水或简单腌制。",
+      "锅里加水和姜片，先下耐煮食材煮出底味。",
+      "再放易熟食材，中小火煮到软熟。",
+      "最后加盐调味，尝味后撒葱花出锅。"
+    ],
+    "shopping_amount_for_3_people": [
+      {
+        "name": "基围虾",
+        "amount": "半斤"
+      },
+      {
+        "name": "豆腐",
+        "amount": "1 盒"
       }
     ]
   },
