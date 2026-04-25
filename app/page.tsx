@@ -2,6 +2,7 @@
 
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
+import { buildPrefixedUserId, getUserIdDisplay } from "@/lib/userIdentity";
 
 type Choice<T extends string | number> = { id: T; label: string };
 type StoredForm = {
@@ -14,6 +15,7 @@ type StoredForm = {
   avoid: string[];
   finishTime: string;
   cookSpeed: string;
+  userId: string;
 };
 type LastChoice = {
   title: string;
@@ -23,6 +25,7 @@ type LastChoice = {
 
 const LAST_FORM_KEY = "san-zhuo-cai:last-form";
 const LAST_CHOICE_KEY = "san-zhuo-cai:last-choice";
+const USER_ID_COOKIE = "jtcsm_user_id";
 
 const PEOPLE: Choice<number>[] = [
   { id: 1, label: "1人" },
@@ -102,6 +105,7 @@ const DEFAULT_FORM: StoredForm = {
   avoid: [],
   finishTime: "19:00",
   cookSpeed: "normal",
+  userId: "",
 };
 
 const splitList = (value: unknown) => {
@@ -131,9 +135,27 @@ const parseJson = (value: string | null) => {
   }
 };
 
+const readCookie = (name: string) => {
+  if (typeof document === "undefined") return "";
+  return (
+    document.cookie
+      .split("; ")
+      .find((row) => row.startsWith(`${name}=`))
+      ?.split("=")[1] ?? ""
+  );
+};
+
+const saveUserIdCookie = (userId: string) => {
+  const prefixed = buildPrefixedUserId(userId);
+  if (!prefixed) return;
+  document.cookie = `${USER_ID_COOKIE}=${encodeURIComponent(
+    prefixed
+  )}; max-age=31536000; path=/; SameSite=Lax`;
+};
+
 const normalizeForm = (value: unknown): StoredForm | null => {
   if (!value || typeof value !== "object") return null;
-  const data = value as Partial<StoredForm>;
+  const data = value as Partial<StoredForm> & { user_id?: unknown };
   return {
     people: pickNumber(data.people, DEFAULT_FORM.people),
     family: pickString(data.family, DEFAULT_FORM.family),
@@ -144,6 +166,7 @@ const normalizeForm = (value: unknown): StoredForm | null => {
     avoid: splitList(data.avoid),
     finishTime: pickString(data.finishTime, DEFAULT_FORM.finishTime),
     cookSpeed: pickString(data.cookSpeed, DEFAULT_FORM.cookSpeed),
+    userId: getUserIdDisplay(data.userId ?? data.user_id),
   };
 };
 
@@ -159,6 +182,10 @@ const buildResultUrl = (form: StoredForm) => {
     finishTime: form.finishTime,
     cookSpeed: form.cookSpeed,
   });
+  const userId = getUserIdDisplay(form.userId);
+  if (userId) {
+    params.set("userId", userId);
+  }
   return `/result?${params.toString()}`;
 };
 
@@ -212,6 +239,7 @@ export default function HomePage() {
   const [avoid, setAvoid] = useState<string[]>(DEFAULT_FORM.avoid);
   const [finishTime, setFinishTime] = useState(DEFAULT_FORM.finishTime);
   const [cookSpeed, setCookSpeed] = useState(DEFAULT_FORM.cookSpeed);
+  const [userId, setUserId] = useState(DEFAULT_FORM.userId);
   const [lastForm, setLastForm] = useState<StoredForm | null>(null);
   const [lastChoice, setLastChoice] = useState<LastChoice | null>(null);
   const [loading, setLoading] = useState(false);
@@ -224,7 +252,19 @@ export default function HomePage() {
       const savedChoice = normalizeChoice(
         parseJson(window.localStorage.getItem(LAST_CHOICE_KEY))
       );
-      setLastForm(savedForm);
+      const cookieUserId = getUserIdDisplay(
+        decodeURIComponent(readCookie(USER_ID_COOKIE))
+      );
+      const mergedForm =
+        savedForm && !savedForm.userId && cookieUserId
+          ? { ...savedForm, userId: cookieUserId }
+          : savedForm;
+      if (mergedForm?.userId) {
+        setUserId(mergedForm.userId);
+      } else if (cookieUserId) {
+        setUserId(cookieUserId);
+      }
+      setLastForm(mergedForm);
       setLastChoice(savedChoice);
     } catch {
       setLastForm(null);
@@ -245,6 +285,7 @@ export default function HomePage() {
     setAvoid(form.avoid);
     setFinishTime(form.finishTime);
     setCookSpeed(form.cookSpeed);
+    setUserId(form.userId);
   };
 
   const currentForm = (): StoredForm => ({
@@ -257,10 +298,12 @@ export default function HomePage() {
     avoid,
     finishTime,
     cookSpeed,
+    userId: getUserIdDisplay(userId),
   });
 
   const saveLastForm = (form: StoredForm) => {
     try {
+      saveUserIdCookie(form.userId);
       window.localStorage.setItem(LAST_FORM_KEY, JSON.stringify(form));
     } catch {
       // Storage can be unavailable; navigation should still work.
@@ -284,6 +327,20 @@ export default function HomePage() {
         <h1>今天吃什么</h1>
         <p>帮你想好买什么、做什么、怎么做</p>
       </header>
+
+      <section className="form-section">
+        <label className="form-label" htmlFor="user-id">
+          你的代号（可中文）
+        </label>
+        <input
+          id="user-id"
+          className="text-input"
+          value={userId}
+          onChange={(event) => setUserId(getUserIdDisplay(event.target.value))}
+          placeholder="例如 小王 / 龙岗妈妈"
+          maxLength={32}
+        />
+      </section>
 
       {(lastChoice || lastForm) && (
         <section className="memory-section">

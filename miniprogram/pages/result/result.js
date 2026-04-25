@@ -2,6 +2,25 @@ const { buildGenerateResponse } = require("../../utils/mealPlans");
 
 const LAST_CHOICE_KEY = "san-zhuo-cai:last-choice";
 const LAST_FORM_KEY = "san-zhuo-cai:last-form";
+const USER_ID_KEY = "jtcsm:user-id";
+const USER_ID_PREFIX = "jtcsm_";
+
+function getUserIdDisplay(value) {
+  if (typeof value !== "string") return "";
+  const trimmed = value.trim();
+  const withoutPrefix = trimmed.startsWith(USER_ID_PREFIX)
+    ? trimmed.slice(USER_ID_PREFIX.length)
+    : trimmed;
+  return withoutPrefix
+    .replace(/\s+/g, "")
+    .replace(/[^\u4e00-\u9fa5A-Za-z0-9_-]/g, "")
+    .slice(0, 32);
+}
+
+function buildPrefixedUserId(value) {
+  const display = getUserIdDisplay(value);
+  return display ? `${USER_ID_PREFIX}${display}` : "";
+}
 
 function splitList(value) {
   return value ? decodeURIComponent(value).split(",").filter(Boolean) : [];
@@ -18,7 +37,8 @@ function parseForm(options) {
     avoid: splitList(options.avoid),
     finishTime: options.finishTime ? decodeURIComponent(options.finishTime) : "12:00",
     cookSpeed: options.cookSpeed || "normal",
-    variant: Math.max(0, Number(options.variant) || 0)
+    variant: Math.max(0, Number(options.variant) || 0),
+    userId: options.userId ? getUserIdDisplay(decodeURIComponent(options.userId)) : ""
   };
 }
 
@@ -36,6 +56,7 @@ function buildRequest(form) {
     finish_time: form.finishTime,
     cook_speed: form.cookSpeed,
     variant: form.variant || 0,
+    user_id: buildPrefixedUserId(form.userId),
     shopping_channel: form.channel,
     kitchen_tools: ["炒锅", "电饭锅"]
   };
@@ -54,6 +75,10 @@ function buildResultUrl(form) {
     ["cookSpeed", form.cookSpeed],
     ["variant", form.variant || 0]
   ];
+  const userId = getUserIdDisplay(form.userId);
+  if (userId) {
+    params.push(["userId", userId]);
+  }
   return `/pages/result/result?${params
     .map(([key, value]) => `${key}=${encodeURIComponent(value)}`)
     .join("&")}`;
@@ -70,8 +95,12 @@ Page({
 
   onLoad(options) {
     const form = parseForm(options);
+    const prefixedUserId = buildPrefixedUserId(form.userId);
     const request = buildRequest(form);
     const response = buildGenerateResponse(request);
+    if (prefixedUserId) {
+      wx.setStorageSync(USER_ID_KEY, prefixedUserId);
+    }
     wx.setStorageSync(LAST_FORM_KEY, form);
     this.setData({
       form,

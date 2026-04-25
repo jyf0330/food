@@ -67,6 +67,7 @@ export interface GenerateRequest {
   finish_time?: string;
   cook_speed?: "normal" | "slow" | "beginner";
   variant?: number;
+  user_id?: string;
   shopping_channel: string;
   kitchen_tools: string[];
 }

@@ -13,6 +13,7 @@ export type PlanMemoryForm = {
   avoid: string[];
   finishTime: string;
   cookSpeed: string;
+  userId: string;
 };
 
 type PlanMemoryActionsProps = {
@@ -70,6 +71,9 @@ export default function PlanMemoryActions({
       cookSpeed: form.cookSpeed,
       variant: String(currentVariant + 1),
     });
+    if (form.userId) {
+      params.set("userId", form.userId);
+    }
     router.push(`/result?${params.toString()}`);
   };
 

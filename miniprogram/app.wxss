@@ -79,6 +79,18 @@ button {
   color: #fff;
 }
 
+.text-input {
+  min-height: 76rpx;
+  padding: 0 20rpx;
+  border: 2rpx solid #ffe4d3;
+  border-radius: 16rpx;
+  background: #fff;
+  color: #1a1a1a;
+  font-size: 28rpx;
+  line-height: 76rpx;
+  box-sizing: border-box;
+}
+
 .primary-btn,
 .secondary-btn {
   min-height: 88rpx;

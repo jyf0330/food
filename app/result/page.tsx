@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { buildGenerateResponse } from "@/lib/mealPlanGenerator";
 import type { GenerateRequest } from "@/lib/types";
+import { buildPrefixedUserId, getUserIdDisplay } from "@/lib/userIdentity";
 import PlanMemoryActions, { type PlanMemoryForm } from "./PlanMemoryActions";
 
 export const dynamic = "force-dynamic";
@@ -42,6 +43,7 @@ function parseForm(sp: SP): PlanMemoryForm {
     avoid: readList(sp, "avoid"),
     finishTime: readString(sp, "finishTime"),
     cookSpeed: readString(sp, "cookSpeed"),
+    userId: getUserIdDisplay(readString(sp, "userId")),
   };
 }
 
@@ -65,6 +67,7 @@ function parseRequest(sp: SP): GenerateRequest {
     meal_type: "晚餐",
     kitchen_tools: ["炒锅", "电饭锅"],
     variant: readNonNegativeNumber(sp, "variant", 0),
+    user_id: buildPrefixedUserId(s("userId")),
     ...(finishTime ? { finish_time: finishTime } : {}),
     ...(cookSpeed
       ? { cook_speed: cookSpeed as GenerateRequest["cook_speed"] }

@@ -1,5 +1,24 @@
 const LAST_FORM_KEY = "san-zhuo-cai:last-form";
 const LAST_CHOICE_KEY = "san-zhuo-cai:last-choice";
+const USER_ID_KEY = "jtcsm:user-id";
+const USER_ID_PREFIX = "jtcsm_";
+
+function getUserIdDisplay(value) {
+  if (typeof value !== "string") return "";
+  const trimmed = value.trim();
+  const withoutPrefix = trimmed.startsWith(USER_ID_PREFIX)
+    ? trimmed.slice(USER_ID_PREFIX.length)
+    : trimmed;
+  return withoutPrefix
+    .replace(/\s+/g, "")
+    .replace(/[^\u4e00-\u9fa5A-Za-z0-9_-]/g, "")
+    .slice(0, 32);
+}
+
+function buildPrefixedUserId(value) {
+  const display = getUserIdDisplay(value);
+  return display ? `${USER_ID_PREFIX}${display}` : "";
+}
 
 const DEFAULT_FORM = {
   people: 3,
@@ -10,7 +29,8 @@ const DEFAULT_FORM = {
   channel: "菜市场",
   avoid: [],
   finishTime: "12:00",
-  cookSpeed: "slow"
+  cookSpeed: "slow",
+  userId: ""
 };
 
 const choices = {
@@ -87,6 +107,10 @@ function buildResultUrl(form) {
     ["finishTime", form.finishTime],
     ["cookSpeed", form.cookSpeed]
   ];
+  const userId = getUserIdDisplay(form.userId);
+  if (userId) {
+    params.push(["userId", userId]);
+  }
   if (form.variant) {
     params.push(["variant", form.variant]);
   }
@@ -106,7 +130,10 @@ Page({
   },
 
   onLoad() {
-    this.syncMultiOptions(DEFAULT_FORM);
+    const savedUserId = getUserIdDisplay(wx.getStorageSync(USER_ID_KEY));
+    const form = { ...DEFAULT_FORM, userId: savedUserId };
+    this.setData({ form });
+    this.syncMultiOptions(form);
     this.loadMemory();
   },
 
@@ -135,6 +162,11 @@ Page({
       : current.concat(value);
     this.setData({ [`form.${field}`]: next });
     this.syncMultiOptions({ ...this.data.form, [field]: next });
+  },
+
+  updateUserId(event) {
+    const userId = getUserIdDisplay(event.detail.value);
+    this.setData({ "form.userId": userId });
   },
 
   applyLastForm() {
@@ -170,6 +202,10 @@ Page({
   },
 
   goResult(form) {
+    const prefixedUserId = buildPrefixedUserId(form.userId);
+    if (prefixedUserId) {
+      wx.setStorageSync(USER_ID_KEY, prefixedUserId);
+    }
     wx.setStorageSync(LAST_FORM_KEY, form);
     wx.navigateTo({ url: buildResultUrl(form) });
   },
