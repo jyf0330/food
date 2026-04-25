@@ -87,6 +87,9 @@ function buildResultUrl(form) {
     ["finishTime", form.finishTime],
     ["cookSpeed", form.cookSpeed]
   ];
+  if (form.variant) {
+    params.push(["variant", form.variant]);
+  }
   return `/pages/result/result?${params
     .map(([key, value]) => `${key}=${encodeURIComponent(value)}`)
     .join("&")}`;

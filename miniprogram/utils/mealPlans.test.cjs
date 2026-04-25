@@ -67,4 +67,13 @@ describe("mini program meal plan generator", () => {
       }
     }
   });
+
+  it("can swap to another table with the same conditions", () => {
+    const first = buildGenerateResponse({ ...baseRequest, variant: 0 });
+    const swapped = buildGenerateResponse({ ...baseRequest, variant: 1 });
+    const firstNames = first.plans.flatMap((plan) => plan.dishes.map((dish) => dish.name));
+    const swappedNames = swapped.plans.flatMap((plan) => plan.dishes.map((dish) => dish.name));
+
+    assert.notDeepEqual(swappedNames, firstNames);
+  });
 });

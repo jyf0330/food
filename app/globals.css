@@ -238,7 +238,7 @@ button {
 
 .plan-actions {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 10px;
   margin: 12px 0 18px;
 }
@@ -249,6 +249,7 @@ button {
   border: 1px solid var(--border);
   font-size: 15px;
   font-weight: 600;
+  line-height: 1.25;
   transition: background 0.15s ease, border-color 0.15s ease, color 0.15s ease;
 }
 

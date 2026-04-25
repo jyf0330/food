@@ -50,6 +50,7 @@
 }
 
 .plan-actions {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   margin: 16rpx 0 22rpx;
 }
 

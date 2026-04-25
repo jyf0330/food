@@ -424,12 +424,16 @@ function scoreDish(dish, request, type) {
 }
 
 function pickCuratedDish(pool, request, type, categories, used) {
+  const variant = Math.max(0, Math.floor(request.variant || 0));
   const candidates = pool
     .filter((dish) => categories.includes(dish.category))
     .filter((dish) => !used.has(dish.dish_name))
     .filter((dish) => !blockedByRequest(dish, request))
     .sort((a, b) => scoreDish(b, request, type) - scoreDish(a, request, type));
-  const selected = candidates[0] || pool.find((dish) => !used.has(dish.dish_name)) || pool[0];
+  const selected =
+    candidates[(variant + used.size) % Math.max(1, candidates.length)] ||
+    pool.find((dish) => !used.has(dish.dish_name)) ||
+    pool[0];
   used.add(selected.dish_name);
   return selected;
 }

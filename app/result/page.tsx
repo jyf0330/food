@@ -19,6 +19,11 @@ const readNumber = (sp: SP, key: string, fallback: number) => {
   return Number.isFinite(value) && value > 0 ? value : fallback;
 };
 
+const readNonNegativeNumber = (sp: SP, key: string, fallback: number) => {
+  const value = Number(readString(sp, key));
+  return Number.isFinite(value) && value >= 0 ? value : fallback;
+};
+
 const readList = (sp: SP, key: string) =>
   readString(sp, key)
     ? readString(sp, key)
@@ -59,6 +64,7 @@ function parseRequest(sp: SP): GenerateRequest {
     shopping_channel: s("channel") || "菜市场",
     meal_type: "晚餐",
     kitchen_tools: ["炒锅", "电饭锅"],
+    variant: readNonNegativeNumber(sp, "variant", 0),
     ...(finishTime ? { finish_time: finishTime } : {}),
     ...(cookSpeed
       ? { cook_speed: cookSpeed as GenerateRequest["cook_speed"] }
@@ -69,6 +75,7 @@ function parseRequest(sp: SP): GenerateRequest {
 export default function ResultPage({ searchParams }: { searchParams: SP }) {
   const req = parseRequest(searchParams);
   const form = parseForm(searchParams);
+  const currentVariant = readNonNegativeNumber(searchParams, "variant", 0);
   const response = buildGenerateResponse(req);
   const plans = response.plans as MealPlanWithOptionalSchedule[];
 
@@ -115,6 +122,7 @@ export default function ResultPage({ searchParams }: { searchParams: SP }) {
             planTitle={plan.title}
             planType={plan.type}
             form={form}
+            currentVariant={currentVariant}
           />
 
           <div className="section-title">🍲 菜单</div>

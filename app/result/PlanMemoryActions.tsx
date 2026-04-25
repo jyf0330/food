@@ -20,6 +20,7 @@ type PlanMemoryActionsProps = {
   planTitle: string;
   planType: string;
   form: PlanMemoryForm;
+  currentVariant: number;
 };
 
 const STORAGE_KEY = "san-zhuo-cai:last-choice";
@@ -29,6 +30,7 @@ export default function PlanMemoryActions({
   planTitle,
   planType,
   form,
+  currentVariant,
 }: PlanMemoryActionsProps) {
   const router = useRouter();
   const [saved, setSaved] = useState(false);
@@ -55,6 +57,22 @@ export default function PlanMemoryActions({
     resetTimer.current = setTimeout(() => setSaved(false), 1400);
   };
 
+  const swapTable = () => {
+    const params = new URLSearchParams({
+      people: String(form.people),
+      family: form.family,
+      budget: String(form.budget),
+      time: String(form.time),
+      taste: form.taste.join(","),
+      channel: form.channel,
+      avoid: form.avoid.join(","),
+      finishTime: form.finishTime,
+      cookSpeed: form.cookSpeed,
+      variant: String(currentVariant + 1),
+    });
+    router.push(`/result?${params.toString()}`);
+  };
+
   return (
     <div className="plan-actions">
       <button
@@ -63,6 +81,13 @@ export default function PlanMemoryActions({
         onClick={rememberPlan}
       >
         {saved ? "已记住" : "就用这桌"}
+      </button>
+      <button
+        type="button"
+        className="plan-action-btn plan-action-secondary"
+        onClick={swapTable}
+      >
+        换一桌
       </button>
       <button
         type="button"

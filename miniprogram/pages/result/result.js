@@ -17,7 +17,8 @@ function parseForm(options) {
     channel: options.channel ? decodeURIComponent(options.channel) : "菜市场",
     avoid: splitList(options.avoid),
     finishTime: options.finishTime ? decodeURIComponent(options.finishTime) : "12:00",
-    cookSpeed: options.cookSpeed || "normal"
+    cookSpeed: options.cookSpeed || "normal",
+    variant: Math.max(0, Number(options.variant) || 0)
   };
 }
 
@@ -34,6 +35,7 @@ function buildRequest(form) {
     time_limit: form.time,
     finish_time: form.finishTime,
     cook_speed: form.cookSpeed,
+    variant: form.variant || 0,
     shopping_channel: form.channel,
     kitchen_tools: ["炒锅", "电饭锅"]
   };
@@ -49,7 +51,8 @@ function buildResultUrl(form) {
     ["channel", form.channel],
     ["avoid", form.avoid.join(",")],
     ["finishTime", form.finishTime],
-    ["cookSpeed", form.cookSpeed]
+    ["cookSpeed", form.cookSpeed],
+    ["variant", form.variant || 0]
   ];
   return `/pages/result/result?${params
     .map(([key, value]) => `${key}=${encodeURIComponent(value)}`)
@@ -99,5 +102,14 @@ Page({
       delta: 1,
       fail: () => wx.redirectTo({ url: "/pages/index/index" })
     });
+  },
+
+  swapTable() {
+    const nextForm = {
+      ...this.data.form,
+      variant: (this.data.form.variant || 0) + 1
+    };
+    wx.setStorageSync(LAST_FORM_KEY, nextForm);
+    wx.redirectTo({ url: buildResultUrl(nextForm) });
   }
 });

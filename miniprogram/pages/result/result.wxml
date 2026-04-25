@@ -22,6 +22,7 @@
 
     <view class="actions plan-actions">
       <button class="primary-btn" data-index="{{planIndex}}" bindtap="rememberPlan">就用这桌</button>
+      <button class="secondary-btn" bindtap="swapTable">换一桌</button>
       <button class="secondary-btn" bindtap="editConditions">改条件</button>
     </view>
 

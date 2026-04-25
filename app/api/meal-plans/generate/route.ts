@@ -13,6 +13,9 @@ function normalizeRequest(input: Partial<GenerateRequest>): GenerateRequest {
     taste: Array.isArray(input.taste) ? input.taste : [],
     avoid: Array.isArray(input.avoid) ? input.avoid : [],
     time_limit: Number(input.time_limit) || 40,
+    finish_time: input.finish_time,
+    cook_speed: input.cook_speed,
+    variant: Math.max(0, Number(input.variant) || 0),
     shopping_channel: input.shopping_channel || "菜市场",
     kitchen_tools: Array.isArray(input.kitchen_tools)
       ? input.kitchen_tools

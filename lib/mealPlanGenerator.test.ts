@@ -44,6 +44,15 @@ describe("buildGenerateResponse", () => {
     assert.equal(response.plans[2].type, "改善伙食型");
   });
 
+  it("can swap to another table with the same conditions", () => {
+    const first = buildGenerateResponse({ ...baseRequest, variant: 0 });
+    const swapped = buildGenerateResponse({ ...baseRequest, variant: 1 });
+    const firstNames = first.plans.flatMap((plan) => plan.dishes.map((dish) => dish.name));
+    const swappedNames = swapped.plans.flatMap((plan) => plan.dishes.map((dish) => dish.name));
+
+    assert.notDeepEqual(swappedNames, firstNames);
+  });
+
   it("includes detailed cooking steps for every dish", () => {
     const response = buildGenerateResponse(baseRequest);
 
