@@ -1,0 +1,117 @@
+page {
+  min-height: 100%;
+  background: #fff8f2;
+  color: #1a1a1a;
+  font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+}
+
+button {
+  font: inherit;
+}
+
+.page {
+  padding: 28rpx 24rpx 80rpx;
+}
+
+.header {
+  padding: 24rpx 0 26rpx;
+  text-align: center;
+}
+
+.brand {
+  color: #ff6b35;
+  font-size: 56rpx;
+  font-weight: 800;
+  letter-spacing: 4rpx;
+}
+
+.subtitle {
+  margin-top: 8rpx;
+  color: #6b6b6b;
+  font-size: 26rpx;
+}
+
+.section,
+.plan-card,
+.memory-card {
+  margin-bottom: 24rpx;
+  padding: 28rpx;
+  border: 2rpx solid #ffe4d3;
+  border-radius: 24rpx;
+  background: #ffffff;
+  box-shadow: 0 4rpx 16rpx rgba(255, 107, 53, 0.04);
+}
+
+.section-title {
+  display: block;
+  margin-bottom: 18rpx;
+  font-size: 29rpx;
+  font-weight: 700;
+}
+
+.chip-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14rpx;
+}
+
+.chip {
+  min-height: 76rpx;
+  margin: 0;
+  padding: 0 24rpx;
+  border: 2rpx solid #ffe4d3;
+  border-radius: 999rpx;
+  background: #fff;
+  color: #1a1a1a;
+  font-size: 27rpx;
+  line-height: 76rpx;
+}
+
+.chip::after,
+.primary-btn::after,
+.secondary-btn::after {
+  border: none;
+}
+
+.chip-active {
+  border-color: #ff6b35;
+  background: #ff6b35;
+  color: #fff;
+}
+
+.primary-btn,
+.secondary-btn {
+  min-height: 88rpx;
+  margin: 0;
+  border-radius: 24rpx;
+  font-size: 31rpx;
+  font-weight: 700;
+  line-height: 88rpx;
+}
+
+.primary-btn {
+  background: #ff6b35;
+  color: #fff;
+}
+
+.secondary-btn {
+  border: 2rpx solid #ffe4d3;
+  background: #fff;
+  color: #ff6b35;
+}
+
+.actions {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16rpx;
+}
+
+.muted {
+  color: #6b6b6b;
+  font-size: 25rpx;
+  line-height: 1.55;
+}
+
+.safe-bottom {
+  padding-bottom: env(safe-area-inset-bottom);
+}

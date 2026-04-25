@@ -1,0 +1,957 @@
+[
+  {
+    "name": "番茄",
+    "category": "蔬菜",
+    "energy_kcal_per_100g": 32,
+    "protein_g_per_100g": 1.8,
+    "fat_g_per_100g": 0.4,
+    "carb_g_per_100g": 4,
+    "fiber_g_per_100g": 2.2,
+    "tags": [
+      "高纤维"
+    ],
+    "source_note": "结构化占位：后续可映射中国食物成分数据中心条目"
+  },
+  {
+    "name": "鸡蛋",
+    "category": "肉蛋",
+    "energy_kcal_per_100g": 140,
+    "protein_g_per_100g": 16,
+    "fat_g_per_100g": 6,
+    "carb_g_per_100g": 2,
+    "fiber_g_per_100g": 0.5,
+    "tags": [
+      "高蛋白"
+    ],
+    "source_note": "结构化占位：后续可映射中国食物成分数据中心条目"
+  },
+  {
+    "name": "鸡腿",
+    "category": "肉蛋",
+    "energy_kcal_per_100g": 140,
+    "protein_g_per_100g": 16,
+    "fat_g_per_100g": 6,
+    "carb_g_per_100g": 2,
+    "fiber_g_per_100g": 0.5,
+    "tags": [
+      "高蛋白"
+    ],
+    "source_note": "结构化占位：后续可映射中国食物成分数据中心条目"
+  },
+  {
+    "name": "鸡胸肉",
+    "category": "肉蛋",
+    "energy_kcal_per_100g": 140,
+    "protein_g_per_100g": 16,
+    "fat_g_per_100g": 6,
+    "carb_g_per_100g": 2,
+    "fiber_g_per_100g": 0.5,
+    "tags": [
+      "高蛋白"
+    ],
+    "source_note": "结构化占位：后续可映射中国食物成分数据中心条目"
+  },
+  {
+    "name": "猪肉末",
+    "category": "肉蛋",
+    "energy_kcal_per_100g": 140,
+    "protein_g_per_100g": 16,
+    "fat_g_per_100g": 6,
+    "carb_g_per_100g": 2,
+    "fiber_g_per_100g": 0.5,
+    "tags": [
+      "高蛋白"
+    ],
+    "source_note": "结构化占位：后续可映射中国食物成分数据中心条目"
+  },
+  {
+    "name": "瘦肉",
+    "category": "肉蛋",
+    "energy_kcal_per_100g": 140,
+    "protein_g_per_100g": 16,
+    "fat_g_per_100g": 6,
+    "carb_g_per_100g": 2,
+    "fiber_g_per_100g": 0.5,
+    "tags": [
+      "高蛋白"
+    ],
+    "source_note": "结构化占位：后续可映射中国食物成分数据中心条目"
+  },
+  {
+    "name": "排骨",
+    "category": "肉蛋",
+    "energy_kcal_per_100g": 140,
+    "protein_g_per_100g": 16,
+    "fat_g_per_100g": 6,
+    "carb_g_per_100g": 2,
+    "fiber_g_per_100g": 0.5,
+    "tags": [
+      "高蛋白"
+    ],
+    "source_note": "结构化占位：后续可映射中国食物成分数据中心条目"
+  },
+  {
+    "name": "牛肉",
+    "category": "肉蛋",
+    "energy_kcal_per_100g": 140,
+    "protein_g_per_100g": 16,
+    "fat_g_per_100g": 6,
+    "carb_g_per_100g": 2,
+    "fiber_g_per_100g": 0.5,
+    "tags": [
+      "高蛋白"
+    ],
+    "source_note": "结构化占位：后续可映射中国食物成分数据中心条目"
+  },
+  {
+    "name": "鲈鱼",
+    "category": "水产",
+    "energy_kcal_per_100g": 140,
+    "protein_g_per_100g": 16,
+    "fat_g_per_100g": 6,
+    "carb_g_per_100g": 2,
+    "fiber_g_per_100g": 0.5,
+    "tags": [
+      "高蛋白"
+    ],
+    "source_note": "结构化占位：后续可映射中国食物成分数据中心条目"
+  },
+  {
+    "name": "草鱼",
+    "category": "水产",
+    "energy_kcal_per_100g": 140,
+    "protein_g_per_100g": 16,
+    "fat_g_per_100g": 6,
+    "carb_g_per_100g": 2,
+    "fiber_g_per_100g": 0.5,
+    "tags": [
+      "高蛋白"
+    ],
+    "source_note": "结构化占位：后续可映射中国食物成分数据中心条目"
+  },
+  {
+    "name": "虾仁",
+    "category": "水产",
+    "energy_kcal_per_100g": 140,
+    "protein_g_per_100g": 16,
+    "fat_g_per_100g": 6,
+    "carb_g_per_100g": 2,
+    "fiber_g_per_100g": 0.5,
+    "tags": [
+      "高蛋白"
+    ],
+    "source_note": "结构化占位：后续可映射中国食物成分数据中心条目"
+  },
+  {
+    "name": "基围虾",
+    "category": "水产",
+    "energy_kcal_per_100g": 140,
+    "protein_g_per_100g": 16,
+    "fat_g_per_100g": 6,
+    "carb_g_per_100g": 2,
+    "fiber_g_per_100g": 0.5,
+    "tags": [
+      "高蛋白"
+    ],
+    "source_note": "结构化占位：后续可映射中国食物成分数据中心条目"
+  },
+  {
+    "name": "豆腐",
+    "category": "豆制品",
+    "energy_kcal_per_100g": 140,
+    "protein_g_per_100g": 16,
+    "fat_g_per_100g": 6,
+    "carb_g_per_100g": 2,
+    "fiber_g_per_100g": 0.5,
+    "tags": [
+      "高蛋白"
+    ],
+    "source_note": "结构化占位：后续可映射中国食物成分数据中心条目"
+  },
+  {
+    "name": "豆干",
+    "category": "豆制品",
+    "energy_kcal_per_100g": 140,
+    "protein_g_per_100g": 16,
+    "fat_g_per_100g": 6,
+    "carb_g_per_100g": 2,
+    "fiber_g_per_100g": 0.5,
+    "tags": [
+      "高蛋白"
+    ],
+    "source_note": "结构化占位：后续可映射中国食物成分数据中心条目"
+  },
+  {
+    "name": "腐竹",
+    "category": "豆制品",
+    "energy_kcal_per_100g": 140,
+    "protein_g_per_100g": 16,
+    "fat_g_per_100g": 6,
+    "carb_g_per_100g": 2,
+    "fiber_g_per_100g": 0.5,
+    "tags": [
+      "高蛋白"
+    ],
+    "source_note": "结构化占位：后续可映射中国食物成分数据中心条目"
+  },
+  {
+    "name": "土豆",
+    "category": "蔬菜",
+    "energy_kcal_per_100g": 32,
+    "protein_g_per_100g": 1.8,
+    "fat_g_per_100g": 0.4,
+    "carb_g_per_100g": 4,
+    "fiber_g_per_100g": 2.2,
+    "tags": [
+      "高纤维"
+    ],
+    "source_note": "结构化占位：后续可映射中国食物成分数据中心条目"
+  },
+  {
+    "name": "胡萝卜",
+    "category": "蔬菜",
+    "energy_kcal_per_100g": 32,
+    "protein_g_per_100g": 1.8,
+    "fat_g_per_100g": 0.4,
+    "carb_g_per_100g": 4,
+    "fiber_g_per_100g": 2.2,
+    "tags": [
+      "高纤维"
+    ],
+    "source_note": "结构化占位：后续可映射中国食物成分数据中心条目"
+  },
+  {
+    "name": "白萝卜",
+    "category": "蔬菜",
+    "energy_kcal_per_100g": 32,
+    "protein_g_per_100g": 1.8,
+    "fat_g_per_100g": 0.4,
+    "carb_g_per_100g": 4,
+    "fiber_g_per_100g": 2.2,
+    "tags": [
+      "高纤维"
+    ],
+    "source_note": "结构化占位：后续可映射中国食物成分数据中心条目"
+  },
+  {
+    "name": "冬瓜",
+    "category": "蔬菜",
+    "energy_kcal_per_100g": 32,
+    "protein_g_per_100g": 1.8,
+    "fat_g_per_100g": 0.4,
+    "carb_g_per_100g": 4,
+    "fiber_g_per_100g": 2.2,
+    "tags": [
+      "高纤维",
+      "清淡汤水"
+    ],
+    "source_note": "结构化占位：后续可映射中国食物成分数据中心条目"
+  },
+  {
+    "name": "丝瓜",
+    "category": "蔬菜",
+    "energy_kcal_per_100g": 32,
+    "protein_g_per_100g": 1.8,
+    "fat_g_per_100g": 0.4,
+    "carb_g_per_100g": 4,
+    "fiber_g_per_100g": 2.2,
+    "tags": [
+      "高纤维",
+      "清淡汤水"
+    ],
+    "source_note": "结构化占位：后续可映射中国食物成分数据中心条目"
+  },
+  {
+    "name": "苦瓜",
+    "category": "蔬菜",
+    "energy_kcal_per_100g": 32,
+    "protein_g_per_100g": 1.8,
+    "fat_g_per_100g": 0.4,
+    "carb_g_per_100g": 4,
+    "fiber_g_per_100g": 2.2,
+    "tags": [
+      "高纤维"
+    ],
+    "source_note": "结构化占位：后续可映射中国食物成分数据中心条目"
+  },
+  {
+    "name": "南瓜",
+    "category": "蔬菜",
+    "energy_kcal_per_100g": 32,
+    "protein_g_per_100g": 1.8,
+    "fat_g_per_100g": 0.4,
+    "carb_g_per_100g": 4,
+    "fiber_g_per_100g": 2.2,
+    "tags": [
+      "高纤维"
+    ],
+    "source_note": "结构化占位：后续可映射中国食物成分数据中心条目"
+  },
+  {
+    "name": "茄子",
+    "category": "蔬菜",
+    "energy_kcal_per_100g": 32,
+    "protein_g_per_100g": 1.8,
+    "fat_g_per_100g": 0.4,
+    "carb_g_per_100g": 4,
+    "fiber_g_per_100g": 2.2,
+    "tags": [
+      "高纤维"
+    ],
+    "source_note": "结构化占位：后续可映射中国食物成分数据中心条目"
+  },
+  {
+    "name": "青瓜",
+    "category": "蔬菜",
+    "energy_kcal_per_100g": 32,
+    "protein_g_per_100g": 1.8,
+    "fat_g_per_100g": 0.4,
+    "carb_g_per_100g": 4,
+    "fiber_g_per_100g": 2.2,
+    "tags": [
+      "高纤维"
+    ],
+    "source_note": "结构化占位：后续可映射中国食物成分数据中心条目"
+  },
+  {
+    "name": "西兰花",
+    "category": "蔬菜",
+    "energy_kcal_per_100g": 32,
+    "protein_g_per_100g": 1.8,
+    "fat_g_per_100g": 0.4,
+    "carb_g_per_100g": 4,
+    "fiber_g_per_100g": 2.2,
+    "tags": [
+      "高纤维"
+    ],
+    "source_note": "结构化占位：后续可映射中国食物成分数据中心条目"
+  },
+  {
+    "name": "菜心",
+    "category": "蔬菜",
+    "energy_kcal_per_100g": 32,
+    "protein_g_per_100g": 1.8,
+    "fat_g_per_100g": 0.4,
+    "carb_g_per_100g": 4,
+    "fiber_g_per_100g": 2.2,
+    "tags": [
+      "高纤维"
+    ],
+    "source_note": "结构化占位：后续可映射中国食物成分数据中心条目"
+  },
+  {
+    "name": "生菜",
+    "category": "蔬菜",
+    "energy_kcal_per_100g": 32,
+    "protein_g_per_100g": 1.8,
+    "fat_g_per_100g": 0.4,
+    "carb_g_per_100g": 4,
+    "fiber_g_per_100g": 2.2,
+    "tags": [
+      "高纤维"
+    ],
+    "source_note": "结构化占位：后续可映射中国食物成分数据中心条目"
+  },
+  {
+    "name": "上海青",
+    "category": "蔬菜",
+    "energy_kcal_per_100g": 32,
+    "protein_g_per_100g": 1.8,
+    "fat_g_per_100g": 0.4,
+    "carb_g_per_100g": 4,
+    "fiber_g_per_100g": 2.2,
+    "tags": [
+      "高纤维"
+    ],
+    "source_note": "结构化占位：后续可映射中国食物成分数据中心条目"
+  },
+  {
+    "name": "油麦菜",
+    "category": "蔬菜",
+    "energy_kcal_per_100g": 32,
+    "protein_g_per_100g": 1.8,
+    "fat_g_per_100g": 0.4,
+    "carb_g_per_100g": 4,
+    "fiber_g_per_100g": 2.2,
+    "tags": [
+      "高纤维"
+    ],
+    "source_note": "结构化占位：后续可映射中国食物成分数据中心条目"
+  },
+  {
+    "name": "芥兰",
+    "category": "蔬菜",
+    "energy_kcal_per_100g": 32,
+    "protein_g_per_100g": 1.8,
+    "fat_g_per_100g": 0.4,
+    "carb_g_per_100g": 4,
+    "fiber_g_per_100g": 2.2,
+    "tags": [
+      "高纤维"
+    ],
+    "source_note": "结构化占位：后续可映射中国食物成分数据中心条目"
+  },
+  {
+    "name": "菠菜",
+    "category": "蔬菜",
+    "energy_kcal_per_100g": 32,
+    "protein_g_per_100g": 1.8,
+    "fat_g_per_100g": 0.4,
+    "carb_g_per_100g": 4,
+    "fiber_g_per_100g": 2.2,
+    "tags": [
+      "高纤维"
+    ],
+    "source_note": "结构化占位：后续可映射中国食物成分数据中心条目"
+  },
+  {
+    "name": "空心菜",
+    "category": "蔬菜",
+    "energy_kcal_per_100g": 32,
+    "protein_g_per_100g": 1.8,
+    "fat_g_per_100g": 0.4,
+    "carb_g_per_100g": 4,
+    "fiber_g_per_100g": 2.2,
+    "tags": [
+      "高纤维"
+    ],
+    "source_note": "结构化占位：后续可映射中国食物成分数据中心条目"
+  },
+  {
+    "name": "娃娃菜",
+    "category": "蔬菜",
+    "energy_kcal_per_100g": 32,
+    "protein_g_per_100g": 1.8,
+    "fat_g_per_100g": 0.4,
+    "carb_g_per_100g": 4,
+    "fiber_g_per_100g": 2.2,
+    "tags": [
+      "高纤维"
+    ],
+    "source_note": "结构化占位：后续可映射中国食物成分数据中心条目"
+  },
+  {
+    "name": "包菜",
+    "category": "蔬菜",
+    "energy_kcal_per_100g": 32,
+    "protein_g_per_100g": 1.8,
+    "fat_g_per_100g": 0.4,
+    "carb_g_per_100g": 4,
+    "fiber_g_per_100g": 2.2,
+    "tags": [
+      "高纤维"
+    ],
+    "source_note": "结构化占位：后续可映射中国食物成分数据中心条目"
+  },
+  {
+    "name": "莴笋",
+    "category": "蔬菜",
+    "energy_kcal_per_100g": 32,
+    "protein_g_per_100g": 1.8,
+    "fat_g_per_100g": 0.4,
+    "carb_g_per_100g": 4,
+    "fiber_g_per_100g": 2.2,
+    "tags": [
+      "高纤维"
+    ],
+    "source_note": "结构化占位：后续可映射中国食物成分数据中心条目"
+  },
+  {
+    "name": "莲藕",
+    "category": "蔬菜",
+    "energy_kcal_per_100g": 32,
+    "protein_g_per_100g": 1.8,
+    "fat_g_per_100g": 0.4,
+    "carb_g_per_100g": 4,
+    "fiber_g_per_100g": 2.2,
+    "tags": [
+      "高纤维"
+    ],
+    "source_note": "结构化占位：后续可映射中国食物成分数据中心条目"
+  },
+  {
+    "name": "山药",
+    "category": "蔬菜",
+    "energy_kcal_per_100g": 32,
+    "protein_g_per_100g": 1.8,
+    "fat_g_per_100g": 0.4,
+    "carb_g_per_100g": 4,
+    "fiber_g_per_100g": 2.2,
+    "tags": [
+      "高纤维"
+    ],
+    "source_note": "结构化占位：后续可映射中国食物成分数据中心条目"
+  },
+  {
+    "name": "玉米",
+    "category": "蔬菜",
+    "energy_kcal_per_100g": 32,
+    "protein_g_per_100g": 1.8,
+    "fat_g_per_100g": 0.4,
+    "carb_g_per_100g": 4,
+    "fiber_g_per_100g": 2.2,
+    "tags": [
+      "高纤维"
+    ],
+    "source_note": "结构化占位：后续可映射中国食物成分数据中心条目"
+  },
+  {
+    "name": "香菇",
+    "category": "菌菇",
+    "energy_kcal_per_100g": 32,
+    "protein_g_per_100g": 1.8,
+    "fat_g_per_100g": 0.4,
+    "carb_g_per_100g": 2,
+    "fiber_g_per_100g": 0.5,
+    "tags": [],
+    "source_note": "结构化占位：后续可映射中国食物成分数据中心条目"
+  },
+  {
+    "name": "金针菇",
+    "category": "菌菇",
+    "energy_kcal_per_100g": 32,
+    "protein_g_per_100g": 1.8,
+    "fat_g_per_100g": 0.4,
+    "carb_g_per_100g": 2,
+    "fiber_g_per_100g": 0.5,
+    "tags": [],
+    "source_note": "结构化占位：后续可映射中国食物成分数据中心条目"
+  },
+  {
+    "name": "杏鲍菇",
+    "category": "菌菇",
+    "energy_kcal_per_100g": 32,
+    "protein_g_per_100g": 1.8,
+    "fat_g_per_100g": 0.4,
+    "carb_g_per_100g": 2,
+    "fiber_g_per_100g": 0.5,
+    "tags": [],
+    "source_note": "结构化占位：后续可映射中国食物成分数据中心条目"
+  },
+  {
+    "name": "木耳",
+    "category": "干货",
+    "energy_kcal_per_100g": 32,
+    "protein_g_per_100g": 1.8,
+    "fat_g_per_100g": 0.4,
+    "carb_g_per_100g": 2,
+    "fiber_g_per_100g": 0.5,
+    "tags": [],
+    "source_note": "结构化占位：后续可映射中国食物成分数据中心条目"
+  },
+  {
+    "name": "海带",
+    "category": "干货",
+    "energy_kcal_per_100g": 32,
+    "protein_g_per_100g": 1.8,
+    "fat_g_per_100g": 0.4,
+    "carb_g_per_100g": 2,
+    "fiber_g_per_100g": 0.5,
+    "tags": [],
+    "source_note": "结构化占位：后续可映射中国食物成分数据中心条目"
+  },
+  {
+    "name": "紫菜",
+    "category": "干货",
+    "energy_kcal_per_100g": 32,
+    "protein_g_per_100g": 1.8,
+    "fat_g_per_100g": 0.4,
+    "carb_g_per_100g": 2,
+    "fiber_g_per_100g": 0.5,
+    "tags": [],
+    "source_note": "结构化占位：后续可映射中国食物成分数据中心条目"
+  },
+  {
+    "name": "绿豆芽",
+    "category": "蔬菜",
+    "energy_kcal_per_100g": 32,
+    "protein_g_per_100g": 1.8,
+    "fat_g_per_100g": 0.4,
+    "carb_g_per_100g": 4,
+    "fiber_g_per_100g": 2.2,
+    "tags": [
+      "高纤维"
+    ],
+    "source_note": "结构化占位：后续可映射中国食物成分数据中心条目"
+  },
+  {
+    "name": "黄豆芽",
+    "category": "蔬菜",
+    "energy_kcal_per_100g": 32,
+    "protein_g_per_100g": 1.8,
+    "fat_g_per_100g": 0.4,
+    "carb_g_per_100g": 4,
+    "fiber_g_per_100g": 2.2,
+    "tags": [
+      "高纤维"
+    ],
+    "source_note": "结构化占位：后续可映射中国食物成分数据中心条目"
+  },
+  {
+    "name": "洋葱",
+    "category": "蔬菜",
+    "energy_kcal_per_100g": 32,
+    "protein_g_per_100g": 1.8,
+    "fat_g_per_100g": 0.4,
+    "carb_g_per_100g": 4,
+    "fiber_g_per_100g": 2.2,
+    "tags": [
+      "高纤维"
+    ],
+    "source_note": "结构化占位：后续可映射中国食物成分数据中心条目"
+  },
+  {
+    "name": "青椒",
+    "category": "蔬菜",
+    "energy_kcal_per_100g": 32,
+    "protein_g_per_100g": 1.8,
+    "fat_g_per_100g": 0.4,
+    "carb_g_per_100g": 4,
+    "fiber_g_per_100g": 2.2,
+    "tags": [
+      "高纤维"
+    ],
+    "source_note": "结构化占位：后续可映射中国食物成分数据中心条目"
+  },
+  {
+    "name": "彩椒",
+    "category": "蔬菜",
+    "energy_kcal_per_100g": 32,
+    "protein_g_per_100g": 1.8,
+    "fat_g_per_100g": 0.4,
+    "carb_g_per_100g": 4,
+    "fiber_g_per_100g": 2.2,
+    "tags": [
+      "高纤维"
+    ],
+    "source_note": "结构化占位：后续可映射中国食物成分数据中心条目"
+  },
+  {
+    "name": "四季豆",
+    "category": "蔬菜",
+    "energy_kcal_per_100g": 32,
+    "protein_g_per_100g": 1.8,
+    "fat_g_per_100g": 0.4,
+    "carb_g_per_100g": 4,
+    "fiber_g_per_100g": 2.2,
+    "tags": [
+      "高纤维"
+    ],
+    "source_note": "结构化占位：后续可映射中国食物成分数据中心条目"
+  },
+  {
+    "name": "荷兰豆",
+    "category": "蔬菜",
+    "energy_kcal_per_100g": 32,
+    "protein_g_per_100g": 1.8,
+    "fat_g_per_100g": 0.4,
+    "carb_g_per_100g": 4,
+    "fiber_g_per_100g": 2.2,
+    "tags": [
+      "高纤维"
+    ],
+    "source_note": "结构化占位：后续可映射中国食物成分数据中心条目"
+  },
+  {
+    "name": "芹菜",
+    "category": "蔬菜",
+    "energy_kcal_per_100g": 32,
+    "protein_g_per_100g": 1.8,
+    "fat_g_per_100g": 0.4,
+    "carb_g_per_100g": 4,
+    "fiber_g_per_100g": 2.2,
+    "tags": [
+      "高纤维"
+    ],
+    "source_note": "结构化占位：后续可映射中国食物成分数据中心条目"
+  },
+  {
+    "name": "韭菜",
+    "category": "蔬菜",
+    "energy_kcal_per_100g": 32,
+    "protein_g_per_100g": 1.8,
+    "fat_g_per_100g": 0.4,
+    "carb_g_per_100g": 4,
+    "fiber_g_per_100g": 2.2,
+    "tags": [
+      "高纤维"
+    ],
+    "source_note": "结构化占位：后续可映射中国食物成分数据中心条目"
+  },
+  {
+    "name": "葱",
+    "category": "调料",
+    "energy_kcal_per_100g": 32,
+    "protein_g_per_100g": 1.8,
+    "fat_g_per_100g": 0.4,
+    "carb_g_per_100g": 2,
+    "fiber_g_per_100g": 0.5,
+    "tags": [],
+    "source_note": "结构化占位：后续可映射中国食物成分数据中心条目"
+  },
+  {
+    "name": "姜",
+    "category": "调料",
+    "energy_kcal_per_100g": 32,
+    "protein_g_per_100g": 1.8,
+    "fat_g_per_100g": 0.4,
+    "carb_g_per_100g": 2,
+    "fiber_g_per_100g": 0.5,
+    "tags": [],
+    "source_note": "结构化占位：后续可映射中国食物成分数据中心条目"
+  },
+  {
+    "name": "蒜",
+    "category": "调料",
+    "energy_kcal_per_100g": 32,
+    "protein_g_per_100g": 1.8,
+    "fat_g_per_100g": 0.4,
+    "carb_g_per_100g": 2,
+    "fiber_g_per_100g": 0.5,
+    "tags": [],
+    "source_note": "结构化占位：后续可映射中国食物成分数据中心条目"
+  },
+  {
+    "name": "米",
+    "category": "主食",
+    "energy_kcal_per_100g": 115,
+    "protein_g_per_100g": 3,
+    "fat_g_per_100g": 0.4,
+    "carb_g_per_100g": 25,
+    "fiber_g_per_100g": 0.5,
+    "tags": [
+      "主食能量"
+    ],
+    "source_note": "结构化占位：后续可映射中国食物成分数据中心条目"
+  },
+  {
+    "name": "面条",
+    "category": "主食",
+    "energy_kcal_per_100g": 115,
+    "protein_g_per_100g": 3,
+    "fat_g_per_100g": 0.4,
+    "carb_g_per_100g": 25,
+    "fiber_g_per_100g": 0.5,
+    "tags": [
+      "主食能量"
+    ],
+    "source_note": "结构化占位：后续可映射中国食物成分数据中心条目"
+  },
+  {
+    "name": "粉丝",
+    "category": "主食",
+    "energy_kcal_per_100g": 115,
+    "protein_g_per_100g": 3,
+    "fat_g_per_100g": 0.4,
+    "carb_g_per_100g": 25,
+    "fiber_g_per_100g": 0.5,
+    "tags": [
+      "主食能量"
+    ],
+    "source_note": "结构化占位：后续可映射中国食物成分数据中心条目"
+  },
+  {
+    "name": "河粉",
+    "category": "主食",
+    "energy_kcal_per_100g": 115,
+    "protein_g_per_100g": 3,
+    "fat_g_per_100g": 0.4,
+    "carb_g_per_100g": 25,
+    "fiber_g_per_100g": 0.5,
+    "tags": [
+      "主食能量"
+    ],
+    "source_note": "结构化占位：后续可映射中国食物成分数据中心条目"
+  },
+  {
+    "name": "小米",
+    "category": "主食",
+    "energy_kcal_per_100g": 115,
+    "protein_g_per_100g": 3,
+    "fat_g_per_100g": 0.4,
+    "carb_g_per_100g": 25,
+    "fiber_g_per_100g": 0.5,
+    "tags": [
+      "主食能量"
+    ],
+    "source_note": "结构化占位：后续可映射中国食物成分数据中心条目"
+  },
+  {
+    "name": "红薯",
+    "category": "主食",
+    "energy_kcal_per_100g": 115,
+    "protein_g_per_100g": 3,
+    "fat_g_per_100g": 0.4,
+    "carb_g_per_100g": 25,
+    "fiber_g_per_100g": 0.5,
+    "tags": [
+      "主食能量"
+    ],
+    "source_note": "结构化占位：后续可映射中国食物成分数据中心条目"
+  },
+  {
+    "name": "芋头",
+    "category": "主食",
+    "energy_kcal_per_100g": 115,
+    "protein_g_per_100g": 3,
+    "fat_g_per_100g": 0.4,
+    "carb_g_per_100g": 25,
+    "fiber_g_per_100g": 0.5,
+    "tags": [
+      "主食能量"
+    ],
+    "source_note": "结构化占位：后续可映射中国食物成分数据中心条目"
+  },
+  {
+    "name": "花生",
+    "category": "干货",
+    "energy_kcal_per_100g": 32,
+    "protein_g_per_100g": 1.8,
+    "fat_g_per_100g": 0.4,
+    "carb_g_per_100g": 2,
+    "fiber_g_per_100g": 0.5,
+    "tags": [],
+    "source_note": "结构化占位：后续可映射中国食物成分数据中心条目"
+  },
+  {
+    "name": "红枣",
+    "category": "干货",
+    "energy_kcal_per_100g": 32,
+    "protein_g_per_100g": 1.8,
+    "fat_g_per_100g": 0.4,
+    "carb_g_per_100g": 2,
+    "fiber_g_per_100g": 0.5,
+    "tags": [],
+    "source_note": "结构化占位：后续可映射中国食物成分数据中心条目"
+  },
+  {
+    "name": "枸杞",
+    "category": "干货",
+    "energy_kcal_per_100g": 32,
+    "protein_g_per_100g": 1.8,
+    "fat_g_per_100g": 0.4,
+    "carb_g_per_100g": 2,
+    "fiber_g_per_100g": 0.5,
+    "tags": [],
+    "source_note": "结构化占位：后续可映射中国食物成分数据中心条目"
+  },
+  {
+    "name": "马蹄",
+    "category": "蔬菜",
+    "energy_kcal_per_100g": 32,
+    "protein_g_per_100g": 1.8,
+    "fat_g_per_100g": 0.4,
+    "carb_g_per_100g": 4,
+    "fiber_g_per_100g": 2.2,
+    "tags": [
+      "高纤维"
+    ],
+    "source_note": "结构化占位：后续可映射中国食物成分数据中心条目"
+  },
+  {
+    "name": "节瓜",
+    "category": "蔬菜",
+    "energy_kcal_per_100g": 32,
+    "protein_g_per_100g": 1.8,
+    "fat_g_per_100g": 0.4,
+    "carb_g_per_100g": 4,
+    "fiber_g_per_100g": 2.2,
+    "tags": [
+      "高纤维",
+      "清淡汤水"
+    ],
+    "source_note": "结构化占位：后续可映射中国食物成分数据中心条目"
+  },
+  {
+    "name": "西洋菜",
+    "category": "蔬菜",
+    "energy_kcal_per_100g": 32,
+    "protein_g_per_100g": 1.8,
+    "fat_g_per_100g": 0.4,
+    "carb_g_per_100g": 4,
+    "fiber_g_per_100g": 2.2,
+    "tags": [
+      "高纤维",
+      "清淡汤水"
+    ],
+    "source_note": "结构化占位：后续可映射中国食物成分数据中心条目"
+  },
+  {
+    "name": "苋菜",
+    "category": "蔬菜",
+    "energy_kcal_per_100g": 32,
+    "protein_g_per_100g": 1.8,
+    "fat_g_per_100g": 0.4,
+    "carb_g_per_100g": 4,
+    "fiber_g_per_100g": 2.2,
+    "tags": [
+      "高纤维"
+    ],
+    "source_note": "结构化占位：后续可映射中国食物成分数据中心条目"
+  },
+  {
+    "name": "芦笋",
+    "category": "蔬菜",
+    "energy_kcal_per_100g": 32,
+    "protein_g_per_100g": 1.8,
+    "fat_g_per_100g": 0.4,
+    "carb_g_per_100g": 4,
+    "fiber_g_per_100g": 2.2,
+    "tags": [
+      "高纤维"
+    ],
+    "source_note": "结构化占位：后续可映射中国食物成分数据中心条目"
+  },
+  {
+    "name": "豆苗",
+    "category": "蔬菜",
+    "energy_kcal_per_100g": 32,
+    "protein_g_per_100g": 1.8,
+    "fat_g_per_100g": 0.4,
+    "carb_g_per_100g": 4,
+    "fiber_g_per_100g": 2.2,
+    "tags": [
+      "高纤维"
+    ],
+    "source_note": "结构化占位：后续可映射中国食物成分数据中心条目"
+  },
+  {
+    "name": "鸡翅",
+    "category": "肉蛋",
+    "energy_kcal_per_100g": 140,
+    "protein_g_per_100g": 16,
+    "fat_g_per_100g": 6,
+    "carb_g_per_100g": 2,
+    "fiber_g_per_100g": 0.5,
+    "tags": [
+      "高蛋白"
+    ],
+    "source_note": "结构化占位：后续可映射中国食物成分数据中心条目"
+  },
+  {
+    "name": "鸭肉",
+    "category": "肉蛋",
+    "energy_kcal_per_100g": 140,
+    "protein_g_per_100g": 16,
+    "fat_g_per_100g": 6,
+    "carb_g_per_100g": 2,
+    "fiber_g_per_100g": 0.5,
+    "tags": [
+      "高蛋白"
+    ],
+    "source_note": "结构化占位：后续可映射中国食物成分数据中心条目"
+  },
+  {
+    "name": "肉片",
+    "category": "肉蛋",
+    "energy_kcal_per_100g": 140,
+    "protein_g_per_100g": 16,
+    "fat_g_per_100g": 6,
+    "carb_g_per_100g": 2,
+    "fiber_g_per_100g": 0.5,
+    "tags": [
+      "高蛋白"
+    ],
+    "source_note": "结构化占位：后续可映射中国食物成分数据中心条目"
+  }
+]

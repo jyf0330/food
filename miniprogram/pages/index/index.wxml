@@ -1,0 +1,89 @@
+<view class="page safe-bottom">
+  <view class="header">
+    <view class="brand">今天吃什么</view>
+    <view class="subtitle">帮你想好买什么、做什么、怎么做</view>
+  </view>
+
+  <view wx:if="{{lastChoice || lastForm}}" class="memory-wrap">
+    <view wx:if="{{lastChoice}}" class="memory-card">
+      <view class="memory-title">上次选了：{{lastChoice.planTitle || lastChoice.planType}}</view>
+      <view class="actions">
+        <button class="primary-btn" bindtap="useLastChoice">直接用这桌</button>
+        <button class="secondary-btn" bindtap="editLastChoice">修改条件</button>
+      </view>
+    </view>
+    <view wx:if="{{lastForm}}" class="memory-card">
+      <view class="memory-title">上次设置</view>
+      <view class="memory-desc">{{lastForm.people}} 人 · {{lastForm.channel}} · {{lastForm.finishTime}} 前做好</view>
+      <view class="actions">
+        <button class="primary-btn" bindtap="useLastForm">直接用</button>
+        <button class="secondary-btn" bindtap="applyLastForm">修改</button>
+      </view>
+    </view>
+  </view>
+
+  <view class="section">
+    <text class="section-title">几个人吃饭？</text>
+    <view class="chip-row">
+      <button wx:for="{{people}}" wx:key="id" data-field="people" data-value="{{item.id}}" bindtap="selectOne" class="chip {{form.people === item.id ? 'chip-active' : ''}}">{{item.label}}</button>
+    </view>
+  </view>
+
+  <view class="section">
+    <text class="section-title">有没有小孩/老人？</text>
+    <view class="chip-row">
+      <button wx:for="{{family}}" wx:key="id" data-field="family" data-value="{{item.id}}" bindtap="selectOne" class="chip {{form.family === item.id ? 'chip-active' : ''}}">{{item.label}}</button>
+    </view>
+  </view>
+
+  <view class="section">
+    <text class="section-title">预算？</text>
+    <view class="chip-row">
+      <button wx:for="{{budget}}" wx:key="id" data-field="budget" data-value="{{item.id}}" bindtap="selectOne" class="chip {{form.budget === item.id ? 'chip-active' : ''}}">{{item.label}}</button>
+    </view>
+  </view>
+
+  <view class="section">
+    <text class="section-title">想做多久？</text>
+    <view class="chip-row">
+      <button wx:for="{{time}}" wx:key="id" data-field="time" data-value="{{item.id}}" bindtap="selectOne" class="chip {{form.time === item.id ? 'chip-active' : ''}}">{{item.label}}</button>
+    </view>
+  </view>
+
+  <view class="section">
+    <text class="section-title">几点前做好？</text>
+    <view class="chip-row">
+      <button wx:for="{{finishTime}}" wx:key="id" data-field="finishTime" data-value="{{item.id}}" bindtap="selectOne" class="chip {{form.finishTime === item.id ? 'chip-active' : ''}}">{{item.label}}</button>
+    </view>
+  </view>
+
+  <view class="section">
+    <text class="section-title">做饭速度？</text>
+    <view class="chip-row">
+      <button wx:for="{{cookSpeed}}" wx:key="id" data-field="cookSpeed" data-value="{{item.id}}" bindtap="selectOne" class="chip {{form.cookSpeed === item.id ? 'chip-active' : ''}}">{{item.label}}</button>
+    </view>
+  </view>
+
+  <view class="section">
+    <text class="section-title">口味？（可多选）</text>
+    <view class="chip-row">
+      <button wx:for="{{tasteOptions}}" wx:key="id" data-field="taste" data-value="{{item.id}}" bindtap="toggleMulti" class="chip {{item.active ? 'chip-active' : ''}}">{{item.label}}</button>
+    </view>
+  </view>
+
+  <view class="section">
+    <text class="section-title">买菜方式？</text>
+    <view class="chip-row">
+      <button wx:for="{{channel}}" wx:key="id" data-field="channel" data-value="{{item.id}}" bindtap="selectOne" class="chip {{form.channel === item.id ? 'chip-active' : ''}}">{{item.label}}</button>
+    </view>
+  </view>
+
+  <view class="section">
+    <text class="section-title">不吃什么？（可多选）</text>
+    <view class="chip-row">
+      <button wx:for="{{avoidOptions}}" wx:key="id" data-field="avoid" data-value="{{item.id}}" bindtap="toggleMulti" class="chip {{item.active ? 'chip-active' : ''}}">{{item.label}}</button>
+    </view>
+  </view>
+
+  <button class="primary-btn submit" bindtap="submit">看看今天吃什么</button>
+</view>

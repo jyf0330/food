@@ -1,0 +1,29 @@
+{
+  "name": "san-zhuo-cai",
+  "version": "0.1.0",
+  "private": true,
+  "description": "今天吃什么 - 面向深圳家庭的 AI 买菜做饭助手（MVP 脚手架）",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "test": "tsx --test \"lib/*.test.ts\" && node --test \"miniprogram/**/*.test.cjs\"",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.104.1",
+    "next": "^14.2.35",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "20.14.10",
+    "@types/react": "18.3.3",
+    "@types/react-dom": "18.3.0",
+    "eslint": "8.57.0",
+    "eslint-config-next": "^14.2.35",
+    "tsx": "^4.21.0",
+    "typescript": "5.5.3"
+  }
+}

@@ -1,0 +1,62 @@
+<view class="page safe-bottom">
+  <view class="header result-header">
+    <view class="brand result-brand">今天吃什么</view>
+    <view class="subtitle">{{request.people_count}} 人 · {{request.shopping_channel}} · 约 {{request.budget}} 元 · {{request.time_limit}} 分钟</view>
+  </view>
+
+  <view class="section summary">
+    <view class="section-title">今日推荐买</view>
+    <view class="summary-good">{{dailyRecommended}}</view>
+    <view class="section-title small-title">今天不太推荐</view>
+    <view wx:for="{{dailyNotRecommended}}" wx:key="name" class="muted">{{item.name}}：{{item.reason}}</view>
+  </view>
+
+  <view wx:for="{{plans}}" wx:for-item="plan" wx:for-index="planIndex" wx:key="title" class="plan-card">
+    <view class="plan-title">{{planIndex + 1}}. {{plan.type}}</view>
+    <view class="plan-meta">
+      <text>约 {{plan.estimated_cost}} 元</text>
+      <text>约 {{plan.total_time}} 分钟</text>
+      <text>{{plan.dishes.length}} 道菜</text>
+    </view>
+    <view class="plan-reason">{{plan.reason}}</view>
+
+    <view class="actions plan-actions">
+      <button class="primary-btn" data-index="{{planIndex}}" bindtap="rememberPlan">就用这桌</button>
+      <button class="secondary-btn" bindtap="editConditions">改条件</button>
+    </view>
+
+    <view class="block-title">菜单</view>
+    <view wx:for="{{plan.dishes}}" wx:for-item="dish" wx:key="name" class="dish-row">
+      <view class="dish-name">{{dish.name}}</view>
+      <view class="muted">{{dish.reason}}</view>
+    </view>
+
+    <view class="block-title">买菜清单</view>
+    <view wx:for="{{plan.shopping_list}}" wx:for-item="group" wx:key="category" class="shopping-group">
+      <view class="shopping-title">{{group.category}}</view>
+      <view class="shopping-items">
+        <text wx:for="{{group.items}}" wx:for-item="goods" wx:key="name" class="shopping-item">{{goods.name}} · {{goods.amount}}</text>
+      </view>
+    </view>
+
+    <view class="block-title">按点上桌计划</view>
+    <view wx:for="{{plan.cooking_schedule}}" wx:for-item="node" wx:key="time" class="timeline-row">
+      <text class="timeline-time">{{node.time}}</text>
+      <text class="timeline-task">{{node.task}}</text>
+    </view>
+
+    <view class="block-title">做饭顺序</view>
+    <view wx:for="{{plan.cooking_order}}" wx:for-item="step" wx:key="*this" class="step-row">{{index + 1}}. {{step}}</view>
+
+    <view class="block-title">每道菜做法</view>
+    <view wx:for="{{plan.dishes}}" wx:for-item="dish" wx:key="name" class="recipe">
+      <view class="recipe-name">{{dish.name}}</view>
+      <view wx:for="{{dish.steps}}" wx:for-item="step" wx:key="*this" class="step-row">{{index + 1}}. {{step}}</view>
+      <view class="recipe-tips">
+        <text wx:for="{{dish.tips}}" wx:for-item="tip" wx:key="*this" class="recipe-tip">{{tip}}</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="mock-note">当前为本地演示数据，后续可接你的云服务器生成。</view>
+</view>

@@ -1,0 +1,10 @@
+{
+  "recipe_policy": "不复制商业网站菜谱正文；使用自有结构化模板生成原创步骤。",
+  "recipe_candidates": [
+    "中文菜谱研究数据集可用于研究参考：https://counterfactual-recipe-generation.github.io/dataset_zh.html",
+    "商业使用可考虑购买授权菜谱库或接入合法菜谱 API"
+  ],
+  "nutrition_source": "中国疾控营养与健康所食物营养成分查询平台：https://nlc.chinanutri.cn/fq/；中国食物成分数据中心：https://fndc.chinanutri.cn/",
+  "price_source": "农业农村部主要菜篮子价格日动态：https://www.moa.gov.cn/ztzl/wcbgclz/jgsj/；农业农村部市场与信息化司监测预警：https://scs.moa.gov.cn/jcyj/",
+  "local_strategy": "MVP 先维护深圳家庭常见菜、食材别名、平台搜索词和价格/营养映射；后续定时拉取官方价格指数与批发价，再人工校验。"
+}
