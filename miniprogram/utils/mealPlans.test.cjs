@@ -76,4 +76,17 @@ describe("mini program meal plan generator", () => {
 
     assert.notDeepEqual(swappedNames, firstNames);
   });
+
+  it("recommends one favorite food on a deterministic half of days", () => {
+    const response = buildGenerateResponse({
+      ...baseRequest,
+      favorite_foods: ["豆腐"],
+      recommendation_date: "2026-04-27",
+      user_id: "jtcsm_tester"
+    });
+    const dishes = response.plans.flatMap((plan) => plan.dishes);
+
+    assert.ok(dishes.some((dish) => dish.name.includes("豆腐")));
+    assert.ok(dishes.some((dish) => dish.reason.includes("喜欢")));
+  });
 });

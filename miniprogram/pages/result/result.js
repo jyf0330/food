@@ -35,6 +35,7 @@ function parseForm(options) {
     taste: splitList(options.taste),
     channel: options.channel ? decodeURIComponent(options.channel) : "菜市场",
     avoid: splitList(options.avoid),
+    favoriteFoods: splitList(options.favoriteFoods),
     finishTime: options.finishTime ? decodeURIComponent(options.finishTime) : "12:00",
     cookSpeed: options.cookSpeed || "normal",
     variant: Math.max(0, Number(options.variant) || 0),
@@ -52,6 +53,7 @@ function buildRequest(form) {
     meal_type: "晚餐",
     taste: form.taste,
     avoid: form.avoid,
+    favorite_foods: form.favoriteFoods || [],
     time_limit: form.time,
     finish_time: form.finishTime,
     cook_speed: form.cookSpeed,
@@ -73,6 +75,7 @@ function buildResultUrl(form) {
     ["avoid", form.avoid.join(",")],
     ["finishTime", form.finishTime],
     ["cookSpeed", form.cookSpeed],
+    ["favoriteFoods", (form.favoriteFoods || []).join(",")],
     ["variant", form.variant || 0]
   ];
   const userId = getUserIdDisplay(form.userId);

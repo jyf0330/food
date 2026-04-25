@@ -90,5 +90,23 @@
     </view>
   </view>
 
+  <view class="section advanced-section">
+    <button class="advanced-toggle" bindtap="toggleAdvanced">
+      <text>高级功能</text>
+      <text class="advanced-toggle-state">{{advancedOpen ? '收起' : '展开'}}</text>
+    </button>
+    <view wx:if="{{advancedOpen}}" class="advanced-panel">
+      <text class="section-title">喜欢的食物</text>
+      <view class="favorite-input-row">
+        <input class="text-input" value="{{favoriteFoodInput}}" maxlength="24" placeholder="例如 豆腐 / 番茄炒蛋" bindinput="updateFavoriteFoodInput" />
+        <button class="secondary-btn add-food-btn" bindtap="addFavoriteFood">添加</button>
+      </view>
+      <view wx:if="{{form.favoriteFoods.length}}" class="chip-row favorite-list">
+        <button wx:for="{{form.favoriteFoods}}" wx:key="*this" data-value="{{item}}" bindtap="removeFavoriteFood" class="chip chip-active">{{item}} ×</button>
+      </view>
+      <view wx:else class="advanced-hint">设置后，每天有 50% 概率把其中一个放进推荐菜单。</view>
+    </view>
+  </view>
+
   <button class="primary-btn submit" bindtap="submit">看看今天吃什么</button>
 </view>

@@ -40,6 +40,7 @@ function parseForm(sp: SP): PlanMemoryForm {
     finishTime: readString(sp, "finishTime"),
     cookSpeed: readString(sp, "cookSpeed"),
     userId: getUserIdDisplay(readString(sp, "userId")),
+    favoriteFoods: readList(sp, "favoriteFoods"),
   };
 }
 
@@ -59,6 +60,7 @@ function parseRequest(sp: SP): GenerateRequest {
     time_limit: readNumber(sp, "time", 40),
     taste: readList(sp, "taste"),
     avoid: readList(sp, "avoid"),
+    favorite_foods: readList(sp, "favoriteFoods"),
     shopping_channel: s("channel") || "菜市场",
     meal_type: "晚餐",
     kitchen_tools: ["炒锅", "电饭锅"],

@@ -20,6 +20,14 @@ function buildPrefixedUserId(value) {
   return display ? `${USER_ID_PREFIX}${display}` : "";
 }
 
+function normalizeFoodName(value) {
+  return String(value || "")
+    .trim()
+    .replace(/\s+/g, "")
+    .replace(/[^\u4e00-\u9fa5A-Za-z0-9_-]/g, "")
+    .slice(0, 24);
+}
+
 const DEFAULT_FORM = {
   people: 3,
   family: "child",
@@ -30,8 +38,17 @@ const DEFAULT_FORM = {
   avoid: [],
   finishTime: "12:00",
   cookSpeed: "slow",
-  userId: ""
+  userId: "",
+  favoriteFoods: []
 };
+
+function normalizeStoredForm(form) {
+  return {
+    ...DEFAULT_FORM,
+    ...(form || {}),
+    favoriteFoods: Array.isArray(form && form.favoriteFoods) ? form.favoriteFoods : []
+  };
+}
 
 const choices = {
   people: [
@@ -105,7 +122,8 @@ function buildResultUrl(form) {
     ["channel", form.channel],
     ["avoid", form.avoid.join(",")],
     ["finishTime", form.finishTime],
-    ["cookSpeed", form.cookSpeed]
+    ["cookSpeed", form.cookSpeed],
+    ["favoriteFoods", (form.favoriteFoods || []).join(",")]
   ];
   const userId = getUserIdDisplay(form.userId);
   if (userId) {
@@ -124,6 +142,8 @@ Page({
     ...choices,
     tasteOptions: [],
     avoidOptions: [],
+    advancedOpen: false,
+    favoriteFoodInput: "",
     form: DEFAULT_FORM,
     lastForm: null,
     lastChoice: null
@@ -171,14 +191,18 @@ Page({
 
   applyLastForm() {
     if (this.data.lastForm) {
-      this.setData({ form: this.data.lastForm });
-      this.syncMultiOptions(this.data.lastForm);
+      const form = normalizeStoredForm(this.data.lastForm);
+      this.setData({ form });
+      if (form.favoriteFoods.length) {
+        this.setData({ advancedOpen: true });
+      }
+      this.syncMultiOptions(form);
     }
   },
 
   useLastForm() {
     if (this.data.lastForm) {
-      this.goResult(this.data.lastForm);
+      this.goResult(normalizeStoredForm(this.data.lastForm));
     }
   },
 
@@ -192,9 +216,38 @@ Page({
   editLastChoice() {
     const choice = this.data.lastChoice;
     if (choice && choice.form) {
-      this.setData({ form: choice.form });
-      this.syncMultiOptions(choice.form);
+      const form = normalizeStoredForm(choice.form);
+      this.setData({ form });
+      if (form.favoriteFoods.length) {
+        this.setData({ advancedOpen: true });
+      }
+      this.syncMultiOptions(form);
     }
+  },
+
+  toggleAdvanced() {
+    this.setData({ advancedOpen: !this.data.advancedOpen });
+  },
+
+  updateFavoriteFoodInput(event) {
+    this.setData({ favoriteFoodInput: event.detail.value });
+  },
+
+  addFavoriteFood() {
+    const food = normalizeFoodName(this.data.favoriteFoodInput);
+    if (!food) return;
+    const current = this.data.form.favoriteFoods || [];
+    const next = current.includes(food) ? current : current.concat(food).slice(0, 12);
+    this.setData({
+      "form.favoriteFoods": next,
+      favoriteFoodInput: ""
+    });
+  },
+
+  removeFavoriteFood(event) {
+    const { value } = event.currentTarget.dataset;
+    const next = (this.data.form.favoriteFoods || []).filter((item) => item !== value);
+    this.setData({ "form.favoriteFoods": next });
   },
 
   submit() {

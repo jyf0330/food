@@ -14,6 +14,7 @@ export type PlanMemoryForm = {
   finishTime: string;
   cookSpeed: string;
   userId: string;
+  favoriteFoods: string[];
 };
 
 type PlanMemoryActionsProps = {
@@ -69,6 +70,7 @@ export default function PlanMemoryActions({
       avoid: form.avoid.join(","),
       finishTime: form.finishTime,
       cookSpeed: form.cookSpeed,
+      favoriteFoods: form.favoriteFoods.join(","),
       variant: String(currentVariant + 1),
     });
     if (form.userId) {

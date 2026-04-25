@@ -372,6 +372,8 @@ const costScore = {
   高: 36
 };
 
+const FAVORITE_RECOMMEND_PERCENT = 50;
+
 const priceByName = new Map(curatedData.priceBaseline.map((item) => [item.name, item]));
 
 function getPriceTier(name) {
@@ -389,6 +391,128 @@ function priceScore(name) {
   if (tier === "正常") return 4;
   if (tier === "偏贵") return -6;
   return -40;
+}
+
+function currentDateKey() {
+  const now = new Date();
+  return `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, "0")}-${String(now.getDate()).padStart(2, "0")}`;
+}
+
+function recommendationDateKey(request) {
+  return /^\d{4}-\d{2}-\d{2}$/.test(request.recommendation_date || "")
+    ? request.recommendation_date
+    : currentDateKey();
+}
+
+function hashText(value) {
+  let hash = 2166136261;
+  for (const char of value) {
+    hash ^= char.charCodeAt(0);
+    hash = Math.imul(hash, 16777619);
+  }
+  return hash >>> 0;
+}
+
+function normalizeFavoriteFoods(value) {
+  if (!Array.isArray(value)) return [];
+  return Array.from(new Set(value.map((item) => String(item).trim()).filter(Boolean).map((item) => item.slice(0, 24)))).slice(0, 12);
+}
+
+function matchesFavoriteFood(dish, favorite) {
+  return (
+    dish.dish_name.includes(favorite) ||
+    dish.main_ingredients.some((ingredient) => ingredient === favorite || ingredient.includes(favorite))
+  );
+}
+
+function favoritePick(request) {
+  const favorites = normalizeFavoriteFoods(request.favorite_foods);
+  if (!favorites.length) return null;
+
+  const baseSeed = `${recommendationDateKey(request)}|${request.user_id || ""}|${favorites.join("|")}`;
+  if (hashText(baseSeed) % 100 >= FAVORITE_RECOMMEND_PERCENT) return null;
+
+  const start = hashText(`${baseSeed}|favorite`) % favorites.length;
+  const orderedFavorites = favorites.slice(start).concat(favorites.slice(0, start));
+  for (const favorite of orderedFavorites) {
+    const candidates = curatedData.dishes
+      .filter((dish) => matchesFavoriteFood(dish, favorite))
+      .filter((dish) => !blockedByRequest(dish, request))
+      .sort((a, b) => scoreDish(b, request, "营养均衡型") - scoreDish(a, request, "营养均衡型"));
+
+    if (candidates.length) {
+      return {
+        favorite,
+        dish: candidates[hashText(`${baseSeed}|${favorite}|dish`) % candidates.length]
+      };
+    }
+  }
+
+  return null;
+}
+
+function withFavoriteReason(reason) {
+  return reason.includes("喜欢") ? reason : `今天抽中你的喜欢 · ${reason}`;
+}
+
+function withDailyFavorite(plans, request) {
+  const pick = favoritePick(request);
+  if (!pick) return plans;
+
+  const existingPlanIndex = plans.findIndex((plan) =>
+    plan.dishes.some((dish) => {
+      const seedDish = curatedData.dishes.find((item) => item.dish_name === dish.name);
+      return seedDish ? matchesFavoriteFood(seedDish, pick.favorite) : dish.name.includes(pick.favorite);
+    })
+  );
+
+  if (existingPlanIndex >= 0) {
+    return plans.map((plan, planIndex) => planIndex === existingPlanIndex
+      ? {
+          ...plan,
+          dishes: plan.dishes.map((dish) => {
+            const seedDish = curatedData.dishes.find((item) => item.dish_name === dish.name);
+            return (seedDish && matchesFavoriteFood(seedDish, pick.favorite)) || dish.name.includes(pick.favorite)
+              ? { ...dish, reason: withFavoriteReason(dish.reason) }
+              : dish;
+          })
+        }
+      : plan);
+  }
+
+  const targetPlan = plans[0];
+  if (!targetPlan) return plans;
+  const replacementIndex = targetPlan.dishes.findIndex((dish) => dish.category === pick.dish.category);
+  const dishIndex = replacementIndex >= 0 ? replacementIndex : targetPlan.dishes.length - 1;
+  const favoriteDish = {
+    name: pick.dish.dish_name,
+    category: pick.dish.category,
+    reason: withFavoriteReason(`${pick.dish.cuisine} · ${pick.dish.time_minutes} 分钟 · ${pick.dish.taste.join("/")}`),
+    ingredients: pick.dish.shopping_amount_for_3_people,
+    steps: buildCoachSteps(pick.dish, request),
+    tips: buildCoachTips(pick.dish, request)
+  };
+  const nextDishes = targetPlan.dishes.slice();
+  nextDishes[dishIndex] = favoriteDish;
+  const selectedSeedDishes = nextDishes
+    .map((dish) => curatedData.dishes.find((seed) => seed.dish_name === dish.name))
+    .filter(Boolean);
+  const nextPlan = {
+    ...targetPlan,
+    title: nextDishes.map((dish) => dish.name).slice(0, 2).join(" + "),
+    dishes: nextDishes,
+    shopping_list: curatedShoppingList(selectedSeedDishes),
+    cooking_order: [
+      "先洗米煮饭，顺手把汤锅或蒸锅准备好",
+      ...selectedSeedDishes
+        .slice()
+        .sort((a, b) => b.time_minutes - a.time_minutes)
+        .map((dish) => `${dish.dish_name}：${dish.steps[0]}`),
+      "最后集中炒青菜、调味收尾，上桌前尝咸淡"
+    ]
+  };
+
+  return plans.map((plan, index) => (index === 0 ? addSchedule(nextPlan, request) : plan));
 }
 
 function dishPriceScore(dish, type) {
@@ -596,6 +720,7 @@ function buildCuratedPlan(request, type, used) {
     ),
     dishes: selected.map((dish) => ({
       name: dish.dish_name,
+      category: dish.category,
       reason: `${dish.cuisine} · ${dish.time_minutes} 分钟 · ${dish.taste.join("/")}`,
       ingredients: dish.shopping_amount_for_3_people,
       steps: buildCoachSteps(dish, request),
@@ -624,11 +749,11 @@ function buildCuratedPlan(request, type, used) {
 function buildCuratedPlans(request) {
   const used = new Set();
   const thirdType = request.has_child || request.has_elder ? "孩子老人友好型" : "改善伙食型";
-  return [
+  return withDailyFavorite([
     buildCuratedPlan(request, "省钱快手型", used),
     buildCuratedPlan(request, "营养均衡型", used),
     buildCuratedPlan(request, thirdType, used)
-  ];
+  ], request);
 }
 
 module.exports = {

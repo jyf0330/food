@@ -3,6 +3,19 @@ import { buildGenerateResponse } from "@/lib/mealPlanGenerator";
 import type { GenerateRequest } from "@/lib/types";
 import { buildPrefixedUserId } from "@/lib/userIdentity";
 
+function normalizeList(value: unknown): string[] {
+  if (!Array.isArray(value)) return [];
+
+  return Array.from(
+    new Set(
+      value
+        .filter((item): item is string => typeof item === "string")
+        .map((item) => item.trim())
+        .filter(Boolean)
+    )
+  );
+}
+
 function normalizeRequest(input: Partial<GenerateRequest> & { userId?: string }): GenerateRequest {
   return {
     city: input.city || "深圳",
@@ -11,13 +24,14 @@ function normalizeRequest(input: Partial<GenerateRequest> & { userId?: string })
     has_elder: !!input.has_elder,
     budget: Number(input.budget) || 80,
     meal_type: input.meal_type || "晚餐",
-    taste: Array.isArray(input.taste) ? input.taste : [],
-    avoid: Array.isArray(input.avoid) ? input.avoid : [],
+    taste: normalizeList(input.taste),
+    avoid: normalizeList(input.avoid),
     time_limit: Number(input.time_limit) || 40,
     finish_time: input.finish_time,
     cook_speed: input.cook_speed,
     variant: Math.max(0, Number(input.variant) || 0),
     user_id: buildPrefixedUserId(input.user_id ?? input.userId),
+    favorite_foods: normalizeList(input.favorite_foods),
     shopping_channel: input.shopping_channel || "菜市场",
     kitchen_tools: Array.isArray(input.kitchen_tools)
       ? input.kitchen_tools

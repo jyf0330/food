@@ -16,6 +16,7 @@ type StoredForm = {
   finishTime: string;
   cookSpeed: string;
   userId: string;
+  favoriteFoods: string[];
 };
 type LastChoice = {
   title: string;
@@ -106,6 +107,7 @@ const DEFAULT_FORM: StoredForm = {
   finishTime: "19:00",
   cookSpeed: "normal",
   userId: "",
+  favoriteFoods: [],
 };
 
 const splitList = (value: unknown) => {
@@ -117,6 +119,16 @@ const splitList = (value: unknown) => {
   }
   return [];
 };
+
+const normalizeFoodName = (value: string) =>
+  value
+    .trim()
+    .replace(/\s+/g, "")
+    .replace(/[^\u4e00-\u9fa5A-Za-z0-9_-]/g, "")
+    .slice(0, 24);
+
+const normalizeFavoriteFoods = (value: unknown) =>
+  Array.from(new Set(splitList(value).map(normalizeFoodName).filter(Boolean))).slice(0, 12);
 
 const pickNumber = (value: unknown, fallback: number) => {
   const next = Number(value);
@@ -167,6 +179,7 @@ const normalizeForm = (value: unknown): StoredForm | null => {
     finishTime: pickString(data.finishTime, DEFAULT_FORM.finishTime),
     cookSpeed: pickString(data.cookSpeed, DEFAULT_FORM.cookSpeed),
     userId: getUserIdDisplay(data.userId ?? data.user_id),
+    favoriteFoods: normalizeFavoriteFoods(data.favoriteFoods),
   };
 };
 
@@ -181,6 +194,7 @@ const buildResultUrl = (form: StoredForm) => {
     avoid: form.avoid.join(","),
     finishTime: form.finishTime,
     cookSpeed: form.cookSpeed,
+    favoriteFoods: form.favoriteFoods.join(","),
   });
   const userId = getUserIdDisplay(form.userId);
   if (userId) {
@@ -240,6 +254,9 @@ export default function HomePage() {
   const [finishTime, setFinishTime] = useState(DEFAULT_FORM.finishTime);
   const [cookSpeed, setCookSpeed] = useState(DEFAULT_FORM.cookSpeed);
   const [userId, setUserId] = useState(DEFAULT_FORM.userId);
+  const [favoriteFoods, setFavoriteFoods] = useState<string[]>(DEFAULT_FORM.favoriteFoods);
+  const [favoriteFoodInput, setFavoriteFoodInput] = useState("");
+  const [advancedOpen, setAdvancedOpen] = useState(false);
   const [lastForm, setLastForm] = useState<StoredForm | null>(null);
   const [lastChoice, setLastChoice] = useState<LastChoice | null>(null);
   const [loading, setLoading] = useState(false);
@@ -286,6 +303,8 @@ export default function HomePage() {
     setFinishTime(form.finishTime);
     setCookSpeed(form.cookSpeed);
     setUserId(form.userId);
+    setFavoriteFoods(form.favoriteFoods);
+    setAdvancedOpen(form.favoriteFoods.length > 0);
   };
 
   const currentForm = (): StoredForm => ({
@@ -299,7 +318,22 @@ export default function HomePage() {
     finishTime,
     cookSpeed,
     userId: getUserIdDisplay(userId),
+    favoriteFoods,
   });
+
+  const addFavoriteFood = () => {
+    const food = normalizeFoodName(favoriteFoodInput);
+    if (!food) return;
+    setFavoriteFoods((current) => {
+      if (current.includes(food)) return current;
+      return [...current, food].slice(0, 12);
+    });
+    setFavoriteFoodInput("");
+  };
+
+  const removeFavoriteFood = (food: string) => {
+    setFavoriteFoods((current) => current.filter((item) => item !== food));
+  };
 
   const saveLastForm = (form: StoredForm) => {
     try {
@@ -537,6 +571,62 @@ export default function HomePage() {
             </button>
           ))}
         </div>
+      </section>
+
+      <section className="form-section advanced-section">
+        <button
+          type="button"
+          className="advanced-toggle"
+          onClick={() => setAdvancedOpen((open) => !open)}
+          aria-expanded={advancedOpen}
+        >
+          <span>高级功能</span>
+          <span>{advancedOpen ? "收起" : "展开"}</span>
+        </button>
+
+        {advancedOpen && (
+          <div className="advanced-panel">
+            <label className="form-label" htmlFor="favorite-food">
+              喜欢的食物
+            </label>
+            <div className="favorite-input-row">
+              <input
+                id="favorite-food"
+                className="text-input"
+                value={favoriteFoodInput}
+                onChange={(event) => setFavoriteFoodInput(event.target.value)}
+                onKeyDown={(event) => {
+                  if (event.key === "Enter") {
+                    event.preventDefault();
+                    addFavoriteFood();
+                  }
+                }}
+                placeholder="例如 豆腐 / 番茄炒蛋"
+                maxLength={24}
+              />
+              <button type="button" className="memory-btn" onClick={addFavoriteFood}>
+                添加
+              </button>
+            </div>
+            {favoriteFoods.length ? (
+              <div className="chip-group favorite-list" aria-label="已设置喜欢的食物">
+                {favoriteFoods.map((food) => (
+                  <button
+                    key={food}
+                    type="button"
+                    className="chip active"
+                    onClick={() => removeFavoriteFood(food)}
+                    title="点击移除"
+                  >
+                    {food} ×
+                  </button>
+                ))}
+              </div>
+            ) : (
+              <p className="advanced-hint">设置后，每天有 50% 概率把其中一个放进推荐菜单。</p>
+            )}
+          </div>
+        )}
       </section>
 
       <button
