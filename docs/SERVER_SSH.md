@@ -15,19 +15,19 @@
 私钥文件在本机桌面：
 
 ```bash
-/Users/macminim4/Desktop/agar.pem
+/Users/macminim4/Desktop/rule/agar.pem
 ```
 
 如果 SSH 提示私钥权限过宽，先运行：
 
 ```bash
-chmod 600 /Users/macminim4/Desktop/agar.pem
+chmod 600 /Users/macminim4/Desktop/rule/agar.pem
 ```
 
 ## SSH 连接
 
 ```bash
-ssh -i /Users/macminim4/Desktop/agar.pem ubuntu@124.222.83.113
+ssh -i /Users/macminim4/Desktop/rule/agar.pem ubuntu@124.222.83.113
 ```
 
 `root` 用户当前不接受这个私钥。需要管理员权限时，登录后使用 `sudo`。

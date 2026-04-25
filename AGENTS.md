@@ -40,7 +40,7 @@ docs/SERVER_SSH.md
 当前服务器连接命令：
 
 ```bash
-ssh -i /Users/macminim4/Desktop/agar.pem ubuntu@124.222.83.113
+ssh -i /Users/macminim4/Desktop/rule/agar.pem ubuntu@124.222.83.113
 ```
 
 不要把私钥内容写进仓库。仓库里只允许记录私钥路径和连接方式。
