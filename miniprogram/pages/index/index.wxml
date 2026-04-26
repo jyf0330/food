@@ -19,7 +19,7 @@
     </view>
     <view wx:if="{{lastForm}}" class="memory-card">
       <view class="memory-title">上次设置</view>
-      <view class="memory-desc">{{lastForm.people}} 人 · {{lastForm.channel}} · {{lastForm.finishTime}} 前做好</view>
+      <view class="memory-desc">{{lastForm.people}} 人 · {{lastForm.finishTime}} 前做好</view>
       <view class="actions">
         <button class="primary-btn" bindtap="useLastForm">直接用</button>
         <button class="secondary-btn" bindtap="applyLastForm">修改</button>
@@ -73,13 +73,6 @@
     <text class="section-title">口味？（可多选）</text>
     <view class="chip-row">
       <button wx:for="{{tasteOptions}}" wx:key="id" data-field="taste" data-value="{{item.id}}" bindtap="toggleMulti" class="chip {{item.active ? 'chip-active' : ''}}">{{item.label}}</button>
-    </view>
-  </view>
-
-  <view class="section">
-    <text class="section-title">买菜方式？</text>
-    <view class="chip-row">
-      <button wx:for="{{channel}}" wx:key="id" data-field="channel" data-value="{{item.id}}" bindtap="selectOne" class="chip {{form.channel === item.id ? 'chip-active' : ''}}">{{item.label}}</button>
     </view>
   </view>
 

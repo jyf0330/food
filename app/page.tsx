@@ -2,22 +2,11 @@
 
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
+import { restoreHomeForm, type MealMemoryForm } from "@/lib/mealMemory";
 import { buildPrefixedUserId, getUserIdDisplay } from "@/lib/userIdentity";
 
 type Choice<T extends string | number> = { id: T; label: string };
-type StoredForm = {
-  people: number;
-  family: string;
-  budget: number;
-  time: number;
-  taste: string[];
-  channel: string;
-  avoid: string[];
-  finishTime: string;
-  cookSpeed: string;
-  userId: string;
-  favoriteFoods: string[];
-};
+type StoredForm = MealMemoryForm;
 type LastChoice = {
   title: string;
   resultUrl: string;
@@ -63,15 +52,6 @@ const TASTE: Choice<string>[] = [
   { id: "重口", label: "重口" },
   { id: "不辣", label: "不辣" },
   { id: "微辣", label: "微辣" },
-];
-
-const CHANNEL: Choice<string>[] = [
-  { id: "菜市场", label: "菜市场" },
-  { id: "楼下超市", label: "楼下超市" },
-  { id: "朴朴", label: "朴朴" },
-  { id: "沃尔玛", label: "沃尔玛" },
-  { id: "盒马", label: "盒马" },
-  { id: "美团买菜", label: "美团买菜" },
 ];
 
 const AVOID: Choice<string>[] = [
@@ -249,7 +229,6 @@ export default function HomePage() {
   const [budget, setBudget] = useState(DEFAULT_FORM.budget);
   const [time, setTime] = useState(DEFAULT_FORM.time);
   const [taste, setTaste] = useState<string[]>(DEFAULT_FORM.taste);
-  const [channel, setChannel] = useState(DEFAULT_FORM.channel);
   const [avoid, setAvoid] = useState<string[]>(DEFAULT_FORM.avoid);
   const [finishTime, setFinishTime] = useState(DEFAULT_FORM.finishTime);
   const [cookSpeed, setCookSpeed] = useState(DEFAULT_FORM.cookSpeed);
@@ -260,6 +239,20 @@ export default function HomePage() {
   const [lastForm, setLastForm] = useState<StoredForm | null>(null);
   const [lastChoice, setLastChoice] = useState<LastChoice | null>(null);
   const [loading, setLoading] = useState(false);
+
+  const applyForm = (form: StoredForm) => {
+    setPeople(form.people);
+    setFamily(form.family);
+    setBudget(form.budget);
+    setTime(form.time);
+    setTaste(form.taste);
+    setAvoid(form.avoid);
+    setFinishTime(form.finishTime);
+    setCookSpeed(form.cookSpeed);
+    setUserId(form.userId);
+    setFavoriteFoods(form.favoriteFoods);
+    setAdvancedOpen(form.favoriteFoods.length > 0);
+  };
 
   useEffect(() => {
     try {
@@ -272,16 +265,13 @@ export default function HomePage() {
       const cookieUserId = getUserIdDisplay(
         decodeURIComponent(readCookie(USER_ID_COOKIE))
       );
-      const mergedForm =
-        savedForm && !savedForm.userId && cookieUserId
-          ? { ...savedForm, userId: cookieUserId }
-          : savedForm;
-      if (mergedForm?.userId) {
-        setUserId(mergedForm.userId);
+      const restoredForm = restoreHomeForm(savedForm, savedChoice?.form ?? null, cookieUserId);
+      if (restoredForm) {
+        applyForm(restoredForm);
       } else if (cookieUserId) {
         setUserId(cookieUserId);
       }
-      setLastForm(mergedForm);
+      setLastForm(restoredForm);
       setLastChoice(savedChoice);
     } catch {
       setLastForm(null);
@@ -292,28 +282,13 @@ export default function HomePage() {
   const toggle = (list: string[], id: string) =>
     list.includes(id) ? list.filter((x) => x !== id) : [...list, id];
 
-  const applyForm = (form: StoredForm) => {
-    setPeople(form.people);
-    setFamily(form.family);
-    setBudget(form.budget);
-    setTime(form.time);
-    setTaste(form.taste);
-    setChannel(form.channel);
-    setAvoid(form.avoid);
-    setFinishTime(form.finishTime);
-    setCookSpeed(form.cookSpeed);
-    setUserId(form.userId);
-    setFavoriteFoods(form.favoriteFoods);
-    setAdvancedOpen(form.favoriteFoods.length > 0);
-  };
-
   const currentForm = (): StoredForm => ({
     people,
     family,
     budget,
     time,
     taste,
-    channel,
+    channel: DEFAULT_FORM.channel,
     avoid,
     finishTime,
     cookSpeed,
@@ -534,22 +509,6 @@ export default function HomePage() {
               type="button"
               className={`chip ${taste.includes(o.id) ? "active" : ""}`}
               onClick={() => setTaste(toggle(taste, o.id))}
-            >
-              {o.label}
-            </button>
-          ))}
-        </div>
-      </section>
-
-      <section className="form-section">
-        <label className="form-label">买菜方式？</label>
-        <div className="chip-group">
-          {CHANNEL.map((o) => (
-            <button
-              key={o.id}
-              type="button"
-              className={`chip ${channel === o.id ? "active" : ""}`}
-              onClick={() => setChannel(o.id)}
             >
               {o.label}
             </button>

@@ -94,14 +94,6 @@ const choices = {
     { id: "不辣", label: "不辣" },
     { id: "微辣", label: "微辣" }
   ],
-  channel: [
-    { id: "菜市场", label: "菜市场" },
-    { id: "楼下超市", label: "楼下超市" },
-    { id: "朴朴", label: "朴朴" },
-    { id: "沃尔玛", label: "沃尔玛" },
-    { id: "盒马", label: "盒马" },
-    { id: "美团买菜", label: "美团买菜" }
-  ],
   avoid: [
     { id: "辣", label: "辣" },
     { id: "鱼", label: "鱼" },
@@ -260,7 +252,7 @@ Page({
       wx.setStorageSync(USER_ID_KEY, prefixedUserId);
     }
     wx.setStorageSync(LAST_FORM_KEY, form);
-    wx.navigateTo({ url: buildResultUrl(form) });
+    wx.navigateTo({ url: buildResultUrl({ ...form, channel: DEFAULT_FORM.channel }) });
   },
 
   syncMultiOptions(form) {

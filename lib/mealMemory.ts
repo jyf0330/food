@@ -53,3 +53,14 @@ export function rememberMealChoice(
   storage.setItem(LAST_CHOICE_KEY, JSON.stringify(choice));
   return choice;
 }
+
+export function restoreHomeForm(
+  savedForm: MealMemoryForm | null,
+  rememberedChoiceForm: MealMemoryForm | null,
+  cookieUserId: string
+): MealMemoryForm | null {
+  const restored = savedForm ?? rememberedChoiceForm;
+  if (!restored) return null;
+  if (restored.userId || !cookieUserId) return restored;
+  return { ...restored, userId: cookieUserId };
+}

@@ -97,8 +97,8 @@ export default function ResultPage({ searchParams }: { searchParams: SP }) {
       <header className="header result-header">
         <h1>今天吃什么</h1>
         <p>
-          {req.people_count} 人 · {req.shopping_channel} · 预算 约 {req.budget}{" "}
-          元 · {req.time_limit} 分钟
+          {req.people_count} 人 · 预算 约 {req.budget} 元 · {req.time_limit}{" "}
+          分钟
         </p>
       </header>
 

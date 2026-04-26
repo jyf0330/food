@@ -1,7 +1,7 @@
 <view class="page safe-bottom">
   <view class="header result-header">
     <view class="brand result-brand">今天吃什么</view>
-    <view class="subtitle">{{request.people_count}} 人 · {{request.shopping_channel}} · 约 {{request.budget}} 元 · {{request.time_limit}} 分钟</view>
+    <view class="subtitle">{{request.people_count}} 人 · 约 {{request.budget}} 元 · {{request.time_limit}} 分钟</view>
   </view>
 
   <view class="section summary">

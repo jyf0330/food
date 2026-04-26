@@ -1,4 +1,5 @@
 import assert from "node:assert/strict";
+import fs from "node:fs";
 import { describe, it } from "node:test";
 import dishes from "../data/dishes.seed.json";
 import ingredients from "../data/ingredients.seed.json";
@@ -197,5 +198,15 @@ describe("curated food data", () => {
       aprilWeekFourRecommendations.length >= 6,
       "weekly recommendations should still provide enough choices"
     );
+  });
+});
+
+describe("home form filters", () => {
+  it("does not expose shopping channel as a user-facing filter", () => {
+    const webHome = fs.readFileSync("app/page.tsx", "utf8");
+    const miniHome = fs.readFileSync("miniprogram/pages/index/index.wxml", "utf8");
+
+    assert.doesNotMatch(webHome, /买菜方式？/);
+    assert.doesNotMatch(miniHome, /买菜方式？/);
   });
 });

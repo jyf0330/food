@@ -1,6 +1,11 @@
 import assert from "node:assert/strict";
 import { describe, it } from "node:test";
-import { LAST_CHOICE_KEY, rememberMealChoice, type MealMemoryForm } from "./mealMemory";
+import {
+  LAST_CHOICE_KEY,
+  rememberMealChoice,
+  restoreHomeForm,
+  type MealMemoryForm,
+} from "./mealMemory";
 
 const form: MealMemoryForm = {
   people: 3,
@@ -41,5 +46,20 @@ describe("meal memory", () => {
       savedAt: "2026-04-27T10:00:00.000Z",
     });
     assert.equal(writes.get(LAST_CHOICE_KEY), JSON.stringify(choice));
+  });
+
+  it("restores the saved form when opening the home page again", () => {
+    const savedForm = { ...form, people: 4, budget: 120, userId: "" };
+
+    assert.deepEqual(restoreHomeForm(savedForm, null, "小王"), {
+      ...savedForm,
+      userId: "小王",
+    });
+  });
+
+  it("falls back to the remembered choice form when there is no saved form", () => {
+    const choiceForm = { ...form, people: 2, budget: 200 };
+
+    assert.deepEqual(restoreHomeForm(null, choiceForm, ""), choiceForm);
   });
 });
