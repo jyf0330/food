@@ -19,6 +19,7 @@ const form: MealMemoryForm = {
   cookSpeed: "normal",
   userId: "小王",
   favoriteFoods: ["番茄炒蛋"],
+  selectedDishes: ["番茄炒蛋", "蒜蓉菜心"],
 };
 
 describe("meal memory", () => {

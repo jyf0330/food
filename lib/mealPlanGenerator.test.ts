@@ -186,4 +186,17 @@ describe("buildGenerateResponse", () => {
       assert.match(finalNode?.task ?? "", /开饭|上桌|完成/);
     }
   });
+
+  it("uses selected home page dishes to build the first recipe plan", () => {
+    const response = buildGenerateResponse({
+      ...baseRequest,
+      selected_dishes: ["番茄炒蛋", "蒜蓉菜心", "紫菜蛋花汤"],
+    } as GenerateRequest & { selected_dishes: string[] });
+
+    assert.deepEqual(
+      response.plans[0].dishes.map((dish) => dish.name),
+      ["番茄炒蛋", "蒜蓉菜心", "紫菜蛋花汤"]
+    );
+    assert.match(response.plans[0].reason, /你在首页选/);
+  });
 });

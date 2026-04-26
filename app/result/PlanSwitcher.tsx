@@ -2,6 +2,7 @@
 
 import type { MealPlan } from "@/lib/types";
 import { rememberMealChoice } from "@/lib/mealMemory";
+import { formatMealPlanCopyText } from "@/lib/mealPlanText";
 import PlanMemoryActions, { type PlanMemoryForm } from "./PlanMemoryActions";
 import { useState } from "react";
 
@@ -26,7 +27,9 @@ export default function PlanSwitcher({
   initialSelectedIndex,
 }: PlanSwitcherProps) {
   const [selectedIndex, setSelectedIndex] = useState(initialSelectedIndex);
+  const [copied, setCopied] = useState(false);
   const plan = plans[selectedIndex] as PlanWithOptionalSchedule | undefined;
+  const selectedHomePlan = form.selectedDishes.length > 0 && selectedIndex === 0;
 
   const selectPlan = (index: number, selectedPlan: MealPlan) => {
     setSelectedIndex(index);
@@ -47,6 +50,33 @@ export default function PlanSwitcher({
     return null;
   }
 
+  const copyWithFallback = (text: string) => {
+    const textarea = document.createElement("textarea");
+    textarea.value = text;
+    textarea.setAttribute("readonly", "true");
+    textarea.style.position = "fixed";
+    textarea.style.left = "-9999px";
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand("copy");
+    document.body.removeChild(textarea);
+  };
+
+  const copyPlan = async () => {
+    const text = formatMealPlanCopyText(plan as MealPlan);
+    try {
+      if (navigator.clipboard?.writeText) {
+        await navigator.clipboard.writeText(text);
+      } else {
+        copyWithFallback(text);
+      }
+    } catch {
+      copyWithFallback(text);
+    }
+    setCopied(true);
+    window.setTimeout(() => setCopied(false), 1400);
+  };
+
   return (
     <>
       <section className="plan-switcher" aria-label="选择今天吃哪一桌">
@@ -62,7 +92,9 @@ export default function PlanSwitcher({
             >
               <span className="plan-tab-letter">{planLabel(i)}</span>
               <span className="plan-tab-copy">
-                <span className="plan-tab-title">{item.type}</span>
+                <span className="plan-tab-title">
+                  {form.selectedDishes.length > 0 && i === 0 ? "自选菜谱" : item.type}
+                </span>
                 <span className="plan-tab-meta">
                   约 {item.estimated_cost} 元 · {item.total_time} 分钟
                 </span>
@@ -74,7 +106,7 @@ export default function PlanSwitcher({
 
       <article className="plan-card">
         <h2>
-          {planLabel(selectedIndex)}. {plan.type}
+          {planLabel(selectedIndex)}. {selectedHomePlan ? "自选菜谱" : plan.type}
         </h2>
         <div className="plan-meta">
           <span>💰 约 {plan.estimated_cost} 元</span>
@@ -91,6 +123,10 @@ export default function PlanSwitcher({
           form={form}
           currentVariant={currentVariant}
         />
+
+        <button type="button" className="copy-recipe-btn" onClick={copyPlan}>
+          {copied ? "已复制菜谱文字" : "一键复制菜谱文字"}
+        </button>
 
         <div className="section-title">🍲 菜单</div>
         <ul className="dish-list">

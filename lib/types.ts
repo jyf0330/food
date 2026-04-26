@@ -69,6 +69,7 @@ export interface GenerateRequest {
   variant?: number;
   user_id?: string;
   favorite_foods?: string[];
+  selected_dishes?: string[];
   recommendation_date?: string;
   shopping_channel: string;
   kitchen_tools: string[];

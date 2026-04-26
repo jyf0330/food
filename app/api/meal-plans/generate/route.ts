@@ -32,6 +32,7 @@ function normalizeRequest(input: Partial<GenerateRequest> & { userId?: string })
     variant: Math.max(0, Number(input.variant) || 0),
     user_id: buildPrefixedUserId(input.user_id ?? input.userId),
     favorite_foods: normalizeList(input.favorite_foods),
+    selected_dishes: normalizeList(input.selected_dishes),
     recommendation_date: input.recommendation_date,
     shopping_channel: input.shopping_channel || "菜市场",
     kitchen_tools: Array.isArray(input.kitchen_tools)

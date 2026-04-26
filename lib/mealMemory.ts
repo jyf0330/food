@@ -10,6 +10,7 @@ export type MealMemoryForm = {
   cookSpeed: string;
   userId: string;
   favoriteFoods: string[];
+  selectedDishes: string[];
 };
 
 export type MealChoice = {

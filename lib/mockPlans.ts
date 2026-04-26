@@ -679,16 +679,68 @@ function buildCuratedPlan(
   return withCookingSchedule(plan, req);
 }
 
+function selectedSeedDishes(req: GenerateRequest): SeedDish[] {
+  const selectedNames = Array.from(
+    new Set((req.selected_dishes ?? []).map((name) => name.trim()).filter(Boolean))
+  ).slice(0, 12);
+  if (selectedNames.length === 0) return [];
+
+  const byName = new Map((dishesSeed as SeedDish[]).map((dish) => [dish.dish_name, dish]));
+  return selectedNames
+    .map((name) => byName.get(name))
+    .filter((dish): dish is SeedDish => Boolean(dish));
+}
+
+function buildSelectedDishPlan(req: GenerateRequest, selected: SeedDish[]): MealPlan {
+  const estimatedCost = selected.reduce(
+    (sum, dish) => sum + (costScore[dish.estimated_cost_level] ?? 18),
+    0
+  );
+  const totalTime = Math.max(
+    12,
+    selected.reduce((sum, dish) => sum + Math.ceil(dish.time_minutes * 0.6), 10)
+  );
+  const plan: MealPlan = {
+    type: "营养均衡型",
+    title: selected.map((dish) => dish.dish_name).slice(0, 2).join(" + "),
+    estimated_cost: Math.min(Math.max(estimatedCost, 18), req.budget + 60),
+    total_time: totalTime,
+    suitable_for: ["首页自选", "按菜生成", "可复制"],
+    dishes: selected.map((dish) => toPlanDish(dish, req)),
+    shopping_list: buildShoppingList(selected),
+    cooking_order: [
+      "先洗米煮饭，顺手把所有食材按菜名分好",
+      ...selected
+        .slice()
+        .sort((a, b) => b.time_minutes - a.time_minutes)
+        .map((dish) => `${dish.dish_name}：${dish.steps[0]}`),
+      "最后集中做快手青菜和蛋类，所有菜上桌前统一尝咸淡",
+    ],
+    reason: `按你在首页选的 ${selected.length} 道菜生成，买菜清单和做法都围绕这组菜单整理。`,
+  };
+
+  return withCookingSchedule(plan, req);
+}
+
 function buildCuratedPlans(req: GenerateRequest): MealPlan[] {
   const used = new Set<string>();
+  const selected = selectedSeedDishes(req);
+  const selectedPlan = selected.length ? buildSelectedDishPlan(req, selected) : null;
+  selected.forEach((dish) => used.add(dish.dish_name));
   const thirdType: MealPlan["type"] =
     req.has_child || req.has_elder ? "孩子老人友好型" : "改善伙食型";
 
-  return withDailyFavorite([
+  const generated = [
     buildCuratedPlan(req, "省钱快手型", used),
     buildCuratedPlan(req, "营养均衡型", used),
     buildCuratedPlan(req, thirdType, used),
-  ], req);
+  ];
+
+  if (selectedPlan) {
+    return [selectedPlan, ...withDailyFavorite(generated.slice(0, 2), req)];
+  }
+
+  return withDailyFavorite(generated, req);
 }
 
 /**

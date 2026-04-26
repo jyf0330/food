@@ -54,6 +54,7 @@ export default function PlanMemoryActions({
       finishTime: form.finishTime,
       cookSpeed: form.cookSpeed,
       favoriteFoods: form.favoriteFoods.join(","),
+      selectedDishes: form.selectedDishes.join(","),
       variant: String(currentVariant + 1),
     });
     if (form.userId) {
