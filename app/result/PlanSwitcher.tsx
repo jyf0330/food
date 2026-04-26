@@ -1,6 +1,7 @@
 "use client";
 
 import type { MealPlan } from "@/lib/types";
+import { rememberMealChoice } from "@/lib/mealMemory";
 import PlanMemoryActions, { type PlanMemoryForm } from "./PlanMemoryActions";
 import { useState } from "react";
 
@@ -27,6 +28,21 @@ export default function PlanSwitcher({
   const [selectedIndex, setSelectedIndex] = useState(initialSelectedIndex);
   const plan = plans[selectedIndex] as PlanWithOptionalSchedule | undefined;
 
+  const selectPlan = (index: number, selectedPlan: MealPlan) => {
+    setSelectedIndex(index);
+    try {
+      rememberMealChoice(window.localStorage, {
+        planIndex: index,
+        planTitle: selectedPlan.title,
+        planType: selectedPlan.type,
+        resultUrl: window.location.href,
+        form,
+      });
+    } catch {
+      // Local storage can be unavailable; selecting a plan should still work.
+    }
+  };
+
   if (!plan) {
     return null;
   }
@@ -42,7 +58,7 @@ export default function PlanSwitcher({
               type="button"
               className={`plan-tab${active ? " active" : ""}`}
               aria-pressed={active}
-              onClick={() => setSelectedIndex(i)}
+              onClick={() => selectPlan(i, item)}
             >
               <span className="plan-tab-letter">{planLabel(i)}</span>
               <span className="plan-tab-copy">

@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import { describe, it } from "node:test";
-import { recommendedInitialPlanIndex } from "./planSelection";
+import { initialPlanIndex, recommendedInitialPlanIndex } from "./planSelection";
 import type { MealPlan } from "./types";
 
 const plans = [
@@ -16,5 +16,15 @@ describe("recommendedInitialPlanIndex", () => {
 
   it("keeps budget-focused users on the cheapest plan", () => {
     assert.equal(recommendedInitialPlanIndex(plans, 80), 0);
+  });
+});
+
+describe("initialPlanIndex", () => {
+  it("keeps an explicitly selected table when reopening a remembered result", () => {
+    assert.equal(initialPlanIndex(plans, 80, 1), 1);
+  });
+
+  it("falls back to the recommended table when the selected index is invalid", () => {
+    assert.equal(initialPlanIndex(plans, 200, 99), 2);
   });
 });

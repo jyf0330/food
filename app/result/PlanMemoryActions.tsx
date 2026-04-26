@@ -2,20 +2,9 @@
 
 import { useRef, useState } from "react";
 import { useRouter } from "next/navigation";
+import { rememberMealChoice, type MealMemoryForm } from "@/lib/mealMemory";
 
-export type PlanMemoryForm = {
-  people: number;
-  family: string;
-  budget: number;
-  time: number;
-  taste: string[];
-  channel: string;
-  avoid: string[];
-  finishTime: string;
-  cookSpeed: string;
-  userId: string;
-  favoriteFoods: string[];
-};
+export type PlanMemoryForm = MealMemoryForm;
 
 type PlanMemoryActionsProps = {
   planIndex: number;
@@ -24,8 +13,6 @@ type PlanMemoryActionsProps = {
   form: PlanMemoryForm;
   currentVariant: number;
 };
-
-const STORAGE_KEY = "san-zhuo-cai:last-choice";
 
 export default function PlanMemoryActions({
   planIndex,
@@ -43,17 +30,13 @@ export default function PlanMemoryActions({
       clearTimeout(resetTimer.current);
     }
 
-    localStorage.setItem(
-      STORAGE_KEY,
-      JSON.stringify({
-        planIndex,
-        planTitle,
-        planType,
-        resultUrl: window.location.href,
-        form,
-        savedAt: new Date().toISOString(),
-      })
-    );
+    rememberMealChoice(localStorage, {
+      planIndex,
+      planTitle,
+      planType,
+      resultUrl: window.location.href,
+      form,
+    });
 
     setSaved(true);
     resetTimer.current = setTimeout(() => setSaved(false), 1400);

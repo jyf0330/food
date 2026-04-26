@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { buildGenerateResponse } from "@/lib/mealPlanGenerator";
-import { recommendedInitialPlanIndex } from "@/lib/planSelection";
+import { initialPlanIndex } from "@/lib/planSelection";
 import type { GenerateRequest } from "@/lib/types";
 import { buildPrefixedUserId, getUserIdDisplay } from "@/lib/userIdentity";
 import type { PlanMemoryForm } from "./PlanMemoryActions";
@@ -20,6 +20,13 @@ const readNumber = (sp: SP, key: string, fallback: number) => {
 const readNonNegativeNumber = (sp: SP, key: string, fallback: number) => {
   const value = Number(readString(sp, key));
   return Number.isFinite(value) && value >= 0 ? value : fallback;
+};
+
+const readOptionalNonNegativeInteger = (sp: SP, key: string) => {
+  const raw = readString(sp, key);
+  if (!raw) return undefined;
+  const value = Number(raw);
+  return Number.isInteger(value) && value >= 0 ? value : undefined;
 };
 
 const readList = (sp: SP, key: string) =>
@@ -78,6 +85,7 @@ export default function ResultPage({ searchParams }: { searchParams: SP }) {
   const req = parseRequest(searchParams);
   const form = parseForm(searchParams);
   const currentVariant = readNonNegativeNumber(searchParams, "variant", 0);
+  const selectedPlanIndex = readOptionalNonNegativeInteger(searchParams, "planIndex");
   const response = buildGenerateResponse(req);
 
   return (
@@ -109,7 +117,11 @@ export default function ResultPage({ searchParams }: { searchParams: SP }) {
         plans={response.plans}
         form={form}
         currentVariant={currentVariant}
-        initialSelectedIndex={recommendedInitialPlanIndex(response.plans, req.budget)}
+        initialSelectedIndex={initialPlanIndex(
+          response.plans,
+          req.budget,
+          selectedPlanIndex
+        )}
       />
 
       <p className="mock-note">

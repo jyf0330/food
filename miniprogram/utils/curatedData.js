@@ -5156,7 +5156,9 @@ module.exports = {
       "estimated_cost_level": "中",
       "kid_friendly": true,
       "elder_friendly": false,
-      "avoid_tags": [],
+      "avoid_tags": [
+        "海鲜"
+      ],
       "steps": [
         "带鱼、姜洗净切好，肉类或水产提前用少许盐和淀粉抓匀。",
         "热锅加油，先炒香姜蒜，再下不易熟的食材。",
@@ -5171,6 +5173,1145 @@ module.exports = {
         {
           "name": "姜",
           "amount": "适量"
+        }
+      ]
+    },
+    {
+      "dish_name": "清蒸大黄花鱼",
+      "category": "荤菜",
+      "cuisine": "广东家常",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 2,
+      "time_minutes": 18,
+      "taste": [
+        "清淡",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "大黄花鱼",
+        "姜",
+        "葱"
+      ],
+      "optional_ingredients": [
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "蒸锅"
+      ],
+      "cooking_methods": [
+        "蒸"
+      ],
+      "estimated_cost_level": "高",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [
+        "海鲜"
+      ],
+      "steps": [
+        "大黄花鱼、姜、葱处理干净，按入口大小切好。",
+        "主料用少许盐、生抽和姜葱抓匀，铺入浅盘。",
+        "水开后上锅蒸到熟透，出锅前倒掉多余水汽。",
+        "淋少许热油或蒸鱼豉油，保持清淡口味。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "大黄花鱼",
+          "amount": "1 条"
+        },
+        {
+          "name": "姜",
+          "amount": "适量"
+        },
+        {
+          "name": "葱",
+          "amount": "适量"
+        }
+      ]
+    },
+    {
+      "dish_name": "干煎大带鱼",
+      "category": "荤菜",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 2,
+      "time_minutes": 12,
+      "taste": [
+        "咸香",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "带鱼",
+        "姜"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "炒锅"
+      ],
+      "cooking_methods": [
+        "煎"
+      ],
+      "estimated_cost_level": "高",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [
+        "海鲜"
+      ],
+      "steps": [
+        "带鱼、姜洗净切好，肉类或水产提前用少许盐和淀粉抓匀。",
+        "热锅加油，先炒香姜蒜，再下不易熟的食材。",
+        "转大火快速翻炒，按顺序放入易熟食材。",
+        "加盐或生抽调味，保持咸香，断生后立刻出锅。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "带鱼",
+          "amount": "半斤"
+        },
+        {
+          "name": "姜",
+          "amount": "适量"
+        }
+      ]
+    },
+    {
+      "dish_name": "黄骨鱼豆腐汤",
+      "category": "汤",
+      "cuisine": "广东家常",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 2,
+      "time_minutes": 20,
+      "taste": [
+        "鲜",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "黄骨鱼",
+        "豆腐"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "姜",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "汤锅"
+      ],
+      "cooking_methods": [
+        "煮"
+      ],
+      "estimated_cost_level": "高",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [
+        "海鲜"
+      ],
+      "steps": [
+        "黄骨鱼、豆腐洗净切好，肉类先焯水或简单腌制。",
+        "锅里加水和姜片，先下耐煮食材煮出底味。",
+        "再放易熟食材，中小火煮到软熟。",
+        "最后加盐调味，尝味后撒葱花出锅。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "黄骨鱼",
+          "amount": "2 条"
+        },
+        {
+          "name": "豆腐",
+          "amount": "1 盒"
+        }
+      ]
+    },
+    {
+      "dish_name": "椒盐对虾",
+      "category": "荤菜",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 1,
+      "time_minutes": 12,
+      "taste": [
+        "鲜香",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "对虾",
+        "蒜"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "姜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "炒锅"
+      ],
+      "cooking_methods": [
+        "炒"
+      ],
+      "estimated_cost_level": "高",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [
+        "海鲜"
+      ],
+      "steps": [
+        "对虾、蒜洗净切好，肉类或水产提前用少许盐和淀粉抓匀。",
+        "热锅加油，先炒香姜蒜，再下不易熟的食材。",
+        "转大火快速翻炒，按顺序放入易熟食材。",
+        "加盐或生抽调味，保持鲜香，断生后立刻出锅。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "对虾",
+          "amount": "半斤"
+        },
+        {
+          "name": "蒜",
+          "amount": "适量"
+        }
+      ]
+    },
+    {
+      "dish_name": "蒜蓉蒸鲍鱼",
+      "category": "荤菜",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 2,
+      "time_minutes": 18,
+      "taste": [
+        "鲜香",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "鲍鱼",
+        "粉丝",
+        "蒜"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "姜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "蒸锅"
+      ],
+      "cooking_methods": [
+        "蒸"
+      ],
+      "estimated_cost_level": "高",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [
+        "海鲜"
+      ],
+      "steps": [
+        "鲍鱼、粉丝、蒜处理干净，按入口大小切好。",
+        "主料用少许盐、生抽和姜葱抓匀，铺入浅盘。",
+        "水开后上锅蒸到熟透，出锅前倒掉多余水汽。",
+        "淋少许热油或蒸鱼豉油，保持鲜香口味。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "鲍鱼",
+          "amount": "6 只"
+        },
+        {
+          "name": "粉丝",
+          "amount": "1 把"
+        },
+        {
+          "name": "蒜",
+          "amount": "适量"
+        }
+      ]
+    },
+    {
+      "dish_name": "海参蒸蛋",
+      "category": "蛋类",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 2,
+      "time_minutes": 18,
+      "taste": [
+        "鲜嫩",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "海参",
+        "鸡蛋"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "姜",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "蒸锅"
+      ],
+      "cooking_methods": [
+        "蒸"
+      ],
+      "estimated_cost_level": "高",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [
+        "鸡蛋过敏",
+        "海鲜"
+      ],
+      "steps": [
+        "海参、鸡蛋处理干净，按入口大小切好。",
+        "主料用少许盐、生抽和姜葱抓匀，铺入浅盘。",
+        "水开后上锅蒸到熟透，出锅前倒掉多余水汽。",
+        "淋少许热油或蒸鱼豉油，保持鲜嫩口味。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "海参",
+          "amount": "2 条"
+        },
+        {
+          "name": "鸡蛋",
+          "amount": "4 个"
+        }
+      ]
+    },
+    {
+      "dish_name": "姜葱炒梭子蟹",
+      "category": "荤菜",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 1,
+      "time_minutes": 12,
+      "taste": [
+        "鲜香",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "梭子蟹",
+        "姜",
+        "葱"
+      ],
+      "optional_ingredients": [
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "炒锅"
+      ],
+      "cooking_methods": [
+        "炒"
+      ],
+      "estimated_cost_level": "高",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [
+        "海鲜"
+      ],
+      "steps": [
+        "梭子蟹、姜、葱洗净切好，肉类或水产提前用少许盐和淀粉抓匀。",
+        "热锅加油，先炒香姜蒜，再下不易熟的食材。",
+        "转大火快速翻炒，按顺序放入易熟食材。",
+        "加盐或生抽调味，保持鲜香，断生后立刻出锅。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "梭子蟹",
+          "amount": "2 只"
+        },
+        {
+          "name": "姜",
+          "amount": "适量"
+        },
+        {
+          "name": "葱",
+          "amount": "适量"
+        }
+      ]
+    },
+    {
+      "dish_name": "红烧甲鱼",
+      "category": "荤菜",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 2,
+      "time_minutes": 12,
+      "taste": [
+        "咸香",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "甲鱼",
+        "姜",
+        "葱"
+      ],
+      "optional_ingredients": [
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "炒锅"
+      ],
+      "cooking_methods": [
+        "烧"
+      ],
+      "estimated_cost_level": "高",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [
+        "海鲜"
+      ],
+      "steps": [
+        "甲鱼、姜、葱切成大小接近的块，甲鱼先煎或炒香。",
+        "加入姜蒜和少许生抽翻匀，再加热水没过一半。",
+        "盖上锅盖中火焖到主料软熟。",
+        "开盖收汁，按家人口味补盐后出锅。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "甲鱼",
+          "amount": "半只"
+        },
+        {
+          "name": "姜",
+          "amount": "适量"
+        },
+        {
+          "name": "葱",
+          "amount": "适量"
+        }
+      ]
+    },
+    {
+      "dish_name": "清蒸鲳鱼",
+      "category": "荤菜",
+      "cuisine": "广东家常",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 2,
+      "time_minutes": 18,
+      "taste": [
+        "清淡",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "鲳鱼",
+        "姜",
+        "葱"
+      ],
+      "optional_ingredients": [
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "蒸锅"
+      ],
+      "cooking_methods": [
+        "蒸"
+      ],
+      "estimated_cost_level": "高",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [
+        "海鲜"
+      ],
+      "steps": [
+        "鲳鱼、姜、葱处理干净，按入口大小切好。",
+        "主料用少许盐、生抽和姜葱抓匀，铺入浅盘。",
+        "水开后上锅蒸到熟透，出锅前倒掉多余水汽。",
+        "淋少许热油或蒸鱼豉油，保持清淡口味。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "鲳鱼",
+          "amount": "1 条"
+        },
+        {
+          "name": "姜",
+          "amount": "适量"
+        },
+        {
+          "name": "葱",
+          "amount": "适量"
+        }
+      ]
+    },
+    {
+      "dish_name": "丝瓜焖牛蛙",
+      "category": "荤菜",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 2,
+      "time_minutes": 30,
+      "taste": [
+        "鲜香",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "牛蛙",
+        "丝瓜"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "姜",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "炒锅"
+      ],
+      "cooking_methods": [
+        "焖"
+      ],
+      "estimated_cost_level": "高",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [
+        "海鲜"
+      ],
+      "steps": [
+        "牛蛙、丝瓜切成大小接近的块，牛蛙先煎或炒香。",
+        "加入姜蒜和少许生抽翻匀，再加热水没过一半。",
+        "盖上锅盖中火焖到主料软熟。",
+        "开盖收汁，按家人口味补盐后出锅。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "牛蛙",
+          "amount": "半斤"
+        },
+        {
+          "name": "丝瓜",
+          "amount": "1 根"
+        }
+      ]
+    },
+    {
+      "dish_name": "葱爆羊肉",
+      "category": "荤菜",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 1,
+      "time_minutes": 12,
+      "taste": [
+        "咸香",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "羊肉",
+        "洋葱"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "姜",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "炒锅"
+      ],
+      "cooking_methods": [
+        "炒"
+      ],
+      "estimated_cost_level": "高",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [
+        "牛羊肉"
+      ],
+      "steps": [
+        "羊肉、洋葱洗净切好，肉类或水产提前用少许盐和淀粉抓匀。",
+        "热锅加油，先炒香姜蒜，再下不易熟的食材。",
+        "转大火快速翻炒，按顺序放入易熟食材。",
+        "加盐或生抽调味，保持咸香，断生后立刻出锅。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "羊肉",
+          "amount": "300g"
+        },
+        {
+          "name": "洋葱",
+          "amount": "1 个"
+        }
+      ]
+    },
+    {
+      "dish_name": "萝卜羊肉汤",
+      "category": "汤",
+      "cuisine": "广东家常",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 3,
+      "time_minutes": 45,
+      "taste": [
+        "清甜",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "羊肉",
+        "白萝卜"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "姜",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "汤锅"
+      ],
+      "cooking_methods": [
+        "炖"
+      ],
+      "estimated_cost_level": "高",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [
+        "牛羊肉"
+      ],
+      "steps": [
+        "羊肉、白萝卜洗净切好，肉类先焯水或简单腌制。",
+        "锅里加水和姜片，先下耐煮食材煮出底味。",
+        "再放易熟食材，中小火煮到软熟。",
+        "最后加盐调味，尝味后撒葱花出锅。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "羊肉",
+          "amount": "300g"
+        },
+        {
+          "name": "白萝卜",
+          "amount": "半根"
+        }
+      ]
+    },
+    {
+      "dish_name": "香煎羊排",
+      "category": "荤菜",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "年轻人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 2,
+      "time_minutes": 12,
+      "taste": [
+        "咸香",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "羊排",
+        "姜"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "炒锅"
+      ],
+      "cooking_methods": [
+        "煎"
+      ],
+      "estimated_cost_level": "高",
+      "kid_friendly": true,
+      "elder_friendly": false,
+      "avoid_tags": [
+        "牛羊肉"
+      ],
+      "steps": [
+        "羊排、姜洗净切好，肉类或水产提前用少许盐和淀粉抓匀。",
+        "热锅加油，先炒香姜蒜，再下不易熟的食材。",
+        "转大火快速翻炒，按顺序放入易熟食材。",
+        "加盐或生抽调味，保持咸香，断生后立刻出锅。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "羊排",
+          "amount": "500g"
+        },
+        {
+          "name": "姜",
+          "amount": "适量"
+        }
+      ]
+    },
+    {
+      "dish_name": "肥牛金针菇",
+      "category": "荤菜",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 2,
+      "time_minutes": 12,
+      "taste": [
+        "鲜香",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "肥牛",
+        "金针菇"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "姜",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "汤锅"
+      ],
+      "cooking_methods": [
+        "煮"
+      ],
+      "estimated_cost_level": "高",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [
+        "牛羊肉"
+      ],
+      "steps": [
+        "肥牛、金针菇洗净切好，肉类先焯水或简单腌制。",
+        "锅里加水和姜片，先下耐煮食材煮出底味。",
+        "再放易熟食材，中小火煮到软熟。",
+        "最后加盐调味，尝味后撒葱花出锅。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "肥牛",
+          "amount": "250g"
+        },
+        {
+          "name": "金针菇",
+          "amount": "1 把"
+        }
+      ]
+    },
+    {
+      "dish_name": "黑椒牛排粒",
+      "category": "荤菜",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 1,
+      "time_minutes": 12,
+      "taste": [
+        "咸香",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "牛排",
+        "彩椒"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "姜",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "炒锅"
+      ],
+      "cooking_methods": [
+        "炒"
+      ],
+      "estimated_cost_level": "高",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [
+        "牛羊肉"
+      ],
+      "steps": [
+        "牛排、彩椒洗净切好，肉类或水产提前用少许盐和淀粉抓匀。",
+        "热锅加油，先炒香姜蒜，再下不易熟的食材。",
+        "转大火快速翻炒，按顺序放入易熟食材。",
+        "加盐或生抽调味，保持咸香，断生后立刻出锅。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "牛排",
+          "amount": "300g"
+        },
+        {
+          "name": "彩椒",
+          "amount": "2 个"
         }
       ]
     },
@@ -9717,6 +10858,3274 @@ module.exports = {
           "amount": "按人数"
         }
       ]
+    },
+    {
+      "dish_name": "白菜豆腐汤",
+      "category": "汤",
+      "cuisine": "广东家常",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 2,
+      "time_minutes": 20,
+      "taste": [
+        "清甜",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "大白菜",
+        "豆腐"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "姜",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "汤锅"
+      ],
+      "cooking_methods": [
+        "煮"
+      ],
+      "estimated_cost_level": "低",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [],
+      "steps": [
+        "大白菜、豆腐洗净切好，肉类先焯水或简单腌制。",
+        "锅里加水和姜片，先下耐煮食材煮出底味。",
+        "再放易熟食材，中小火煮到软熟。",
+        "最后加盐调味，尝味后撒葱花出锅。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "大白菜",
+          "amount": "半棵"
+        },
+        {
+          "name": "豆腐",
+          "amount": "1 盒"
+        }
+      ]
+    },
+    {
+      "dish_name": "白菜猪肉炖粉条",
+      "category": "荤菜",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 3,
+      "time_minutes": 50,
+      "taste": [
+        "咸香",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "大白菜",
+        "粉丝",
+        "猪里脊"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "姜",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "汤锅"
+      ],
+      "cooking_methods": [
+        "炖"
+      ],
+      "estimated_cost_level": "中",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [],
+      "steps": [
+        "大白菜、粉丝、猪里脊洗净切好，肉类先焯水或简单腌制。",
+        "锅里加水和姜片，先下耐煮食材煮出底味。",
+        "再放易熟食材，中小火煮到软熟。",
+        "最后加盐调味，尝味后撒葱花出锅。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "大白菜",
+          "amount": "半棵"
+        },
+        {
+          "name": "粉丝",
+          "amount": "1 把"
+        },
+        {
+          "name": "猪里脊",
+          "amount": "250g"
+        }
+      ]
+    },
+    {
+      "dish_name": "白芹菜炒肉丝",
+      "category": "荤菜",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 1,
+      "time_minutes": 12,
+      "taste": [
+        "清爽",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "白芹菜",
+        "猪里脊"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "姜",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "炒锅"
+      ],
+      "cooking_methods": [
+        "炒"
+      ],
+      "estimated_cost_level": "中",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [],
+      "steps": [
+        "白芹菜、猪里脊洗净切好，肉类或水产提前用少许盐和淀粉抓匀。",
+        "热锅加油，先炒香姜蒜，再下不易熟的食材。",
+        "转大火快速翻炒，按顺序放入易熟食材。",
+        "加盐或生抽调味，保持清爽，断生后立刻出锅。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "白芹菜",
+          "amount": "半斤"
+        },
+        {
+          "name": "猪里脊",
+          "amount": "250g"
+        }
+      ]
+    },
+    {
+      "dish_name": "青苦菜肉片汤",
+      "category": "汤",
+      "cuisine": "广东家常",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 2,
+      "time_minutes": 20,
+      "taste": [
+        "清淡",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "青苦菜",
+        "肉片"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "姜",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "汤锅"
+      ],
+      "cooking_methods": [
+        "煮"
+      ],
+      "estimated_cost_level": "低",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [],
+      "steps": [
+        "青苦菜、肉片洗净切好，肉类先焯水或简单腌制。",
+        "锅里加水和姜片，先下耐煮食材煮出底味。",
+        "再放易熟食材，中小火煮到软熟。",
+        "最后加盐调味，尝味后撒葱花出锅。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "青苦菜",
+          "amount": "半斤"
+        },
+        {
+          "name": "肉片",
+          "amount": "250g"
+        }
+      ]
+    },
+    {
+      "dish_name": "茼蒿炒鸡蛋",
+      "category": "蛋类",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 1,
+      "time_minutes": 12,
+      "taste": [
+        "清香",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "茼蒿",
+        "鸡蛋"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "姜",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "炒锅"
+      ],
+      "cooking_methods": [
+        "炒"
+      ],
+      "estimated_cost_level": "低",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [
+        "鸡蛋过敏"
+      ],
+      "steps": [
+        "茼蒿、鸡蛋洗净切好，肉类或水产提前用少许盐和淀粉抓匀。",
+        "热锅加油，先炒香姜蒜，再下不易熟的食材。",
+        "转大火快速翻炒，按顺序放入易熟食材。",
+        "加盐或生抽调味，保持清香，断生后立刻出锅。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "茼蒿",
+          "amount": "半斤"
+        },
+        {
+          "name": "鸡蛋",
+          "amount": "4 个"
+        }
+      ]
+    },
+    {
+      "dish_name": "上汤茼蒿",
+      "category": "素菜",
+      "cuisine": "广东家常",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 2,
+      "time_minutes": 12,
+      "taste": [
+        "清淡",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "茼蒿",
+        "鸡蛋"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "姜",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "汤锅"
+      ],
+      "cooking_methods": [
+        "煮"
+      ],
+      "estimated_cost_level": "低",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [
+        "鸡蛋过敏"
+      ],
+      "steps": [
+        "茼蒿、鸡蛋洗净切好，肉类先焯水或简单腌制。",
+        "锅里加水和姜片，先下耐煮食材煮出底味。",
+        "再放易熟食材，中小火煮到软熟。",
+        "最后加盐调味，尝味后撒葱花出锅。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "茼蒿",
+          "amount": "半斤"
+        },
+        {
+          "name": "鸡蛋",
+          "amount": "4 个"
+        }
+      ]
+    },
+    {
+      "dish_name": "蒜苗炒五花肉",
+      "category": "荤菜",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 1,
+      "time_minutes": 12,
+      "taste": [
+        "咸香",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "蒜苗",
+        "五花肉"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "姜",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "炒锅"
+      ],
+      "cooking_methods": [
+        "炒"
+      ],
+      "estimated_cost_level": "中",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [],
+      "steps": [
+        "蒜苗、五花肉洗净切好，肉类或水产提前用少许盐和淀粉抓匀。",
+        "热锅加油，先炒香姜蒜，再下不易熟的食材。",
+        "转大火快速翻炒，按顺序放入易熟食材。",
+        "加盐或生抽调味，保持咸香，断生后立刻出锅。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "蒜苗",
+          "amount": "半斤"
+        },
+        {
+          "name": "五花肉",
+          "amount": "250g"
+        }
+      ]
+    },
+    {
+      "dish_name": "蒜苗炒鸡蛋",
+      "category": "蛋类",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 1,
+      "time_minutes": 12,
+      "taste": [
+        "鲜香",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "蒜苗",
+        "鸡蛋"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "姜",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "炒锅"
+      ],
+      "cooking_methods": [
+        "炒"
+      ],
+      "estimated_cost_level": "低",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [
+        "鸡蛋过敏"
+      ],
+      "steps": [
+        "蒜苗、鸡蛋洗净切好，肉类或水产提前用少许盐和淀粉抓匀。",
+        "热锅加油，先炒香姜蒜，再下不易熟的食材。",
+        "转大火快速翻炒，按顺序放入易熟食材。",
+        "加盐或生抽调味，保持鲜香，断生后立刻出锅。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "蒜苗",
+          "amount": "半斤"
+        },
+        {
+          "name": "鸡蛋",
+          "amount": "4 个"
+        }
+      ]
+    },
+    {
+      "dish_name": "西葫芦炒蛋",
+      "category": "蛋类",
+      "cuisine": "广东家常",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 1,
+      "time_minutes": 12,
+      "taste": [
+        "清甜",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "西葫芦",
+        "鸡蛋"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "姜",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "炒锅"
+      ],
+      "cooking_methods": [
+        "炒"
+      ],
+      "estimated_cost_level": "低",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [
+        "鸡蛋过敏"
+      ],
+      "steps": [
+        "西葫芦、鸡蛋洗净切好，肉类或水产提前用少许盐和淀粉抓匀。",
+        "热锅加油，先炒香姜蒜，再下不易熟的食材。",
+        "转大火快速翻炒，按顺序放入易熟食材。",
+        "加盐或生抽调味，保持清甜，断生后立刻出锅。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "西葫芦",
+          "amount": "1 根"
+        },
+        {
+          "name": "鸡蛋",
+          "amount": "4 个"
+        }
+      ]
+    },
+    {
+      "dish_name": "佛手瓜炒肉片",
+      "category": "荤菜",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 1,
+      "time_minutes": 12,
+      "taste": [
+        "清爽",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "佛手瓜",
+        "肉片"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "姜",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "炒锅"
+      ],
+      "cooking_methods": [
+        "炒"
+      ],
+      "estimated_cost_level": "中",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [],
+      "steps": [
+        "佛手瓜、肉片洗净切好，肉类或水产提前用少许盐和淀粉抓匀。",
+        "热锅加油，先炒香姜蒜，再下不易熟的食材。",
+        "转大火快速翻炒，按顺序放入易熟食材。",
+        "加盐或生抽调味，保持清爽，断生后立刻出锅。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "佛手瓜",
+          "amount": "1 个"
+        },
+        {
+          "name": "肉片",
+          "amount": "250g"
+        }
+      ]
+    },
+    {
+      "dish_name": "口蘑炒鸡胸",
+      "category": "荤菜",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 1,
+      "time_minutes": 12,
+      "taste": [
+        "咸鲜",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "口蘑",
+        "鸡胸肉"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "姜",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "炒锅"
+      ],
+      "cooking_methods": [
+        "炒"
+      ],
+      "estimated_cost_level": "中",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [],
+      "steps": [
+        "口蘑、鸡胸肉洗净切好，肉类或水产提前用少许盐和淀粉抓匀。",
+        "热锅加油，先炒香姜蒜，再下不易熟的食材。",
+        "转大火快速翻炒，按顺序放入易熟食材。",
+        "加盐或生抽调味，保持咸鲜，断生后立刻出锅。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "口蘑",
+          "amount": "半斤"
+        },
+        {
+          "name": "鸡胸肉",
+          "amount": "300g"
+        }
+      ]
+    },
+    {
+      "dish_name": "平菇炒蛋",
+      "category": "蛋类",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 1,
+      "time_minutes": 12,
+      "taste": [
+        "鲜香",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "平菇",
+        "鸡蛋"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "姜",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "炒锅"
+      ],
+      "cooking_methods": [
+        "炒"
+      ],
+      "estimated_cost_level": "低",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [
+        "鸡蛋过敏"
+      ],
+      "steps": [
+        "平菇、鸡蛋洗净切好，肉类或水产提前用少许盐和淀粉抓匀。",
+        "热锅加油，先炒香姜蒜，再下不易熟的食材。",
+        "转大火快速翻炒，按顺序放入易熟食材。",
+        "加盐或生抽调味，保持鲜香，断生后立刻出锅。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "平菇",
+          "amount": "半斤"
+        },
+        {
+          "name": "鸡蛋",
+          "amount": "4 个"
+        }
+      ]
+    },
+    {
+      "dish_name": "海鲜菇豆腐汤",
+      "category": "汤",
+      "cuisine": "广东家常",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 2,
+      "time_minutes": 20,
+      "taste": [
+        "鲜",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "海鲜菇",
+        "豆腐"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "姜",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "汤锅"
+      ],
+      "cooking_methods": [
+        "煮"
+      ],
+      "estimated_cost_level": "低",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [],
+      "steps": [
+        "海鲜菇、豆腐洗净切好，肉类先焯水或简单腌制。",
+        "锅里加水和姜片，先下耐煮食材煮出底味。",
+        "再放易熟食材，中小火煮到软熟。",
+        "最后加盐调味，尝味后撒葱花出锅。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "海鲜菇",
+          "amount": "1 包"
+        },
+        {
+          "name": "豆腐",
+          "amount": "1 盒"
+        }
+      ]
+    },
+    {
+      "dish_name": "茶树菇蒸鸡",
+      "category": "荤菜",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 2,
+      "time_minutes": 18,
+      "taste": [
+        "咸鲜",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "茶树菇",
+        "鸡肉"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "姜",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "蒸锅"
+      ],
+      "cooking_methods": [
+        "蒸"
+      ],
+      "estimated_cost_level": "中",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [],
+      "steps": [
+        "茶树菇、鸡肉处理干净，按入口大小切好。",
+        "主料用少许盐、生抽和姜葱抓匀，铺入浅盘。",
+        "水开后上锅蒸到熟透，出锅前倒掉多余水汽。",
+        "淋少许热油或蒸鱼豉油，保持咸鲜口味。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "茶树菇",
+          "amount": "1 把"
+        },
+        {
+          "name": "鸡肉",
+          "amount": "半斤"
+        }
+      ]
+    },
+    {
+      "dish_name": "春笋炒肉片",
+      "category": "荤菜",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 1,
+      "time_minutes": 12,
+      "taste": [
+        "清香",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "春笋",
+        "肉片"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "姜",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "炒锅"
+      ],
+      "cooking_methods": [
+        "炒"
+      ],
+      "estimated_cost_level": "中",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [],
+      "steps": [
+        "春笋、肉片洗净切好，肉类或水产提前用少许盐和淀粉抓匀。",
+        "热锅加油，先炒香姜蒜，再下不易熟的食材。",
+        "转大火快速翻炒，按顺序放入易熟食材。",
+        "加盐或生抽调味，保持清香，断生后立刻出锅。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "春笋",
+          "amount": "2 根"
+        },
+        {
+          "name": "肉片",
+          "amount": "250g"
+        }
+      ]
+    },
+    {
+      "dish_name": "冬笋焖鸡",
+      "category": "荤菜",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 2,
+      "time_minutes": 30,
+      "taste": [
+        "咸香",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "冬笋",
+        "鸡肉"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "姜",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "炒锅"
+      ],
+      "cooking_methods": [
+        "焖"
+      ],
+      "estimated_cost_level": "中",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [],
+      "steps": [
+        "冬笋、鸡肉切成大小接近的块，冬笋先煎或炒香。",
+        "加入姜蒜和少许生抽翻匀，再加热水没过一半。",
+        "盖上锅盖中火焖到主料软熟。",
+        "开盖收汁，按家人口味补盐后出锅。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "冬笋",
+          "amount": "2 根"
+        },
+        {
+          "name": "鸡肉",
+          "amount": "半斤"
+        }
+      ]
+    },
+    {
+      "dish_name": "芥菜瘦肉汤",
+      "category": "汤",
+      "cuisine": "广东家常",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 2,
+      "time_minutes": 20,
+      "taste": [
+        "清淡",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "芥菜",
+        "瘦肉"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "姜",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "汤锅"
+      ],
+      "cooking_methods": [
+        "煮"
+      ],
+      "estimated_cost_level": "低",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [],
+      "steps": [
+        "芥菜、瘦肉洗净切好，肉类先焯水或简单腌制。",
+        "锅里加水和姜片，先下耐煮食材煮出底味。",
+        "再放易熟食材，中小火煮到软熟。",
+        "最后加盐调味，尝味后撒葱花出锅。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "芥菜",
+          "amount": "1 斤"
+        },
+        {
+          "name": "瘦肉",
+          "amount": "250g"
+        }
+      ]
+    },
+    {
+      "dish_name": "豇豆炒肉末",
+      "category": "荤菜",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 1,
+      "time_minutes": 12,
+      "taste": [
+        "咸香",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "豇豆",
+        "猪肉末"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "姜",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "炒锅"
+      ],
+      "cooking_methods": [
+        "炒"
+      ],
+      "estimated_cost_level": "中",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [],
+      "steps": [
+        "豇豆、猪肉末洗净切好，肉类或水产提前用少许盐和淀粉抓匀。",
+        "热锅加油，先炒香姜蒜，再下不易熟的食材。",
+        "转大火快速翻炒，按顺序放入易熟食材。",
+        "加盐或生抽调味，保持咸香，断生后立刻出锅。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "豇豆",
+          "amount": "半斤"
+        },
+        {
+          "name": "猪肉末",
+          "amount": "200g"
+        }
+      ]
+    },
+    {
+      "dish_name": "毛豆炒肉末",
+      "category": "荤菜",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 1,
+      "time_minutes": 12,
+      "taste": [
+        "鲜香",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "毛豆",
+        "猪肉末"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "姜",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "炒锅"
+      ],
+      "cooking_methods": [
+        "炒"
+      ],
+      "estimated_cost_level": "中",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [],
+      "steps": [
+        "毛豆、猪肉末洗净切好，肉类或水产提前用少许盐和淀粉抓匀。",
+        "热锅加油，先炒香姜蒜，再下不易熟的食材。",
+        "转大火快速翻炒，按顺序放入易熟食材。",
+        "加盐或生抽调味，保持鲜香，断生后立刻出锅。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "毛豆",
+          "amount": "半斤"
+        },
+        {
+          "name": "猪肉末",
+          "amount": "200g"
+        }
+      ]
+    },
+    {
+      "dish_name": "莴笋叶鸡蛋汤",
+      "category": "汤",
+      "cuisine": "广东家常",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 2,
+      "time_minutes": 20,
+      "taste": [
+        "清淡",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "莴笋叶",
+        "鸡蛋"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "姜",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "汤锅"
+      ],
+      "cooking_methods": [
+        "煮"
+      ],
+      "estimated_cost_level": "低",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [
+        "鸡蛋过敏"
+      ],
+      "steps": [
+        "莴笋叶、鸡蛋洗净切好，肉类先焯水或简单腌制。",
+        "锅里加水和姜片，先下耐煮食材煮出底味。",
+        "再放易熟食材，中小火煮到软熟。",
+        "最后加盐调味，尝味后撒葱花出锅。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "莴笋叶",
+          "amount": "半斤"
+        },
+        {
+          "name": "鸡蛋",
+          "amount": "4 个"
+        }
+      ]
+    },
+    {
+      "dish_name": "生蚝煎蛋",
+      "category": "蛋类",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 2,
+      "time_minutes": 12,
+      "taste": [
+        "鲜香",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "生蚝",
+        "鸡蛋"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "姜",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "炒锅"
+      ],
+      "cooking_methods": [
+        "煎"
+      ],
+      "estimated_cost_level": "中",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [
+        "鸡蛋过敏",
+        "海鲜"
+      ],
+      "steps": [
+        "生蚝、鸡蛋洗净切好，肉类或水产提前用少许盐和淀粉抓匀。",
+        "热锅加油，先炒香姜蒜，再下不易熟的食材。",
+        "转大火快速翻炒，按顺序放入易熟食材。",
+        "加盐或生抽调味，保持鲜香，断生后立刻出锅。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "生蚝",
+          "amount": "6 只"
+        },
+        {
+          "name": "鸡蛋",
+          "amount": "4 个"
+        }
+      ]
+    },
+    {
+      "dish_name": "鲫鱼豆腐汤",
+      "category": "汤",
+      "cuisine": "广东家常",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 2,
+      "time_minutes": 20,
+      "taste": [
+        "鲜",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "鲫鱼",
+        "豆腐"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "姜",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "汤锅"
+      ],
+      "cooking_methods": [
+        "煮"
+      ],
+      "estimated_cost_level": "中",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [
+        "海鲜"
+      ],
+      "steps": [
+        "鲫鱼、豆腐洗净切好，肉类先焯水或简单腌制。",
+        "锅里加水和姜片，先下耐煮食材煮出底味。",
+        "再放易熟食材，中小火煮到软熟。",
+        "最后加盐调味，尝味后撒葱花出锅。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "鲫鱼",
+          "amount": "1 条"
+        },
+        {
+          "name": "豆腐",
+          "amount": "1 盒"
+        }
+      ]
+    },
+    {
+      "dish_name": "里脊青椒丝",
+      "category": "荤菜",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "成人",
+        "年轻人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 1,
+      "time_minutes": 12,
+      "taste": [
+        "咸香",
+        "微辣"
+      ],
+      "main_ingredients": [
+        "猪里脊",
+        "青椒"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "姜",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "炒锅"
+      ],
+      "cooking_methods": [
+        "炒"
+      ],
+      "estimated_cost_level": "中",
+      "kid_friendly": false,
+      "elder_friendly": false,
+      "avoid_tags": [
+        "辣"
+      ],
+      "steps": [
+        "猪里脊、青椒洗净切好，肉类或水产提前用少许盐和淀粉抓匀。",
+        "热锅加油，先炒香姜蒜，再下不易熟的食材。",
+        "转大火快速翻炒，按顺序放入易熟食材。",
+        "加盐或生抽调味，保持咸香，断生后立刻出锅。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "猪里脊",
+          "amount": "250g"
+        },
+        {
+          "name": "青椒",
+          "amount": "2 个"
+        }
+      ]
+    },
+    {
+      "dish_name": "五花肉焖莲藕",
+      "category": "荤菜",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 2,
+      "time_minutes": 30,
+      "taste": [
+        "咸香",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "五花肉",
+        "莲藕"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "姜",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "炒锅"
+      ],
+      "cooking_methods": [
+        "焖"
+      ],
+      "estimated_cost_level": "中",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [],
+      "steps": [
+        "五花肉、莲藕切成大小接近的块，五花肉先煎或炒香。",
+        "加入姜蒜和少许生抽翻匀，再加热水没过一半。",
+        "盖上锅盖中火焖到主料软熟。",
+        "开盖收汁，按家人口味补盐后出锅。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "五花肉",
+          "amount": "250g"
+        },
+        {
+          "name": "莲藕",
+          "amount": "1 节"
+        }
+      ]
+    },
+    {
+      "dish_name": "香菜拌牛肉",
+      "category": "凉菜",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "年轻人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 2,
+      "time_minutes": 12,
+      "taste": [
+        "清爽",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "香菜",
+        "牛肉"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "姜",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "炒锅"
+      ],
+      "cooking_methods": [
+        "拌"
+      ],
+      "estimated_cost_level": "中",
+      "kid_friendly": true,
+      "elder_friendly": false,
+      "avoid_tags": [
+        "牛羊肉"
+      ],
+      "steps": [
+        "香菜、牛肉洗净处理，能生吃的切条，需断生的先焯水。",
+        "蒜末、生抽、少许醋和香油调成料汁。",
+        "食材沥干后和料汁拌匀。",
+        "放 3 分钟入味，开饭前再装盘。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "香菜",
+          "amount": "1 小把"
+        },
+        {
+          "name": "牛肉",
+          "amount": "250g"
+        }
+      ]
+    },
+    {
+      "dish_name": "口蘑豆腐煲",
+      "category": "豆腐",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 2,
+      "time_minutes": 12,
+      "taste": [
+        "咸鲜",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "口蘑",
+        "豆腐"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "姜",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "汤锅"
+      ],
+      "cooking_methods": [
+        "煮"
+      ],
+      "estimated_cost_level": "低",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [],
+      "steps": [
+        "口蘑、豆腐洗净切好，肉类先焯水或简单腌制。",
+        "锅里加水和姜片，先下耐煮食材煮出底味。",
+        "再放易熟食材，中小火煮到软熟。",
+        "最后加盐调味，尝味后撒葱花出锅。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "口蘑",
+          "amount": "半斤"
+        },
+        {
+          "name": "豆腐",
+          "amount": "1 盒"
+        }
+      ]
+    },
+    {
+      "dish_name": "平菇肉片汤",
+      "category": "汤",
+      "cuisine": "广东家常",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 2,
+      "time_minutes": 20,
+      "taste": [
+        "鲜",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "平菇",
+        "肉片"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "姜",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "汤锅"
+      ],
+      "cooking_methods": [
+        "煮"
+      ],
+      "estimated_cost_level": "低",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [],
+      "steps": [
+        "平菇、肉片洗净切好，肉类先焯水或简单腌制。",
+        "锅里加水和姜片，先下耐煮食材煮出底味。",
+        "再放易熟食材，中小火煮到软熟。",
+        "最后加盐调味，尝味后撒葱花出锅。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "平菇",
+          "amount": "半斤"
+        },
+        {
+          "name": "肉片",
+          "amount": "250g"
+        }
+      ]
+    },
+    {
+      "dish_name": "海鲜菇炒牛肉",
+      "category": "荤菜",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 1,
+      "time_minutes": 12,
+      "taste": [
+        "咸鲜",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "海鲜菇",
+        "牛肉"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "姜",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "炒锅"
+      ],
+      "cooking_methods": [
+        "炒"
+      ],
+      "estimated_cost_level": "中",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [
+        "牛羊肉"
+      ],
+      "steps": [
+        "海鲜菇、牛肉洗净切好，肉类或水产提前用少许盐和淀粉抓匀。",
+        "热锅加油，先炒香姜蒜，再下不易熟的食材。",
+        "转大火快速翻炒，按顺序放入易熟食材。",
+        "加盐或生抽调味，保持咸鲜，断生后立刻出锅。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "海鲜菇",
+          "amount": "1 包"
+        },
+        {
+          "name": "牛肉",
+          "amount": "250g"
+        }
+      ]
+    },
+    {
+      "dish_name": "菜花炒猪肉",
+      "category": "荤菜",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 1,
+      "time_minutes": 12,
+      "taste": [
+        "咸香",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "菜花",
+        "猪肉"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "姜",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "炒锅"
+      ],
+      "cooking_methods": [
+        "炒"
+      ],
+      "estimated_cost_level": "中",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [],
+      "steps": [
+        "菜花、猪肉洗净切好，肉类或水产提前用少许盐和淀粉抓匀。",
+        "热锅加油，先炒香姜蒜，再下不易熟的食材。",
+        "转大火快速翻炒，按顺序放入易熟食材。",
+        "加盐或生抽调味，保持咸香，断生后立刻出锅。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "菜花",
+          "amount": "半颗"
+        },
+        {
+          "name": "猪肉",
+          "amount": "250g"
+        }
+      ]
+    },
+    {
+      "dish_name": "香菇炖白条鸡",
+      "category": "荤菜",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 3,
+      "time_minutes": 50,
+      "taste": [
+        "清香",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "白条鸡",
+        "香菇"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "姜",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "汤锅"
+      ],
+      "cooking_methods": [
+        "炖"
+      ],
+      "estimated_cost_level": "中",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [],
+      "steps": [
+        "白条鸡、香菇洗净切好，肉类先焯水或简单腌制。",
+        "锅里加水和姜片，先下耐煮食材煮出底味。",
+        "再放易熟食材，中小火煮到软熟。",
+        "最后加盐调味，尝味后撒葱花出锅。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "白条鸡",
+          "amount": "半只"
+        },
+        {
+          "name": "香菇",
+          "amount": "6 朵"
+        }
+      ]
+    },
+    {
+      "dish_name": "红烧鲤鱼",
+      "category": "荤菜",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 2,
+      "time_minutes": 12,
+      "taste": [
+        "咸香",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "鲤鱼",
+        "生姜",
+        "大葱"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "姜",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "炒锅"
+      ],
+      "cooking_methods": [
+        "烧"
+      ],
+      "estimated_cost_level": "中",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [
+        "海鲜"
+      ],
+      "steps": [
+        "鲤鱼、生姜、大葱切成大小接近的块，鲤鱼先煎或炒香。",
+        "加入姜蒜和少许生抽翻匀，再加热水没过一半。",
+        "盖上锅盖中火焖到主料软熟。",
+        "开盖收汁，按家人口味补盐后出锅。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "鲤鱼",
+          "amount": "1 条"
+        },
+        {
+          "name": "生姜",
+          "amount": "适量"
+        },
+        {
+          "name": "大葱",
+          "amount": "1 根"
+        }
+      ]
+    },
+    {
+      "dish_name": "白鲢鱼豆腐汤",
+      "category": "汤",
+      "cuisine": "广东家常",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 2,
+      "time_minutes": 20,
+      "taste": [
+        "鲜",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "白鲢鱼",
+        "豆腐"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "姜",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "汤锅"
+      ],
+      "cooking_methods": [
+        "煮"
+      ],
+      "estimated_cost_level": "中",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [
+        "海鲜"
+      ],
+      "steps": [
+        "白鲢鱼、豆腐洗净切好，肉类先焯水或简单腌制。",
+        "锅里加水和姜片，先下耐煮食材煮出底味。",
+        "再放易熟食材，中小火煮到软熟。",
+        "最后加盐调味，尝味后撒葱花出锅。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "白鲢鱼",
+          "amount": "1 条"
+        },
+        {
+          "name": "豆腐",
+          "amount": "1 盒"
+        }
+      ]
+    },
+    {
+      "dish_name": "香煎大带鱼",
+      "category": "荤菜",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "年轻人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 2,
+      "time_minutes": 12,
+      "taste": [
+        "咸香",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "大带鱼",
+        "生姜"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "姜",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "炒锅"
+      ],
+      "cooking_methods": [
+        "煎"
+      ],
+      "estimated_cost_level": "中",
+      "kid_friendly": true,
+      "elder_friendly": false,
+      "avoid_tags": [
+        "海鲜"
+      ],
+      "steps": [
+        "大带鱼、生姜洗净切好，肉类或水产提前用少许盐和淀粉抓匀。",
+        "热锅加油，先炒香姜蒜，再下不易熟的食材。",
+        "转大火快速翻炒，按顺序放入易熟食材。",
+        "加盐或生抽调味，保持咸香，断生后立刻出锅。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "大带鱼",
+          "amount": "半斤"
+        },
+        {
+          "name": "生姜",
+          "amount": "适量"
+        }
+      ]
+    },
+    {
+      "dish_name": "花鲢鱼头豆腐汤",
+      "category": "汤",
+      "cuisine": "广东家常",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 3,
+      "time_minutes": 45,
+      "taste": [
+        "鲜",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "花鲢鱼",
+        "豆腐"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "姜",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "汤锅"
+      ],
+      "cooking_methods": [
+        "炖"
+      ],
+      "estimated_cost_level": "中",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [
+        "海鲜"
+      ],
+      "steps": [
+        "花鲢鱼、豆腐洗净切好，肉类先焯水或简单腌制。",
+        "锅里加水和姜片，先下耐煮食材煮出底味。",
+        "再放易熟食材，中小火煮到软熟。",
+        "最后加盐调味，尝味后撒葱花出锅。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "花鲢鱼",
+          "amount": "半个鱼头"
+        },
+        {
+          "name": "豆腐",
+          "amount": "1 盒"
+        }
+      ]
+    },
+    {
+      "dish_name": "清炒油菜",
+      "category": "素菜",
+      "cuisine": "广东家常",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 1,
+      "time_minutes": 12,
+      "taste": [
+        "清淡",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "油菜",
+        "大蒜"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "姜",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "炒锅"
+      ],
+      "cooking_methods": [
+        "炒"
+      ],
+      "estimated_cost_level": "低",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [],
+      "steps": [
+        "油菜、大蒜洗净切好，肉类或水产提前用少许盐和淀粉抓匀。",
+        "热锅加油，先炒香姜蒜，再下不易熟的食材。",
+        "转大火快速翻炒，按顺序放入易熟食材。",
+        "加盐或生抽调味，保持清淡，断生后立刻出锅。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "油菜",
+          "amount": "1 斤"
+        },
+        {
+          "name": "大蒜",
+          "amount": "适量"
+        }
+      ]
+    },
+    {
+      "dish_name": "洋白菜炒鸡蛋",
+      "category": "蛋类",
+      "cuisine": "广东家常",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 1,
+      "time_minutes": 12,
+      "taste": [
+        "清甜",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "洋白菜",
+        "鸡蛋"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "姜",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "炒锅"
+      ],
+      "cooking_methods": [
+        "炒"
+      ],
+      "estimated_cost_level": "低",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [
+        "鸡蛋过敏"
+      ],
+      "steps": [
+        "洋白菜、鸡蛋洗净切好，肉类或水产提前用少许盐和淀粉抓匀。",
+        "热锅加油，先炒香姜蒜，再下不易熟的食材。",
+        "转大火快速翻炒，按顺序放入易熟食材。",
+        "加盐或生抽调味，保持清甜，断生后立刻出锅。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "洋白菜",
+          "amount": "半个"
+        },
+        {
+          "name": "鸡蛋",
+          "amount": "4 个"
+        }
+      ]
+    },
+    {
+      "dish_name": "葱头炒牛肉",
+      "category": "荤菜",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 1,
+      "time_minutes": 12,
+      "taste": [
+        "咸香",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "葱头",
+        "牛肉"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "姜",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "炒锅"
+      ],
+      "cooking_methods": [
+        "炒"
+      ],
+      "estimated_cost_level": "中",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [
+        "牛羊肉"
+      ],
+      "steps": [
+        "葱头、牛肉洗净切好，肉类或水产提前用少许盐和淀粉抓匀。",
+        "热锅加油，先炒香姜蒜，再下不易熟的食材。",
+        "转大火快速翻炒，按顺序放入易熟食材。",
+        "加盐或生抽调味，保持咸香，断生后立刻出锅。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "葱头",
+          "amount": "1 个"
+        },
+        {
+          "name": "牛肉",
+          "amount": "250g"
+        }
+      ]
+    },
+    {
+      "dish_name": "大葱炒鸡蛋",
+      "category": "蛋类",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 1,
+      "time_minutes": 12,
+      "taste": [
+        "葱香",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "大葱",
+        "鸡蛋"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "姜",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "炒锅"
+      ],
+      "cooking_methods": [
+        "炒"
+      ],
+      "estimated_cost_level": "低",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [
+        "鸡蛋过敏"
+      ],
+      "steps": [
+        "大葱、鸡蛋洗净切好，肉类或水产提前用少许盐和淀粉抓匀。",
+        "热锅加油，先炒香姜蒜，再下不易熟的食材。",
+        "转大火快速翻炒，按顺序放入易熟食材。",
+        "加盐或生抽调味，保持葱香，断生后立刻出锅。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "大葱",
+          "amount": "1 根"
+        },
+        {
+          "name": "鸡蛋",
+          "amount": "4 个"
+        }
+      ]
+    },
+    {
+      "dish_name": "生姜焖鸡",
+      "category": "荤菜",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 2,
+      "time_minutes": 30,
+      "taste": [
+        "咸香",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "生姜",
+        "鸡肉"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "姜",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "炒锅"
+      ],
+      "cooking_methods": [
+        "焖"
+      ],
+      "estimated_cost_level": "中",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [],
+      "steps": [
+        "生姜、鸡肉切成大小接近的块，生姜先煎或炒香。",
+        "加入姜蒜和少许生抽翻匀，再加热水没过一半。",
+        "盖上锅盖中火焖到主料软熟。",
+        "开盖收汁，按家人口味补盐后出锅。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "生姜",
+          "amount": "适量"
+        },
+        {
+          "name": "鸡肉",
+          "amount": "半斤"
+        }
+      ]
+    },
+    {
+      "dish_name": "蒜薹炒肉丝",
+      "category": "荤菜",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 1,
+      "time_minutes": 12,
+      "taste": [
+        "咸香",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "蒜薹",
+        "猪里脊"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "姜",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "炒锅"
+      ],
+      "cooking_methods": [
+        "炒"
+      ],
+      "estimated_cost_level": "中",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [],
+      "steps": [
+        "蒜薹、猪里脊洗净切好，肉类或水产提前用少许盐和淀粉抓匀。",
+        "热锅加油，先炒香姜蒜，再下不易熟的食材。",
+        "转大火快速翻炒，按顺序放入易熟食材。",
+        "加盐或生抽调味，保持咸香，断生后立刻出锅。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "蒜薹",
+          "amount": "半斤"
+        },
+        {
+          "name": "猪里脊",
+          "amount": "250g"
+        }
+      ]
+    },
+    {
+      "dish_name": "豆角焖面",
+      "category": "主食",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 2,
+      "time_minutes": 30,
+      "taste": [
+        "咸香",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "豆角",
+        "面条"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "姜",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "炒锅"
+      ],
+      "cooking_methods": [
+        "焖"
+      ],
+      "estimated_cost_level": "低",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [],
+      "steps": [
+        "豆角、面条切成大小接近的块，豆角先煎或炒香。",
+        "加入姜蒜和少许生抽翻匀，再加热水没过一半。",
+        "盖上锅盖中火焖到主料软熟。",
+        "开盖收汁，按家人口味补盐后出锅。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "豆角",
+          "amount": "半斤"
+        },
+        {
+          "name": "面条",
+          "amount": "300g"
+        }
+      ]
+    },
+    {
+      "dish_name": "大蒜烧豆腐",
+      "category": "豆腐",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 2,
+      "time_minutes": 12,
+      "taste": [
+        "咸香",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "大蒜",
+        "豆腐"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "姜",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "炒锅"
+      ],
+      "cooking_methods": [
+        "烧"
+      ],
+      "estimated_cost_level": "低",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [],
+      "steps": [
+        "大蒜、豆腐切成大小接近的块，大蒜先煎或炒香。",
+        "加入姜蒜和少许生抽翻匀，再加热水没过一半。",
+        "盖上锅盖中火焖到主料软熟。",
+        "开盖收汁，按家人口味补盐后出锅。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "大蒜",
+          "amount": "适量"
+        },
+        {
+          "name": "豆腐",
+          "amount": "1 盒"
+        }
+      ]
+    },
+    {
+      "dish_name": "西红柿鸡蛋汤",
+      "category": "汤",
+      "cuisine": "广东家常",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 2,
+      "time_minutes": 20,
+      "taste": [
+        "酸甜",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "西红柿",
+        "鸡蛋"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "姜",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "汤锅"
+      ],
+      "cooking_methods": [
+        "煮"
+      ],
+      "estimated_cost_level": "低",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [
+        "鸡蛋过敏"
+      ],
+      "steps": [
+        "西红柿、鸡蛋洗净切好，肉类先焯水或简单腌制。",
+        "锅里加水和姜片，先下耐煮食材煮出底味。",
+        "再放易熟食材，中小火煮到软熟。",
+        "最后加盐调味，尝味后撒葱花出锅。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "西红柿",
+          "amount": "3 个"
+        },
+        {
+          "name": "鸡蛋",
+          "amount": "4 个"
+        }
+      ]
+    },
+    {
+      "dish_name": "黄瓜木耳炒蛋",
+      "category": "蛋类",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 1,
+      "time_minutes": 12,
+      "taste": [
+        "清爽",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "黄瓜",
+        "木耳",
+        "鸡蛋"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "姜",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "炒锅"
+      ],
+      "cooking_methods": [
+        "炒"
+      ],
+      "estimated_cost_level": "低",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [
+        "鸡蛋过敏"
+      ],
+      "steps": [
+        "黄瓜、木耳、鸡蛋洗净切好，肉类或水产提前用少许盐和淀粉抓匀。",
+        "热锅加油，先炒香姜蒜，再下不易熟的食材。",
+        "转大火快速翻炒，按顺序放入易熟食材。",
+        "加盐或生抽调味，保持清爽，断生后立刻出锅。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "黄瓜",
+          "amount": "1 根"
+        },
+        {
+          "name": "木耳",
+          "amount": "1 把"
+        },
+        {
+          "name": "鸡蛋",
+          "amount": "4 个"
+        }
+      ]
     }
   ],
   "ingredients": [
@@ -14151,6 +18560,497 @@ module.exports = {
       }
     },
     {
+      "standard_name": "大黄花鱼",
+      "aliases": [
+        "黄花鱼",
+        "黄鱼"
+      ],
+      "category": "水产",
+      "common_units": [
+        "斤",
+        "克",
+        "份"
+      ],
+      "storage_days": 1,
+      "season_months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "platform_keywords": {
+        "朴朴": [
+          "大黄花鱼",
+          "黄花鱼",
+          "黄鱼"
+        ],
+        "沃尔玛": [
+          "大黄花鱼",
+          "黄花鱼",
+          "黄鱼"
+        ],
+        "盒马": [
+          "大黄花鱼",
+          "黄花鱼",
+          "黄鱼"
+        ],
+        "菜市场": [
+          "大黄花鱼",
+          "黄花鱼",
+          "黄鱼"
+        ],
+        "美团买菜": [
+          "大黄花鱼",
+          "黄花鱼",
+          "黄鱼"
+        ],
+        "楼下超市": [
+          "大黄花鱼",
+          "黄花鱼",
+          "黄鱼"
+        ]
+      }
+    },
+    {
+      "standard_name": "黄骨鱼",
+      "aliases": [
+        "黄颡鱼"
+      ],
+      "category": "水产",
+      "common_units": [
+        "斤",
+        "克",
+        "份"
+      ],
+      "storage_days": 1,
+      "season_months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "platform_keywords": {
+        "朴朴": [
+          "黄骨鱼",
+          "黄颡鱼"
+        ],
+        "沃尔玛": [
+          "黄骨鱼",
+          "黄颡鱼"
+        ],
+        "盒马": [
+          "黄骨鱼",
+          "黄颡鱼"
+        ],
+        "菜市场": [
+          "黄骨鱼",
+          "黄颡鱼"
+        ],
+        "美团买菜": [
+          "黄骨鱼",
+          "黄颡鱼"
+        ],
+        "楼下超市": [
+          "黄骨鱼",
+          "黄颡鱼"
+        ]
+      }
+    },
+    {
+      "standard_name": "对虾",
+      "aliases": [
+        "大虾",
+        "明虾"
+      ],
+      "category": "水产",
+      "common_units": [
+        "斤",
+        "克",
+        "份"
+      ],
+      "storage_days": 1,
+      "season_months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "platform_keywords": {
+        "朴朴": [
+          "对虾",
+          "大虾",
+          "明虾"
+        ],
+        "沃尔玛": [
+          "对虾",
+          "大虾",
+          "明虾"
+        ],
+        "盒马": [
+          "对虾",
+          "大虾",
+          "明虾"
+        ],
+        "菜市场": [
+          "对虾",
+          "大虾",
+          "明虾"
+        ],
+        "美团买菜": [
+          "对虾",
+          "大虾",
+          "明虾"
+        ],
+        "楼下超市": [
+          "对虾",
+          "大虾",
+          "明虾"
+        ]
+      }
+    },
+    {
+      "standard_name": "鲍鱼",
+      "aliases": [
+        "鲜鲍鱼"
+      ],
+      "category": "水产",
+      "common_units": [
+        "斤",
+        "克",
+        "份"
+      ],
+      "storage_days": 1,
+      "season_months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "platform_keywords": {
+        "朴朴": [
+          "鲍鱼",
+          "鲜鲍鱼"
+        ],
+        "沃尔玛": [
+          "鲍鱼",
+          "鲜鲍鱼"
+        ],
+        "盒马": [
+          "鲍鱼",
+          "鲜鲍鱼"
+        ],
+        "菜市场": [
+          "鲍鱼",
+          "鲜鲍鱼"
+        ],
+        "美团买菜": [
+          "鲍鱼",
+          "鲜鲍鱼"
+        ],
+        "楼下超市": [
+          "鲍鱼",
+          "鲜鲍鱼"
+        ]
+      }
+    },
+    {
+      "standard_name": "海参",
+      "aliases": [
+        "活海参"
+      ],
+      "category": "水产",
+      "common_units": [
+        "斤",
+        "克",
+        "份"
+      ],
+      "storage_days": 1,
+      "season_months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "platform_keywords": {
+        "朴朴": [
+          "海参",
+          "活海参"
+        ],
+        "沃尔玛": [
+          "海参",
+          "活海参"
+        ],
+        "盒马": [
+          "海参",
+          "活海参"
+        ],
+        "菜市场": [
+          "海参",
+          "活海参"
+        ],
+        "美团买菜": [
+          "海参",
+          "活海参"
+        ],
+        "楼下超市": [
+          "海参",
+          "活海参"
+        ]
+      }
+    },
+    {
+      "standard_name": "梭子蟹",
+      "aliases": [
+        "花蟹"
+      ],
+      "category": "水产",
+      "common_units": [
+        "斤",
+        "克",
+        "份"
+      ],
+      "storage_days": 1,
+      "season_months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "platform_keywords": {
+        "朴朴": [
+          "梭子蟹",
+          "花蟹"
+        ],
+        "沃尔玛": [
+          "梭子蟹",
+          "花蟹"
+        ],
+        "盒马": [
+          "梭子蟹",
+          "花蟹"
+        ],
+        "菜市场": [
+          "梭子蟹",
+          "花蟹"
+        ],
+        "美团买菜": [
+          "梭子蟹",
+          "花蟹"
+        ],
+        "楼下超市": [
+          "梭子蟹",
+          "花蟹"
+        ]
+      }
+    },
+    {
+      "standard_name": "甲鱼",
+      "aliases": [
+        "水鱼"
+      ],
+      "category": "水产",
+      "common_units": [
+        "斤",
+        "克",
+        "份"
+      ],
+      "storage_days": 1,
+      "season_months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "platform_keywords": {
+        "朴朴": [
+          "甲鱼",
+          "水鱼"
+        ],
+        "沃尔玛": [
+          "甲鱼",
+          "水鱼"
+        ],
+        "盒马": [
+          "甲鱼",
+          "水鱼"
+        ],
+        "菜市场": [
+          "甲鱼",
+          "水鱼"
+        ],
+        "美团买菜": [
+          "甲鱼",
+          "水鱼"
+        ],
+        "楼下超市": [
+          "甲鱼",
+          "水鱼"
+        ]
+      }
+    },
+    {
+      "standard_name": "鲳鱼",
+      "aliases": [
+        "白鲳鱼"
+      ],
+      "category": "水产",
+      "common_units": [
+        "斤",
+        "克",
+        "份"
+      ],
+      "storage_days": 1,
+      "season_months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "platform_keywords": {
+        "朴朴": [
+          "鲳鱼",
+          "白鲳鱼"
+        ],
+        "沃尔玛": [
+          "鲳鱼",
+          "白鲳鱼"
+        ],
+        "盒马": [
+          "鲳鱼",
+          "白鲳鱼"
+        ],
+        "菜市场": [
+          "鲳鱼",
+          "白鲳鱼"
+        ],
+        "美团买菜": [
+          "鲳鱼",
+          "白鲳鱼"
+        ],
+        "楼下超市": [
+          "鲳鱼",
+          "白鲳鱼"
+        ]
+      }
+    },
+    {
+      "standard_name": "牛蛙",
+      "aliases": [
+        "蛙肉"
+      ],
+      "category": "水产",
+      "common_units": [
+        "斤",
+        "克",
+        "份"
+      ],
+      "storage_days": 1,
+      "season_months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "platform_keywords": {
+        "朴朴": [
+          "牛蛙",
+          "蛙肉"
+        ],
+        "沃尔玛": [
+          "牛蛙",
+          "蛙肉"
+        ],
+        "盒马": [
+          "牛蛙",
+          "蛙肉"
+        ],
+        "菜市场": [
+          "牛蛙",
+          "蛙肉"
+        ],
+        "美团买菜": [
+          "牛蛙",
+          "蛙肉"
+        ],
+        "楼下超市": [
+          "牛蛙",
+          "蛙肉"
+        ]
+      }
+    },
+    {
       "standard_name": "蛤蜊",
       "aliases": [
         "花甲"
@@ -14249,6 +19149,232 @@ module.exports = {
         "楼下超市": [
           "牛腩",
           "牛坑腩"
+        ]
+      }
+    },
+    {
+      "standard_name": "羊肉",
+      "aliases": [
+        "羊腿肉",
+        "羊肉片"
+      ],
+      "category": "肉蛋",
+      "common_units": [
+        "斤",
+        "克",
+        "份"
+      ],
+      "storage_days": 2,
+      "season_months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "platform_keywords": {
+        "朴朴": [
+          "羊肉",
+          "羊腿肉",
+          "羊肉片"
+        ],
+        "沃尔玛": [
+          "羊肉",
+          "羊腿肉",
+          "羊肉片"
+        ],
+        "盒马": [
+          "羊肉",
+          "羊腿肉",
+          "羊肉片"
+        ],
+        "菜市场": [
+          "羊肉",
+          "羊腿肉",
+          "羊肉片"
+        ],
+        "美团买菜": [
+          "羊肉",
+          "羊腿肉",
+          "羊肉片"
+        ],
+        "楼下超市": [
+          "羊肉",
+          "羊腿肉",
+          "羊肉片"
+        ]
+      }
+    },
+    {
+      "standard_name": "羊排",
+      "aliases": [
+        "羊肋排"
+      ],
+      "category": "肉蛋",
+      "common_units": [
+        "斤",
+        "克",
+        "份"
+      ],
+      "storage_days": 2,
+      "season_months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "platform_keywords": {
+        "朴朴": [
+          "羊排",
+          "羊肋排"
+        ],
+        "沃尔玛": [
+          "羊排",
+          "羊肋排"
+        ],
+        "盒马": [
+          "羊排",
+          "羊肋排"
+        ],
+        "菜市场": [
+          "羊排",
+          "羊肋排"
+        ],
+        "美团买菜": [
+          "羊排",
+          "羊肋排"
+        ],
+        "楼下超市": [
+          "羊排",
+          "羊肋排"
+        ]
+      }
+    },
+    {
+      "standard_name": "肥牛",
+      "aliases": [
+        "肥牛卷"
+      ],
+      "category": "肉蛋",
+      "common_units": [
+        "斤",
+        "克",
+        "份"
+      ],
+      "storage_days": 2,
+      "season_months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "platform_keywords": {
+        "朴朴": [
+          "肥牛",
+          "肥牛卷"
+        ],
+        "沃尔玛": [
+          "肥牛",
+          "肥牛卷"
+        ],
+        "盒马": [
+          "肥牛",
+          "肥牛卷"
+        ],
+        "菜市场": [
+          "肥牛",
+          "肥牛卷"
+        ],
+        "美团买菜": [
+          "肥牛",
+          "肥牛卷"
+        ],
+        "楼下超市": [
+          "肥牛",
+          "肥牛卷"
+        ]
+      }
+    },
+    {
+      "standard_name": "牛排",
+      "aliases": [
+        "西冷牛排",
+        "肉眼牛排"
+      ],
+      "category": "肉蛋",
+      "common_units": [
+        "斤",
+        "克",
+        "份"
+      ],
+      "storage_days": 2,
+      "season_months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "platform_keywords": {
+        "朴朴": [
+          "牛排",
+          "西冷牛排",
+          "肉眼牛排"
+        ],
+        "沃尔玛": [
+          "牛排",
+          "西冷牛排",
+          "肉眼牛排"
+        ],
+        "盒马": [
+          "牛排",
+          "西冷牛排",
+          "肉眼牛排"
+        ],
+        "菜市场": [
+          "牛排",
+          "西冷牛排",
+          "肉眼牛排"
+        ],
+        "美团买菜": [
+          "牛排",
+          "西冷牛排",
+          "肉眼牛排"
+        ],
+        "楼下超市": [
+          "牛排",
+          "西冷牛排",
+          "肉眼牛排"
         ]
       }
     },
@@ -14466,6 +19592,2228 @@ module.exports = {
         "楼下超市": [
           "西红柿",
           "番茄"
+        ]
+      }
+    },
+    {
+      "standard_name": "大白菜",
+      "aliases": [
+        "白菜",
+        "黄芽白"
+      ],
+      "category": "蔬菜",
+      "common_units": [
+        "斤",
+        "个",
+        "把",
+        "份"
+      ],
+      "storage_days": 3,
+      "season_months": [
+        1,
+        2,
+        3,
+        10,
+        11,
+        12
+      ],
+      "platform_keywords": {
+        "朴朴": [
+          "大白菜",
+          "白菜",
+          "黄芽白"
+        ],
+        "沃尔玛": [
+          "大白菜",
+          "白菜",
+          "黄芽白"
+        ],
+        "盒马": [
+          "大白菜",
+          "白菜",
+          "黄芽白"
+        ],
+        "菜市场": [
+          "大白菜",
+          "白菜",
+          "黄芽白"
+        ],
+        "美团买菜": [
+          "大白菜",
+          "白菜",
+          "黄芽白"
+        ],
+        "楼下超市": [
+          "大白菜",
+          "白菜",
+          "黄芽白"
+        ]
+      }
+    },
+    {
+      "standard_name": "白芹菜",
+      "aliases": [
+        "本地芹菜",
+        "细芹"
+      ],
+      "category": "蔬菜",
+      "common_units": [
+        "斤",
+        "个",
+        "把",
+        "份"
+      ],
+      "storage_days": 3,
+      "season_months": [
+        1,
+        2,
+        3,
+        4,
+        10,
+        11,
+        12
+      ],
+      "platform_keywords": {
+        "朴朴": [
+          "白芹菜",
+          "本地芹菜",
+          "细芹"
+        ],
+        "沃尔玛": [
+          "白芹菜",
+          "本地芹菜",
+          "细芹"
+        ],
+        "盒马": [
+          "白芹菜",
+          "本地芹菜",
+          "细芹"
+        ],
+        "菜市场": [
+          "白芹菜",
+          "本地芹菜",
+          "细芹"
+        ],
+        "美团买菜": [
+          "白芹菜",
+          "本地芹菜",
+          "细芹"
+        ],
+        "楼下超市": [
+          "白芹菜",
+          "本地芹菜",
+          "细芹"
+        ]
+      }
+    },
+    {
+      "standard_name": "青苦菜",
+      "aliases": [
+        "苦菜",
+        "苦麦菜"
+      ],
+      "category": "蔬菜",
+      "common_units": [
+        "斤",
+        "个",
+        "把",
+        "份"
+      ],
+      "storage_days": 3,
+      "season_months": [
+        1,
+        2,
+        3,
+        4,
+        10,
+        11,
+        12
+      ],
+      "platform_keywords": {
+        "朴朴": [
+          "青苦菜",
+          "苦菜",
+          "苦麦菜"
+        ],
+        "沃尔玛": [
+          "青苦菜",
+          "苦菜",
+          "苦麦菜"
+        ],
+        "盒马": [
+          "青苦菜",
+          "苦菜",
+          "苦麦菜"
+        ],
+        "菜市场": [
+          "青苦菜",
+          "苦菜",
+          "苦麦菜"
+        ],
+        "美团买菜": [
+          "青苦菜",
+          "苦菜",
+          "苦麦菜"
+        ],
+        "楼下超市": [
+          "青苦菜",
+          "苦菜",
+          "苦麦菜"
+        ]
+      }
+    },
+    {
+      "standard_name": "茼蒿",
+      "aliases": [
+        "皇帝菜"
+      ],
+      "category": "蔬菜",
+      "common_units": [
+        "斤",
+        "个",
+        "把",
+        "份"
+      ],
+      "storage_days": 3,
+      "season_months": [
+        1,
+        2,
+        3,
+        10,
+        11,
+        12
+      ],
+      "platform_keywords": {
+        "朴朴": [
+          "茼蒿",
+          "皇帝菜"
+        ],
+        "沃尔玛": [
+          "茼蒿",
+          "皇帝菜"
+        ],
+        "盒马": [
+          "茼蒿",
+          "皇帝菜"
+        ],
+        "菜市场": [
+          "茼蒿",
+          "皇帝菜"
+        ],
+        "美团买菜": [
+          "茼蒿",
+          "皇帝菜"
+        ],
+        "楼下超市": [
+          "茼蒿",
+          "皇帝菜"
+        ]
+      }
+    },
+    {
+      "standard_name": "香菜",
+      "aliases": [
+        "芫荽"
+      ],
+      "category": "调料",
+      "common_units": [
+        "斤",
+        "个",
+        "把",
+        "份"
+      ],
+      "storage_days": 7,
+      "season_months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "platform_keywords": {
+        "朴朴": [
+          "香菜",
+          "芫荽"
+        ],
+        "沃尔玛": [
+          "香菜",
+          "芫荽"
+        ],
+        "盒马": [
+          "香菜",
+          "芫荽"
+        ],
+        "菜市场": [
+          "香菜",
+          "芫荽"
+        ],
+        "美团买菜": [
+          "香菜",
+          "芫荽"
+        ],
+        "楼下超市": [
+          "香菜",
+          "芫荽"
+        ]
+      }
+    },
+    {
+      "standard_name": "蒜苗",
+      "aliases": [
+        "青蒜"
+      ],
+      "category": "蔬菜",
+      "common_units": [
+        "斤",
+        "个",
+        "把",
+        "份"
+      ],
+      "storage_days": 3,
+      "season_months": [
+        1,
+        2,
+        3,
+        4,
+        10,
+        11,
+        12
+      ],
+      "platform_keywords": {
+        "朴朴": [
+          "蒜苗",
+          "青蒜"
+        ],
+        "沃尔玛": [
+          "蒜苗",
+          "青蒜"
+        ],
+        "盒马": [
+          "蒜苗",
+          "青蒜"
+        ],
+        "菜市场": [
+          "蒜苗",
+          "青蒜"
+        ],
+        "美团买菜": [
+          "蒜苗",
+          "青蒜"
+        ],
+        "楼下超市": [
+          "蒜苗",
+          "青蒜"
+        ]
+      }
+    },
+    {
+      "standard_name": "西葫芦",
+      "aliases": [
+        "云南小瓜"
+      ],
+      "category": "蔬菜",
+      "common_units": [
+        "斤",
+        "个",
+        "把",
+        "份"
+      ],
+      "storage_days": 3,
+      "season_months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "platform_keywords": {
+        "朴朴": [
+          "西葫芦",
+          "云南小瓜"
+        ],
+        "沃尔玛": [
+          "西葫芦",
+          "云南小瓜"
+        ],
+        "盒马": [
+          "西葫芦",
+          "云南小瓜"
+        ],
+        "菜市场": [
+          "西葫芦",
+          "云南小瓜"
+        ],
+        "美团买菜": [
+          "西葫芦",
+          "云南小瓜"
+        ],
+        "楼下超市": [
+          "西葫芦",
+          "云南小瓜"
+        ]
+      }
+    },
+    {
+      "standard_name": "佛手瓜",
+      "aliases": [
+        "合掌瓜"
+      ],
+      "category": "蔬菜",
+      "common_units": [
+        "斤",
+        "个",
+        "把",
+        "份"
+      ],
+      "storage_days": 3,
+      "season_months": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "platform_keywords": {
+        "朴朴": [
+          "佛手瓜",
+          "合掌瓜"
+        ],
+        "沃尔玛": [
+          "佛手瓜",
+          "合掌瓜"
+        ],
+        "盒马": [
+          "佛手瓜",
+          "合掌瓜"
+        ],
+        "菜市场": [
+          "佛手瓜",
+          "合掌瓜"
+        ],
+        "美团买菜": [
+          "佛手瓜",
+          "合掌瓜"
+        ],
+        "楼下超市": [
+          "佛手瓜",
+          "合掌瓜"
+        ]
+      }
+    },
+    {
+      "standard_name": "口蘑",
+      "aliases": [
+        "白蘑菇"
+      ],
+      "category": "菌菇",
+      "common_units": [
+        "斤",
+        "个",
+        "把",
+        "份"
+      ],
+      "storage_days": 7,
+      "season_months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "platform_keywords": {
+        "朴朴": [
+          "口蘑",
+          "白蘑菇"
+        ],
+        "沃尔玛": [
+          "口蘑",
+          "白蘑菇"
+        ],
+        "盒马": [
+          "口蘑",
+          "白蘑菇"
+        ],
+        "菜市场": [
+          "口蘑",
+          "白蘑菇"
+        ],
+        "美团买菜": [
+          "口蘑",
+          "白蘑菇"
+        ],
+        "楼下超市": [
+          "口蘑",
+          "白蘑菇"
+        ]
+      }
+    },
+    {
+      "standard_name": "平菇",
+      "aliases": [
+        "鲜平菇"
+      ],
+      "category": "菌菇",
+      "common_units": [
+        "斤",
+        "个",
+        "把",
+        "份"
+      ],
+      "storage_days": 7,
+      "season_months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "platform_keywords": {
+        "朴朴": [
+          "平菇",
+          "鲜平菇"
+        ],
+        "沃尔玛": [
+          "平菇",
+          "鲜平菇"
+        ],
+        "盒马": [
+          "平菇",
+          "鲜平菇"
+        ],
+        "菜市场": [
+          "平菇",
+          "鲜平菇"
+        ],
+        "美团买菜": [
+          "平菇",
+          "鲜平菇"
+        ],
+        "楼下超市": [
+          "平菇",
+          "鲜平菇"
+        ]
+      }
+    },
+    {
+      "standard_name": "海鲜菇",
+      "aliases": [
+        "蟹味菇",
+        "白玉菇"
+      ],
+      "category": "菌菇",
+      "common_units": [
+        "斤",
+        "个",
+        "把",
+        "份"
+      ],
+      "storage_days": 7,
+      "season_months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "platform_keywords": {
+        "朴朴": [
+          "海鲜菇",
+          "蟹味菇",
+          "白玉菇"
+        ],
+        "沃尔玛": [
+          "海鲜菇",
+          "蟹味菇",
+          "白玉菇"
+        ],
+        "盒马": [
+          "海鲜菇",
+          "蟹味菇",
+          "白玉菇"
+        ],
+        "菜市场": [
+          "海鲜菇",
+          "蟹味菇",
+          "白玉菇"
+        ],
+        "美团买菜": [
+          "海鲜菇",
+          "蟹味菇",
+          "白玉菇"
+        ],
+        "楼下超市": [
+          "海鲜菇",
+          "蟹味菇",
+          "白玉菇"
+        ]
+      }
+    },
+    {
+      "standard_name": "茶树菇",
+      "aliases": [
+        "鲜茶树菇"
+      ],
+      "category": "菌菇",
+      "common_units": [
+        "斤",
+        "个",
+        "把",
+        "份"
+      ],
+      "storage_days": 7,
+      "season_months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "platform_keywords": {
+        "朴朴": [
+          "茶树菇",
+          "鲜茶树菇"
+        ],
+        "沃尔玛": [
+          "茶树菇",
+          "鲜茶树菇"
+        ],
+        "盒马": [
+          "茶树菇",
+          "鲜茶树菇"
+        ],
+        "菜市场": [
+          "茶树菇",
+          "鲜茶树菇"
+        ],
+        "美团买菜": [
+          "茶树菇",
+          "鲜茶树菇"
+        ],
+        "楼下超市": [
+          "茶树菇",
+          "鲜茶树菇"
+        ]
+      }
+    },
+    {
+      "standard_name": "春笋",
+      "aliases": [
+        "竹笋"
+      ],
+      "category": "蔬菜",
+      "common_units": [
+        "斤",
+        "个",
+        "把",
+        "份"
+      ],
+      "storage_days": 3,
+      "season_months": [
+        3,
+        4,
+        5
+      ],
+      "platform_keywords": {
+        "朴朴": [
+          "春笋",
+          "竹笋"
+        ],
+        "沃尔玛": [
+          "春笋",
+          "竹笋"
+        ],
+        "盒马": [
+          "春笋",
+          "竹笋"
+        ],
+        "菜市场": [
+          "春笋",
+          "竹笋"
+        ],
+        "美团买菜": [
+          "春笋",
+          "竹笋"
+        ],
+        "楼下超市": [
+          "春笋",
+          "竹笋"
+        ]
+      }
+    },
+    {
+      "standard_name": "冬笋",
+      "aliases": [
+        "竹笋尖"
+      ],
+      "category": "蔬菜",
+      "common_units": [
+        "斤",
+        "个",
+        "把",
+        "份"
+      ],
+      "storage_days": 3,
+      "season_months": [
+        1,
+        2,
+        12
+      ],
+      "platform_keywords": {
+        "朴朴": [
+          "冬笋",
+          "竹笋尖"
+        ],
+        "沃尔玛": [
+          "冬笋",
+          "竹笋尖"
+        ],
+        "盒马": [
+          "冬笋",
+          "竹笋尖"
+        ],
+        "菜市场": [
+          "冬笋",
+          "竹笋尖"
+        ],
+        "美团买菜": [
+          "冬笋",
+          "竹笋尖"
+        ],
+        "楼下超市": [
+          "冬笋",
+          "竹笋尖"
+        ]
+      }
+    },
+    {
+      "standard_name": "芥菜",
+      "aliases": [
+        "盖菜"
+      ],
+      "category": "蔬菜",
+      "common_units": [
+        "斤",
+        "个",
+        "把",
+        "份"
+      ],
+      "storage_days": 3,
+      "season_months": [
+        1,
+        2,
+        3,
+        10,
+        11,
+        12
+      ],
+      "platform_keywords": {
+        "朴朴": [
+          "芥菜",
+          "盖菜"
+        ],
+        "沃尔玛": [
+          "芥菜",
+          "盖菜"
+        ],
+        "盒马": [
+          "芥菜",
+          "盖菜"
+        ],
+        "菜市场": [
+          "芥菜",
+          "盖菜"
+        ],
+        "美团买菜": [
+          "芥菜",
+          "盖菜"
+        ],
+        "楼下超市": [
+          "芥菜",
+          "盖菜"
+        ]
+      }
+    },
+    {
+      "standard_name": "豇豆",
+      "aliases": [
+        "长豆角"
+      ],
+      "category": "蔬菜",
+      "common_units": [
+        "斤",
+        "个",
+        "把",
+        "份"
+      ],
+      "storage_days": 3,
+      "season_months": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "platform_keywords": {
+        "朴朴": [
+          "豇豆",
+          "长豆角"
+        ],
+        "沃尔玛": [
+          "豇豆",
+          "长豆角"
+        ],
+        "盒马": [
+          "豇豆",
+          "长豆角"
+        ],
+        "菜市场": [
+          "豇豆",
+          "长豆角"
+        ],
+        "美团买菜": [
+          "豇豆",
+          "长豆角"
+        ],
+        "楼下超市": [
+          "豇豆",
+          "长豆角"
+        ]
+      }
+    },
+    {
+      "standard_name": "毛豆",
+      "aliases": [
+        "毛豆仁"
+      ],
+      "category": "蔬菜",
+      "common_units": [
+        "斤",
+        "个",
+        "把",
+        "份"
+      ],
+      "storage_days": 3,
+      "season_months": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "platform_keywords": {
+        "朴朴": [
+          "毛豆",
+          "毛豆仁"
+        ],
+        "沃尔玛": [
+          "毛豆",
+          "毛豆仁"
+        ],
+        "盒马": [
+          "毛豆",
+          "毛豆仁"
+        ],
+        "菜市场": [
+          "毛豆",
+          "毛豆仁"
+        ],
+        "美团买菜": [
+          "毛豆",
+          "毛豆仁"
+        ],
+        "楼下超市": [
+          "毛豆",
+          "毛豆仁"
+        ]
+      }
+    },
+    {
+      "standard_name": "莴笋叶",
+      "aliases": [
+        "莴笋尖"
+      ],
+      "category": "蔬菜",
+      "common_units": [
+        "斤",
+        "个",
+        "把",
+        "份"
+      ],
+      "storage_days": 3,
+      "season_months": [
+        1,
+        2,
+        3,
+        4,
+        11,
+        12
+      ],
+      "platform_keywords": {
+        "朴朴": [
+          "莴笋叶",
+          "莴笋尖"
+        ],
+        "沃尔玛": [
+          "莴笋叶",
+          "莴笋尖"
+        ],
+        "盒马": [
+          "莴笋叶",
+          "莴笋尖"
+        ],
+        "菜市场": [
+          "莴笋叶",
+          "莴笋尖"
+        ],
+        "美团买菜": [
+          "莴笋叶",
+          "莴笋尖"
+        ],
+        "楼下超市": [
+          "莴笋叶",
+          "莴笋尖"
+        ]
+      }
+    },
+    {
+      "standard_name": "生蚝",
+      "aliases": [
+        "牡蛎"
+      ],
+      "category": "水产",
+      "common_units": [
+        "斤",
+        "克",
+        "份"
+      ],
+      "storage_days": 1,
+      "season_months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "platform_keywords": {
+        "朴朴": [
+          "生蚝",
+          "牡蛎"
+        ],
+        "沃尔玛": [
+          "生蚝",
+          "牡蛎"
+        ],
+        "盒马": [
+          "生蚝",
+          "牡蛎"
+        ],
+        "菜市场": [
+          "生蚝",
+          "牡蛎"
+        ],
+        "美团买菜": [
+          "生蚝",
+          "牡蛎"
+        ],
+        "楼下超市": [
+          "生蚝",
+          "牡蛎"
+        ]
+      }
+    },
+    {
+      "standard_name": "鲫鱼",
+      "aliases": [
+        "鲜鲫鱼"
+      ],
+      "category": "水产",
+      "common_units": [
+        "斤",
+        "克",
+        "份"
+      ],
+      "storage_days": 1,
+      "season_months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "platform_keywords": {
+        "朴朴": [
+          "鲫鱼",
+          "鲜鲫鱼"
+        ],
+        "沃尔玛": [
+          "鲫鱼",
+          "鲜鲫鱼"
+        ],
+        "盒马": [
+          "鲫鱼",
+          "鲜鲫鱼"
+        ],
+        "菜市场": [
+          "鲫鱼",
+          "鲜鲫鱼"
+        ],
+        "美团买菜": [
+          "鲫鱼",
+          "鲜鲫鱼"
+        ],
+        "楼下超市": [
+          "鲫鱼",
+          "鲜鲫鱼"
+        ]
+      }
+    },
+    {
+      "standard_name": "猪里脊",
+      "aliases": [
+        "里脊肉"
+      ],
+      "category": "肉蛋",
+      "common_units": [
+        "斤",
+        "克",
+        "份"
+      ],
+      "storage_days": 2,
+      "season_months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "platform_keywords": {
+        "朴朴": [
+          "猪里脊",
+          "里脊肉"
+        ],
+        "沃尔玛": [
+          "猪里脊",
+          "里脊肉"
+        ],
+        "盒马": [
+          "猪里脊",
+          "里脊肉"
+        ],
+        "菜市场": [
+          "猪里脊",
+          "里脊肉"
+        ],
+        "美团买菜": [
+          "猪里脊",
+          "里脊肉"
+        ],
+        "楼下超市": [
+          "猪里脊",
+          "里脊肉"
+        ]
+      }
+    },
+    {
+      "standard_name": "五花肉",
+      "aliases": [
+        "猪五花"
+      ],
+      "category": "肉蛋",
+      "common_units": [
+        "斤",
+        "克",
+        "份"
+      ],
+      "storage_days": 2,
+      "season_months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "platform_keywords": {
+        "朴朴": [
+          "五花肉",
+          "猪五花"
+        ],
+        "沃尔玛": [
+          "五花肉",
+          "猪五花"
+        ],
+        "盒马": [
+          "五花肉",
+          "猪五花"
+        ],
+        "菜市场": [
+          "五花肉",
+          "猪五花"
+        ],
+        "美团买菜": [
+          "五花肉",
+          "猪五花"
+        ],
+        "楼下超市": [
+          "五花肉",
+          "猪五花"
+        ]
+      }
+    },
+    {
+      "standard_name": "猪肉",
+      "aliases": [
+        "鲜猪肉"
+      ],
+      "category": "肉蛋",
+      "common_units": [
+        "斤",
+        "克",
+        "份"
+      ],
+      "storage_days": 2,
+      "season_months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "platform_keywords": {
+        "朴朴": [
+          "猪肉",
+          "鲜猪肉"
+        ],
+        "沃尔玛": [
+          "猪肉",
+          "鲜猪肉"
+        ],
+        "盒马": [
+          "猪肉",
+          "鲜猪肉"
+        ],
+        "菜市场": [
+          "猪肉",
+          "鲜猪肉"
+        ],
+        "美团买菜": [
+          "猪肉",
+          "鲜猪肉"
+        ],
+        "楼下超市": [
+          "猪肉",
+          "鲜猪肉"
+        ]
+      }
+    },
+    {
+      "standard_name": "白条鸡",
+      "aliases": [
+        "整鸡"
+      ],
+      "category": "肉蛋",
+      "common_units": [
+        "斤",
+        "克",
+        "份"
+      ],
+      "storage_days": 2,
+      "season_months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "platform_keywords": {
+        "朴朴": [
+          "白条鸡",
+          "整鸡"
+        ],
+        "沃尔玛": [
+          "白条鸡",
+          "整鸡"
+        ],
+        "盒马": [
+          "白条鸡",
+          "整鸡"
+        ],
+        "菜市场": [
+          "白条鸡",
+          "整鸡"
+        ],
+        "美团买菜": [
+          "白条鸡",
+          "整鸡"
+        ],
+        "楼下超市": [
+          "白条鸡",
+          "整鸡"
+        ]
+      }
+    },
+    {
+      "standard_name": "鲤鱼",
+      "aliases": [
+        "鲜鲤鱼"
+      ],
+      "category": "水产",
+      "common_units": [
+        "斤",
+        "克",
+        "份"
+      ],
+      "storage_days": 1,
+      "season_months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "platform_keywords": {
+        "朴朴": [
+          "鲤鱼",
+          "鲜鲤鱼"
+        ],
+        "沃尔玛": [
+          "鲤鱼",
+          "鲜鲤鱼"
+        ],
+        "盒马": [
+          "鲤鱼",
+          "鲜鲤鱼"
+        ],
+        "菜市场": [
+          "鲤鱼",
+          "鲜鲤鱼"
+        ],
+        "美团买菜": [
+          "鲤鱼",
+          "鲜鲤鱼"
+        ],
+        "楼下超市": [
+          "鲤鱼",
+          "鲜鲤鱼"
+        ]
+      }
+    },
+    {
+      "standard_name": "白鲢鱼",
+      "aliases": [
+        "鲢鱼"
+      ],
+      "category": "水产",
+      "common_units": [
+        "斤",
+        "克",
+        "份"
+      ],
+      "storage_days": 1,
+      "season_months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "platform_keywords": {
+        "朴朴": [
+          "白鲢鱼",
+          "鲢鱼"
+        ],
+        "沃尔玛": [
+          "白鲢鱼",
+          "鲢鱼"
+        ],
+        "盒马": [
+          "白鲢鱼",
+          "鲢鱼"
+        ],
+        "菜市场": [
+          "白鲢鱼",
+          "鲢鱼"
+        ],
+        "美团买菜": [
+          "白鲢鱼",
+          "鲢鱼"
+        ],
+        "楼下超市": [
+          "白鲢鱼",
+          "鲢鱼"
+        ]
+      }
+    },
+    {
+      "standard_name": "大带鱼",
+      "aliases": [
+        "带鱼段"
+      ],
+      "category": "水产",
+      "common_units": [
+        "斤",
+        "克",
+        "份"
+      ],
+      "storage_days": 1,
+      "season_months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "platform_keywords": {
+        "朴朴": [
+          "大带鱼",
+          "带鱼段"
+        ],
+        "沃尔玛": [
+          "大带鱼",
+          "带鱼段"
+        ],
+        "盒马": [
+          "大带鱼",
+          "带鱼段"
+        ],
+        "菜市场": [
+          "大带鱼",
+          "带鱼段"
+        ],
+        "美团买菜": [
+          "大带鱼",
+          "带鱼段"
+        ],
+        "楼下超市": [
+          "大带鱼",
+          "带鱼段"
+        ]
+      }
+    },
+    {
+      "standard_name": "花鲢鱼",
+      "aliases": [
+        "鳙鱼",
+        "鱼头"
+      ],
+      "category": "水产",
+      "common_units": [
+        "斤",
+        "克",
+        "份"
+      ],
+      "storage_days": 1,
+      "season_months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "platform_keywords": {
+        "朴朴": [
+          "花鲢鱼",
+          "鳙鱼",
+          "鱼头"
+        ],
+        "沃尔玛": [
+          "花鲢鱼",
+          "鳙鱼",
+          "鱼头"
+        ],
+        "盒马": [
+          "花鲢鱼",
+          "鳙鱼",
+          "鱼头"
+        ],
+        "菜市场": [
+          "花鲢鱼",
+          "鳙鱼",
+          "鱼头"
+        ],
+        "美团买菜": [
+          "花鲢鱼",
+          "鳙鱼",
+          "鱼头"
+        ],
+        "楼下超市": [
+          "花鲢鱼",
+          "鳙鱼",
+          "鱼头"
+        ]
+      }
+    },
+    {
+      "standard_name": "油菜",
+      "aliases": [
+        "小油菜"
+      ],
+      "category": "蔬菜",
+      "common_units": [
+        "斤",
+        "个",
+        "把",
+        "份"
+      ],
+      "storage_days": 3,
+      "season_months": [
+        1,
+        2,
+        3,
+        4,
+        10,
+        11,
+        12
+      ],
+      "platform_keywords": {
+        "朴朴": [
+          "油菜",
+          "小油菜"
+        ],
+        "沃尔玛": [
+          "油菜",
+          "小油菜"
+        ],
+        "盒马": [
+          "油菜",
+          "小油菜"
+        ],
+        "菜市场": [
+          "油菜",
+          "小油菜"
+        ],
+        "美团买菜": [
+          "油菜",
+          "小油菜"
+        ],
+        "楼下超市": [
+          "油菜",
+          "小油菜"
+        ]
+      }
+    },
+    {
+      "standard_name": "洋白菜",
+      "aliases": [
+        "圆白菜",
+        "卷心菜"
+      ],
+      "category": "蔬菜",
+      "common_units": [
+        "斤",
+        "个",
+        "把",
+        "份"
+      ],
+      "storage_days": 3,
+      "season_months": [
+        1,
+        2,
+        3,
+        4,
+        10,
+        11,
+        12
+      ],
+      "platform_keywords": {
+        "朴朴": [
+          "洋白菜",
+          "圆白菜",
+          "卷心菜"
+        ],
+        "沃尔玛": [
+          "洋白菜",
+          "圆白菜",
+          "卷心菜"
+        ],
+        "盒马": [
+          "洋白菜",
+          "圆白菜",
+          "卷心菜"
+        ],
+        "菜市场": [
+          "洋白菜",
+          "圆白菜",
+          "卷心菜"
+        ],
+        "美团买菜": [
+          "洋白菜",
+          "圆白菜",
+          "卷心菜"
+        ],
+        "楼下超市": [
+          "洋白菜",
+          "圆白菜",
+          "卷心菜"
+        ]
+      }
+    },
+    {
+      "standard_name": "葱头",
+      "aliases": [
+        "洋葱头"
+      ],
+      "category": "蔬菜",
+      "common_units": [
+        "斤",
+        "个",
+        "把",
+        "份"
+      ],
+      "storage_days": 3,
+      "season_months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "platform_keywords": {
+        "朴朴": [
+          "葱头",
+          "洋葱头"
+        ],
+        "沃尔玛": [
+          "葱头",
+          "洋葱头"
+        ],
+        "盒马": [
+          "葱头",
+          "洋葱头"
+        ],
+        "菜市场": [
+          "葱头",
+          "洋葱头"
+        ],
+        "美团买菜": [
+          "葱头",
+          "洋葱头"
+        ],
+        "楼下超市": [
+          "葱头",
+          "洋葱头"
+        ]
+      }
+    },
+    {
+      "standard_name": "大葱",
+      "aliases": [
+        "京葱"
+      ],
+      "category": "调料",
+      "common_units": [
+        "斤",
+        "个",
+        "把",
+        "份"
+      ],
+      "storage_days": 7,
+      "season_months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "platform_keywords": {
+        "朴朴": [
+          "大葱",
+          "京葱"
+        ],
+        "沃尔玛": [
+          "大葱",
+          "京葱"
+        ],
+        "盒马": [
+          "大葱",
+          "京葱"
+        ],
+        "菜市场": [
+          "大葱",
+          "京葱"
+        ],
+        "美团买菜": [
+          "大葱",
+          "京葱"
+        ],
+        "楼下超市": [
+          "大葱",
+          "京葱"
+        ]
+      }
+    },
+    {
+      "standard_name": "生姜",
+      "aliases": [
+        "老姜"
+      ],
+      "category": "调料",
+      "common_units": [
+        "斤",
+        "个",
+        "把",
+        "份"
+      ],
+      "storage_days": 7,
+      "season_months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "platform_keywords": {
+        "朴朴": [
+          "生姜",
+          "老姜"
+        ],
+        "沃尔玛": [
+          "生姜",
+          "老姜"
+        ],
+        "盒马": [
+          "生姜",
+          "老姜"
+        ],
+        "菜市场": [
+          "生姜",
+          "老姜"
+        ],
+        "美团买菜": [
+          "生姜",
+          "老姜"
+        ],
+        "楼下超市": [
+          "生姜",
+          "老姜"
+        ]
+      }
+    },
+    {
+      "standard_name": "大蒜",
+      "aliases": [
+        "蒜头"
+      ],
+      "category": "调料",
+      "common_units": [
+        "斤",
+        "个",
+        "把",
+        "份"
+      ],
+      "storage_days": 7,
+      "season_months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "platform_keywords": {
+        "朴朴": [
+          "大蒜",
+          "蒜头"
+        ],
+        "沃尔玛": [
+          "大蒜",
+          "蒜头"
+        ],
+        "盒马": [
+          "大蒜",
+          "蒜头"
+        ],
+        "菜市场": [
+          "大蒜",
+          "蒜头"
+        ],
+        "美团买菜": [
+          "大蒜",
+          "蒜头"
+        ],
+        "楼下超市": [
+          "大蒜",
+          "蒜头"
+        ]
+      }
+    },
+    {
+      "standard_name": "蒜薹",
+      "aliases": [
+        "蒜苔"
+      ],
+      "category": "蔬菜",
+      "common_units": [
+        "斤",
+        "个",
+        "把",
+        "份"
+      ],
+      "storage_days": 3,
+      "season_months": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "platform_keywords": {
+        "朴朴": [
+          "蒜薹",
+          "蒜苔"
+        ],
+        "沃尔玛": [
+          "蒜薹",
+          "蒜苔"
+        ],
+        "盒马": [
+          "蒜薹",
+          "蒜苔"
+        ],
+        "菜市场": [
+          "蒜薹",
+          "蒜苔"
+        ],
+        "美团买菜": [
+          "蒜薹",
+          "蒜苔"
+        ],
+        "楼下超市": [
+          "蒜薹",
+          "蒜苔"
+        ]
+      }
+    },
+    {
+      "standard_name": "豆角",
+      "aliases": [
+        "长豆角"
+      ],
+      "category": "蔬菜",
+      "common_units": [
+        "斤",
+        "个",
+        "把",
+        "份"
+      ],
+      "storage_days": 3,
+      "season_months": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "platform_keywords": {
+        "朴朴": [
+          "豆角",
+          "长豆角"
+        ],
+        "沃尔玛": [
+          "豆角",
+          "长豆角"
+        ],
+        "盒马": [
+          "豆角",
+          "长豆角"
+        ],
+        "菜市场": [
+          "豆角",
+          "长豆角"
+        ],
+        "美团买菜": [
+          "豆角",
+          "长豆角"
+        ],
+        "楼下超市": [
+          "豆角",
+          "长豆角"
+        ]
+      }
+    },
+    {
+      "standard_name": "菜花",
+      "aliases": [
+        "花菜"
+      ],
+      "category": "蔬菜",
+      "common_units": [
+        "斤",
+        "个",
+        "把",
+        "份"
+      ],
+      "storage_days": 3,
+      "season_months": [
+        1,
+        2,
+        3,
+        4,
+        10,
+        11,
+        12
+      ],
+      "platform_keywords": {
+        "朴朴": [
+          "菜花",
+          "花菜"
+        ],
+        "沃尔玛": [
+          "菜花",
+          "花菜"
+        ],
+        "盒马": [
+          "菜花",
+          "花菜"
+        ],
+        "菜市场": [
+          "菜花",
+          "花菜"
+        ],
+        "美团买菜": [
+          "菜花",
+          "花菜"
+        ],
+        "楼下超市": [
+          "菜花",
+          "花菜"
+        ]
+      }
+    },
+    {
+      "standard_name": "西瓜",
+      "aliases": [
+        "麒麟瓜"
+      ],
+      "category": "水果",
+      "common_units": [
+        "斤",
+        "个",
+        "把",
+        "份"
+      ],
+      "storage_days": 7,
+      "season_months": [
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "platform_keywords": {
+        "朴朴": [
+          "西瓜",
+          "麒麟瓜"
+        ],
+        "沃尔玛": [
+          "西瓜",
+          "麒麟瓜"
+        ],
+        "盒马": [
+          "西瓜",
+          "麒麟瓜"
+        ],
+        "菜市场": [
+          "西瓜",
+          "麒麟瓜"
+        ],
+        "美团买菜": [
+          "西瓜",
+          "麒麟瓜"
+        ],
+        "楼下超市": [
+          "西瓜",
+          "麒麟瓜"
+        ]
+      }
+    },
+    {
+      "standard_name": "香蕉",
+      "aliases": [
+        "蕉"
+      ],
+      "category": "水果",
+      "common_units": [
+        "斤",
+        "个",
+        "把",
+        "份"
+      ],
+      "storage_days": 7,
+      "season_months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "platform_keywords": {
+        "朴朴": [
+          "香蕉",
+          "蕉"
+        ],
+        "沃尔玛": [
+          "香蕉",
+          "蕉"
+        ],
+        "盒马": [
+          "香蕉",
+          "蕉"
+        ],
+        "菜市场": [
+          "香蕉",
+          "蕉"
+        ],
+        "美团买菜": [
+          "香蕉",
+          "蕉"
+        ],
+        "楼下超市": [
+          "香蕉",
+          "蕉"
+        ]
+      }
+    },
+    {
+      "standard_name": "鸭梨",
+      "aliases": [
+        "梨"
+      ],
+      "category": "水果",
+      "common_units": [
+        "斤",
+        "个",
+        "把",
+        "份"
+      ],
+      "storage_days": 7,
+      "season_months": [
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "platform_keywords": {
+        "朴朴": [
+          "鸭梨",
+          "梨"
+        ],
+        "沃尔玛": [
+          "鸭梨",
+          "梨"
+        ],
+        "盒马": [
+          "鸭梨",
+          "梨"
+        ],
+        "菜市场": [
+          "鸭梨",
+          "梨"
+        ],
+        "美团买菜": [
+          "鸭梨",
+          "梨"
+        ],
+        "楼下超市": [
+          "鸭梨",
+          "梨"
+        ]
+      }
+    },
+    {
+      "standard_name": "富士苹果",
+      "aliases": [
+        "苹果"
+      ],
+      "category": "水果",
+      "common_units": [
+        "斤",
+        "个",
+        "把",
+        "份"
+      ],
+      "storage_days": 7,
+      "season_months": [
+        1,
+        2,
+        3,
+        4,
+        9,
+        10,
+        11,
+        12
+      ],
+      "platform_keywords": {
+        "朴朴": [
+          "富士苹果",
+          "苹果"
+        ],
+        "沃尔玛": [
+          "富士苹果",
+          "苹果"
+        ],
+        "盒马": [
+          "富士苹果",
+          "苹果"
+        ],
+        "菜市场": [
+          "富士苹果",
+          "苹果"
+        ],
+        "美团买菜": [
+          "富士苹果",
+          "苹果"
+        ],
+        "楼下超市": [
+          "富士苹果",
+          "苹果"
+        ]
+      }
+    },
+    {
+      "standard_name": "菠萝",
+      "aliases": [
+        "凤梨"
+      ],
+      "category": "水果",
+      "common_units": [
+        "斤",
+        "个",
+        "把",
+        "份"
+      ],
+      "storage_days": 7,
+      "season_months": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "platform_keywords": {
+        "朴朴": [
+          "菠萝",
+          "凤梨"
+        ],
+        "沃尔玛": [
+          "菠萝",
+          "凤梨"
+        ],
+        "盒马": [
+          "菠萝",
+          "凤梨"
+        ],
+        "菜市场": [
+          "菠萝",
+          "凤梨"
+        ],
+        "美团买菜": [
+          "菠萝",
+          "凤梨"
+        ],
+        "楼下超市": [
+          "菠萝",
+          "凤梨"
+        ]
+      }
+    },
+    {
+      "standard_name": "巨峰葡萄",
+      "aliases": [
+        "葡萄"
+      ],
+      "category": "水果",
+      "common_units": [
+        "斤",
+        "个",
+        "把",
+        "份"
+      ],
+      "storage_days": 7,
+      "season_months": [
+        6,
+        7,
+        8,
+        9,
+        10
+      ],
+      "platform_keywords": {
+        "朴朴": [
+          "巨峰葡萄",
+          "葡萄"
+        ],
+        "沃尔玛": [
+          "巨峰葡萄",
+          "葡萄"
+        ],
+        "盒马": [
+          "巨峰葡萄",
+          "葡萄"
+        ],
+        "菜市场": [
+          "巨峰葡萄",
+          "葡萄"
+        ],
+        "美团买菜": [
+          "巨峰葡萄",
+          "葡萄"
+        ],
+        "楼下超市": [
+          "巨峰葡萄",
+          "葡萄"
         ]
       }
     }
@@ -15504,9 +22852,9 @@ module.exports = {
       "unit": "斤",
       "normal_price": 20.4,
       "cheap_threshold": 16.7,
-      "expensive_threshold": 25.5,
-      "current_price": 26.9,
-      "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
+      "expensive_threshold": 30.9,
+      "current_price": 33.6,
+      "source_note": "参考农业农村部/价格监测公开数据后人工设定的深圳家庭买菜贵价基线"
     },
     {
       "name": "鲈鱼",
@@ -15514,9 +22862,9 @@ module.exports = {
       "unit": "斤",
       "normal_price": 35.6,
       "cheap_threshold": 29.2,
-      "expensive_threshold": 44.5,
-      "current_price": 35.6,
-      "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
+      "expensive_threshold": 22.1,
+      "current_price": 24,
+      "source_note": "参考农业农村部/价格监测公开数据后人工设定的深圳家庭买菜贵价基线"
     },
     {
       "name": "草鱼",
@@ -15534,9 +22882,9 @@ module.exports = {
       "unit": "斤",
       "normal_price": 32,
       "cheap_threshold": 26.2,
-      "expensive_threshold": 40,
-      "current_price": 25,
-      "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
+      "expensive_threshold": 27.6,
+      "current_price": 30,
+      "source_note": "参考农业农村部/价格监测公开数据后人工设定的深圳家庭买菜贵价基线"
     },
     {
       "name": "虾仁",
@@ -15544,9 +22892,9 @@ module.exports = {
       "unit": "斤",
       "normal_price": 33.2,
       "cheap_threshold": 27.2,
-      "expensive_threshold": 41.5,
-      "current_price": 33.2,
-      "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
+      "expensive_threshold": 32.2,
+      "current_price": 35,
+      "source_note": "参考农业农村部/价格监测公开数据后人工设定的深圳家庭买菜贵价基线"
     },
     {
       "name": "基围虾",
@@ -15554,9 +22902,9 @@ module.exports = {
       "unit": "斤",
       "normal_price": 34.4,
       "cheap_threshold": 28.2,
-      "expensive_threshold": 43,
-      "current_price": 34.4,
-      "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
+      "expensive_threshold": 35,
+      "current_price": 38,
+      "source_note": "参考农业农村部/价格监测公开数据后人工设定的深圳家庭买菜贵价基线"
     },
     {
       "name": "扇贝",
@@ -15954,9 +23302,9 @@ module.exports = {
       "unit": "斤",
       "normal_price": 8.4,
       "cheap_threshold": 6.9,
-      "expensive_threshold": 10.5,
-      "current_price": 8.4,
-      "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
+      "expensive_threshold": 14.7,
+      "current_price": 16,
+      "source_note": "参考农业农村部/价格监测公开数据后人工设定的深圳家庭买菜贵价基线"
     },
     {
       "name": "芹菜",
@@ -16026,6 +23374,846 @@ module.exports = {
       "cheap_threshold": 12.1,
       "expensive_threshold": 18.5,
       "current_price": 14.8,
+      "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
+    },
+    {
+      "name": "粉丝",
+      "category": "主食",
+      "unit": "斤",
+      "normal_price": 10,
+      "cheap_threshold": 8.2,
+      "expensive_threshold": 12.5,
+      "current_price": 7.8,
+      "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
+    },
+    {
+      "name": "河粉",
+      "category": "主食",
+      "unit": "斤",
+      "normal_price": 11.2,
+      "cheap_threshold": 9.2,
+      "expensive_threshold": 14,
+      "current_price": 11.2,
+      "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
+    },
+    {
+      "name": "小米",
+      "category": "主食",
+      "unit": "斤",
+      "normal_price": 12.4,
+      "cheap_threshold": 10.2,
+      "expensive_threshold": 15.5,
+      "current_price": 12.4,
+      "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
+    },
+    {
+      "name": "红薯",
+      "category": "主食",
+      "unit": "斤",
+      "normal_price": 13.6,
+      "cheap_threshold": 11.2,
+      "expensive_threshold": 17,
+      "current_price": 18,
+      "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
+    },
+    {
+      "name": "芋头",
+      "category": "主食",
+      "unit": "斤",
+      "normal_price": 14.8,
+      "cheap_threshold": 12.1,
+      "expensive_threshold": 18.5,
+      "current_price": 14.8,
+      "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
+    },
+    {
+      "name": "花生",
+      "category": "干货",
+      "unit": "斤",
+      "normal_price": 10,
+      "cheap_threshold": 8.2,
+      "expensive_threshold": 12.5,
+      "current_price": 7.8,
+      "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
+    },
+    {
+      "name": "红枣",
+      "category": "干货",
+      "unit": "斤",
+      "normal_price": 11.2,
+      "cheap_threshold": 9.2,
+      "expensive_threshold": 14,
+      "current_price": 11.2,
+      "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
+    },
+    {
+      "name": "枸杞",
+      "category": "干货",
+      "unit": "斤",
+      "normal_price": 12.4,
+      "cheap_threshold": 10.2,
+      "expensive_threshold": 15.5,
+      "current_price": 12.4,
+      "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
+    },
+    {
+      "name": "马蹄",
+      "category": "蔬菜",
+      "unit": "斤",
+      "normal_price": 9.6,
+      "cheap_threshold": 7.9,
+      "expensive_threshold": 12,
+      "current_price": 9.6,
+      "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
+    },
+    {
+      "name": "节瓜",
+      "category": "蔬菜",
+      "unit": "斤",
+      "normal_price": 10.8,
+      "cheap_threshold": 8.9,
+      "expensive_threshold": 13.5,
+      "current_price": 10.8,
+      "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
+    },
+    {
+      "name": "西洋菜",
+      "category": "蔬菜",
+      "unit": "斤",
+      "normal_price": 6,
+      "cheap_threshold": 4.9,
+      "expensive_threshold": 7.5,
+      "current_price": 7.9,
+      "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
+    },
+    {
+      "name": "苋菜",
+      "category": "蔬菜",
+      "unit": "斤",
+      "normal_price": 7.2,
+      "cheap_threshold": 5.9,
+      "expensive_threshold": 9,
+      "current_price": 7.2,
+      "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
+    },
+    {
+      "name": "芦笋",
+      "category": "蔬菜",
+      "unit": "斤",
+      "normal_price": 8.4,
+      "cheap_threshold": 6.9,
+      "expensive_threshold": 16.6,
+      "current_price": 18,
+      "source_note": "参考农业农村部/价格监测公开数据后人工设定的深圳家庭买菜贵价基线"
+    },
+    {
+      "name": "豆苗",
+      "category": "蔬菜",
+      "unit": "斤",
+      "normal_price": 9.6,
+      "cheap_threshold": 7.9,
+      "expensive_threshold": 12,
+      "current_price": 9.6,
+      "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
+    },
+    {
+      "name": "鸡翅",
+      "category": "肉蛋",
+      "unit": "斤",
+      "normal_price": 22.8,
+      "cheap_threshold": 18.7,
+      "expensive_threshold": 28.5,
+      "current_price": 22.8,
+      "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
+    },
+    {
+      "name": "鸭肉",
+      "category": "肉蛋",
+      "unit": "斤",
+      "normal_price": 18,
+      "cheap_threshold": 14.8,
+      "expensive_threshold": 22.5,
+      "current_price": 14,
+      "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
+    },
+    {
+      "name": "肉片",
+      "category": "肉蛋",
+      "unit": "斤",
+      "normal_price": 19.2,
+      "cheap_threshold": 15.7,
+      "expensive_threshold": 24,
+      "current_price": 19.2,
+      "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
+    },
+    {
+      "name": "午餐肉",
+      "category": "加工食品",
+      "unit": "斤",
+      "normal_price": 12.4,
+      "cheap_threshold": 10.2,
+      "expensive_threshold": 15.5,
+      "current_price": 16.4,
+      "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
+    },
+    {
+      "name": "腊肠",
+      "category": "加工食品",
+      "unit": "斤",
+      "normal_price": 13.6,
+      "cheap_threshold": 11.2,
+      "expensive_threshold": 17,
+      "current_price": 13.6,
+      "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
+    },
+    {
+      "name": "鲜鱿鱼",
+      "category": "水产",
+      "unit": "斤",
+      "normal_price": 36.8,
+      "cheap_threshold": 30.2,
+      "expensive_threshold": 46,
+      "current_price": 36.8,
+      "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
+    },
+    {
+      "name": "巴沙鱼",
+      "category": "水产",
+      "unit": "斤",
+      "normal_price": 32,
+      "cheap_threshold": 26.2,
+      "expensive_threshold": 40,
+      "current_price": 25,
+      "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
+    },
+    {
+      "name": "带鱼",
+      "category": "水产",
+      "unit": "斤",
+      "normal_price": 33.2,
+      "cheap_threshold": 27.2,
+      "expensive_threshold": 18.9,
+      "current_price": 20.5,
+      "source_note": "参考农业农村部/价格监测公开数据后人工设定的深圳家庭买菜贵价基线"
+    },
+    {
+      "name": "大黄花鱼",
+      "category": "水产",
+      "unit": "斤",
+      "normal_price": 34.4,
+      "cheap_threshold": 28.2,
+      "expensive_threshold": 20.8,
+      "current_price": 22.6,
+      "source_note": "参考农业农村部/价格监测公开数据后人工设定的深圳家庭买菜贵价基线"
+    },
+    {
+      "name": "黄骨鱼",
+      "category": "水产",
+      "unit": "斤",
+      "normal_price": 35.6,
+      "cheap_threshold": 29.2,
+      "expensive_threshold": 17,
+      "current_price": 18.5,
+      "source_note": "参考农业农村部/价格监测公开数据后人工设定的深圳家庭买菜贵价基线"
+    },
+    {
+      "name": "对虾",
+      "category": "水产",
+      "unit": "斤",
+      "normal_price": 36.8,
+      "cheap_threshold": 30.2,
+      "expensive_threshold": 82.8,
+      "current_price": 90,
+      "source_note": "参考农业农村部/价格监测公开数据后人工设定的深圳家庭买菜贵价基线"
+    },
+    {
+      "name": "鲍鱼",
+      "category": "水产",
+      "unit": "斤",
+      "normal_price": 32,
+      "cheap_threshold": 26.2,
+      "expensive_threshold": 47.8,
+      "current_price": 52,
+      "source_note": "参考农业农村部/价格监测公开数据后人工设定的深圳家庭买菜贵价基线"
+    },
+    {
+      "name": "海参",
+      "category": "水产",
+      "unit": "斤",
+      "normal_price": 33.2,
+      "cheap_threshold": 27.2,
+      "expensive_threshold": 46,
+      "current_price": 50,
+      "source_note": "参考农业农村部/价格监测公开数据后人工设定的深圳家庭买菜贵价基线"
+    },
+    {
+      "name": "梭子蟹",
+      "category": "水产",
+      "unit": "斤",
+      "normal_price": 34.4,
+      "cheap_threshold": 28.2,
+      "expensive_threshold": 82.8,
+      "current_price": 90,
+      "source_note": "参考农业农村部/价格监测公开数据后人工设定的深圳家庭买菜贵价基线"
+    },
+    {
+      "name": "甲鱼",
+      "category": "水产",
+      "unit": "斤",
+      "normal_price": 35.6,
+      "cheap_threshold": 29.2,
+      "expensive_threshold": 64.4,
+      "current_price": 70,
+      "source_note": "参考农业农村部/价格监测公开数据后人工设定的深圳家庭买菜贵价基线"
+    },
+    {
+      "name": "鲳鱼",
+      "category": "水产",
+      "unit": "斤",
+      "normal_price": 36.8,
+      "cheap_threshold": 30.2,
+      "expensive_threshold": 73.6,
+      "current_price": 80,
+      "source_note": "参考农业农村部/价格监测公开数据后人工设定的深圳家庭买菜贵价基线"
+    },
+    {
+      "name": "牛蛙",
+      "category": "水产",
+      "unit": "斤",
+      "normal_price": 32,
+      "cheap_threshold": 26.2,
+      "expensive_threshold": 22.1,
+      "current_price": 24,
+      "source_note": "参考农业农村部/价格监测公开数据后人工设定的深圳家庭买菜贵价基线"
+    },
+    {
+      "name": "蛤蜊",
+      "category": "水产",
+      "unit": "斤",
+      "normal_price": 33.2,
+      "cheap_threshold": 27.2,
+      "expensive_threshold": 41.5,
+      "current_price": 43.8,
+      "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
+    },
+    {
+      "name": "牛腩",
+      "category": "肉蛋",
+      "unit": "斤",
+      "normal_price": 20.4,
+      "cheap_threshold": 16.7,
+      "expensive_threshold": 35,
+      "current_price": 38,
+      "source_note": "参考农业农村部/价格监测公开数据后人工设定的深圳家庭买菜贵价基线"
+    },
+    {
+      "name": "羊肉",
+      "category": "肉蛋",
+      "unit": "斤",
+      "normal_price": 21.6,
+      "cheap_threshold": 17.7,
+      "expensive_threshold": 29.8,
+      "current_price": 32.4,
+      "source_note": "参考农业农村部/价格监测公开数据后人工设定的深圳家庭买菜贵价基线"
+    },
+    {
+      "name": "羊排",
+      "category": "肉蛋",
+      "unit": "斤",
+      "normal_price": 22.8,
+      "cheap_threshold": 18.7,
+      "expensive_threshold": 38.6,
+      "current_price": 42,
+      "source_note": "参考农业农村部/价格监测公开数据后人工设定的深圳家庭买菜贵价基线"
+    },
+    {
+      "name": "肥牛",
+      "category": "肉蛋",
+      "unit": "斤",
+      "normal_price": 18,
+      "cheap_threshold": 14.8,
+      "expensive_threshold": 33.1,
+      "current_price": 36,
+      "source_note": "参考农业农村部/价格监测公开数据后人工设定的深圳家庭买菜贵价基线"
+    },
+    {
+      "name": "牛排",
+      "category": "肉蛋",
+      "unit": "斤",
+      "normal_price": 19.2,
+      "cheap_threshold": 15.7,
+      "expensive_threshold": 53.4,
+      "current_price": 58,
+      "source_note": "参考农业农村部/价格监测公开数据后人工设定的深圳家庭买菜贵价基线"
+    },
+    {
+      "name": "猪肝",
+      "category": "肉蛋",
+      "unit": "斤",
+      "normal_price": 20.4,
+      "cheap_threshold": 16.7,
+      "expensive_threshold": 25.5,
+      "current_price": 20.4,
+      "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
+    },
+    {
+      "name": "鸡肉",
+      "category": "肉蛋",
+      "unit": "斤",
+      "normal_price": 21.6,
+      "cheap_threshold": 17.7,
+      "expensive_threshold": 27,
+      "current_price": 28.5,
+      "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
+    },
+    {
+      "name": "黄瓜",
+      "category": "蔬菜",
+      "unit": "斤",
+      "normal_price": 10.8,
+      "cheap_threshold": 8.9,
+      "expensive_threshold": 13.5,
+      "current_price": 10.8,
+      "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
+    },
+    {
+      "name": "西红柿",
+      "category": "蔬菜",
+      "unit": "斤",
+      "normal_price": 6,
+      "cheap_threshold": 4.9,
+      "expensive_threshold": 7.5,
+      "current_price": 4.7,
+      "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
+    },
+    {
+      "name": "大白菜",
+      "category": "蔬菜",
+      "unit": "斤",
+      "normal_price": 7.2,
+      "cheap_threshold": 5.9,
+      "expensive_threshold": 9,
+      "current_price": 7.2,
+      "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
+    },
+    {
+      "name": "白芹菜",
+      "category": "蔬菜",
+      "unit": "斤",
+      "normal_price": 8.4,
+      "cheap_threshold": 6.9,
+      "expensive_threshold": 10.5,
+      "current_price": 8.4,
+      "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
+    },
+    {
+      "name": "青苦菜",
+      "category": "蔬菜",
+      "unit": "斤",
+      "normal_price": 9.6,
+      "cheap_threshold": 7.9,
+      "expensive_threshold": 12,
+      "current_price": 9.6,
+      "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
+    },
+    {
+      "name": "茼蒿",
+      "category": "蔬菜",
+      "unit": "斤",
+      "normal_price": 10.8,
+      "cheap_threshold": 8.9,
+      "expensive_threshold": 13.5,
+      "current_price": 10.8,
+      "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
+    },
+    {
+      "name": "香菜",
+      "category": "调料",
+      "unit": "斤",
+      "normal_price": 10,
+      "cheap_threshold": 8.2,
+      "expensive_threshold": 12.5,
+      "current_price": 13.2,
+      "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
+    },
+    {
+      "name": "蒜苗",
+      "category": "蔬菜",
+      "unit": "斤",
+      "normal_price": 7.2,
+      "cheap_threshold": 5.9,
+      "expensive_threshold": 9,
+      "current_price": 7.2,
+      "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
+    },
+    {
+      "name": "西葫芦",
+      "category": "蔬菜",
+      "unit": "斤",
+      "normal_price": 8.4,
+      "cheap_threshold": 6.9,
+      "expensive_threshold": 10.5,
+      "current_price": 8.4,
+      "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
+    },
+    {
+      "name": "佛手瓜",
+      "category": "蔬菜",
+      "unit": "斤",
+      "normal_price": 9.6,
+      "cheap_threshold": 7.9,
+      "expensive_threshold": 12,
+      "current_price": 9.6,
+      "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
+    },
+    {
+      "name": "口蘑",
+      "category": "菌菇",
+      "unit": "斤",
+      "normal_price": 14.8,
+      "cheap_threshold": 12.1,
+      "expensive_threshold": 18.5,
+      "current_price": 14.8,
+      "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
+    },
+    {
+      "name": "平菇",
+      "category": "菌菇",
+      "unit": "斤",
+      "normal_price": 10,
+      "cheap_threshold": 8.2,
+      "expensive_threshold": 12.5,
+      "current_price": 7.8,
+      "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
+    },
+    {
+      "name": "海鲜菇",
+      "category": "菌菇",
+      "unit": "斤",
+      "normal_price": 11.2,
+      "cheap_threshold": 9.2,
+      "expensive_threshold": 14,
+      "current_price": 11.2,
+      "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
+    },
+    {
+      "name": "茶树菇",
+      "category": "菌菇",
+      "unit": "斤",
+      "normal_price": 12.4,
+      "cheap_threshold": 10.2,
+      "expensive_threshold": 15.5,
+      "current_price": 16.4,
+      "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
+    },
+    {
+      "name": "春笋",
+      "category": "蔬菜",
+      "unit": "斤",
+      "normal_price": 9.6,
+      "cheap_threshold": 7.9,
+      "expensive_threshold": 12,
+      "current_price": 9.6,
+      "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
+    },
+    {
+      "name": "冬笋",
+      "category": "蔬菜",
+      "unit": "斤",
+      "normal_price": 10.8,
+      "cheap_threshold": 8.9,
+      "expensive_threshold": 13.5,
+      "current_price": 10.8,
+      "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
+    },
+    {
+      "name": "芥菜",
+      "category": "蔬菜",
+      "unit": "斤",
+      "normal_price": 6,
+      "cheap_threshold": 4.9,
+      "expensive_threshold": 7.5,
+      "current_price": 4.7,
+      "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
+    },
+    {
+      "name": "豇豆",
+      "category": "蔬菜",
+      "unit": "斤",
+      "normal_price": 7.2,
+      "cheap_threshold": 5.9,
+      "expensive_threshold": 9,
+      "current_price": 7.2,
+      "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
+    },
+    {
+      "name": "毛豆",
+      "category": "蔬菜",
+      "unit": "斤",
+      "normal_price": 8.4,
+      "cheap_threshold": 6.9,
+      "expensive_threshold": 10.5,
+      "current_price": 8.4,
+      "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
+    },
+    {
+      "name": "莴笋叶",
+      "category": "蔬菜",
+      "unit": "斤",
+      "normal_price": 9.6,
+      "cheap_threshold": 7.9,
+      "expensive_threshold": 12,
+      "current_price": 9.6,
+      "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
+    },
+    {
+      "name": "生蚝",
+      "category": "水产",
+      "unit": "斤",
+      "normal_price": 36.8,
+      "cheap_threshold": 30.2,
+      "expensive_threshold": 46,
+      "current_price": 48.6,
+      "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
+    },
+    {
+      "name": "鲫鱼",
+      "category": "水产",
+      "unit": "斤",
+      "normal_price": 32,
+      "cheap_threshold": 26.2,
+      "expensive_threshold": 40,
+      "current_price": 25,
+      "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
+    },
+    {
+      "name": "猪里脊",
+      "category": "肉蛋",
+      "unit": "斤",
+      "normal_price": 19.2,
+      "cheap_threshold": 15.7,
+      "expensive_threshold": 24,
+      "current_price": 19.2,
+      "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
+    },
+    {
+      "name": "五花肉",
+      "category": "肉蛋",
+      "unit": "斤",
+      "normal_price": 20.4,
+      "cheap_threshold": 16.7,
+      "expensive_threshold": 25.5,
+      "current_price": 20.4,
+      "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
+    },
+    {
+      "name": "猪肉",
+      "category": "肉蛋",
+      "unit": "斤",
+      "normal_price": 21.6,
+      "cheap_threshold": 17.7,
+      "expensive_threshold": 27,
+      "current_price": 21.6,
+      "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
+    },
+    {
+      "name": "白条鸡",
+      "category": "肉蛋",
+      "unit": "斤",
+      "normal_price": 22.8,
+      "cheap_threshold": 18.7,
+      "expensive_threshold": 28.5,
+      "current_price": 22.8,
+      "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
+    },
+    {
+      "name": "鲤鱼",
+      "category": "水产",
+      "unit": "斤",
+      "normal_price": 32,
+      "cheap_threshold": 26.2,
+      "expensive_threshold": 40,
+      "current_price": 25,
+      "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
+    },
+    {
+      "name": "白鲢鱼",
+      "category": "水产",
+      "unit": "斤",
+      "normal_price": 33.2,
+      "cheap_threshold": 27.2,
+      "expensive_threshold": 41.5,
+      "current_price": 43.8,
+      "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
+    },
+    {
+      "name": "大带鱼",
+      "category": "水产",
+      "unit": "斤",
+      "normal_price": 34.4,
+      "cheap_threshold": 28.2,
+      "expensive_threshold": 43,
+      "current_price": 34.4,
+      "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
+    },
+    {
+      "name": "花鲢鱼",
+      "category": "水产",
+      "unit": "斤",
+      "normal_price": 35.6,
+      "cheap_threshold": 29.2,
+      "expensive_threshold": 44.5,
+      "current_price": 35.6,
+      "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
+    },
+    {
+      "name": "油菜",
+      "category": "蔬菜",
+      "unit": "斤",
+      "normal_price": 10.8,
+      "cheap_threshold": 8.9,
+      "expensive_threshold": 13.5,
+      "current_price": 10.8,
+      "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
+    },
+    {
+      "name": "洋白菜",
+      "category": "蔬菜",
+      "unit": "斤",
+      "normal_price": 6,
+      "cheap_threshold": 4.9,
+      "expensive_threshold": 7.5,
+      "current_price": 4.7,
+      "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
+    },
+    {
+      "name": "葱头",
+      "category": "蔬菜",
+      "unit": "斤",
+      "normal_price": 7.2,
+      "cheap_threshold": 5.9,
+      "expensive_threshold": 9,
+      "current_price": 7.2,
+      "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
+    },
+    {
+      "name": "大葱",
+      "category": "调料",
+      "unit": "斤",
+      "normal_price": 12.4,
+      "cheap_threshold": 10.2,
+      "expensive_threshold": 15.5,
+      "current_price": 12.4,
+      "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
+    },
+    {
+      "name": "生姜",
+      "category": "调料",
+      "unit": "斤",
+      "normal_price": 13.6,
+      "cheap_threshold": 11.2,
+      "expensive_threshold": 17,
+      "current_price": 18,
+      "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
+    },
+    {
+      "name": "大蒜",
+      "category": "调料",
+      "unit": "斤",
+      "normal_price": 14.8,
+      "cheap_threshold": 12.1,
+      "expensive_threshold": 18.5,
+      "current_price": 14.8,
+      "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
+    },
+    {
+      "name": "蒜薹",
+      "category": "蔬菜",
+      "unit": "斤",
+      "normal_price": 6,
+      "cheap_threshold": 4.9,
+      "expensive_threshold": 7.5,
+      "current_price": 4.7,
+      "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
+    },
+    {
+      "name": "豆角",
+      "category": "蔬菜",
+      "unit": "斤",
+      "normal_price": 7.2,
+      "cheap_threshold": 5.9,
+      "expensive_threshold": 9,
+      "current_price": 7.2,
+      "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
+    },
+    {
+      "name": "菜花",
+      "category": "蔬菜",
+      "unit": "斤",
+      "normal_price": 8.4,
+      "cheap_threshold": 6.9,
+      "expensive_threshold": 10.5,
+      "current_price": 8.4,
+      "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
+    },
+    {
+      "name": "西瓜",
+      "category": "水果",
+      "unit": "斤",
+      "normal_price": 13.6,
+      "cheap_threshold": 11.2,
+      "expensive_threshold": 17,
+      "current_price": 13.6,
+      "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
+    },
+    {
+      "name": "香蕉",
+      "category": "水果",
+      "unit": "斤",
+      "normal_price": 14.8,
+      "cheap_threshold": 12.1,
+      "expensive_threshold": 18.5,
+      "current_price": 14.8,
+      "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
+    },
+    {
+      "name": "鸭梨",
+      "category": "水果",
+      "unit": "斤",
+      "normal_price": 10,
+      "cheap_threshold": 8.2,
+      "expensive_threshold": 12.5,
+      "current_price": 13.2,
+      "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
+    },
+    {
+      "name": "富士苹果",
+      "category": "水果",
+      "unit": "斤",
+      "normal_price": 11.2,
+      "cheap_threshold": 9.2,
+      "expensive_threshold": 14,
+      "current_price": 11.2,
+      "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
+    },
+    {
+      "name": "菠萝",
+      "category": "水果",
+      "unit": "斤",
+      "normal_price": 12.4,
+      "cheap_threshold": 10.2,
+      "expensive_threshold": 15.5,
+      "current_price": 12.4,
+      "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
+    },
+    {
+      "name": "巨峰葡萄",
+      "category": "水果",
+      "unit": "斤",
+      "normal_price": 13.6,
+      "cheap_threshold": 11.2,
+      "expensive_threshold": 17,
+      "current_price": 13.6,
       "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
     }
   ]

@@ -21,3 +21,20 @@ export function recommendedInitialPlanIndex(plans: MealPlan[], budget: number): 
 
   return 0;
 }
+
+export function initialPlanIndex(
+  plans: MealPlan[],
+  budget: number,
+  selectedPlanIndex?: number
+): number {
+  if (
+    selectedPlanIndex !== undefined &&
+    Number.isInteger(selectedPlanIndex) &&
+    selectedPlanIndex >= 0 &&
+    selectedPlanIndex < plans.length
+  ) {
+    return selectedPlanIndex;
+  }
+
+  return recommendedInitialPlanIndex(plans, budget);
+}

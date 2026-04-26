@@ -87,6 +87,12 @@ function buildResultUrl(form) {
     .join("&")}`;
 }
 
+function buildRememberedResultUrl(form, planIndex) {
+  const url = buildResultUrl(form);
+  const separator = url.includes("?") ? "&" : "?";
+  return `${url}${separator}planIndex=${encodeURIComponent(planIndex)}`;
+}
+
 function withPlanState(plans, currentPlanIndex) {
   return plans.map((plan, index) => ({
     ...plan,
@@ -113,6 +119,29 @@ function recommendedInitialPlanIndex(plans, budget) {
   return 0;
 }
 
+function initialPlanIndex(plans, budget, selectedPlanIndex) {
+  if (
+    Number.isInteger(selectedPlanIndex) &&
+    selectedPlanIndex >= 0 &&
+    selectedPlanIndex < plans.length
+  ) {
+    return selectedPlanIndex;
+  }
+  return recommendedInitialPlanIndex(plans, budget);
+}
+
+function rememberPlanChoice(form, plan, index) {
+  if (!plan) return;
+  wx.setStorageSync(LAST_CHOICE_KEY, {
+    planIndex: index,
+    planTitle: plan.title,
+    planType: plan.type,
+    resultUrl: buildRememberedResultUrl(form, index),
+    form,
+    savedAt: new Date().toISOString()
+  });
+}
+
 Page({
   data: {
     form: null,
@@ -128,7 +157,11 @@ Page({
     const prefixedUserId = buildPrefixedUserId(form.userId);
     const request = buildRequest(form);
     const response = buildGenerateResponse(request);
-    const currentPlanIndex = recommendedInitialPlanIndex(response.plans, form.budget);
+    const currentPlanIndex = initialPlanIndex(
+      response.plans,
+      form.budget,
+      Number(options.planIndex)
+    );
     if (prefixedUserId) {
       wx.setStorageSync(USER_ID_KEY, prefixedUserId);
     }
@@ -146,24 +179,18 @@ Page({
   selectPlan(event) {
     const index = Number(event.currentTarget.dataset.index);
     if (!Number.isFinite(index)) return;
+    const plan = this.data.plans[index];
     this.setData({
       currentPlanIndex: index,
       plans: withPlanState(this.data.plans, index)
     });
+    rememberPlanChoice(this.data.form, plan, index);
   },
 
   rememberPlan(event) {
     const index = Number(event.currentTarget.dataset.index);
     const plan = this.data.plans[index];
-    if (!plan) return;
-    wx.setStorageSync(LAST_CHOICE_KEY, {
-      planIndex: index,
-      planTitle: plan.title,
-      planType: plan.type,
-      resultUrl: buildResultUrl(this.data.form),
-      form: this.data.form,
-      savedAt: new Date().toISOString()
-    });
+    rememberPlanChoice(this.data.form, plan, index);
     wx.showToast({ title: "已记住", icon: "success" });
   },
 
