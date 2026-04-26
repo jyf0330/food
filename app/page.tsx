@@ -236,7 +236,6 @@ export default function HomePage() {
   const [favoriteFoods, setFavoriteFoods] = useState<string[]>(DEFAULT_FORM.favoriteFoods);
   const [favoriteFoodInput, setFavoriteFoodInput] = useState("");
   const [advancedOpen, setAdvancedOpen] = useState(false);
-  const [lastForm, setLastForm] = useState<StoredForm | null>(null);
   const [lastChoice, setLastChoice] = useState<LastChoice | null>(null);
   const [loading, setLoading] = useState(false);
 
@@ -271,10 +270,8 @@ export default function HomePage() {
       } else if (cookieUserId) {
         setUserId(cookieUserId);
       }
-      setLastForm(restoredForm);
       setLastChoice(savedChoice);
     } catch {
-      setLastForm(null);
       setLastChoice(null);
     }
   }, []);
@@ -317,7 +314,6 @@ export default function HomePage() {
     } catch {
       // Storage can be unavailable; navigation should still work.
     }
-    setLastForm(form);
   };
 
   const goToResult = (form: StoredForm) => {
@@ -351,56 +347,31 @@ export default function HomePage() {
         />
       </section>
 
-      {(lastChoice || lastForm) && (
+      {lastChoice && (
         <section className="memory-section">
-          {lastChoice && (
-            <div className="memory-card">
-              <div className="memory-text">上次选了：{lastChoice.title}</div>
-              <div className="memory-actions">
-                <a
-                  className="memory-link"
-                  href={lastChoice.resultUrl}
-                  onClick={() => {
-                    if (lastChoice.form) saveLastForm(lastChoice.form);
-                  }}
-                >
-                  直接用这桌
-                </a>
-                {lastChoice.form && (
-                  <button
-                    type="button"
-                    className="memory-btn"
-                    onClick={() => applyForm(lastChoice.form as StoredForm)}
-                  >
-                    修改条件
-                  </button>
-                )}
-              </div>
-            </div>
-          )}
-
-          {lastForm && (
-            <div className="memory-card">
-              <div className="memory-text">上次设置</div>
-              <div className="memory-actions">
+          <div className="memory-card">
+            <div className="memory-text">上次选了：{lastChoice.title}</div>
+            <div className="memory-actions">
+              <a
+                className="memory-link"
+                href={lastChoice.resultUrl}
+                onClick={() => {
+                  if (lastChoice.form) saveLastForm(lastChoice.form);
+                }}
+              >
+                直接用这桌
+              </a>
+              {lastChoice.form && (
                 <button
                   type="button"
                   className="memory-btn"
-                  onClick={() => goToResult(lastForm)}
-                  disabled={loading}
+                  onClick={() => applyForm(lastChoice.form as StoredForm)}
                 >
-                  直接用
+                  修改条件
                 </button>
-                <button
-                  type="button"
-                  className="memory-btn"
-                  onClick={() => applyForm(lastForm)}
-                >
-                  修改
-                </button>
-              </div>
+              )}
             </div>
-          )}
+          </div>
         </section>
       )}
 
