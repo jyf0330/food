@@ -3,6 +3,7 @@
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { restoreHomeForm, type MealMemoryForm } from "@/lib/mealMemory";
+import { nextResultVariant } from "@/lib/resultVariant";
 import { buildPrefixedUserId, getUserIdDisplay } from "@/lib/userIdentity";
 
 type Choice<T extends string | number> = { id: T; label: string };
@@ -163,7 +164,7 @@ const normalizeForm = (value: unknown): StoredForm | null => {
   };
 };
 
-const buildResultUrl = (form: StoredForm) => {
+const buildResultUrl = (form: StoredForm, variant?: number) => {
   const params = new URLSearchParams({
     people: String(form.people),
     family: form.family,
@@ -179,6 +180,9 @@ const buildResultUrl = (form: StoredForm) => {
   const userId = getUserIdDisplay(form.userId);
   if (userId) {
     params.set("userId", userId);
+  }
+  if (variant) {
+    params.set("variant", String(variant));
   }
   return `/result?${params.toString()}`;
 };
@@ -319,7 +323,7 @@ export default function HomePage() {
   const goToResult = (form: StoredForm) => {
     setLoading(true);
     saveLastForm(form);
-    router.push(buildResultUrl(form));
+    router.push(buildResultUrl(form, nextResultVariant()));
   };
 
   const onSubmit = () => {

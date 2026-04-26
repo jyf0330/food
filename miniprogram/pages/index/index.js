@@ -20,6 +20,10 @@ function buildPrefixedUserId(value) {
   return display ? `${USER_ID_PREFIX}${display}` : "";
 }
 
+function nextResultVariant() {
+  return Math.max(1, Date.now() + Math.floor(Math.random() * 1000000));
+}
+
 function normalizeFoodName(value) {
   return String(value || "")
     .trim()
@@ -252,7 +256,13 @@ Page({
       wx.setStorageSync(USER_ID_KEY, prefixedUserId);
     }
     wx.setStorageSync(LAST_FORM_KEY, form);
-    wx.navigateTo({ url: buildResultUrl({ ...form, channel: DEFAULT_FORM.channel }) });
+    wx.navigateTo({
+      url: buildResultUrl({
+        ...form,
+        channel: DEFAULT_FORM.channel,
+        variant: nextResultVariant()
+      })
+    });
   },
 
   syncMultiOptions(form) {
