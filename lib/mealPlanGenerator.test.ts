@@ -197,6 +197,19 @@ describe("buildGenerateResponse", () => {
     assert.doesNotMatch(text, /肉类先焯水/);
   });
 
+  it("keeps detailed curated Hakka recipe steps in generated plans", () => {
+    const response = buildGenerateResponse({
+      ...baseRequest,
+      selected_dishes: ["客家酿豆腐", "梅菜扣肉", "盐焗鸡翼"],
+    } as GenerateRequest & { selected_dishes: string[] });
+    const text = response.plans[0].dishes.flatMap((dish) => dish.steps ?? []).join("\n");
+
+    assert.match(text, /肉面朝下|煎 2-3 分钟/);
+    assert.match(text, /梅菜提前浸泡|蒸 50-70 分钟|倒扣/);
+    assert.match(text, /盐焗粉|腌 20 分钟|中途翻面/);
+    assert.doesNotMatch(text, /提前处理好，容易熟的和耐煮的分开放/);
+  });
+
   it("builds a cooking schedule backwards from the requested finish time for slower cooks", () => {
     const response = buildGenerateResponse({
       ...baseRequest,

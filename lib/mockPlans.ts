@@ -634,6 +634,27 @@ function buildDonenessStep(dish: SeedDish): string {
   return "判断：主料熟透、配菜断生、锅里香味出来后再调味；不确定时先夹一小块尝口感。";
 }
 
+function hasDetailedSeedSteps(dish: SeedDish): boolean {
+  return dish.steps.length >= 7 && dish.steps.join("").length >= 220;
+}
+
+function buildDetailedSeedCoachSteps(dish: SeedDish, req: GenerateRequest): string[] {
+  const detailSteps = dish.steps.map((step, index) => {
+    if (index <= 1) return `处理：${step}`;
+    if (index < dish.steps.length - 2) return `下锅：${step}`;
+    if (index === dish.steps.length - 2) return `判断：${step}`;
+    return `收尾：${step}`;
+  });
+  const childOrElderNote =
+    req.has_child || req.has_elder
+      ? "收尾：给孩子或老人吃的部分，先剪小块、确认熟透，再单独盛出来。"
+      : null;
+
+  return [buildCoachGoal(dish, req), buildMaterialStep(dish), ...detailSteps, childOrElderNote].filter(
+    (step): step is string => Boolean(step)
+  );
+}
+
 function buildCoachSteps(dish: SeedDish, req: GenerateRequest): string[] {
   const hasBones = dish.main_ingredients.some((item) =>
     /鱼|排骨|鸡腿|鸡翅|鸭肉|带鱼|鸡肉/.test(item)
@@ -644,6 +665,10 @@ function buildCoachSteps(dish: SeedDish, req: GenerateRequest): string[] {
         ? "出锅前先尝味道，盐少量多次加；给孩子和老人吃的部分，可以剪小块、挑掉骨刺，再单独盛出来。"
         : "出锅前先尝味道，盐少量多次加；给孩子和老人吃的部分，可以剪小块或多焖一会儿，再单独盛出来。"
       : "出锅前尝一下咸淡，宁可淡一点，最后用生抽或盐微调；不要为了颜色好看把菜继续加热太久。";
+
+  if (hasDetailedSeedSteps(dish)) {
+    return buildDetailedSeedCoachSteps(dish, req);
+  }
 
   return [
     buildCoachGoal(dish, req),
