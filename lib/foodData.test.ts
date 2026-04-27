@@ -129,6 +129,44 @@ describe("curated food data", () => {
     assert.match(sourceText, /category\/312/);
   });
 
+  it("gives every Cook1Cook Hakka candidate detailed project-style cooking steps", () => {
+    const hakkaNames = cook1cookHakkaDishNames();
+    const byName = new Map(dishes.map((dish) => [dish.dish_name, dish]));
+    const genericPhrases = /洗净切好|按入口大小切好|再下不易熟的食材|快速翻炒，按顺序|水开后上锅蒸到熟透|盖上锅盖中火焖到主料软熟/;
+
+    for (const name of hakkaNames) {
+      const dish = byName.get(name);
+      assert.ok(dish, `missing Hakka candidate ${name}`);
+      assert.ok(dish.steps.length >= 7, `${name} should have detailed steps`);
+      assert.ok(
+        dish.steps.join("").length >= 220,
+        `${name} should have enough cooking detail`
+      );
+      assert.doesNotMatch(
+        dish.steps.join("\n"),
+        genericPhrases,
+        `${name} should not fall back to generic cooking text`
+      );
+    }
+
+    const examples = new Map([
+      ["客家酿豆腐", /肉馅|肉面朝下|煎定型|焖/],
+      ["梅菜扣肉", /梅菜|五花肉|蒸|倒扣|收汁/],
+      ["盐焗鸡翼", /盐焗|鸡翼|腌|焗|翻面/],
+      ["沙姜猪手", /猪手|焯|沙姜|焖|胶质/],
+      ["客家艾糍", /艾叶|糯米粉|揉|蒸|不粘/],
+      ["咸酸菜炒猪肠", /猪肠|盐|面粉|焯|咸酸菜|大火/],
+    ]);
+
+    for (const [name, pattern] of examples) {
+      assert.match(
+        byName.get(name)?.steps.join("\n") ?? "",
+        pattern,
+        `${name} should include dish-specific technique`
+      );
+    }
+  });
+
   it("has original cooking steps and shopping amounts for every dish", () => {
     for (const dish of dishes) {
       assert.ok(dish.dish_name, "dish should have a name");
