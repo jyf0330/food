@@ -104,17 +104,6 @@ export default function ResultPage({ searchParams }: { searchParams: SP }) {
         </p>
       </header>
 
-      <section className="form-section result-summary">
-        <strong>今日推荐买：</strong>
-        <p className="summary-good">{response.daily_recommended.join("、")}</p>
-        <strong>今天不太推荐：</strong>
-        <p className="summary-muted">
-          {response.daily_not_recommended
-            .map((item) => `${item.name}（${item.reason}）`)
-            .join(" · ")}
-        </p>
-      </section>
-
       <PlanSwitcher
         plans={response.plans}
         form={form}

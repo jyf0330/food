@@ -1,9 +1,8 @@
 "use client";
 
 import type { MealPlan } from "@/lib/types";
-import { rememberMealChoice } from "@/lib/mealMemory";
 import { formatMealPlanCopyText } from "@/lib/mealPlanText";
-import PlanMemoryActions, { type PlanMemoryForm } from "./PlanMemoryActions";
+import type { PlanMemoryForm } from "./PlanMemoryActions";
 import { useState } from "react";
 
 type ScheduleNode = string | { time: string; task: string };
@@ -18,33 +17,12 @@ type PlanSwitcherProps = {
   initialSelectedIndex: number;
 };
 
-const planLabel = (index: number) => String.fromCharCode(65 + index);
-
 export default function PlanSwitcher({
   plans,
-  form,
-  currentVariant,
   initialSelectedIndex,
 }: PlanSwitcherProps) {
-  const [selectedIndex, setSelectedIndex] = useState(initialSelectedIndex);
   const [copied, setCopied] = useState(false);
-  const plan = plans[selectedIndex] as PlanWithOptionalSchedule | undefined;
-  const selectedHomePlan = form.selectedDishes.length > 0 && selectedIndex === 0;
-
-  const selectPlan = (index: number, selectedPlan: MealPlan) => {
-    setSelectedIndex(index);
-    try {
-      rememberMealChoice(window.localStorage, {
-        planIndex: index,
-        planTitle: selectedPlan.title,
-        planType: selectedPlan.type,
-        resultUrl: window.location.href,
-        form,
-      });
-    } catch {
-      // Local storage can be unavailable; selecting a plan should still work.
-    }
-  };
+  const plan = plans[initialSelectedIndex] as PlanWithOptionalSchedule | undefined;
 
   if (!plan) {
     return null;
@@ -79,51 +57,7 @@ export default function PlanSwitcher({
 
   return (
     <>
-      <section className="plan-switcher" aria-label="选择今天吃哪一桌">
-        {plans.map((item, i) => {
-          const active = i === selectedIndex;
-          return (
-            <button
-              key={`${item.type}-${i}`}
-              type="button"
-              className={`plan-tab${active ? " active" : ""}`}
-              aria-pressed={active}
-              onClick={() => selectPlan(i, item)}
-            >
-              <span className="plan-tab-letter">{planLabel(i)}</span>
-              <span className="plan-tab-copy">
-                <span className="plan-tab-title">
-                  {form.selectedDishes.length > 0 && i === 0 ? "自选菜谱" : item.type}
-                </span>
-                <span className="plan-tab-meta">
-                  约 {item.estimated_cost} 元 · {item.total_time} 分钟
-                </span>
-              </span>
-            </button>
-          );
-        })}
-      </section>
-
       <article className="plan-card">
-        <h2>
-          {planLabel(selectedIndex)}. {selectedHomePlan ? "自选菜谱" : plan.type}
-        </h2>
-        <div className="plan-meta">
-          <span>💰 约 {plan.estimated_cost} 元</span>
-          <span>⏱ 约 {plan.total_time} 分钟</span>
-          <span>🍽 {plan.dishes.length} 道菜</span>
-        </div>
-
-        <p className="plan-reason">{plan.reason}</p>
-
-        <PlanMemoryActions
-          planIndex={selectedIndex}
-          planTitle={plan.title}
-          planType={plan.type}
-          form={form}
-          currentVariant={currentVariant}
-        />
-
         <button type="button" className="copy-recipe-btn" onClick={copyPlan}>
           {copied ? "已复制菜谱文字" : "一键复制菜谱文字"}
         </button>
