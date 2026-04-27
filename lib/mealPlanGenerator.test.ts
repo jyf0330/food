@@ -125,7 +125,7 @@ describe("buildGenerateResponse", () => {
     }
   });
 
-  it("turns recipes into coaching-style cooking guidance", () => {
+  it("turns recipes into template-style cooking guidance", () => {
     const response = buildGenerateResponse({
       ...baseRequest,
       has_elder: true,
@@ -135,7 +135,23 @@ describe("buildGenerateResponse", () => {
 
     for (const plan of response.plans) {
       for (const dish of plan.dishes) {
-        assert.match(dish.steps?.[0] ?? "", /目标是/);
+        assert.match(dish.steps?.[0] ?? "", /^关键点：/);
+        assert.ok(
+          dish.steps?.some((step) => /^材料：/.test(step)),
+          `${dish.name} should include a material line`
+        );
+        assert.ok(
+          dish.steps?.some((step) => /^处理：/.test(step)),
+          `${dish.name} should include prep guidance`
+        );
+        assert.ok(
+          dish.steps?.some((step) => /^下锅：/.test(step)),
+          `${dish.name} should include cooking guidance`
+        );
+        assert.ok(
+          dish.steps?.some((step) => /^判断：/.test(step)),
+          `${dish.name} should include doneness guidance`
+        );
         assert.ok(
           dish.steps?.some((step) => /看到|如果|别|不要|判断/.test(step)),
           `${dish.name} should explain how to judge doneness or avoid mistakes`
@@ -165,6 +181,20 @@ describe("buildGenerateResponse", () => {
         }
       }
     }
+  });
+
+  it("uses the liver soup template for pork liver dishes", () => {
+    const response = buildGenerateResponse({
+      ...baseRequest,
+      selected_dishes: ["猪肝菠菜汤"],
+    } as GenerateRequest & { selected_dishes: string[] });
+    const text = response.plans[0].dishes[0].steps?.join("\n") ?? "";
+
+    assert.match(text, /泡出血水|20.?30 分钟/);
+    assert.match(text, /料酒|淀粉|食用油|白胡椒/);
+    assert.match(text, /一片片|不要一坨/);
+    assert.match(text, /30 秒.?1 分钟|变色后/);
+    assert.doesNotMatch(text, /肉类先焯水/);
   });
 
   it("builds a cooking schedule backwards from the requested finish time for slower cooks", () => {

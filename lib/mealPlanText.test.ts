@@ -47,6 +47,8 @@ describe("formatMealPlanCopyText", () => {
     assert.match(text, /【菜单】\n1\. 番茄炒蛋 - 快手下饭/);
     assert.match(text, /【买菜清单】\n肉蛋：鸡蛋 4 个\n蔬菜：番茄 3 个/);
     assert.match(text, /【按点上桌】\n18:25 - 开始备菜\n19:00 - 完成收尾，上桌开饭/);
-    assert.match(text, /【每道菜做法】\n番茄炒蛋\n1\. 番茄切块，鸡蛋打散。/);
+    assert.match(text, /【每道菜做法】\n## 番茄炒蛋\n\n材料：番茄 3 个、鸡蛋 4 个/);
+    assert.match(text, /做法：\n1\. 番茄切块，鸡蛋打散。/);
+    assert.match(text, /小技巧：\n- 鸡蛋别炒老。/);
   });
 });

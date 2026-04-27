@@ -20,11 +20,23 @@ export function formatMealPlanCopyText(plan: MealPlan): string {
     : plan.cooking_order.map((step, index) => `${index + 1}. ${step}`).join("\n");
   const recipes = plan.dishes
     .map((dish) => {
+      const embeddedMaterial = dish.steps?.find((step) => /^材料：/.test(step));
+      const material = dish.ingredients?.length
+        ? `材料：${formatItems(dish.ingredients)}`
+        : embeddedMaterial;
       const steps = (dish.steps ?? [])
+        .filter((step) => !/^材料：/.test(step))
         .map((step, index) => `${index + 1}. ${step}`)
         .join("\n");
-      const tips = dish.tips?.length ? `\n小贴士：${dish.tips.join("；")}` : "";
-      return `${dish.name}\n${steps}${tips}`;
+      const tips = dish.tips?.length
+        ? `\n\n小技巧：\n${dish.tips.map((tip) => `- ${tip}`).join("\n")}`
+        : "";
+
+      const parts = [`## ${dish.name}`];
+      if (material) parts.push(material);
+      if (steps) parts.push(`做法：\n${steps}`);
+
+      return parts.join("\n\n") + tips;
     })
     .join("\n\n");
 

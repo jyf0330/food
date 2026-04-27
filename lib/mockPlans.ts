@@ -458,6 +458,30 @@ function pickDish(
   return selected;
 }
 
+function allDishIngredients(dish: SeedDish): string[] {
+  return [...dish.main_ingredients, ...(dish.optional_ingredients ?? [])];
+}
+
+function dishHas(dish: SeedDish, pattern: RegExp): boolean {
+  return allDishIngredients(dish).some((item) => pattern.test(item)) || pattern.test(dish.dish_name);
+}
+
+function formatRecipeMaterials(dish: SeedDish): string {
+  const main =
+    dish.shopping_amount_for_3_people
+      ?.map((item) => `${item.name} ${item.amount}`)
+      .join("、") || dish.main_ingredients.join("、");
+  const optional = (dish.optional_ingredients ?? [])
+    .filter((name) => !dish.main_ingredients.includes(name))
+    .slice(0, 4);
+
+  return optional.length ? `${main}；家里有的话备${optional.join("、")}。` : `${main}。`;
+}
+
+function hasAnimalProtein(dish: SeedDish): boolean {
+  return dishHas(dish, /猪|牛|羊|鸡|鸭|鱼|虾|排骨|肉|肝|鱿|贝|蛤|蛋/);
+}
+
 function buildCoachGoal(dish: SeedDish, req: GenerateRequest): string {
   const method = dish.cooking_methods?.[0] ?? dish.category;
   const taste = dish.taste[0] ?? "家常";
@@ -465,8 +489,25 @@ function buildCoachGoal(dish: SeedDish, req: GenerateRequest): string {
     req.has_child || req.has_elder
       ? "口感尽量软一点、味道淡一点"
       : "保留食材本味，不要把火候做老";
+  const focus = dishHas(dish, /猪肝/)
+    ? dishHas(dish, /枸杞/)
+      ? "猪肝去腥、口感嫩、枸杞最后放"
+      : "猪肝去腥、口感嫩，青菜最后放"
+    : dishHas(dish, /鱼/)
+      ? "去腥、蒸煮时间准，鱼肉刚熟就停"
+      : dish.category === "素菜"
+        ? "水分沥干、火要够旺，断生就出锅"
+        : dish.category === "蛋类"
+          ? "蛋要嫩，配菜先处理好，别炒老"
+          : method === "煮" || method === "炖"
+            ? "汤味清甜，先耐煮后易熟"
+            : `${method}的时候重点看火候`;
 
-  return `目标是：${dish.dish_name}做出来要${taste}、不腻，${method}的时候重点看火候，${friendlyNote}。`;
+  return `关键点：${dish.dish_name}要做得${taste}、不腻，关键是${focus}；${friendlyNote}。`;
+}
+
+function buildMaterialStep(dish: SeedDish): string {
+  return `材料：${formatRecipeMaterials(dish)}`;
 }
 
 function buildPrepStep(dish: SeedDish, req: GenerateRequest): string {
@@ -478,65 +519,119 @@ function buildPrepStep(dish: SeedDish, req: GenerateRequest): string {
   const beginnerPrefix =
     req.cook_speed === "beginner" ? "开火前先把调料、盘子和锅具都放顺手。" : "";
 
+  if (dishHas(dish, /猪肝/)) {
+    const vegetable = dish.main_ingredients.find((item) => !/猪肝/.test(item));
+    const vegetableNote = vegetable ? `${vegetable}洗净，梗和叶分开放。` : "";
+
+    return `处理：${beginnerPrefix}猪肝切薄片，清水浸泡 20-30 分钟，中途换水 2 次，把血水泡出来；沥干后加料酒、姜丝、白胡椒粉、淀粉和一点食用油抓匀腌 10 分钟。${vegetableNote}`;
+  }
+
   if (dish.dish_name.includes("蒸蛋") || (hasEgg && hasMeatMince)) {
-    return `${beginnerPrefix}鸡蛋打散后加约 1.5 倍温水，肉末用少许盐和生抽抓匀；蛋液过筛会更嫩，别直接大火硬蒸。`;
+    return `处理：${beginnerPrefix}鸡蛋打散后加约 1.5 倍温水，肉末用少许盐和生抽抓匀；蛋液过筛会更嫩，别直接大火硬蒸。`;
   }
 
   if (dish.category === "蛋类" && hasEgg) {
-    return `${beginnerPrefix}鸡蛋先打散，${mainWithoutEgg || "配菜"}洗净处理好；下锅前把盐和生抽放在手边，别炒到一半才找调料。`;
+    return `处理：${beginnerPrefix}鸡蛋先打散，${mainWithoutEgg || "配菜"}洗净处理好；下锅前把盐和生抽放在手边，别炒到一半才找调料。`;
   }
 
   if (hasFish) {
-    return `${beginnerPrefix}${ingredients.join("、")}处理干净，鱼肚黑膜和血水要冲掉；盘底垫姜葱，腥味会轻很多。`;
+    return `处理：${beginnerPrefix}${ingredients.join("、")}处理干净，鱼肚黑膜和血水要冲掉；盘底垫姜葱，腥味会轻很多。`;
   }
 
   if (dish.category === "素菜") {
-    return `${beginnerPrefix}${ingredients.join("、")}洗净沥干，菜梗和菜叶尽量分开；水太多会变成煮菜，别湿着下锅。`;
+    return `处理：${beginnerPrefix}${ingredients.join("、")}洗净沥干，菜梗和菜叶尽量分开；水太多会变成煮菜，别湿着下锅。`;
   }
 
-  return `${beginnerPrefix}${ingredients.join("、")}提前处理好，容易熟的和耐煮的分开放；肉类可以先用少许盐、淀粉和油抓匀。`;
+  if (hasAnimalProtein(dish)) {
+    return `处理：${beginnerPrefix}${ingredients.join("、")}提前处理好，容易熟的和耐煮的分开放；主料可以先用少许盐、淀粉和油抓匀，口感会更嫩。`;
+  }
+
+  return `处理：${beginnerPrefix}${ingredients.join("、")}提前洗净切好，容易熟的和耐煮的分开放；下锅前把盐、生抽或蚝油放顺手。`;
 }
 
 function buildMethodStep(dish: SeedDish): string {
   const method = dish.cooking_methods?.[0] ?? "";
 
+  if (dishHas(dish, /猪肝/)) {
+    const hasGoji = dishHas(dish, /枸杞/);
+    const leaf = dish.main_ingredients.find((item) => !/猪肝|枸杞/.test(item));
+    const leafStep = leaf ? `先放${leaf.includes("菜") ? `${leaf}梗` : leaf}煮 1-2 分钟，叶子最后再下。` : "";
+    const gojiStep = hasGoji ? "枸杞最后放，煮 30 秒就够。" : "";
+
+    return `下锅：锅里加水和姜片煮开，${leafStep}转中火，把猪肝一片片放进去，不要一坨倒进去；猪肝变色后再煮 30 秒-1 分钟。${gojiStep}`;
+  }
+
   if (dish.dish_name.includes("蒸蛋")) {
-    return "水开后转中小火再上锅，碗口盖盘子防止水滴进去；看到表面凝固、轻轻晃动像嫩豆腐，就可以关火焖 1-2 分钟。";
+    return "下锅：水开后转中小火再上锅，碗口盖盘子防止水滴进去；看到表面凝固、轻轻晃动像嫩豆腐，就可以关火焖 1-2 分钟。";
   }
 
   if (method === "蒸" && dish.main_ingredients.some((item) => item.includes("鱼"))) {
-    return "蒸锅一定等水开再上鱼，中大火保持蒸汽；看到鱼眼发白、鱼肉能被筷子轻轻拨开就熟了，不要久蒸。";
+    return "下锅：蒸锅一定等水开再上鱼，中大火保持蒸汽；看到鱼眼发白、鱼肉能被筷子轻轻拨开就熟了，不要久蒸。";
   }
 
   if (method === "蒸") {
-    return "蒸锅一定等水开再上菜，中火保持有蒸汽；看到肉色变白、筷子能轻松戳进主料就接近熟了，不要反复掀盖。";
+    return "下锅：蒸锅一定等水开再上菜，中火保持有蒸汽；看到主料颜色变白、筷子能轻松戳进就接近熟了，不要反复掀盖。";
   }
 
   if (method === "炒") {
     if (dish.category === "素菜") {
-      return "锅热后再倒油，先下蒜末炒香，再放菜梗，最后放菜叶；看到菜色变亮、边缘变软就说明快好了，别一直炒到出水。";
+      return "下锅：锅热后再倒油，先下蒜末炒香，再放菜梗，最后放菜叶；看到菜色变亮、边缘变软就说明快好了，别一直炒到出水。";
     }
 
-    return "锅热后再倒油，先下蒜姜或肉类打底，再放蔬菜；看到菜色变亮、边缘变软就说明快好了，别一直炒到出水。";
+    return "下锅：锅热后再倒油，先下姜蒜或主料打底，再放配菜；看到菜色变亮、边缘变软就说明快好了，别一直炒到出水。";
   }
 
   if (method === "煮" || method === "炖") {
-    return "先下耐煮食材煮出底味，再下易熟食材；看到汤面小滚、食材能被筷子轻松戳进，就可以准备调味。";
+    return "下锅：先下耐煮食材煮出底味，再下易熟食材；看到汤面小滚、食材能被筷子轻松戳进，就可以准备调味。";
   }
 
   if (method === "焖" || method === "烧") {
-    return "先把主料炒到表面变色再加水，水量到食材一半到八分高；如果锅底快干就补少量热水，不要一次加太多。";
+    return "下锅：先把主料炒到表面变色再加水，水量到食材一半到八分高；如果锅底快干就补少量热水，不要一次加太多。";
   }
 
   if (method === "煎") {
-    return "锅和油都热了再下锅，先别急着翻面；看到边缘定型、底面金黄再翻，鱼肉和豆腐才不容易碎。";
+    return "下锅：锅和油都热了再下锅，先别急着翻面；看到边缘定型、底面金黄再翻，主料才不容易碎。";
   }
 
   if (method === "焯") {
-    return "水开后加一点盐和油再下菜；看到颜色变翠、梗部略软就捞出，不要久煮。";
+    return "下锅：水开后加一点盐和油再下菜；看到颜色变翠、梗部略软就捞出，不要久煮。";
   }
 
-  return "按从难熟到易熟的顺序下锅；看到食材颜色和质地明显变化，再进入调味收尾。";
+  return "下锅：按从难熟到易熟的顺序下锅；看到食材颜色和质地明显变化，再进入调味收尾。";
+}
+
+function buildDonenessStep(dish: SeedDish): string {
+  const method = dish.cooking_methods?.[0] ?? "";
+
+  if (dishHas(dish, /猪肝/)) {
+    return "判断：猪肝颜色刚从红转灰粉、中心没有血水就关火；久煮会老、会柴，汤也容易浑。";
+  }
+
+  if (dish.category === "素菜") {
+    return "判断：菜梗变亮、轻轻一夹能弯，菜叶刚塌下去就是熟；还想脆一点就提前 10 秒关火。";
+  }
+
+  if (dish.dish_name.includes("蒸蛋")) {
+    return "判断：表面平整不流动，勺子轻压有弹性就是嫩；如果中间还有水波纹，再蒸 1 分钟。";
+  }
+
+  if (dish.category === "蛋类") {
+    return "判断：蛋液大部分凝固、表面还带一点湿润时最嫩；等完全干硬再出锅就容易老。";
+  }
+
+  if (dishHas(dish, /鱼/)) {
+    return "判断：鱼肉能被筷子轻轻拨开、靠骨处没有血色就是熟；闻到鲜味后不要继续硬煮。";
+  }
+
+  if (method === "煮" || method === "炖") {
+    return "判断：耐煮食材能轻松戳进，汤味有甜味后再放盐；盐太早会让汤口感发紧。";
+  }
+
+  if (method === "焖" || method === "烧") {
+    return "判断：主料能戳透、锅底还留一点汤汁时最好收尾；如果已经干锅，就补少量热水再调味。";
+  }
+
+  return "判断：主料熟透、配菜断生、锅里香味出来后再调味；不确定时先夹一小块尝口感。";
 }
 
 function buildCoachSteps(dish: SeedDish, req: GenerateRequest): string[] {
@@ -550,7 +645,14 @@ function buildCoachSteps(dish: SeedDish, req: GenerateRequest): string[] {
         : "出锅前先尝味道，盐少量多次加；给孩子和老人吃的部分，可以剪小块或多焖一会儿，再单独盛出来。"
       : "出锅前尝一下咸淡，宁可淡一点，最后用生抽或盐微调；不要为了颜色好看把菜继续加热太久。";
 
-  return [buildCoachGoal(dish, req), buildPrepStep(dish, req), buildMethodStep(dish), finish];
+  return [
+    buildCoachGoal(dish, req),
+    buildMaterialStep(dish),
+    buildPrepStep(dish, req),
+    buildMethodStep(dish),
+    buildDonenessStep(dish),
+    `收尾：${finish}`,
+  ];
 }
 
 function buildCoachTips(dish: SeedDish, req: GenerateRequest): string[] {
@@ -559,8 +661,17 @@ function buildCoachTips(dish: SeedDish, req: GenerateRequest): string[] {
     /鱼|排骨|鸡腿|鸡翅|鸭肉|带鱼|鸡肉/.test(item)
   );
   const tips = [
-    `关键点：${method === "炒" ? "大火快炒、断生就出锅" : method === "蒸" ? "水开上锅、少开盖" : method === "煮" || method === "炖" ? "先耐煮后易熟，最后再调味" : "先判断熟度，再调味收尾"}。`,
+    `好吃小技巧：${method === "炒" ? "大火快炒、断生就出锅" : method === "蒸" ? "水开上锅、少开盖" : method === "煮" || method === "炖" ? "先耐煮后易熟，最后再调味" : "先判断熟度，再调味收尾"}。`,
   ];
+
+  if (dishHas(dish, /猪肝/)) {
+    tips.push("猪肝一定要泡出血水，下锅后别久煮，变色基本就熟了。");
+    tips.push(
+      dishHas(dish, /枸杞/)
+        ? "枸杞最后 30 秒再放，煮久容易发酸发苦。"
+        : "想更清甜可以加几粒枸杞或两片红枣，但都不要久煮。"
+    );
+  }
 
   if (req.has_child && dish.kid_friendly) {
     tips.push("孩子版：少盐少酱油，肉和菜切小一点，入口更稳。");
