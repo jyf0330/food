@@ -1,28 +1,20 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { useEffect, useState } from "react";
-import { restoreHomeForm, type MealMemoryForm } from "@/lib/mealMemory";
+import { useEffect, useMemo, useState } from "react";
+import {
+  readDishEngagement,
+  toggleDishEngagement,
+  type DishEngagement,
+} from "@/lib/dishEngagement";
 import { nextResultVariant } from "@/lib/resultVariant";
-import { buildPrefixedUserId, getUserIdDisplay } from "@/lib/userIdentity";
 
-type Choice<T extends string | number> = { id: T; label: string };
-type StoredForm = MealMemoryForm;
-type LastChoice = {
-  title: string;
-  resultUrl: string;
-  form: StoredForm | null;
-};
 type HomeDish = {
   name: string;
   category: string;
   time: number;
   note: string;
 };
-
-const LAST_FORM_KEY = "san-zhuo-cai:last-form";
-const LAST_CHOICE_KEY = "san-zhuo-cai:last-choice";
-const USER_ID_COOKIE = "jtcsm_user_id";
 
 const HOME_DISHES: HomeDish[] = [
   { name: "番茄炒蛋", category: "蛋类", time: 12, note: "酸甜快手" },
@@ -39,648 +31,227 @@ const HOME_DISHES: HomeDish[] = [
   { name: "家常豆腐", category: "豆腐", time: 15, note: "便宜下饭" },
 ];
 
-const PEOPLE: Choice<number>[] = [
-  { id: 1, label: "1人" },
-  { id: 2, label: "2人" },
-  { id: 3, label: "3人" },
-  { id: 4, label: "4人" },
-  { id: 5, label: "5人+" },
-];
-
-const FAMILY: Choice<string>[] = [
-  { id: "none", label: "没有" },
-  { id: "child", label: "有小孩" },
-  { id: "elder", label: "有老人" },
-  { id: "both", label: "都有" },
-];
-
-const BUDGET: Choice<number>[] = [
-  { id: 50, label: "50以内" },
-  { id: 80, label: "50-80" },
-  { id: 120, label: "80-120" },
-  { id: 200, label: "120+" },
-];
-
-const TIME: Choice<number>[] = [
-  { id: 20, label: "20分钟" },
-  { id: 30, label: "30分钟" },
-  { id: 40, label: "40分钟" },
-  { id: 60, label: "1小时" },
-];
-
-const TASTE: Choice<string>[] = [
-  { id: "清淡", label: "清淡" },
-  { id: "家常", label: "家常" },
-  { id: "重口", label: "重口" },
-  { id: "不辣", label: "不辣" },
-  { id: "微辣", label: "微辣" },
-];
-
-const AVOID: Choice<string>[] = [
-  { id: "辣", label: "辣" },
-  { id: "鱼", label: "鱼" },
-  { id: "牛羊肉", label: "牛羊肉" },
-  { id: "海鲜", label: "海鲜" },
-  { id: "香菜", label: "香菜" },
-  { id: "内脏", label: "内脏" },
-];
-
-const FINISH_TIME: Choice<string>[] = [
-  { id: "12:00", label: "12:00" },
-  { id: "18:30", label: "18:30" },
-  { id: "19:00", label: "19:00" },
-  { id: "20:00", label: "20:00" },
-];
-
-const COOK_SPEED: Choice<string>[] = [
-  { id: "normal", label: "正常" },
-  { id: "slow", label: "慢一点" },
-  { id: "beginner", label: "新手慢做" },
-];
-
 const DEFAULT_SELECTED_DISHES = ["番茄炒蛋", "蒜蓉菜心", "紫菜蛋花汤", "土豆焖鸡"];
-
-const DEFAULT_FORM: StoredForm = {
-  people: 3,
-  family: "child",
-  budget: 80,
-  time: 40,
-  taste: ["清淡", "不辣"],
-  channel: "菜市场",
-  avoid: [],
-  finishTime: "19:00",
-  cookSpeed: "normal",
-  userId: "",
-  favoriteFoods: [],
-  selectedDishes: DEFAULT_SELECTED_DISHES,
-};
-
-const splitList = (value: unknown) => {
-  if (Array.isArray(value)) {
-    return value.filter((item): item is string => typeof item === "string");
-  }
-  if (typeof value === "string") {
-    return value.split(",").filter(Boolean);
-  }
-  return [];
-};
-
-const normalizeFoodName = (value: string) =>
-  value
-    .trim()
-    .replace(/\s+/g, "")
-    .replace(/[^\u4e00-\u9fa5A-Za-z0-9_-]/g, "")
-    .slice(0, 24);
+const SELECTED_DISHES_KEY = "san-zhuo-cai:home-selected-dishes";
 
 const knownHomeDishes = new Set(HOME_DISHES.map((dish) => dish.name));
 
 const normalizeSelectedDishes = (value: unknown) => {
+  if (!Array.isArray(value)) return DEFAULT_SELECTED_DISHES;
+
   const selected = Array.from(
-    new Set(splitList(value).map(normalizeFoodName).filter((name) => knownHomeDishes.has(name)))
+    new Set(
+      value
+        .filter((item): item is string => typeof item === "string")
+        .map((item) => item.trim())
+        .filter((name) => knownHomeDishes.has(name))
+    )
   ).slice(0, 12);
+
   return selected.length ? selected : DEFAULT_SELECTED_DISHES;
 };
 
-const normalizeFavoriteFoods = (value: unknown) =>
-  Array.from(new Set(splitList(value).map(normalizeFoodName).filter(Boolean))).slice(0, 12);
-
-const pickNumber = (value: unknown, fallback: number) => {
-  const next = Number(value);
-  return Number.isFinite(next) && next > 0 ? next : fallback;
-};
-
-const pickString = (value: unknown, fallback: string) =>
-  typeof value === "string" && value ? value : fallback;
-
-const parseJson = (value: string | null) => {
-  if (!value) return null;
+const readSelectedDishes = () => {
   try {
-    return JSON.parse(value);
+    return normalizeSelectedDishes(JSON.parse(localStorage.getItem(SELECTED_DISHES_KEY) ?? "null"));
   } catch {
-    return null;
+    return DEFAULT_SELECTED_DISHES;
   }
 };
 
-const readCookie = (name: string) => {
-  if (typeof document === "undefined") return "";
-  return (
-    document.cookie
-      .split("; ")
-      .find((row) => row.startsWith(`${name}=`))
-      ?.split("=")[1] ?? ""
-  );
+const writeSelectedDishes = (selectedDishes: string[]) => {
+  try {
+    localStorage.setItem(SELECTED_DISHES_KEY, JSON.stringify(selectedDishes));
+  } catch {
+    // Storage can be unavailable; selection should still work for the current session.
+  }
 };
 
-const saveUserIdCookie = (userId: string) => {
-  const prefixed = buildPrefixedUserId(userId);
-  if (!prefixed) return;
-  document.cookie = `${USER_ID_COOKIE}=${encodeURIComponent(
-    prefixed
-  )}; max-age=31536000; path=/; SameSite=Lax`;
-};
-
-const normalizeForm = (value: unknown): StoredForm | null => {
-  if (!value || typeof value !== "object") return null;
-  const data = value as Partial<StoredForm> & { user_id?: unknown };
-  return {
-    people: pickNumber(data.people, DEFAULT_FORM.people),
-    family: pickString(data.family, DEFAULT_FORM.family),
-    budget: pickNumber(data.budget, DEFAULT_FORM.budget),
-    time: pickNumber(data.time, DEFAULT_FORM.time),
-    taste: splitList(data.taste),
-    channel: pickString(data.channel, DEFAULT_FORM.channel),
-    avoid: splitList(data.avoid),
-    finishTime: pickString(data.finishTime, DEFAULT_FORM.finishTime),
-    cookSpeed: pickString(data.cookSpeed, DEFAULT_FORM.cookSpeed),
-    userId: getUserIdDisplay(data.userId ?? data.user_id),
-    favoriteFoods: normalizeFavoriteFoods(data.favoriteFoods),
-    selectedDishes: normalizeSelectedDishes(data.selectedDishes),
-  };
-};
-
-const buildResultUrl = (form: StoredForm, variant?: number) => {
+const buildResultUrl = (selectedDishes: string[]) => {
   const params = new URLSearchParams({
-    people: String(form.people),
-    family: form.family,
-    budget: String(form.budget),
-    time: String(form.time),
-    taste: form.taste.join(","),
-    channel: form.channel,
-    avoid: form.avoid.join(","),
-    finishTime: form.finishTime,
-    cookSpeed: form.cookSpeed,
-    favoriteFoods: form.favoriteFoods.join(","),
-    selectedDishes: form.selectedDishes.join(","),
+    selectedDishes: selectedDishes.join(","),
+    variant: String(nextResultVariant()),
   });
-  const userId = getUserIdDisplay(form.userId);
-  if (userId) {
-    params.set("userId", userId);
-  }
-  if (variant) {
-    params.set("variant", String(variant));
-  }
   return `/result?${params.toString()}`;
-};
-
-const normalizeResultUrl = (value: unknown) => {
-  if (typeof value !== "string" || !value) return "";
-  if (value === "/result" || value.startsWith("/result?")) return value;
-  if (typeof window === "undefined") return "";
-  try {
-    const url = new URL(value, window.location.origin);
-    return url.origin === window.location.origin && url.pathname === "/result"
-      ? `${url.pathname}${url.search}`
-      : "";
-  } catch {
-    return "";
-  }
-};
-
-const normalizeChoice = (value: unknown): LastChoice | null => {
-  if (!value || typeof value !== "object") return null;
-  const data = value as Record<string, unknown>;
-  const form = normalizeForm(
-    data.form ?? data.lastForm ?? data.input ?? data.conditions ?? data.params
-  );
-  const resultUrl =
-    normalizeResultUrl(data.resultUrl ?? data.resultURL ?? data.url ?? data.href) ||
-    (form ? buildResultUrl(form) : "");
-  if (!resultUrl) return null;
-
-  const title =
-    pickString(data.title, "") ||
-    pickString(data.planTitle, "") ||
-    pickString(data.choiceTitle, "") ||
-    pickString(data.name, "") ||
-    pickString(data.planName, "") ||
-    pickString(data.selectedTitle, "") ||
-    pickString(data.label, "") ||
-    pickString(data.choice, "") ||
-    "这桌菜";
-
-  return { title, resultUrl, form };
 };
 
 export default function HomePage() {
   const router = useRouter();
-  const [people, setPeople] = useState(DEFAULT_FORM.people);
-  const [family, setFamily] = useState(DEFAULT_FORM.family);
-  const [budget, setBudget] = useState(DEFAULT_FORM.budget);
-  const [time, setTime] = useState(DEFAULT_FORM.time);
-  const [taste, setTaste] = useState<string[]>(DEFAULT_FORM.taste);
-  const [avoid, setAvoid] = useState<string[]>(DEFAULT_FORM.avoid);
-  const [finishTime, setFinishTime] = useState(DEFAULT_FORM.finishTime);
-  const [cookSpeed, setCookSpeed] = useState(DEFAULT_FORM.cookSpeed);
-  const [userId, setUserId] = useState(DEFAULT_FORM.userId);
-  const [favoriteFoods, setFavoriteFoods] = useState<string[]>(DEFAULT_FORM.favoriteFoods);
-  const [favoriteFoodInput, setFavoriteFoodInput] = useState("");
-  const [selectedDishes, setSelectedDishes] = useState<string[]>(DEFAULT_FORM.selectedDishes);
-  const [advancedOpen, setAdvancedOpen] = useState(false);
-  const [lastChoice, setLastChoice] = useState<LastChoice | null>(null);
+  const [selectedDishes, setSelectedDishes] = useState<string[]>(DEFAULT_SELECTED_DISHES);
+  const [engagement, setEngagement] = useState<DishEngagement>({ liked: [], saved: [] });
+  const [filter, setFilter] = useState<"all" | "saved">("all");
   const [loading, setLoading] = useState(false);
 
-  const applyForm = (form: StoredForm) => {
-    setPeople(form.people);
-    setFamily(form.family);
-    setBudget(form.budget);
-    setTime(form.time);
-    setTaste(form.taste);
-    setAvoid(form.avoid);
-    setFinishTime(form.finishTime);
-    setCookSpeed(form.cookSpeed);
-    setUserId(form.userId);
-    setFavoriteFoods(form.favoriteFoods);
-    setSelectedDishes(normalizeSelectedDishes(form.selectedDishes));
-    setAdvancedOpen(form.favoriteFoods.length > 0);
-  };
-
   useEffect(() => {
+    setSelectedDishes(readSelectedDishes());
     try {
-      const savedForm = normalizeForm(
-        parseJson(window.localStorage.getItem(LAST_FORM_KEY))
-      );
-      const savedChoice = normalizeChoice(
-        parseJson(window.localStorage.getItem(LAST_CHOICE_KEY))
-      );
-      const cookieUserId = getUserIdDisplay(
-        decodeURIComponent(readCookie(USER_ID_COOKIE))
-      );
-      const restoredForm = restoreHomeForm(savedForm, savedChoice?.form ?? null, cookieUserId);
-      if (restoredForm) {
-        applyForm(restoredForm);
-      } else if (cookieUserId) {
-        setUserId(cookieUserId);
-      }
-      setLastChoice(savedChoice);
+      setEngagement(readDishEngagement(localStorage));
     } catch {
-      setLastChoice(null);
+      setEngagement({ liked: [], saved: [] });
     }
   }, []);
 
-  const toggle = (list: string[], id: string) =>
-    list.includes(id) ? list.filter((x) => x !== id) : [...list, id];
+  const visibleDishes = useMemo(
+    () =>
+      filter === "saved"
+        ? HOME_DISHES.filter((dish) => engagement.saved.includes(dish.name))
+        : HOME_DISHES,
+    [engagement.saved, filter]
+  );
+
+  const selectedSummary = selectedDishes.slice(0, 2).join("、");
+  const selectedMoreCount = Math.max(0, selectedDishes.length - 2);
+
+  const setAndPersistSelectedDishes = (next: string[]) => {
+    setSelectedDishes(next);
+    writeSelectedDishes(next);
+  };
 
   const toggleDish = (dishName: string) => {
-    setSelectedDishes((current) =>
-      current.includes(dishName)
-        ? current.filter((name) => name !== dishName)
-        : [...current, dishName].slice(0, 12)
+    setAndPersistSelectedDishes(
+      selectedDishes.includes(dishName)
+        ? selectedDishes.filter((name) => name !== dishName)
+        : [...selectedDishes, dishName].slice(0, 12)
     );
   };
 
-  const currentForm = (): StoredForm => ({
-    people,
-    family,
-    budget,
-    time,
-    taste,
-    channel: DEFAULT_FORM.channel,
-    avoid,
-    finishTime,
-    cookSpeed,
-    userId: getUserIdDisplay(userId),
-    favoriteFoods,
-    selectedDishes,
-  });
-
-  const addFavoriteFood = () => {
-    const food = normalizeFoodName(favoriteFoodInput);
-    if (!food) return;
-    setFavoriteFoods((current) => {
-      if (current.includes(food)) return current;
-      return [...current, food].slice(0, 12);
-    });
-    setFavoriteFoodInput("");
+  const restoreRecommendation = () => {
+    setAndPersistSelectedDishes(DEFAULT_SELECTED_DISHES);
   };
 
-  const removeFavoriteFood = (food: string) => {
-    setFavoriteFoods((current) => current.filter((item) => item !== food));
-  };
-
-  const saveLastForm = (form: StoredForm) => {
+  const toggleEngagement = (key: keyof DishEngagement, dishName: string) => {
     try {
-      saveUserIdCookie(form.userId);
-      window.localStorage.setItem(LAST_FORM_KEY, JSON.stringify(form));
+      setEngagement(toggleDishEngagement(localStorage, key, dishName));
     } catch {
-      // Storage can be unavailable; navigation should still work.
+      setEngagement((current) => {
+        const exists = current[key].includes(dishName);
+        return {
+          ...current,
+          [key]: exists
+            ? current[key].filter((name) => name !== dishName)
+            : [...current[key], dishName],
+        };
+      });
     }
   };
 
-  const goToResult = (form: StoredForm) => {
-    if (form.selectedDishes.length === 0) return;
+  const generateRecipe = () => {
+    if (selectedDishes.length === 0) return;
     setLoading(true);
-    saveLastForm(form);
-    router.push(buildResultUrl(form, nextResultVariant()));
-  };
-
-  const onSubmit = () => {
-    goToResult(currentForm());
+    router.push(buildResultUrl(selectedDishes));
   };
 
   return (
     <main className="home-shell">
-      <section className="home-hero">
+      <header className="home-topbar">
         <div>
           <p className="home-kicker">今天吃什么</p>
-          <h1>先选菜，再生成一份能直接照着做的菜谱。</h1>
-          <p>
-            12 道家常菜都可以点选，系统会整理成菜单、买菜清单、做饭顺序和每道菜做法。
-          </p>
+          <h1>点几道想吃的菜</h1>
+          <p>选菜、点赞、收藏，马上生成一份能照着做的菜谱。</p>
         </div>
-        <div className="home-hero-panel" aria-label="当前选菜统计">
+        <div className="home-count" aria-label={`当前已选 ${selectedDishes.length} 道菜`}>
           <strong>{selectedDishes.length}</strong>
-          <span>道已选</span>
+          <span>已选</span>
         </div>
-      </section>
+      </header>
 
-      {lastChoice && (
-        <section className="memory-section home-memory">
-          <div className="memory-card">
-            <div className="memory-text">上次选了：{lastChoice.title}</div>
-            <div className="memory-actions">
-              <a
-                className="memory-link"
-                href={lastChoice.resultUrl}
-                onClick={() => {
-                  if (lastChoice.form) saveLastForm(lastChoice.form);
-                }}
-              >
-                直接用这桌
-              </a>
-              {lastChoice.form && (
-                <button
-                  type="button"
-                  className="memory-btn"
-                  onClick={() => applyForm(lastChoice.form as StoredForm)}
-                >
-                  修改条件
-                </button>
-              )}
-            </div>
-          </div>
-        </section>
-      )}
-
-      <section className="dish-picker-section" aria-labelledby="dish-picker-title">
-        <div className="home-section-heading">
-          <h2 id="dish-picker-title">选今天想吃的菜</h2>
+      <section className="home-toolbar" aria-label="菜品筛选">
+        <div className="home-filter">
           <button
             type="button"
-            className="home-link-btn"
-            onClick={() => setSelectedDishes(DEFAULT_SELECTED_DISHES)}
+            className={filter === "all" ? "active" : ""}
+            onClick={() => setFilter("all")}
           >
-            恢复推荐组合
+            全部
           </button>
-        </div>
-
-        <div className="dish-grid">
-          {HOME_DISHES.map((dish) => {
-            const active = selectedDishes.includes(dish.name);
-            return (
-              <button
-                key={dish.name}
-                type="button"
-                className={`dish-choice${active ? " active" : ""}`}
-                aria-pressed={active}
-                onClick={() => toggleDish(dish.name)}
-              >
-                <span className="dish-choice-top">
-                  <span className="dish-choice-name">{dish.name}</span>
-                  <span className="dish-choice-mark">{active ? "已选" : "可选"}</span>
-                </span>
-                <span className="dish-choice-meta">
-                  {dish.category} · {dish.time} 分钟
-                </span>
-                <span className="dish-choice-note">{dish.note}</span>
-              </button>
-            );
-          })}
-        </div>
-      </section>
-
-      <section className="preference-panel">
-        <div className="home-section-heading">
-          <h2>吃饭条件</h2>
-          <span>{people} 人 · 约 {budget} 元 · {time} 分钟</span>
-        </div>
-
-        <div className="form-section compact-form-section">
-          <label className="form-label" htmlFor="user-id">
-            你的代号（可中文）
-          </label>
-          <input
-            id="user-id"
-            className="text-input"
-            value={userId}
-            onChange={(event) => setUserId(getUserIdDisplay(event.target.value))}
-            placeholder="例如 小王 / 龙岗妈妈"
-            maxLength={32}
-          />
-        </div>
-
-        <div className="home-option-grid">
-          <section className="form-section compact-form-section">
-            <label className="form-label">今晚几个人吃饭？</label>
-            <div className="chip-group">
-              {PEOPLE.map((o) => (
-                <button
-                  key={o.id}
-                  type="button"
-                  className={`chip ${people === o.id ? "active" : ""}`}
-                  onClick={() => setPeople(o.id)}
-                >
-                  {o.label}
-                </button>
-              ))}
-            </div>
-          </section>
-
-          <section className="form-section compact-form-section">
-            <label className="form-label">有没有小孩/老人？</label>
-            <div className="chip-group">
-              {FAMILY.map((o) => (
-                <button
-                  key={o.id}
-                  type="button"
-                  className={`chip ${family === o.id ? "active" : ""}`}
-                  onClick={() => setFamily(o.id)}
-                >
-                  {o.label}
-                </button>
-              ))}
-            </div>
-          </section>
-
-          <section className="form-section compact-form-section">
-            <label className="form-label">预算？</label>
-            <div className="chip-group">
-              {BUDGET.map((o) => (
-                <button
-                  key={o.id}
-                  type="button"
-                  className={`chip ${budget === o.id ? "active" : ""}`}
-                  onClick={() => setBudget(o.id)}
-                >
-                  {o.label}
-                </button>
-              ))}
-            </div>
-          </section>
-
-          <section className="form-section compact-form-section">
-            <label className="form-label">想做多久？</label>
-            <div className="chip-group">
-              {TIME.map((o) => (
-                <button
-                  key={o.id}
-                  type="button"
-                  className={`chip ${time === o.id ? "active" : ""}`}
-                  onClick={() => setTime(o.id)}
-                >
-                  {o.label}
-                </button>
-              ))}
-            </div>
-          </section>
-        </div>
-
-        <section className="form-section advanced-section">
           <button
             type="button"
-            className="advanced-toggle"
-            onClick={() => setAdvancedOpen((open) => !open)}
-            aria-expanded={advancedOpen}
+            className={filter === "saved" ? "active" : ""}
+            onClick={() => setFilter("saved")}
           >
-            <span>口味、忌口和高级功能</span>
-            <span>{advancedOpen ? "收起" : "展开"}</span>
+            收藏
           </button>
+        </div>
+        <button type="button" className="home-link-btn" onClick={restoreRecommendation}>
+          推荐组合
+        </button>
+      </section>
 
-          {advancedOpen && (
-            <div className="advanced-panel">
-              <div className="home-option-grid">
-                <div>
-                  <label className="form-label">几点前做好？</label>
-                  <div className="chip-group">
-                    {FINISH_TIME.map((o) => (
-                      <button
-                        key={o.id}
-                        type="button"
-                        className={`chip ${finishTime === o.id ? "active" : ""}`}
-                        onClick={() => setFinishTime(o.id)}
-                      >
-                        {o.label}
-                      </button>
-                    ))}
-                  </div>
-                </div>
+      <section className="dish-picker-section" aria-label="选择今天想吃的菜">
+        {visibleDishes.length ? (
+          <div className="dish-grid">
+            {visibleDishes.map((dish) => {
+              const selected = selectedDishes.includes(dish.name);
+              const liked = engagement.liked.includes(dish.name);
+              const saved = engagement.saved.includes(dish.name);
 
-                <div>
-                  <label className="form-label">做饭速度？</label>
-                  <div className="chip-group">
-                    {COOK_SPEED.map((o) => (
-                      <button
-                        key={o.id}
-                        type="button"
-                        className={`chip ${cookSpeed === o.id ? "active" : ""}`}
-                        onClick={() => setCookSpeed(o.id)}
-                      >
-                        {o.label}
-                      </button>
-                    ))}
-                  </div>
-                </div>
-
-                <div>
-                  <label className="form-label">口味？（可多选）</label>
-                  <div className="chip-group">
-                    {TASTE.map((o) => (
-                      <button
-                        key={o.id}
-                        type="button"
-                        className={`chip ${taste.includes(o.id) ? "active" : ""}`}
-                        onClick={() => setTaste(toggle(taste, o.id))}
-                      >
-                        {o.label}
-                      </button>
-                    ))}
-                  </div>
-                </div>
-
-                <div>
-                  <label className="form-label">不吃什么？（可多选）</label>
-                  <div className="chip-group">
-                    {AVOID.map((o) => (
-                      <button
-                        key={o.id}
-                        type="button"
-                        className={`chip ${avoid.includes(o.id) ? "active" : ""}`}
-                        onClick={() => setAvoid(toggle(avoid, o.id))}
-                      >
-                        {o.label}
-                      </button>
-                    ))}
-                  </div>
-                </div>
-              </div>
-
-              <div className="favorite-food-panel">
-                <label className="form-label" htmlFor="favorite-food">
-                  喜欢的食物
-                </label>
-                <div className="favorite-input-row">
-                  <input
-                    id="favorite-food"
-                    className="text-input"
-                    value={favoriteFoodInput}
-                    onChange={(event) => setFavoriteFoodInput(event.target.value)}
-                    onKeyDown={(event) => {
-                      if (event.key === "Enter") {
-                        event.preventDefault();
-                        addFavoriteFood();
-                      }
-                    }}
-                    placeholder="例如 豆腐 / 番茄炒蛋"
-                    maxLength={24}
-                  />
-                  <button type="button" className="memory-btn" onClick={addFavoriteFood}>
-                    添加
+              return (
+                <article key={dish.name} className={`dish-card${selected ? " selected" : ""}`}>
+                  <button
+                    type="button"
+                    className="dish-select"
+                    aria-pressed={selected}
+                    onClick={() => toggleDish(dish.name)}
+                  >
+                    <span className="dish-status">{selected ? "已选" : "可选"}</span>
+                    <span className="dish-name">{dish.name}</span>
+                    <span className="dish-meta">
+                      {dish.category} · {dish.time} 分钟
+                    </span>
+                    <span className="dish-note">{dish.note}</span>
                   </button>
-                </div>
-                {favoriteFoods.length ? (
-                  <div className="chip-group favorite-list" aria-label="已设置喜欢的食物">
-                    {favoriteFoods.map((food) => (
-                      <button
-                        key={food}
-                        type="button"
-                        className="chip active"
-                        onClick={() => removeFavoriteFood(food)}
-                        title="点击移除"
-                      >
-                        {food} ×
-                      </button>
-                    ))}
+
+                  <div className="dish-actions">
+                    <button
+                      type="button"
+                      className={liked ? "active" : ""}
+                      aria-pressed={liked}
+                      aria-label={`${liked ? "取消点赞" : "点赞"}${dish.name}`}
+                      onClick={() => toggleEngagement("liked", dish.name)}
+                    >
+                      赞
+                    </button>
+                    <button
+                      type="button"
+                      className={saved ? "active" : ""}
+                      aria-pressed={saved}
+                      aria-label={`${saved ? "取消收藏" : "收藏"}${dish.name}`}
+                      onClick={() => toggleEngagement("saved", dish.name)}
+                    >
+                      收藏
+                    </button>
                   </div>
-                ) : (
-                  <p className="advanced-hint">设置后，每天有 50% 概率把其中一个放进推荐菜单。</p>
-                )}
-              </div>
-            </div>
-          )}
-        </section>
+                </article>
+              );
+            })}
+          </div>
+        ) : (
+          <div className="empty-saved">
+            <strong>还没有收藏</strong>
+            <p>看到常吃的菜，点一下收藏，下次会在这里出现。</p>
+            <button type="button" onClick={() => setFilter("all")}>
+              去全部看看
+            </button>
+          </div>
+        )}
       </section>
 
       <div className="home-submit-bar">
+        <div className="home-submit-copy">
+          <strong>{selectedDishes.length ? `已选 ${selectedDishes.length} 道` : "先选一道菜"}</strong>
+          <span>
+            {selectedDishes.length
+              ? `${selectedSummary}${selectedMoreCount ? ` 等 ${selectedDishes.length} 道` : ""}`
+              : "点菜卡就能加入菜单"}
+          </span>
+        </div>
         <button
           type="button"
           className="submit-btn"
-          onClick={onSubmit}
+          onClick={generateRecipe}
           disabled={loading || selectedDishes.length === 0}
         >
-          {loading
-            ? "正在生成菜谱…"
-            : selectedDishes.length
-              ? `生成 ${selectedDishes.length} 道菜的菜谱`
-              : "先选一道菜"}
+          {loading ? "生成中…" : "生成菜谱"}
         </button>
       </div>
     </main>
