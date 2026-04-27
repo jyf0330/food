@@ -1,6 +1,8 @@
 {
   "recipe_policy": "不复制商业网站菜谱正文；使用自有结构化模板生成原创步骤。",
   "recipe_candidates": [
+    "《中国菜谱（广东）》1976 编写组 PDF：用于菜名、粤菜技法和目录参考，不复制原书做法正文",
+    "Cook1Cook 客家菜分类前 10 页（https://cook1cook.com/category/312）：只采集列表菜名作目录候选，不复制用户菜谱正文或步骤",
     "中文菜谱研究数据集可用于研究参考：https://counterfactual-recipe-generation.github.io/dataset_zh.html",
     "商业使用可考虑购买授权菜谱库或接入合法菜谱 API"
   ],

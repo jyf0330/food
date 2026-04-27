@@ -2,6 +2,7 @@ import assert from "node:assert/strict";
 import fs from "node:fs";
 import { describe, it } from "node:test";
 import dishes from "../data/dishes.seed.json";
+import dataSources from "../data/data-sources.json";
 import ingredients from "../data/ingredients.seed.json";
 import nutrition from "../data/nutrition.seed.json";
 import priceBaseline from "../data/price-baseline.json";
@@ -24,6 +25,17 @@ const baseRequest: GenerateRequest = {
   shopping_channel: "菜市场",
   kitchen_tools: ["炒锅", "电饭锅"],
 };
+
+function cook1cookHakkaDishNames(): string[] {
+  const scriptText = fs.readFileSync(
+    new URL("../scripts/build-food-data.cjs", import.meta.url),
+    "utf8"
+  );
+  const match = /const cook1cookHakkaDishNames = \[([\s\S]*?)\];/.exec(scriptText);
+  assert.ok(match, "missing cook1cookHakkaDishNames in build script");
+
+  return Array.from(match[1].matchAll(/"([^"]+)"/g), (item) => item[1]);
+}
 
 describe("curated food data", () => {
   it("contains a practical Shenzhen family dish and ingredient library", () => {
@@ -53,6 +65,68 @@ describe("curated food data", () => {
     for (const name of ["白菜豆腐汤", "西葫芦炒蛋", "鲫鱼豆腐汤", "蒜苗炒五花肉"]) {
       assert.ok(dishNames.includes(name), `missing expanded recipe ${name}`);
     }
+  });
+
+  it("adds modern home-style Guangdong recipes adapted from China Cookbook Guangdong", () => {
+    const dishNames = dishes.map((item) => item.dish_name);
+    const expectedGuangdongDishes = [
+      "糖醋咕噜肉",
+      "白切鸡",
+      "东江盐焗鸡",
+      "清蒸滑鸡",
+      "滑蛋虾仁",
+      "大良炒牛奶",
+      "煎瓤凉瓜",
+      "东江瓤豆腐",
+      "干煎虾碌",
+      "蚝油牛肉",
+      "白云猪手",
+      "香芋扣肉",
+    ];
+
+    for (const name of expectedGuangdongDishes) {
+      assert.ok(dishNames.includes(name), `missing Guangdong cookbook dish ${name}`);
+    }
+
+    const sourceText = JSON.stringify(dataSources);
+    assert.match(sourceText, /中国菜谱[（(]广东[）)]/);
+
+    const sampleDish = dishes.find((dish) => dish.dish_name === "白切鸡");
+    assert.ok(sampleDish, "missing sample Guangdong dish");
+    assert.ok(sampleDish.steps.length >= 3, "adapted dish should keep project-style steps");
+    assert.match(sampleDish.steps.join("\n"), /浸|冰水|姜葱/);
+    assert.match(
+      dishes.find((dish) => dish.dish_name === "大良炒牛奶")?.steps.join("\n") ?? "",
+      /牛奶|小火/
+    );
+    assert.match(
+      dishes.find((dish) => dish.dish_name === "东江瓤豆腐")?.steps.join("\n") ?? "",
+      /豆腐|肉馅/
+    );
+    assert.doesNotMatch(
+      sampleDish.steps.join("\n"),
+      /原料|制法|用料|上席/,
+      "adapted dish steps should not copy legacy cookbook prose"
+    );
+  });
+
+  it("adds 100 project-style Hakka recipe candidates from Cook1Cook category listings", () => {
+    const dishNames = dishes.map((item) => item.dish_name);
+    const uniqueDishNames = new Set(dishNames);
+    const hakkaNames = cook1cookHakkaDishNames();
+
+    assert.ok(dishes.length >= 302, `expected 302+ dishes after Cook1Cook import, got ${dishes.length}`);
+    assert.equal(uniqueDishNames.size, dishNames.length, "dish names should stay unique");
+    assert.equal(hakkaNames.length, 100, "Cook1Cook Hakka candidate list should keep 100 names");
+    assert.equal(new Set(hakkaNames).size, hakkaNames.length, "Cook1Cook Hakka names should be unique");
+
+    for (const name of hakkaNames) {
+      assert.ok(dishNames.includes(name), `missing Cook1Cook Hakka candidate ${name}`);
+    }
+
+    const sourceText = JSON.stringify(dataSources);
+    assert.match(sourceText, /Cook1Cook/);
+    assert.match(sourceText, /category\/312/);
   });
 
   it("has original cooking steps and shopping amounts for every dish", () => {

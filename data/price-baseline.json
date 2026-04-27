@@ -1438,5 +1438,215 @@
     "expensive_threshold": 17,
     "current_price": 13.6,
     "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
+  },
+  {
+    "name": "猪蹄",
+    "category": "肉蛋",
+    "unit": "斤",
+    "normal_price": 22.8,
+    "cheap_threshold": 18.7,
+    "expensive_threshold": 28.5,
+    "current_price": 22.8,
+    "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
+  },
+  {
+    "name": "牛奶",
+    "category": "乳制品",
+    "unit": "斤",
+    "normal_price": 10,
+    "cheap_threshold": 8.2,
+    "expensive_threshold": 12.5,
+    "current_price": 7.8,
+    "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
+  },
+  {
+    "name": "梅菜",
+    "category": "干货",
+    "unit": "斤",
+    "normal_price": 11.2,
+    "cheap_threshold": 9.2,
+    "expensive_threshold": 14,
+    "current_price": 11.2,
+    "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
+  },
+  {
+    "name": "眉豆",
+    "category": "干货",
+    "unit": "斤",
+    "normal_price": 12.4,
+    "cheap_threshold": 10.2,
+    "expensive_threshold": 15.5,
+    "current_price": 16.4,
+    "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
+  },
+  {
+    "name": "艾叶",
+    "category": "蔬菜",
+    "unit": "斤",
+    "normal_price": 9.6,
+    "cheap_threshold": 7.9,
+    "expensive_threshold": 12,
+    "current_price": 9.6,
+    "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
+  },
+  {
+    "name": "糯米粉",
+    "category": "主食",
+    "unit": "斤",
+    "normal_price": 14.8,
+    "cheap_threshold": 12.1,
+    "expensive_threshold": 18.5,
+    "current_price": 14.8,
+    "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
+  },
+  {
+    "name": "粘米粉",
+    "category": "主食",
+    "unit": "斤",
+    "normal_price": 10,
+    "cheap_threshold": 8.2,
+    "expensive_threshold": 12.5,
+    "current_price": 7.8,
+    "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
+  },
+  {
+    "name": "鱿鱼干",
+    "category": "干货",
+    "unit": "斤",
+    "normal_price": 11.2,
+    "cheap_threshold": 9.2,
+    "expensive_threshold": 14,
+    "current_price": 11.2,
+    "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
+  },
+  {
+    "name": "咸酸菜",
+    "category": "加工食品",
+    "unit": "斤",
+    "normal_price": 12.4,
+    "cheap_threshold": 10.2,
+    "expensive_threshold": 15.5,
+    "current_price": 12.4,
+    "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
+  },
+  {
+    "name": "猪肠",
+    "category": "肉蛋",
+    "unit": "斤",
+    "normal_price": 21.6,
+    "cheap_threshold": 17.7,
+    "expensive_threshold": 27,
+    "current_price": 21.6,
+    "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
+  },
+  {
+    "name": "粉肠",
+    "category": "肉蛋",
+    "unit": "斤",
+    "normal_price": 22.8,
+    "cheap_threshold": 18.7,
+    "expensive_threshold": 28.5,
+    "current_price": 30.1,
+    "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
+  },
+  {
+    "name": "鸡肾",
+    "category": "肉蛋",
+    "unit": "斤",
+    "normal_price": 18,
+    "cheap_threshold": 14.8,
+    "expensive_threshold": 22.5,
+    "current_price": 14,
+    "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
+  },
+  {
+    "name": "豆腐泡",
+    "category": "豆制品",
+    "unit": "斤",
+    "normal_price": 9.2,
+    "cheap_threshold": 7.5,
+    "expensive_threshold": 11.5,
+    "current_price": 9.2,
+    "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
+  },
+  {
+    "name": "鲮鱼肉",
+    "category": "水产",
+    "unit": "斤",
+    "normal_price": 34.4,
+    "cheap_threshold": 28.2,
+    "expensive_threshold": 43,
+    "current_price": 34.4,
+    "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
+  },
+  {
+    "name": "鲩鱼",
+    "category": "水产",
+    "unit": "斤",
+    "normal_price": 35.6,
+    "cheap_threshold": 29.2,
+    "expensive_threshold": 44.5,
+    "current_price": 35.6,
+    "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
+  },
+  {
+    "name": "沙葛",
+    "category": "蔬菜",
+    "unit": "斤",
+    "normal_price": 10.8,
+    "cheap_threshold": 8.9,
+    "expensive_threshold": 13.5,
+    "current_price": 10.8,
+    "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
+  },
+  {
+    "name": "炸菜",
+    "category": "加工食品",
+    "unit": "斤",
+    "normal_price": 10,
+    "cheap_threshold": 8.2,
+    "expensive_threshold": 12.5,
+    "current_price": 7.8,
+    "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
+  },
+  {
+    "name": "咸鱼",
+    "category": "水产",
+    "unit": "斤",
+    "normal_price": 33.2,
+    "cheap_threshold": 27.2,
+    "expensive_threshold": 41.5,
+    "current_price": 43.8,
+    "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
+  },
+  {
+    "name": "猪颈肉",
+    "category": "肉蛋",
+    "unit": "斤",
+    "normal_price": 20.4,
+    "cheap_threshold": 16.7,
+    "expensive_threshold": 25.5,
+    "current_price": 20.4,
+    "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
+  },
+  {
+    "name": "米粉",
+    "category": "主食",
+    "unit": "斤",
+    "normal_price": 13.6,
+    "cheap_threshold": 11.2,
+    "expensive_threshold": 17,
+    "current_price": 13.6,
+    "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
+  },
+  {
+    "name": "柚子皮",
+    "category": "蔬菜",
+    "unit": "斤",
+    "normal_price": 10.8,
+    "cheap_threshold": 8.9,
+    "expensive_threshold": 13.5,
+    "current_price": 10.8,
+    "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
   }
 ]

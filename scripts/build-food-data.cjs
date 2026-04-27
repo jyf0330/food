@@ -148,7 +148,28 @@ const ingredientSpecs = [
   ["鸭梨", "水果", ["梨"], [8,9,10,11,12]],
   ["富士苹果", "水果", ["苹果"], [1,2,3,4,9,10,11,12]],
   ["菠萝", "水果", ["凤梨"], [3,4,5,6]],
-  ["巨峰葡萄", "水果", ["葡萄"], [6,7,8,9,10]]
+  ["巨峰葡萄", "水果", ["葡萄"], [6,7,8,9,10]],
+  ["猪蹄", "肉蛋", ["猪手"], [1,2,3,4,5,6,7,8,9,10,11,12]],
+  ["牛奶", "乳制品", ["鲜奶"], [1,2,3,4,5,6,7,8,9,10,11,12]],
+  ["梅菜", "干货", ["梅干菜", "甜梅菜"], [1,2,3,4,5,6,7,8,9,10,11,12]],
+  ["眉豆", "干货", ["饭豆"], [1,2,3,4,5,6,7,8,9,10,11,12]],
+  ["艾叶", "蔬菜", ["艾草"], [2,3,4,5]],
+  ["糯米粉", "主食", ["糯米面"], [1,2,3,4,5,6,7,8,9,10,11,12]],
+  ["粘米粉", "主食", ["大米粉"], [1,2,3,4,5,6,7,8,9,10,11,12]],
+  ["鱿鱼干", "干货", ["干鱿鱼"], [1,2,3,4,5,6,7,8,9,10,11,12]],
+  ["咸酸菜", "加工食品", ["酸菜"], [1,2,3,4,5,6,7,8,9,10,11,12]],
+  ["猪肠", "肉蛋", ["大肠"], [1,2,3,4,5,6,7,8,9,10,11,12]],
+  ["粉肠", "肉蛋", ["猪粉肠"], [1,2,3,4,5,6,7,8,9,10,11,12]],
+  ["鸡肾", "肉蛋", ["鸡胗"], [1,2,3,4,5,6,7,8,9,10,11,12]],
+  ["豆腐泡", "豆制品", ["豆卜", "油豆腐"], [1,2,3,4,5,6,7,8,9,10,11,12]],
+  ["鲮鱼肉", "水产", ["鲮鱼滑"], [1,2,3,4,5,6,7,8,9,10,11,12]],
+  ["鲩鱼", "水产", ["草鱼"], [1,2,3,4,5,6,7,8,9,10,11,12]],
+  ["沙葛", "蔬菜", ["豆薯"], [1,2,3,4,11,12]],
+  ["炸菜", "加工食品", ["榨菜"], [1,2,3,4,5,6,7,8,9,10,11,12]],
+  ["咸鱼", "水产", ["咸鱼干"], [1,2,3,4,5,6,7,8,9,10,11,12]],
+  ["猪颈肉", "肉蛋", ["猪颈"], [1,2,3,4,5,6,7,8,9,10,11,12]],
+  ["米粉", "主食", ["檬粉"], [1,2,3,4,5,6,7,8,9,10,11,12]],
+  ["柚子皮", "蔬菜", ["柚皮"], [9,10,11,12]]
 ];
 
 const amountMap = {
@@ -183,7 +204,13 @@ const amountMap = {
   油菜: "1 斤", 洋白菜: "半个", 葱头: "1 个", 大葱: "1 根",
   生姜: "适量", 大蒜: "适量", 蒜薹: "半斤", 豆角: "半斤",
   菜花: "半颗", 西瓜: "1 盒", 香蕉: "1 把", 鸭梨: "3 个",
-  富士苹果: "3 个", 菠萝: "半个", 巨峰葡萄: "1 盒"
+  富士苹果: "3 个", 菠萝: "半个", 巨峰葡萄: "1 盒",
+  猪蹄: "半只", 牛奶: "300ml", 梅菜: "80g", 眉豆: "100g",
+  艾叶: "1 把", 糯米粉: "250g", 粘米粉: "150g", 鱿鱼干: "1 条",
+  咸酸菜: "150g", 猪肠: "半斤", 粉肠: "半斤", 鸡肾: "200g",
+  豆腐泡: "8 个", 鲮鱼肉: "200g", 鲩鱼: "半条", 沙葛: "半个",
+  炸菜: "1 小包", 咸鱼: "1 小块", 猪颈肉: "250g", 米粉: "300g",
+  柚子皮: "半个"
 };
 
 const dishSpecs = [
@@ -363,6 +390,9 @@ const dishSpecs = [
   ["海鲜菇炒牛肉", "荤菜", ["海鲜菇", "牛肉"], "炒", "咸鲜", "中"],
   ["菜花炒猪肉", "荤菜", ["菜花", "猪肉"], "炒", "咸香", "中"],
   ["香菇炖白条鸡", "荤菜", ["白条鸡", "香菇"], "炖", "清香", "中"],
+  ["糖醋咕噜肉", "荤菜", ["猪里脊", "菠萝", "彩椒"], "炒", "酸甜", "中"],
+  ["白云猪手", "凉菜", ["猪蹄", "姜"], "拌", "酸甜", "中"],
+  ["蚝油牛肉", "荤菜", ["牛肉", "姜", "葱"], "炒", "咸鲜", "中"],
   ["红烧鲤鱼", "荤菜", ["鲤鱼", "生姜", "大葱"], "烧", "咸香", "中"],
   ["白鲢鱼豆腐汤", "汤", ["白鲢鱼", "豆腐"], "煮", "鲜", "中"],
   ["香煎大带鱼", "荤菜", ["大带鱼", "生姜"], "煎", "咸香", "中"],
@@ -376,7 +406,16 @@ const dishSpecs = [
   ["豆角焖面", "主食", ["豆角", "面条"], "焖", "咸香", "低"],
   ["大蒜烧豆腐", "豆腐", ["大蒜", "豆腐"], "烧", "咸香", "低"],
   ["西红柿鸡蛋汤", "汤", ["西红柿", "鸡蛋"], "煮", "酸甜", "低"],
-  ["黄瓜木耳炒蛋", "蛋类", ["黄瓜", "木耳", "鸡蛋"], "炒", "清爽", "低"]
+  ["黄瓜木耳炒蛋", "蛋类", ["黄瓜", "木耳", "鸡蛋"], "炒", "清爽", "低"],
+  ["香芋扣肉", "荤菜", ["芋头", "五花肉"], "蒸", "咸香", "中"],
+  ["干煎虾碌", "荤菜", ["对虾", "姜", "葱"], "煎", "鲜香", "高"],
+  ["白切鸡", "荤菜", ["白条鸡", "姜", "葱"], "煮", "清淡", "中"],
+  ["东江盐焗鸡", "荤菜", ["白条鸡", "姜"], "焖", "咸香", "中"],
+  ["清蒸滑鸡", "荤菜", ["鸡肉", "香菇"], "蒸", "咸鲜", "中"],
+  ["滑蛋虾仁", "蛋类", ["虾仁", "鸡蛋"], "炒", "鲜嫩", "中"],
+  ["大良炒牛奶", "蛋类", ["牛奶", "鸡蛋"], "炒", "奶香", "低"],
+  ["煎瓤凉瓜", "荤菜", ["苦瓜", "猪肉末"], "煎", "咸鲜", "中"],
+  ["东江瓤豆腐", "豆腐", ["豆腐", "猪肉末"], "煎", "咸鲜", "低"]
 ];
 
 const categoryMethod = {
@@ -389,6 +428,221 @@ const categoryMethod = {
   凉菜: ["拌"],
   蒸菜: ["蒸"]
 };
+
+const cook1cookHakkaDishNames = [
+  "客家酿豆腐",
+  "客家咸茶果",
+  "客家小炒",
+  "眉豆茶粿",
+  "梅菜扣肉",
+  "客家柚子酿",
+  "客家艾糍",
+  "客家咸汤丸",
+  "梅菜焖猪五花",
+  "咸鸡",
+  "黑糖梅菜焖猪肉",
+  "鱿鱼干炒粉丝",
+  "盐香蒸焗鸡",
+  "客家梅菜焖腩肉",
+  "粉蒸肉",
+  "黑糖姜汁糍粑",
+  "闽南姜粿",
+  "经典客家小炒",
+  "五香梅菜扣肉",
+  "黄豆酱煎酿豆腐",
+  "梅干菜蒸肉饼",
+  "无糖梅菜扣肉",
+  "家常梅菜扣肉",
+  "简易酿豆腐",
+  "梅干扣肉",
+  "福建炒饭",
+  "豆干客家小炒",
+  "砂锅梅菜扣肉",
+  "客家煎酿豆腐",
+  "金沙苦瓜炒蛋",
+  "客家粄粽",
+  "福建炒面",
+  "省火梅菜扣肉",
+  "客家麻糬",
+  "梅菜扣肉煲",
+  "咸酸菜炒猪肠",
+  "南乳咸酸菜木耳腩肉",
+  "三角圆咸汤",
+  "五香扣肉",
+  "蛤蜊虾仁蒸蛋",
+  "素红烧豆腐煲",
+  "香草酱煎酿豆腐",
+  "家常扣肉",
+  "麻辣炸菜鸡肾",
+  "梅菜蒸扣肉",
+  "盐焗鸡翼",
+  "萝卜丝菜包粿",
+  "味噌京葱肥牛豆腐煲",
+  "香茜盐水鸡翼",
+  "咸鱼鸡粒豆腐煲",
+  "花雕咸鸡髀菜饭",
+  "盐焗北菇滑鸡腊肠煲仔饭",
+  "盐焗蜜糖鸡翼",
+  "黑麦酒鸡翼",
+  "简易盐焗鸡翼",
+  "咸鱼鸡粒豆腐煲二",
+  "经典咸鱼鸡粒豆腐煲",
+  "番茄麻辣豆腐煲",
+  "红酒鸡腿",
+  "去骨鸡腿示范菜",
+  "盐焗猪颈肉炒檬",
+  "客家咸鸡",
+  "梅干扣肉煲",
+  "姜葱盐焗鸡翼",
+  "姜葱霸王鸡",
+  "黄酒鸡",
+  "影音鲜虾豆腐煲",
+  "玫瑰盐焗鸡全翼",
+  "传统梅菜扣肉",
+  "川辣炸菜肾片",
+  "十三香盐焗鸡髀",
+  "蒸盐焗鸡髀",
+  "虫草花蒸酒鸡",
+  "盐焗粉肠",
+  "香脆盐焗鸡腿",
+  "迷迭香盐焗鸡翼",
+  "咸鸡髀煲仔饭",
+  "黄豆煎焖酿豆腐",
+  "沙姜猪手",
+  "芝麻手撕鸡",
+  "嫩滑盐焗鸡",
+  "咸蛋炒苦瓜",
+  "芥菜豆腐煲鲩鱼",
+  "蒸酿豆腐",
+  "沙葛黄酒鸡",
+  "盐猪五花客家小炒",
+  "梅菜扣肉饭",
+  "盐焗鸡",
+  "鲮鱼肉酿豆腐泡",
+  "虾胶酿豆腐泡",
+  "夏日啤酒鸡翅",
+  "盐焗鸡肾",
+  "牛至红酒鸡肉",
+  "家常鲜虾豆腐煲",
+  "盐焗鸡脾饭",
+  "一品海皇豆腐煲",
+  "东江豆腐煲",
+  "客家南乳炸腩肉",
+  "红烧豆腐煲",
+  "姜葱海鲈豆腐煲"
+];
+
+function pushUnique(list, value) {
+  if (value && !list.includes(value)) {
+    list.push(value);
+  }
+}
+
+function inferCook1cookHakkaDishSpec(name) {
+  const ingredients = [];
+
+  if (/客家小炒|小炒/.test(name)) {
+    pushUnique(ingredients, "五花肉");
+    pushUnique(ingredients, "豆干");
+    pushUnique(ingredients, "鱿鱼干");
+    pushUnique(ingredients, "芹菜");
+  }
+  if (/豆腐泡|豆腐卜/.test(name)) pushUnique(ingredients, "豆腐泡");
+  else if (name.includes("豆腐")) pushUnique(ingredients, "豆腐");
+
+  if (/鲮鱼/.test(name)) pushUnique(ingredients, "鲮鱼肉");
+  if (/虾胶|鲜虾/.test(name)) pushUnique(ingredients, "虾仁");
+  if (/虾仁|海皇/.test(name)) pushUnique(ingredients, "虾仁");
+  if (/蛤蜊|蜆/.test(name)) pushUnique(ingredients, "蛤蜊");
+  if (/鱿鱼/.test(name)) pushUnique(ingredients, "鱿鱼干");
+  if (/鲩鱼/.test(name)) pushUnique(ingredients, "鲩鱼");
+  if (/海鲈/.test(name)) pushUnique(ingredients, "鲈鱼");
+  if (/咸鱼/.test(name)) pushUnique(ingredients, "咸鱼");
+
+  if (/鸡翼|鸡翅|全翼/.test(name)) pushUnique(ingredients, "鸡翅");
+  else if (/鸡髀|鸡脾|鸡腿|红酒鸡/.test(name)) pushUnique(ingredients, "鸡腿");
+  else if (/咸鸡|盐焗鸡|霸王鸡|黄酒鸡|手撕鸡|酒鸡|蒸焗鸡|去骨鸡/.test(name)) pushUnique(ingredients, "鸡肉");
+  if (/鸡肾|肾片/.test(name)) pushUnique(ingredients, "鸡肾");
+  if (/鸡粒/.test(name)) pushUnique(ingredients, "鸡肉");
+
+  if (/猪手/.test(name)) pushUnique(ingredients, "猪蹄");
+  if (/猪肠/.test(name)) pushUnique(ingredients, "猪肠");
+  if (/粉肠/.test(name)) pushUnique(ingredients, "粉肠");
+  if (/猪颈/.test(name)) pushUnique(ingredients, "猪颈肉");
+  if (/五花|腩肉|扣肉|猪肉|粉蒸肉|盐猪|炸腩/.test(name)) pushUnique(ingredients, "五花肉");
+  if (/肉饼|酿|釀/.test(name) && !ingredients.some((item) => ["鲮鱼肉", "虾仁"].includes(item))) {
+    pushUnique(ingredients, "猪肉末");
+  }
+
+  if (/梅菜|梅干/.test(name)) pushUnique(ingredients, "梅菜");
+  if (/眉豆/.test(name)) pushUnique(ingredients, "眉豆");
+  if (/艾糍/.test(name)) pushUnique(ingredients, "艾叶");
+  if (/艾糍/.test(name)) pushUnique(ingredients, "糯米粉");
+  if (/茶果|茶粿|粄粽|麻糬|糍粑|姜粿|菜包粿|汤丸/.test(name)) pushUnique(ingredients, "糯米粉");
+  if (/茶果|茶粿|菜包粿/.test(name)) pushUnique(ingredients, "粘米粉");
+  if (/萝卜/.test(name)) pushUnique(ingredients, "白萝卜");
+  if (/苦瓜/.test(name)) pushUnique(ingredients, "苦瓜");
+  if (/咸蛋|金沙|蒸蛋/.test(name)) pushUnique(ingredients, "鸡蛋");
+  if (/咸酸菜/.test(name)) pushUnique(ingredients, "咸酸菜");
+  if (/木耳/.test(name)) pushUnique(ingredients, "木耳");
+  if (/炸菜/.test(name)) pushUnique(ingredients, "炸菜");
+  if (/芥菜/.test(name)) pushUnique(ingredients, "芥菜");
+  if (/沙葛/.test(name)) pushUnique(ingredients, "沙葛");
+  if (/柚子/.test(name)) pushUnique(ingredients, "柚子皮");
+  if (/粉丝/.test(name)) pushUnique(ingredients, "粉丝");
+  if (/汤丸/.test(name)) pushUnique(ingredients, "猪肉末");
+  if (/汤丸/.test(name)) pushUnique(ingredients, "香菇");
+  if (/炒面/.test(name)) pushUnique(ingredients, "面条");
+  if (/炒檬/.test(name)) pushUnique(ingredients, "米粉");
+  if (/炒饭|菜饭|煲仔饭|鸡脾饭|扣肉饭/.test(name)) pushUnique(ingredients, "米");
+  if (/肥牛/.test(name)) pushUnique(ingredients, "肥牛");
+  if (/北菇|滑鸡/.test(name)) pushUnique(ingredients, "香菇");
+  if (/腊肠/.test(name)) pushUnique(ingredients, "腊肠");
+  if (/番茄/.test(name)) pushUnique(ingredients, "番茄");
+  if (/柚子|豆腐|鸡|扣肉|猪|虾|鱼/.test(name)) pushUnique(ingredients, "姜");
+  if (/姜葱|霸王鸡|海鲈|盐焗鸡/.test(name)) pushUnique(ingredients, "葱");
+
+  if (ingredients.length === 0) {
+    pushUnique(ingredients, "豆腐");
+    pushUnique(ingredients, "猪肉末");
+  }
+
+  let category = "荤菜";
+  if (/豆腐/.test(name)) category = "豆腐";
+  if (/炒蛋|蒸蛋|咸蛋|金沙/.test(name)) category = "蛋类";
+  if (/茶果|茶粿|粄粽|艾糍|麻糬|糍粑|姜粿|菜包粿|炒饭|菜饭|煲仔饭|炒面|汤丸|扣肉饭|鸡脾饭/.test(name)) {
+    category = "主食";
+  }
+  if (/咸汤|汤丸/.test(name)) category = "汤";
+  if (/素/.test(name) && !/鸡|肉|虾|鱼|猪/.test(name)) category = "素菜";
+
+  let method = "焖";
+  if (/炒/.test(name)) method = "炒";
+  if (/蒸/.test(name)) method = "蒸";
+  if (/煎/.test(name)) method = "煎";
+  if (/酿豆腐|瓤豆腐/.test(name)) method = "煎";
+  if (/炸/.test(name)) method = "煎";
+  if (/盐焗|焗|霸王鸡/.test(name)) method = "焖";
+  if (/扣肉|茶果|茶粿|粄粽|艾糍|菜包粿|蒸蛋|粉蒸/.test(name)) method = "蒸";
+  if (/汤|汤丸|咸汤/.test(name)) method = "煮";
+  if (/饭|煲仔饭/.test(name)) method = "焖";
+
+  let taste = "咸香";
+  if (/辣|麻辣|川辣/.test(name)) taste = "微辣";
+  if (/金沙|咸蛋/.test(name)) taste = "咸香";
+  if (/鲜虾|虾仁|海皇|海鲈|鲩鱼|蛤蜊/.test(name)) taste = "鲜香";
+  if (/黑糖|蜜糖|糍粑|麻糬|艾糍|茶果|茶粿/.test(name)) taste = "清甜";
+  if (/咸酸菜|柚子/.test(name)) taste = "酸香";
+
+  const cost = ingredients.some((item) => ["虾仁", "鲈鱼", "肥牛", "鲩鱼", "鲮鱼肉"].includes(item))
+    ? "中"
+    : "低";
+
+  return [name, category, ingredients.slice(0, 4), method, taste, cost];
+}
+
+const cook1cookHakkaDishSpecs = cook1cookHakkaDishNames.map(inferCook1cookHakkaDishSpec);
+const allDishSpecs = dishSpecs.concat(cook1cookHakkaDishSpecs);
 
 function platformKeywords(name, aliases) {
   const words = [name, ...aliases].filter(Boolean);
@@ -414,7 +668,86 @@ function buildIngredients() {
   }));
 }
 
+const dishStepOverrides = {
+  糖醋咕噜肉: [
+    "猪里脊切小块，用少许盐、淀粉和油抓匀，菠萝和彩椒切成入口大小。",
+    "肉块先煎到表面定型，家常版不用厚炸，锅里留一点油即可。",
+    "用番茄酱、少许糖、醋和生抽调成酸甜汁，倒入锅里小火煮到起泡。",
+    "放回肉块、菠萝和彩椒快速翻匀，汁挂住表面就出锅。"
+  ],
+  白云猪手: [
+    "猪蹄斩小块，冷水下锅加姜片煮开，捞出冲净浮沫。",
+    "重新加水把猪蹄煮到能咬动但不散，捞出后过凉水，口感会更爽。",
+    "用米醋、少许糖、盐和姜丝调成酸甜汁，味道比平时略重一点。",
+    "猪蹄沥干后拌入料汁，冷藏 30 分钟更入味，吃前再翻一遍。"
+  ],
+  蚝油牛肉: [
+    "牛肉逆纹切片，用少许生抽、淀粉和油抓匀，姜葱切好备用。",
+    "热锅宽油快炒牛肉，看到变色就先盛出，别在锅里久炒。",
+    "锅里下姜葱炒香，加蚝油和一点点水调成薄汁。",
+    "倒回牛肉快速翻匀，汁刚裹上肉片就关火。"
+  ],
+  香芋扣肉: [
+    "芋头和五花肉切厚片，五花肉先焯水去浮沫。",
+    "肉片用少许生抽、蚝油和一点糖抓匀，和芋头片交错码入碗中。",
+    "水开后上锅中火蒸到芋头软糯，时间不够就多蒸几分钟。",
+    "出锅后倒出汤汁略收浓，再淋回扣肉上。"
+  ],
+  干煎虾碌: [
+    "对虾剪须开背，挑去虾线，用厨房纸吸干水分。",
+    "锅热后加油，下姜葱煎香，再放虾平铺。",
+    "中火把两面煎到虾壳变红、边缘微焦，期间少翻动。",
+    "沿锅边淋少许生抽，快速翻匀后出锅。"
+  ],
+  白切鸡: [
+    "白条鸡洗净，姜葱拍松，锅里水量要能基本没过鸡块或半鸡。",
+    "水开后放入鸡和姜葱，转小火保持微沸，浸煮到肉熟。",
+    "捞出后稍微过凉水，鸡皮会更紧，切块前先放 5 分钟回汁。",
+    "姜葱加热油和少许盐调成蘸汁，鸡肉保持清淡原味。"
+  ],
+  东江盐焗鸡: [
+    "白条鸡擦干水分，用少许盐和姜片抹匀，静置 15 分钟。",
+    "锅底铺姜片或葱段，放入鸡块，盖好后用中小火焗出香味。",
+    "中途翻一次，让两面受热均匀，锅底太干就沿边淋一小勺水。",
+    "鸡肉熟透后撕开或斩块，原汁拌回去，咸香但不要过咸。"
+  ],
+  清蒸滑鸡: [
+    "鸡肉切小块，香菇切片，用盐、生抽、淀粉和少许油抓匀。",
+    "把鸡肉摊薄在盘中，不要堆太厚，香菇铺在上面。",
+    "水开后上锅蒸到鸡肉变白熟透，中途尽量少开盖。",
+    "出锅撒葱花，淋一点热油或原汁拌匀。"
+  ],
+  滑蛋虾仁: [
+    "虾仁用少许盐和淀粉抓匀，鸡蛋加一点盐和温水打散。",
+    "先把虾仁快炒到变色，立刻盛出。",
+    "锅里补一点油，倒入蛋液后转中小火。",
+    "蛋液半凝固时放回虾仁，用铲子轻推到嫩滑成形。"
+  ],
+  大良炒牛奶: [
+    "牛奶和鸡蛋搅匀，加一点点盐，想更嫩可以过筛一次。",
+    "不粘锅小火加少量油，倒入奶蛋液后不要急着翻。",
+    "看到边缘凝固后用铲子轻轻推拢，保持小火让它慢慢成嫩块。",
+    "凝固到还能轻晃就关火，余温会继续熟，别炒干。"
+  ],
+  煎瓤凉瓜: [
+    "苦瓜切厚圈或斜段，挖去内瓤，猪肉末用盐、生抽和淀粉调成肉馅。",
+    "把肉馅填进苦瓜里，表面抹平，锅热后少油下锅。",
+    "先把有肉的一面煎定型，再翻面煎到苦瓜变软。",
+    "加少许水和生抽盖焖 3 分钟，开盖收汁即可。"
+  ],
+  东江瓤豆腐: [
+    "豆腐切厚块，中间轻轻挖个小窝，猪肉末调成咸鲜肉馅。",
+    "把肉馅填进豆腐里，肉面朝下先小火煎定型。",
+    "翻面后加少许水、生抽和蚝油，盖上锅盖焖到肉馅熟透。",
+    "开盖收一点汁，撒葱花，豆腐别翻碎。"
+  ]
+};
+
 function stepsFor(name, category, ingredients, method, taste) {
+  if (dishStepOverrides[name]) {
+    return dishStepOverrides[name];
+  }
+
   const main = ingredients[0];
   if (method === "蒸") {
     return [
@@ -467,7 +800,7 @@ function dishTime(category, method) {
 }
 
 function buildDishes() {
-  return dishSpecs.map(([dish_name, category, main_ingredients, method, taste, cost]) => {
+  return allDishSpecs.map(([dish_name, category, main_ingredients, method, taste, cost]) => {
     const time = dishTime(category, method);
     const spicy = /辣|重口|麻/.test(taste) || dish_name.includes("青椒");
     const kidFriendly = !spicy && !dish_name.includes("苦瓜") && !dish_name.includes("猪肝");
@@ -503,7 +836,7 @@ function buildDishes() {
       elder_friendly: elderFriendly,
       avoid_tags: [
         main_ingredients.includes("鸡蛋") ? "鸡蛋过敏" : "",
-        main_ingredients.some((x) => ["虾仁", "基围虾", "蛤蜊", "鲜鱿鱼", "带鱼", "大黄花鱼", "黄骨鱼", "对虾", "鲍鱼", "海参", "梭子蟹", "甲鱼", "鲳鱼", "牛蛙", "生蚝", "鲫鱼", "鲤鱼", "白鲢鱼", "大带鱼", "花鲢鱼"].includes(x)) ? "海鲜" : "",
+        main_ingredients.some((x) => ["虾仁", "基围虾", "蛤蜊", "鲜鱿鱼", "鱿鱼干", "带鱼", "大黄花鱼", "黄骨鱼", "对虾", "鲍鱼", "海参", "梭子蟹", "甲鱼", "鲳鱼", "牛蛙", "生蚝", "鲫鱼", "鲤鱼", "白鲢鱼", "大带鱼", "花鲢鱼", "鲮鱼肉", "鲩鱼", "咸鱼"].includes(x)) ? "海鲜" : "",
         main_ingredients.some((x) => ["牛肉", "牛腩", "羊肉", "羊排", "肥牛", "牛排"].includes(x)) ? "牛羊肉" : "",
         spicy ? "辣" : ""
       ].filter(Boolean),
@@ -590,6 +923,8 @@ function buildPriceBaseline() {
 const dataSources = {
   recipe_policy: "不复制商业网站菜谱正文；使用自有结构化模板生成原创步骤。",
   recipe_candidates: [
+    "《中国菜谱（广东）》1976 编写组 PDF：用于菜名、粤菜技法和目录参考，不复制原书做法正文",
+    "Cook1Cook 客家菜分类前 10 页（https://cook1cook.com/category/312）：只采集列表菜名作目录候选，不复制用户菜谱正文或步骤",
     "中文菜谱研究数据集可用于研究参考：https://counterfactual-recipe-generation.github.io/dataset_zh.html",
     "商业使用可考虑购买授权菜谱库或接入合法菜谱 API"
   ],

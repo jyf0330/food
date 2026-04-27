@@ -13078,6 +13078,234 @@ module.exports = {
       ]
     },
     {
+      "dish_name": "糖醋咕噜肉",
+      "category": "荤菜",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 1,
+      "time_minutes": 12,
+      "taste": [
+        "酸甜",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "猪里脊",
+        "菠萝",
+        "彩椒"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "姜",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "炒锅"
+      ],
+      "cooking_methods": [
+        "炒"
+      ],
+      "estimated_cost_level": "中",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [],
+      "steps": [
+        "猪里脊切小块，用少许盐、淀粉和油抓匀，菠萝和彩椒切成入口大小。",
+        "肉块先煎到表面定型，家常版不用厚炸，锅里留一点油即可。",
+        "用番茄酱、少许糖、醋和生抽调成酸甜汁，倒入锅里小火煮到起泡。",
+        "放回肉块、菠萝和彩椒快速翻匀，汁挂住表面就出锅。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "猪里脊",
+          "amount": "250g"
+        },
+        {
+          "name": "菠萝",
+          "amount": "半个"
+        },
+        {
+          "name": "彩椒",
+          "amount": "2 个"
+        }
+      ]
+    },
+    {
+      "dish_name": "白云猪手",
+      "category": "凉菜",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "年轻人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 2,
+      "time_minutes": 12,
+      "taste": [
+        "酸甜",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "猪蹄",
+        "姜"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "炒锅"
+      ],
+      "cooking_methods": [
+        "拌"
+      ],
+      "estimated_cost_level": "中",
+      "kid_friendly": true,
+      "elder_friendly": false,
+      "avoid_tags": [],
+      "steps": [
+        "猪蹄斩小块，冷水下锅加姜片煮开，捞出冲净浮沫。",
+        "重新加水把猪蹄煮到能咬动但不散，捞出后过凉水，口感会更爽。",
+        "用米醋、少许糖、盐和姜丝调成酸甜汁，味道比平时略重一点。",
+        "猪蹄沥干后拌入料汁，冷藏 30 分钟更入味，吃前再翻一遍。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "猪蹄",
+          "amount": "半只"
+        },
+        {
+          "name": "姜",
+          "amount": "适量"
+        }
+      ]
+    },
+    {
+      "dish_name": "蚝油牛肉",
+      "category": "荤菜",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 1,
+      "time_minutes": 12,
+      "taste": [
+        "咸鲜",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "牛肉",
+        "姜",
+        "葱"
+      ],
+      "optional_ingredients": [
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "炒锅"
+      ],
+      "cooking_methods": [
+        "炒"
+      ],
+      "estimated_cost_level": "中",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [
+        "牛羊肉"
+      ],
+      "steps": [
+        "牛肉逆纹切片，用少许生抽、淀粉和油抓匀，姜葱切好备用。",
+        "热锅宽油快炒牛肉，看到变色就先盛出，别在锅里久炒。",
+        "锅里下姜葱炒香，加蚝油和一点点水调成薄汁。",
+        "倒回牛肉快速翻匀，汁刚裹上肉片就关火。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "牛肉",
+          "amount": "250g"
+        },
+        {
+          "name": "姜",
+          "amount": "适量"
+        },
+        {
+          "name": "葱",
+          "amount": "适量"
+        }
+      ]
+    },
+    {
       "dish_name": "红烧鲤鱼",
       "category": "荤菜",
       "cuisine": "家常菜",
@@ -14124,6 +14352,8274 @@ module.exports = {
         {
           "name": "鸡蛋",
           "amount": "4 个"
+        }
+      ]
+    },
+    {
+      "dish_name": "香芋扣肉",
+      "category": "荤菜",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 2,
+      "time_minutes": 18,
+      "taste": [
+        "咸香",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "芋头",
+        "五花肉"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "姜",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "蒸锅"
+      ],
+      "cooking_methods": [
+        "蒸"
+      ],
+      "estimated_cost_level": "中",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [],
+      "steps": [
+        "芋头和五花肉切厚片，五花肉先焯水去浮沫。",
+        "肉片用少许生抽、蚝油和一点糖抓匀，和芋头片交错码入碗中。",
+        "水开后上锅中火蒸到芋头软糯，时间不够就多蒸几分钟。",
+        "出锅后倒出汤汁略收浓，再淋回扣肉上。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "芋头",
+          "amount": "半斤"
+        },
+        {
+          "name": "五花肉",
+          "amount": "250g"
+        }
+      ]
+    },
+    {
+      "dish_name": "干煎虾碌",
+      "category": "荤菜",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 2,
+      "time_minutes": 12,
+      "taste": [
+        "鲜香",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "对虾",
+        "姜",
+        "葱"
+      ],
+      "optional_ingredients": [
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "炒锅"
+      ],
+      "cooking_methods": [
+        "煎"
+      ],
+      "estimated_cost_level": "高",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [
+        "海鲜"
+      ],
+      "steps": [
+        "对虾剪须开背，挑去虾线，用厨房纸吸干水分。",
+        "锅热后加油，下姜葱煎香，再放虾平铺。",
+        "中火把两面煎到虾壳变红、边缘微焦，期间少翻动。",
+        "沿锅边淋少许生抽，快速翻匀后出锅。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "对虾",
+          "amount": "半斤"
+        },
+        {
+          "name": "姜",
+          "amount": "适量"
+        },
+        {
+          "name": "葱",
+          "amount": "适量"
+        }
+      ]
+    },
+    {
+      "dish_name": "白切鸡",
+      "category": "荤菜",
+      "cuisine": "广东家常",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 2,
+      "time_minutes": 12,
+      "taste": [
+        "清淡",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "白条鸡",
+        "姜",
+        "葱"
+      ],
+      "optional_ingredients": [
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "汤锅"
+      ],
+      "cooking_methods": [
+        "煮"
+      ],
+      "estimated_cost_level": "中",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [],
+      "steps": [
+        "白条鸡洗净，姜葱拍松，锅里水量要能基本没过鸡块或半鸡。",
+        "水开后放入鸡和姜葱，转小火保持微沸，浸煮到肉熟。",
+        "捞出后稍微过凉水，鸡皮会更紧，切块前先放 5 分钟回汁。",
+        "姜葱加热油和少许盐调成蘸汁，鸡肉保持清淡原味。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "白条鸡",
+          "amount": "半只"
+        },
+        {
+          "name": "姜",
+          "amount": "适量"
+        },
+        {
+          "name": "葱",
+          "amount": "适量"
+        }
+      ]
+    },
+    {
+      "dish_name": "东江盐焗鸡",
+      "category": "荤菜",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 2,
+      "time_minutes": 30,
+      "taste": [
+        "咸香",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "白条鸡",
+        "姜"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "炒锅"
+      ],
+      "cooking_methods": [
+        "焖"
+      ],
+      "estimated_cost_level": "中",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [],
+      "steps": [
+        "白条鸡擦干水分，用少许盐和姜片抹匀，静置 15 分钟。",
+        "锅底铺姜片或葱段，放入鸡块，盖好后用中小火焗出香味。",
+        "中途翻一次，让两面受热均匀，锅底太干就沿边淋一小勺水。",
+        "鸡肉熟透后撕开或斩块，原汁拌回去，咸香但不要过咸。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "白条鸡",
+          "amount": "半只"
+        },
+        {
+          "name": "姜",
+          "amount": "适量"
+        }
+      ]
+    },
+    {
+      "dish_name": "清蒸滑鸡",
+      "category": "荤菜",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 2,
+      "time_minutes": 18,
+      "taste": [
+        "咸鲜",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "鸡肉",
+        "香菇"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "姜",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "蒸锅"
+      ],
+      "cooking_methods": [
+        "蒸"
+      ],
+      "estimated_cost_level": "中",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [],
+      "steps": [
+        "鸡肉切小块，香菇切片，用盐、生抽、淀粉和少许油抓匀。",
+        "把鸡肉摊薄在盘中，不要堆太厚，香菇铺在上面。",
+        "水开后上锅蒸到鸡肉变白熟透，中途尽量少开盖。",
+        "出锅撒葱花，淋一点热油或原汁拌匀。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "鸡肉",
+          "amount": "半斤"
+        },
+        {
+          "name": "香菇",
+          "amount": "6 朵"
+        }
+      ]
+    },
+    {
+      "dish_name": "滑蛋虾仁",
+      "category": "蛋类",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 1,
+      "time_minutes": 12,
+      "taste": [
+        "鲜嫩",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "虾仁",
+        "鸡蛋"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "姜",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "炒锅"
+      ],
+      "cooking_methods": [
+        "炒"
+      ],
+      "estimated_cost_level": "中",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [
+        "鸡蛋过敏",
+        "海鲜"
+      ],
+      "steps": [
+        "虾仁用少许盐和淀粉抓匀，鸡蛋加一点盐和温水打散。",
+        "先把虾仁快炒到变色，立刻盛出。",
+        "锅里补一点油，倒入蛋液后转中小火。",
+        "蛋液半凝固时放回虾仁，用铲子轻推到嫩滑成形。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "虾仁",
+          "amount": "250g"
+        },
+        {
+          "name": "鸡蛋",
+          "amount": "4 个"
+        }
+      ]
+    },
+    {
+      "dish_name": "大良炒牛奶",
+      "category": "蛋类",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 1,
+      "time_minutes": 12,
+      "taste": [
+        "奶香",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "牛奶",
+        "鸡蛋"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "姜",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "炒锅"
+      ],
+      "cooking_methods": [
+        "炒"
+      ],
+      "estimated_cost_level": "低",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [
+        "鸡蛋过敏"
+      ],
+      "steps": [
+        "牛奶和鸡蛋搅匀，加一点点盐，想更嫩可以过筛一次。",
+        "不粘锅小火加少量油，倒入奶蛋液后不要急着翻。",
+        "看到边缘凝固后用铲子轻轻推拢，保持小火让它慢慢成嫩块。",
+        "凝固到还能轻晃就关火，余温会继续熟，别炒干。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "牛奶",
+          "amount": "300ml"
+        },
+        {
+          "name": "鸡蛋",
+          "amount": "4 个"
+        }
+      ]
+    },
+    {
+      "dish_name": "煎瓤凉瓜",
+      "category": "荤菜",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 2,
+      "time_minutes": 12,
+      "taste": [
+        "咸鲜",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "苦瓜",
+        "猪肉末"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "姜",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "炒锅"
+      ],
+      "cooking_methods": [
+        "煎"
+      ],
+      "estimated_cost_level": "中",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [],
+      "steps": [
+        "苦瓜切厚圈或斜段，挖去内瓤，猪肉末用盐、生抽和淀粉调成肉馅。",
+        "把肉馅填进苦瓜里，表面抹平，锅热后少油下锅。",
+        "先把有肉的一面煎定型，再翻面煎到苦瓜变软。",
+        "加少许水和生抽盖焖 3 分钟，开盖收汁即可。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "苦瓜",
+          "amount": "1 根"
+        },
+        {
+          "name": "猪肉末",
+          "amount": "200g"
+        }
+      ]
+    },
+    {
+      "dish_name": "东江瓤豆腐",
+      "category": "豆腐",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 2,
+      "time_minutes": 12,
+      "taste": [
+        "咸鲜",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "豆腐",
+        "猪肉末"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "姜",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "炒锅"
+      ],
+      "cooking_methods": [
+        "煎"
+      ],
+      "estimated_cost_level": "低",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [],
+      "steps": [
+        "豆腐切厚块，中间轻轻挖个小窝，猪肉末调成咸鲜肉馅。",
+        "把肉馅填进豆腐里，肉面朝下先小火煎定型。",
+        "翻面后加少许水、生抽和蚝油，盖上锅盖焖到肉馅熟透。",
+        "开盖收一点汁，撒葱花，豆腐别翻碎。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "豆腐",
+          "amount": "1 盒"
+        },
+        {
+          "name": "猪肉末",
+          "amount": "200g"
+        }
+      ]
+    },
+    {
+      "dish_name": "客家酿豆腐",
+      "category": "豆腐",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 2,
+      "time_minutes": 12,
+      "taste": [
+        "咸香",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "豆腐",
+        "猪肉末",
+        "姜"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "炒锅"
+      ],
+      "cooking_methods": [
+        "煎"
+      ],
+      "estimated_cost_level": "低",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [],
+      "steps": [
+        "豆腐、猪肉末、姜洗净切好，肉类或水产提前用少许盐和淀粉抓匀。",
+        "热锅加油，先炒香姜蒜，再下不易熟的食材。",
+        "转大火快速翻炒，按顺序放入易熟食材。",
+        "加盐或生抽调味，保持咸香，断生后立刻出锅。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "豆腐",
+          "amount": "1 盒"
+        },
+        {
+          "name": "猪肉末",
+          "amount": "200g"
+        },
+        {
+          "name": "姜",
+          "amount": "适量"
+        }
+      ]
+    },
+    {
+      "dish_name": "客家咸茶果",
+      "category": "主食",
+      "cuisine": "广东家常",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 2,
+      "time_minutes": 18,
+      "taste": [
+        "清甜",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "糯米粉",
+        "粘米粉"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "姜",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "蒸锅"
+      ],
+      "cooking_methods": [
+        "蒸"
+      ],
+      "estimated_cost_level": "低",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [],
+      "steps": [
+        "糯米粉、粘米粉处理干净，按入口大小切好。",
+        "主料用少许盐、生抽和姜葱抓匀，铺入浅盘。",
+        "水开后上锅蒸到熟透，出锅前倒掉多余水汽。",
+        "淋少许热油或蒸鱼豉油，保持清甜口味。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "糯米粉",
+          "amount": "250g"
+        },
+        {
+          "name": "粘米粉",
+          "amount": "150g"
+        }
+      ]
+    },
+    {
+      "dish_name": "客家小炒",
+      "category": "荤菜",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 1,
+      "time_minutes": 12,
+      "taste": [
+        "咸香",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "五花肉",
+        "豆干",
+        "鱿鱼干",
+        "芹菜"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "姜",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "炒锅"
+      ],
+      "cooking_methods": [
+        "炒"
+      ],
+      "estimated_cost_level": "低",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [
+        "海鲜"
+      ],
+      "steps": [
+        "五花肉、豆干、鱿鱼干、芹菜洗净切好，肉类或水产提前用少许盐和淀粉抓匀。",
+        "热锅加油，先炒香姜蒜，再下不易熟的食材。",
+        "转大火快速翻炒，按顺序放入易熟食材。",
+        "加盐或生抽调味，保持咸香，断生后立刻出锅。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "五花肉",
+          "amount": "250g"
+        },
+        {
+          "name": "豆干",
+          "amount": "4 块"
+        },
+        {
+          "name": "鱿鱼干",
+          "amount": "1 条"
+        },
+        {
+          "name": "芹菜",
+          "amount": "半斤"
+        }
+      ]
+    },
+    {
+      "dish_name": "眉豆茶粿",
+      "category": "主食",
+      "cuisine": "广东家常",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 2,
+      "time_minutes": 18,
+      "taste": [
+        "清甜",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "眉豆",
+        "糯米粉",
+        "粘米粉"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "姜",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "蒸锅"
+      ],
+      "cooking_methods": [
+        "蒸"
+      ],
+      "estimated_cost_level": "低",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [],
+      "steps": [
+        "眉豆、糯米粉、粘米粉处理干净，按入口大小切好。",
+        "主料用少许盐、生抽和姜葱抓匀，铺入浅盘。",
+        "水开后上锅蒸到熟透，出锅前倒掉多余水汽。",
+        "淋少许热油或蒸鱼豉油，保持清甜口味。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "眉豆",
+          "amount": "100g"
+        },
+        {
+          "name": "糯米粉",
+          "amount": "250g"
+        },
+        {
+          "name": "粘米粉",
+          "amount": "150g"
+        }
+      ]
+    },
+    {
+      "dish_name": "梅菜扣肉",
+      "category": "荤菜",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 2,
+      "time_minutes": 18,
+      "taste": [
+        "咸香",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "五花肉",
+        "梅菜",
+        "姜"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "蒸锅"
+      ],
+      "cooking_methods": [
+        "蒸"
+      ],
+      "estimated_cost_level": "低",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [],
+      "steps": [
+        "五花肉、梅菜、姜处理干净，按入口大小切好。",
+        "主料用少许盐、生抽和姜葱抓匀，铺入浅盘。",
+        "水开后上锅蒸到熟透，出锅前倒掉多余水汽。",
+        "淋少许热油或蒸鱼豉油，保持咸香口味。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "五花肉",
+          "amount": "250g"
+        },
+        {
+          "name": "梅菜",
+          "amount": "80g"
+        },
+        {
+          "name": "姜",
+          "amount": "适量"
+        }
+      ]
+    },
+    {
+      "dish_name": "客家柚子酿",
+      "category": "荤菜",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 2,
+      "time_minutes": 30,
+      "taste": [
+        "酸香",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "猪肉末",
+        "柚子皮",
+        "姜"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "炒锅"
+      ],
+      "cooking_methods": [
+        "焖"
+      ],
+      "estimated_cost_level": "低",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [],
+      "steps": [
+        "猪肉末、柚子皮、姜切成大小接近的块，猪肉末先煎或炒香。",
+        "加入姜蒜和少许生抽翻匀，再加热水没过一半。",
+        "盖上锅盖中火焖到主料软熟。",
+        "开盖收汁，按家人口味补盐后出锅。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "猪肉末",
+          "amount": "200g"
+        },
+        {
+          "name": "柚子皮",
+          "amount": "半个"
+        },
+        {
+          "name": "姜",
+          "amount": "适量"
+        }
+      ]
+    },
+    {
+      "dish_name": "客家艾糍",
+      "category": "主食",
+      "cuisine": "广东家常",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 2,
+      "time_minutes": 18,
+      "taste": [
+        "清甜",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "艾叶",
+        "糯米粉"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "姜",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "蒸锅"
+      ],
+      "cooking_methods": [
+        "蒸"
+      ],
+      "estimated_cost_level": "低",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [],
+      "steps": [
+        "艾叶、糯米粉处理干净，按入口大小切好。",
+        "主料用少许盐、生抽和姜葱抓匀，铺入浅盘。",
+        "水开后上锅蒸到熟透，出锅前倒掉多余水汽。",
+        "淋少许热油或蒸鱼豉油，保持清甜口味。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "艾叶",
+          "amount": "1 把"
+        },
+        {
+          "name": "糯米粉",
+          "amount": "250g"
+        }
+      ]
+    },
+    {
+      "dish_name": "客家咸汤丸",
+      "category": "汤",
+      "cuisine": "广东家常",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 2,
+      "time_minutes": 20,
+      "taste": [
+        "咸香",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "糯米粉",
+        "猪肉末",
+        "香菇"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "姜",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "汤锅"
+      ],
+      "cooking_methods": [
+        "煮"
+      ],
+      "estimated_cost_level": "低",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [],
+      "steps": [
+        "糯米粉、猪肉末、香菇洗净切好，肉类先焯水或简单腌制。",
+        "锅里加水和姜片，先下耐煮食材煮出底味。",
+        "再放易熟食材，中小火煮到软熟。",
+        "最后加盐调味，尝味后撒葱花出锅。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "糯米粉",
+          "amount": "250g"
+        },
+        {
+          "name": "猪肉末",
+          "amount": "200g"
+        },
+        {
+          "name": "香菇",
+          "amount": "6 朵"
+        }
+      ]
+    },
+    {
+      "dish_name": "梅菜焖猪五花",
+      "category": "荤菜",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 2,
+      "time_minutes": 30,
+      "taste": [
+        "咸香",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "五花肉",
+        "梅菜",
+        "姜"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "炒锅"
+      ],
+      "cooking_methods": [
+        "焖"
+      ],
+      "estimated_cost_level": "低",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [],
+      "steps": [
+        "五花肉、梅菜、姜切成大小接近的块，五花肉先煎或炒香。",
+        "加入姜蒜和少许生抽翻匀，再加热水没过一半。",
+        "盖上锅盖中火焖到主料软熟。",
+        "开盖收汁，按家人口味补盐后出锅。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "五花肉",
+          "amount": "250g"
+        },
+        {
+          "name": "梅菜",
+          "amount": "80g"
+        },
+        {
+          "name": "姜",
+          "amount": "适量"
+        }
+      ]
+    },
+    {
+      "dish_name": "咸鸡",
+      "category": "荤菜",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 2,
+      "time_minutes": 30,
+      "taste": [
+        "咸香",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "鸡肉",
+        "姜"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "炒锅"
+      ],
+      "cooking_methods": [
+        "焖"
+      ],
+      "estimated_cost_level": "低",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [],
+      "steps": [
+        "鸡肉、姜切成大小接近的块，鸡肉先煎或炒香。",
+        "加入姜蒜和少许生抽翻匀，再加热水没过一半。",
+        "盖上锅盖中火焖到主料软熟。",
+        "开盖收汁，按家人口味补盐后出锅。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "鸡肉",
+          "amount": "半斤"
+        },
+        {
+          "name": "姜",
+          "amount": "适量"
+        }
+      ]
+    },
+    {
+      "dish_name": "黑糖梅菜焖猪肉",
+      "category": "荤菜",
+      "cuisine": "广东家常",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 2,
+      "time_minutes": 30,
+      "taste": [
+        "清甜",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "五花肉",
+        "梅菜",
+        "姜"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "炒锅"
+      ],
+      "cooking_methods": [
+        "焖"
+      ],
+      "estimated_cost_level": "低",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [],
+      "steps": [
+        "五花肉、梅菜、姜切成大小接近的块，五花肉先煎或炒香。",
+        "加入姜蒜和少许生抽翻匀，再加热水没过一半。",
+        "盖上锅盖中火焖到主料软熟。",
+        "开盖收汁，按家人口味补盐后出锅。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "五花肉",
+          "amount": "250g"
+        },
+        {
+          "name": "梅菜",
+          "amount": "80g"
+        },
+        {
+          "name": "姜",
+          "amount": "适量"
+        }
+      ]
+    },
+    {
+      "dish_name": "鱿鱼干炒粉丝",
+      "category": "荤菜",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 1,
+      "time_minutes": 12,
+      "taste": [
+        "咸香",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "鱿鱼干",
+        "粉丝",
+        "姜"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "炒锅"
+      ],
+      "cooking_methods": [
+        "炒"
+      ],
+      "estimated_cost_level": "低",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [
+        "海鲜"
+      ],
+      "steps": [
+        "鱿鱼干、粉丝、姜洗净切好，肉类或水产提前用少许盐和淀粉抓匀。",
+        "热锅加油，先炒香姜蒜，再下不易熟的食材。",
+        "转大火快速翻炒，按顺序放入易熟食材。",
+        "加盐或生抽调味，保持咸香，断生后立刻出锅。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "鱿鱼干",
+          "amount": "1 条"
+        },
+        {
+          "name": "粉丝",
+          "amount": "1 把"
+        },
+        {
+          "name": "姜",
+          "amount": "适量"
+        }
+      ]
+    },
+    {
+      "dish_name": "盐香蒸焗鸡",
+      "category": "荤菜",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 2,
+      "time_minutes": 30,
+      "taste": [
+        "咸香",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "鸡肉",
+        "姜"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "炒锅"
+      ],
+      "cooking_methods": [
+        "焖"
+      ],
+      "estimated_cost_level": "低",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [],
+      "steps": [
+        "鸡肉、姜切成大小接近的块，鸡肉先煎或炒香。",
+        "加入姜蒜和少许生抽翻匀，再加热水没过一半。",
+        "盖上锅盖中火焖到主料软熟。",
+        "开盖收汁，按家人口味补盐后出锅。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "鸡肉",
+          "amount": "半斤"
+        },
+        {
+          "name": "姜",
+          "amount": "适量"
+        }
+      ]
+    },
+    {
+      "dish_name": "客家梅菜焖腩肉",
+      "category": "荤菜",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 2,
+      "time_minutes": 30,
+      "taste": [
+        "咸香",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "五花肉",
+        "梅菜"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "姜",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "炒锅"
+      ],
+      "cooking_methods": [
+        "焖"
+      ],
+      "estimated_cost_level": "低",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [],
+      "steps": [
+        "五花肉、梅菜切成大小接近的块，五花肉先煎或炒香。",
+        "加入姜蒜和少许生抽翻匀，再加热水没过一半。",
+        "盖上锅盖中火焖到主料软熟。",
+        "开盖收汁，按家人口味补盐后出锅。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "五花肉",
+          "amount": "250g"
+        },
+        {
+          "name": "梅菜",
+          "amount": "80g"
+        }
+      ]
+    },
+    {
+      "dish_name": "粉蒸肉",
+      "category": "荤菜",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 2,
+      "time_minutes": 18,
+      "taste": [
+        "咸香",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "五花肉"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "姜",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "蒸锅"
+      ],
+      "cooking_methods": [
+        "蒸"
+      ],
+      "estimated_cost_level": "低",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [],
+      "steps": [
+        "五花肉处理干净，按入口大小切好。",
+        "主料用少许盐、生抽和姜葱抓匀，铺入浅盘。",
+        "水开后上锅蒸到熟透，出锅前倒掉多余水汽。",
+        "淋少许热油或蒸鱼豉油，保持咸香口味。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "五花肉",
+          "amount": "250g"
+        }
+      ]
+    },
+    {
+      "dish_name": "黑糖姜汁糍粑",
+      "category": "主食",
+      "cuisine": "广东家常",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 2,
+      "time_minutes": 30,
+      "taste": [
+        "清甜",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "糯米粉"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "姜",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "炒锅"
+      ],
+      "cooking_methods": [
+        "焖"
+      ],
+      "estimated_cost_level": "低",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [],
+      "steps": [
+        "糯米粉切成大小接近的块，糯米粉先煎或炒香。",
+        "加入姜蒜和少许生抽翻匀，再加热水没过一半。",
+        "盖上锅盖中火焖到主料软熟。",
+        "开盖收汁，按家人口味补盐后出锅。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "糯米粉",
+          "amount": "250g"
+        }
+      ]
+    },
+    {
+      "dish_name": "闽南姜粿",
+      "category": "主食",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 2,
+      "time_minutes": 30,
+      "taste": [
+        "咸香",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "糯米粉"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "姜",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "炒锅"
+      ],
+      "cooking_methods": [
+        "焖"
+      ],
+      "estimated_cost_level": "低",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [],
+      "steps": [
+        "糯米粉切成大小接近的块，糯米粉先煎或炒香。",
+        "加入姜蒜和少许生抽翻匀，再加热水没过一半。",
+        "盖上锅盖中火焖到主料软熟。",
+        "开盖收汁，按家人口味补盐后出锅。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "糯米粉",
+          "amount": "250g"
+        }
+      ]
+    },
+    {
+      "dish_name": "经典客家小炒",
+      "category": "荤菜",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 1,
+      "time_minutes": 12,
+      "taste": [
+        "咸香",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "五花肉",
+        "豆干",
+        "鱿鱼干",
+        "芹菜"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "姜",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "炒锅"
+      ],
+      "cooking_methods": [
+        "炒"
+      ],
+      "estimated_cost_level": "低",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [
+        "海鲜"
+      ],
+      "steps": [
+        "五花肉、豆干、鱿鱼干、芹菜洗净切好，肉类或水产提前用少许盐和淀粉抓匀。",
+        "热锅加油，先炒香姜蒜，再下不易熟的食材。",
+        "转大火快速翻炒，按顺序放入易熟食材。",
+        "加盐或生抽调味，保持咸香，断生后立刻出锅。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "五花肉",
+          "amount": "250g"
+        },
+        {
+          "name": "豆干",
+          "amount": "4 块"
+        },
+        {
+          "name": "鱿鱼干",
+          "amount": "1 条"
+        },
+        {
+          "name": "芹菜",
+          "amount": "半斤"
+        }
+      ]
+    },
+    {
+      "dish_name": "五香梅菜扣肉",
+      "category": "荤菜",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 2,
+      "time_minutes": 18,
+      "taste": [
+        "咸香",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "五花肉",
+        "梅菜",
+        "姜"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "蒸锅"
+      ],
+      "cooking_methods": [
+        "蒸"
+      ],
+      "estimated_cost_level": "低",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [],
+      "steps": [
+        "五花肉、梅菜、姜处理干净，按入口大小切好。",
+        "主料用少许盐、生抽和姜葱抓匀，铺入浅盘。",
+        "水开后上锅蒸到熟透，出锅前倒掉多余水汽。",
+        "淋少许热油或蒸鱼豉油，保持咸香口味。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "五花肉",
+          "amount": "250g"
+        },
+        {
+          "name": "梅菜",
+          "amount": "80g"
+        },
+        {
+          "name": "姜",
+          "amount": "适量"
+        }
+      ]
+    },
+    {
+      "dish_name": "黄豆酱煎酿豆腐",
+      "category": "豆腐",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 2,
+      "time_minutes": 12,
+      "taste": [
+        "咸香",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "豆腐",
+        "猪肉末",
+        "姜"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "炒锅"
+      ],
+      "cooking_methods": [
+        "煎"
+      ],
+      "estimated_cost_level": "低",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [],
+      "steps": [
+        "豆腐、猪肉末、姜洗净切好，肉类或水产提前用少许盐和淀粉抓匀。",
+        "热锅加油，先炒香姜蒜，再下不易熟的食材。",
+        "转大火快速翻炒，按顺序放入易熟食材。",
+        "加盐或生抽调味，保持咸香，断生后立刻出锅。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "豆腐",
+          "amount": "1 盒"
+        },
+        {
+          "name": "猪肉末",
+          "amount": "200g"
+        },
+        {
+          "name": "姜",
+          "amount": "适量"
+        }
+      ]
+    },
+    {
+      "dish_name": "梅干菜蒸肉饼",
+      "category": "荤菜",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 2,
+      "time_minutes": 18,
+      "taste": [
+        "咸香",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "猪肉末",
+        "梅菜"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "姜",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "蒸锅"
+      ],
+      "cooking_methods": [
+        "蒸"
+      ],
+      "estimated_cost_level": "低",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [],
+      "steps": [
+        "猪肉末、梅菜处理干净，按入口大小切好。",
+        "主料用少许盐、生抽和姜葱抓匀，铺入浅盘。",
+        "水开后上锅蒸到熟透，出锅前倒掉多余水汽。",
+        "淋少许热油或蒸鱼豉油，保持咸香口味。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "猪肉末",
+          "amount": "200g"
+        },
+        {
+          "name": "梅菜",
+          "amount": "80g"
+        }
+      ]
+    },
+    {
+      "dish_name": "无糖梅菜扣肉",
+      "category": "荤菜",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 2,
+      "time_minutes": 18,
+      "taste": [
+        "咸香",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "五花肉",
+        "梅菜",
+        "姜"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "蒸锅"
+      ],
+      "cooking_methods": [
+        "蒸"
+      ],
+      "estimated_cost_level": "低",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [],
+      "steps": [
+        "五花肉、梅菜、姜处理干净，按入口大小切好。",
+        "主料用少许盐、生抽和姜葱抓匀，铺入浅盘。",
+        "水开后上锅蒸到熟透，出锅前倒掉多余水汽。",
+        "淋少许热油或蒸鱼豉油，保持咸香口味。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "五花肉",
+          "amount": "250g"
+        },
+        {
+          "name": "梅菜",
+          "amount": "80g"
+        },
+        {
+          "name": "姜",
+          "amount": "适量"
+        }
+      ]
+    },
+    {
+      "dish_name": "家常梅菜扣肉",
+      "category": "荤菜",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 2,
+      "time_minutes": 18,
+      "taste": [
+        "咸香",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "五花肉",
+        "梅菜",
+        "姜"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "蒸锅"
+      ],
+      "cooking_methods": [
+        "蒸"
+      ],
+      "estimated_cost_level": "低",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [],
+      "steps": [
+        "五花肉、梅菜、姜处理干净，按入口大小切好。",
+        "主料用少许盐、生抽和姜葱抓匀，铺入浅盘。",
+        "水开后上锅蒸到熟透，出锅前倒掉多余水汽。",
+        "淋少许热油或蒸鱼豉油，保持咸香口味。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "五花肉",
+          "amount": "250g"
+        },
+        {
+          "name": "梅菜",
+          "amount": "80g"
+        },
+        {
+          "name": "姜",
+          "amount": "适量"
+        }
+      ]
+    },
+    {
+      "dish_name": "简易酿豆腐",
+      "category": "豆腐",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 2,
+      "time_minutes": 12,
+      "taste": [
+        "咸香",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "豆腐",
+        "猪肉末",
+        "姜"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "炒锅"
+      ],
+      "cooking_methods": [
+        "煎"
+      ],
+      "estimated_cost_level": "低",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [],
+      "steps": [
+        "豆腐、猪肉末、姜洗净切好，肉类或水产提前用少许盐和淀粉抓匀。",
+        "热锅加油，先炒香姜蒜，再下不易熟的食材。",
+        "转大火快速翻炒，按顺序放入易熟食材。",
+        "加盐或生抽调味，保持咸香，断生后立刻出锅。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "豆腐",
+          "amount": "1 盒"
+        },
+        {
+          "name": "猪肉末",
+          "amount": "200g"
+        },
+        {
+          "name": "姜",
+          "amount": "适量"
+        }
+      ]
+    },
+    {
+      "dish_name": "梅干扣肉",
+      "category": "荤菜",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 2,
+      "time_minutes": 18,
+      "taste": [
+        "咸香",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "五花肉",
+        "梅菜",
+        "姜"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "蒸锅"
+      ],
+      "cooking_methods": [
+        "蒸"
+      ],
+      "estimated_cost_level": "低",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [],
+      "steps": [
+        "五花肉、梅菜、姜处理干净，按入口大小切好。",
+        "主料用少许盐、生抽和姜葱抓匀，铺入浅盘。",
+        "水开后上锅蒸到熟透，出锅前倒掉多余水汽。",
+        "淋少许热油或蒸鱼豉油，保持咸香口味。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "五花肉",
+          "amount": "250g"
+        },
+        {
+          "name": "梅菜",
+          "amount": "80g"
+        },
+        {
+          "name": "姜",
+          "amount": "适量"
+        }
+      ]
+    },
+    {
+      "dish_name": "福建炒饭",
+      "category": "主食",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 2,
+      "time_minutes": 30,
+      "taste": [
+        "咸香",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "米"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "姜",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "炒锅"
+      ],
+      "cooking_methods": [
+        "焖"
+      ],
+      "estimated_cost_level": "低",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [],
+      "steps": [
+        "米切成大小接近的块，米先煎或炒香。",
+        "加入姜蒜和少许生抽翻匀，再加热水没过一半。",
+        "盖上锅盖中火焖到主料软熟。",
+        "开盖收汁，按家人口味补盐后出锅。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "米",
+          "amount": "按人数"
+        }
+      ]
+    },
+    {
+      "dish_name": "豆干客家小炒",
+      "category": "荤菜",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 1,
+      "time_minutes": 12,
+      "taste": [
+        "咸香",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "五花肉",
+        "豆干",
+        "鱿鱼干",
+        "芹菜"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "姜",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "炒锅"
+      ],
+      "cooking_methods": [
+        "炒"
+      ],
+      "estimated_cost_level": "低",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [
+        "海鲜"
+      ],
+      "steps": [
+        "五花肉、豆干、鱿鱼干、芹菜洗净切好，肉类或水产提前用少许盐和淀粉抓匀。",
+        "热锅加油，先炒香姜蒜，再下不易熟的食材。",
+        "转大火快速翻炒，按顺序放入易熟食材。",
+        "加盐或生抽调味，保持咸香，断生后立刻出锅。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "五花肉",
+          "amount": "250g"
+        },
+        {
+          "name": "豆干",
+          "amount": "4 块"
+        },
+        {
+          "name": "鱿鱼干",
+          "amount": "1 条"
+        },
+        {
+          "name": "芹菜",
+          "amount": "半斤"
+        }
+      ]
+    },
+    {
+      "dish_name": "砂锅梅菜扣肉",
+      "category": "荤菜",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 2,
+      "time_minutes": 18,
+      "taste": [
+        "咸香",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "五花肉",
+        "梅菜",
+        "姜"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "蒸锅"
+      ],
+      "cooking_methods": [
+        "蒸"
+      ],
+      "estimated_cost_level": "低",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [],
+      "steps": [
+        "五花肉、梅菜、姜处理干净，按入口大小切好。",
+        "主料用少许盐、生抽和姜葱抓匀，铺入浅盘。",
+        "水开后上锅蒸到熟透，出锅前倒掉多余水汽。",
+        "淋少许热油或蒸鱼豉油，保持咸香口味。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "五花肉",
+          "amount": "250g"
+        },
+        {
+          "name": "梅菜",
+          "amount": "80g"
+        },
+        {
+          "name": "姜",
+          "amount": "适量"
+        }
+      ]
+    },
+    {
+      "dish_name": "客家煎酿豆腐",
+      "category": "豆腐",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 2,
+      "time_minutes": 12,
+      "taste": [
+        "咸香",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "豆腐",
+        "猪肉末",
+        "姜"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "炒锅"
+      ],
+      "cooking_methods": [
+        "煎"
+      ],
+      "estimated_cost_level": "低",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [],
+      "steps": [
+        "豆腐、猪肉末、姜洗净切好，肉类或水产提前用少许盐和淀粉抓匀。",
+        "热锅加油，先炒香姜蒜，再下不易熟的食材。",
+        "转大火快速翻炒，按顺序放入易熟食材。",
+        "加盐或生抽调味，保持咸香，断生后立刻出锅。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "豆腐",
+          "amount": "1 盒"
+        },
+        {
+          "name": "猪肉末",
+          "amount": "200g"
+        },
+        {
+          "name": "姜",
+          "amount": "适量"
+        }
+      ]
+    },
+    {
+      "dish_name": "金沙苦瓜炒蛋",
+      "category": "蛋类",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "成人",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 1,
+      "time_minutes": 12,
+      "taste": [
+        "咸香",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "苦瓜",
+        "鸡蛋"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "姜",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "炒锅"
+      ],
+      "cooking_methods": [
+        "炒"
+      ],
+      "estimated_cost_level": "低",
+      "kid_friendly": false,
+      "elder_friendly": true,
+      "avoid_tags": [
+        "鸡蛋过敏"
+      ],
+      "steps": [
+        "苦瓜、鸡蛋洗净切好，肉类或水产提前用少许盐和淀粉抓匀。",
+        "热锅加油，先炒香姜蒜，再下不易熟的食材。",
+        "转大火快速翻炒，按顺序放入易熟食材。",
+        "加盐或生抽调味，保持咸香，断生后立刻出锅。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "苦瓜",
+          "amount": "1 根"
+        },
+        {
+          "name": "鸡蛋",
+          "amount": "4 个"
+        }
+      ]
+    },
+    {
+      "dish_name": "客家粄粽",
+      "category": "主食",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 2,
+      "time_minutes": 18,
+      "taste": [
+        "咸香",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "糯米粉"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "姜",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "蒸锅"
+      ],
+      "cooking_methods": [
+        "蒸"
+      ],
+      "estimated_cost_level": "低",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [],
+      "steps": [
+        "糯米粉处理干净，按入口大小切好。",
+        "主料用少许盐、生抽和姜葱抓匀，铺入浅盘。",
+        "水开后上锅蒸到熟透，出锅前倒掉多余水汽。",
+        "淋少许热油或蒸鱼豉油，保持咸香口味。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "糯米粉",
+          "amount": "250g"
+        }
+      ]
+    },
+    {
+      "dish_name": "福建炒面",
+      "category": "主食",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 1,
+      "time_minutes": 25,
+      "taste": [
+        "咸香",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "面条"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "姜",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "炒锅"
+      ],
+      "cooking_methods": [
+        "炒"
+      ],
+      "estimated_cost_level": "低",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [],
+      "steps": [
+        "面条洗净切好，肉类或水产提前用少许盐和淀粉抓匀。",
+        "热锅加油，先炒香姜蒜，再下不易熟的食材。",
+        "转大火快速翻炒，按顺序放入易熟食材。",
+        "加盐或生抽调味，保持咸香，断生后立刻出锅。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "面条",
+          "amount": "300g"
+        }
+      ]
+    },
+    {
+      "dish_name": "省火梅菜扣肉",
+      "category": "荤菜",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 2,
+      "time_minutes": 18,
+      "taste": [
+        "咸香",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "五花肉",
+        "梅菜",
+        "姜"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "蒸锅"
+      ],
+      "cooking_methods": [
+        "蒸"
+      ],
+      "estimated_cost_level": "低",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [],
+      "steps": [
+        "五花肉、梅菜、姜处理干净，按入口大小切好。",
+        "主料用少许盐、生抽和姜葱抓匀，铺入浅盘。",
+        "水开后上锅蒸到熟透，出锅前倒掉多余水汽。",
+        "淋少许热油或蒸鱼豉油，保持咸香口味。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "五花肉",
+          "amount": "250g"
+        },
+        {
+          "name": "梅菜",
+          "amount": "80g"
+        },
+        {
+          "name": "姜",
+          "amount": "适量"
+        }
+      ]
+    },
+    {
+      "dish_name": "客家麻糬",
+      "category": "主食",
+      "cuisine": "广东家常",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 2,
+      "time_minutes": 30,
+      "taste": [
+        "清甜",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "糯米粉"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "姜",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "炒锅"
+      ],
+      "cooking_methods": [
+        "焖"
+      ],
+      "estimated_cost_level": "低",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [],
+      "steps": [
+        "糯米粉切成大小接近的块，糯米粉先煎或炒香。",
+        "加入姜蒜和少许生抽翻匀，再加热水没过一半。",
+        "盖上锅盖中火焖到主料软熟。",
+        "开盖收汁，按家人口味补盐后出锅。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "糯米粉",
+          "amount": "250g"
+        }
+      ]
+    },
+    {
+      "dish_name": "梅菜扣肉煲",
+      "category": "荤菜",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 2,
+      "time_minutes": 18,
+      "taste": [
+        "咸香",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "五花肉",
+        "梅菜",
+        "姜"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "蒸锅"
+      ],
+      "cooking_methods": [
+        "蒸"
+      ],
+      "estimated_cost_level": "低",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [],
+      "steps": [
+        "五花肉、梅菜、姜处理干净，按入口大小切好。",
+        "主料用少许盐、生抽和姜葱抓匀，铺入浅盘。",
+        "水开后上锅蒸到熟透，出锅前倒掉多余水汽。",
+        "淋少许热油或蒸鱼豉油，保持咸香口味。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "五花肉",
+          "amount": "250g"
+        },
+        {
+          "name": "梅菜",
+          "amount": "80g"
+        },
+        {
+          "name": "姜",
+          "amount": "适量"
+        }
+      ]
+    },
+    {
+      "dish_name": "咸酸菜炒猪肠",
+      "category": "荤菜",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 1,
+      "time_minutes": 12,
+      "taste": [
+        "酸香",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "猪肠",
+        "咸酸菜",
+        "姜"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "炒锅"
+      ],
+      "cooking_methods": [
+        "炒"
+      ],
+      "estimated_cost_level": "低",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [],
+      "steps": [
+        "猪肠、咸酸菜、姜洗净切好，肉类或水产提前用少许盐和淀粉抓匀。",
+        "热锅加油，先炒香姜蒜，再下不易熟的食材。",
+        "转大火快速翻炒，按顺序放入易熟食材。",
+        "加盐或生抽调味，保持酸香，断生后立刻出锅。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "猪肠",
+          "amount": "半斤"
+        },
+        {
+          "name": "咸酸菜",
+          "amount": "150g"
+        },
+        {
+          "name": "姜",
+          "amount": "适量"
+        }
+      ]
+    },
+    {
+      "dish_name": "南乳咸酸菜木耳腩肉",
+      "category": "荤菜",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 2,
+      "time_minutes": 30,
+      "taste": [
+        "酸香",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "五花肉",
+        "咸酸菜",
+        "木耳"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "姜",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "炒锅"
+      ],
+      "cooking_methods": [
+        "焖"
+      ],
+      "estimated_cost_level": "低",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [],
+      "steps": [
+        "五花肉、咸酸菜、木耳切成大小接近的块，五花肉先煎或炒香。",
+        "加入姜蒜和少许生抽翻匀，再加热水没过一半。",
+        "盖上锅盖中火焖到主料软熟。",
+        "开盖收汁，按家人口味补盐后出锅。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "五花肉",
+          "amount": "250g"
+        },
+        {
+          "name": "咸酸菜",
+          "amount": "150g"
+        },
+        {
+          "name": "木耳",
+          "amount": "1 把"
+        }
+      ]
+    },
+    {
+      "dish_name": "三角圆咸汤",
+      "category": "汤",
+      "cuisine": "广东家常",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 2,
+      "time_minutes": 20,
+      "taste": [
+        "咸香",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "豆腐",
+        "猪肉末"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "姜",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "汤锅"
+      ],
+      "cooking_methods": [
+        "煮"
+      ],
+      "estimated_cost_level": "低",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [],
+      "steps": [
+        "豆腐、猪肉末洗净切好，肉类先焯水或简单腌制。",
+        "锅里加水和姜片，先下耐煮食材煮出底味。",
+        "再放易熟食材，中小火煮到软熟。",
+        "最后加盐调味，尝味后撒葱花出锅。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "豆腐",
+          "amount": "1 盒"
+        },
+        {
+          "name": "猪肉末",
+          "amount": "200g"
+        }
+      ]
+    },
+    {
+      "dish_name": "五香扣肉",
+      "category": "荤菜",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 2,
+      "time_minutes": 18,
+      "taste": [
+        "咸香",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "五花肉",
+        "姜"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "蒸锅"
+      ],
+      "cooking_methods": [
+        "蒸"
+      ],
+      "estimated_cost_level": "低",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [],
+      "steps": [
+        "五花肉、姜处理干净，按入口大小切好。",
+        "主料用少许盐、生抽和姜葱抓匀，铺入浅盘。",
+        "水开后上锅蒸到熟透，出锅前倒掉多余水汽。",
+        "淋少许热油或蒸鱼豉油，保持咸香口味。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "五花肉",
+          "amount": "250g"
+        },
+        {
+          "name": "姜",
+          "amount": "适量"
+        }
+      ]
+    },
+    {
+      "dish_name": "蛤蜊虾仁蒸蛋",
+      "category": "蛋类",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 2,
+      "time_minutes": 18,
+      "taste": [
+        "鲜香",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "虾仁",
+        "蛤蜊",
+        "鸡蛋",
+        "姜"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "蒸锅"
+      ],
+      "cooking_methods": [
+        "蒸"
+      ],
+      "estimated_cost_level": "中",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [
+        "鸡蛋过敏",
+        "海鲜"
+      ],
+      "steps": [
+        "虾仁、蛤蜊、鸡蛋、姜处理干净，按入口大小切好。",
+        "主料用少许盐、生抽和姜葱抓匀，铺入浅盘。",
+        "水开后上锅蒸到熟透，出锅前倒掉多余水汽。",
+        "淋少许热油或蒸鱼豉油，保持鲜香口味。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "虾仁",
+          "amount": "250g"
+        },
+        {
+          "name": "蛤蜊",
+          "amount": "1 斤"
+        },
+        {
+          "name": "鸡蛋",
+          "amount": "4 个"
+        },
+        {
+          "name": "姜",
+          "amount": "适量"
+        }
+      ]
+    },
+    {
+      "dish_name": "素红烧豆腐煲",
+      "category": "素菜",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 2,
+      "time_minutes": 30,
+      "taste": [
+        "咸香",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "豆腐",
+        "姜"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "炒锅"
+      ],
+      "cooking_methods": [
+        "焖"
+      ],
+      "estimated_cost_level": "低",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [],
+      "steps": [
+        "豆腐、姜切成大小接近的块，豆腐先煎或炒香。",
+        "加入姜蒜和少许生抽翻匀，再加热水没过一半。",
+        "盖上锅盖中火焖到主料软熟。",
+        "开盖收汁，按家人口味补盐后出锅。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "豆腐",
+          "amount": "1 盒"
+        },
+        {
+          "name": "姜",
+          "amount": "适量"
+        }
+      ]
+    },
+    {
+      "dish_name": "香草酱煎酿豆腐",
+      "category": "豆腐",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 2,
+      "time_minutes": 12,
+      "taste": [
+        "咸香",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "豆腐",
+        "猪肉末",
+        "姜"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "炒锅"
+      ],
+      "cooking_methods": [
+        "煎"
+      ],
+      "estimated_cost_level": "低",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [],
+      "steps": [
+        "豆腐、猪肉末、姜洗净切好，肉类或水产提前用少许盐和淀粉抓匀。",
+        "热锅加油，先炒香姜蒜，再下不易熟的食材。",
+        "转大火快速翻炒，按顺序放入易熟食材。",
+        "加盐或生抽调味，保持咸香，断生后立刻出锅。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "豆腐",
+          "amount": "1 盒"
+        },
+        {
+          "name": "猪肉末",
+          "amount": "200g"
+        },
+        {
+          "name": "姜",
+          "amount": "适量"
+        }
+      ]
+    },
+    {
+      "dish_name": "家常扣肉",
+      "category": "荤菜",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 2,
+      "time_minutes": 18,
+      "taste": [
+        "咸香",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "五花肉",
+        "姜"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "蒸锅"
+      ],
+      "cooking_methods": [
+        "蒸"
+      ],
+      "estimated_cost_level": "低",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [],
+      "steps": [
+        "五花肉、姜处理干净，按入口大小切好。",
+        "主料用少许盐、生抽和姜葱抓匀，铺入浅盘。",
+        "水开后上锅蒸到熟透，出锅前倒掉多余水汽。",
+        "淋少许热油或蒸鱼豉油，保持咸香口味。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "五花肉",
+          "amount": "250g"
+        },
+        {
+          "name": "姜",
+          "amount": "适量"
+        }
+      ]
+    },
+    {
+      "dish_name": "麻辣炸菜鸡肾",
+      "category": "荤菜",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "成人",
+        "年轻人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 2,
+      "time_minutes": 12,
+      "taste": [
+        "微辣",
+        "微辣"
+      ],
+      "main_ingredients": [
+        "鸡肾",
+        "炸菜",
+        "姜"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "炒锅"
+      ],
+      "cooking_methods": [
+        "煎"
+      ],
+      "estimated_cost_level": "低",
+      "kid_friendly": false,
+      "elder_friendly": false,
+      "avoid_tags": [
+        "辣"
+      ],
+      "steps": [
+        "鸡肾、炸菜、姜洗净切好，肉类或水产提前用少许盐和淀粉抓匀。",
+        "热锅加油，先炒香姜蒜，再下不易熟的食材。",
+        "转大火快速翻炒，按顺序放入易熟食材。",
+        "加盐或生抽调味，保持微辣，断生后立刻出锅。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "鸡肾",
+          "amount": "200g"
+        },
+        {
+          "name": "炸菜",
+          "amount": "1 小包"
+        },
+        {
+          "name": "姜",
+          "amount": "适量"
+        }
+      ]
+    },
+    {
+      "dish_name": "梅菜蒸扣肉",
+      "category": "荤菜",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 2,
+      "time_minutes": 18,
+      "taste": [
+        "咸香",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "五花肉",
+        "梅菜",
+        "姜"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "蒸锅"
+      ],
+      "cooking_methods": [
+        "蒸"
+      ],
+      "estimated_cost_level": "低",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [],
+      "steps": [
+        "五花肉、梅菜、姜处理干净，按入口大小切好。",
+        "主料用少许盐、生抽和姜葱抓匀，铺入浅盘。",
+        "水开后上锅蒸到熟透，出锅前倒掉多余水汽。",
+        "淋少许热油或蒸鱼豉油，保持咸香口味。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "五花肉",
+          "amount": "250g"
+        },
+        {
+          "name": "梅菜",
+          "amount": "80g"
+        },
+        {
+          "name": "姜",
+          "amount": "适量"
+        }
+      ]
+    },
+    {
+      "dish_name": "盐焗鸡翼",
+      "category": "荤菜",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 2,
+      "time_minutes": 30,
+      "taste": [
+        "咸香",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "鸡翅",
+        "姜",
+        "葱"
+      ],
+      "optional_ingredients": [
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "炒锅"
+      ],
+      "cooking_methods": [
+        "焖"
+      ],
+      "estimated_cost_level": "低",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [],
+      "steps": [
+        "鸡翅、姜、葱切成大小接近的块，鸡翅先煎或炒香。",
+        "加入姜蒜和少许生抽翻匀，再加热水没过一半。",
+        "盖上锅盖中火焖到主料软熟。",
+        "开盖收汁，按家人口味补盐后出锅。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "鸡翅",
+          "amount": "8 个"
+        },
+        {
+          "name": "姜",
+          "amount": "适量"
+        },
+        {
+          "name": "葱",
+          "amount": "适量"
+        }
+      ]
+    },
+    {
+      "dish_name": "萝卜丝菜包粿",
+      "category": "主食",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 2,
+      "time_minutes": 18,
+      "taste": [
+        "咸香",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "糯米粉",
+        "粘米粉",
+        "白萝卜"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "姜",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "蒸锅"
+      ],
+      "cooking_methods": [
+        "蒸"
+      ],
+      "estimated_cost_level": "低",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [],
+      "steps": [
+        "糯米粉、粘米粉、白萝卜处理干净，按入口大小切好。",
+        "主料用少许盐、生抽和姜葱抓匀，铺入浅盘。",
+        "水开后上锅蒸到熟透，出锅前倒掉多余水汽。",
+        "淋少许热油或蒸鱼豉油，保持咸香口味。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "糯米粉",
+          "amount": "250g"
+        },
+        {
+          "name": "粘米粉",
+          "amount": "150g"
+        },
+        {
+          "name": "白萝卜",
+          "amount": "半根"
+        }
+      ]
+    },
+    {
+      "dish_name": "味噌京葱肥牛豆腐煲",
+      "category": "豆腐",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 2,
+      "time_minutes": 30,
+      "taste": [
+        "咸香",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "豆腐",
+        "肥牛",
+        "姜"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "炒锅"
+      ],
+      "cooking_methods": [
+        "焖"
+      ],
+      "estimated_cost_level": "中",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [
+        "牛羊肉"
+      ],
+      "steps": [
+        "豆腐、肥牛、姜切成大小接近的块，豆腐先煎或炒香。",
+        "加入姜蒜和少许生抽翻匀，再加热水没过一半。",
+        "盖上锅盖中火焖到主料软熟。",
+        "开盖收汁，按家人口味补盐后出锅。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "豆腐",
+          "amount": "1 盒"
+        },
+        {
+          "name": "肥牛",
+          "amount": "250g"
+        },
+        {
+          "name": "姜",
+          "amount": "适量"
+        }
+      ]
+    },
+    {
+      "dish_name": "香茜盐水鸡翼",
+      "category": "荤菜",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 2,
+      "time_minutes": 30,
+      "taste": [
+        "咸香",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "鸡翅",
+        "姜"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "炒锅"
+      ],
+      "cooking_methods": [
+        "焖"
+      ],
+      "estimated_cost_level": "低",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [],
+      "steps": [
+        "鸡翅、姜切成大小接近的块，鸡翅先煎或炒香。",
+        "加入姜蒜和少许生抽翻匀，再加热水没过一半。",
+        "盖上锅盖中火焖到主料软熟。",
+        "开盖收汁，按家人口味补盐后出锅。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "鸡翅",
+          "amount": "8 个"
+        },
+        {
+          "name": "姜",
+          "amount": "适量"
+        }
+      ]
+    },
+    {
+      "dish_name": "咸鱼鸡粒豆腐煲",
+      "category": "豆腐",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 2,
+      "time_minutes": 30,
+      "taste": [
+        "咸香",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "豆腐",
+        "咸鱼",
+        "鸡肉",
+        "姜"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "炒锅"
+      ],
+      "cooking_methods": [
+        "焖"
+      ],
+      "estimated_cost_level": "低",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [
+        "海鲜"
+      ],
+      "steps": [
+        "豆腐、咸鱼、鸡肉、姜切成大小接近的块，豆腐先煎或炒香。",
+        "加入姜蒜和少许生抽翻匀，再加热水没过一半。",
+        "盖上锅盖中火焖到主料软熟。",
+        "开盖收汁，按家人口味补盐后出锅。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "豆腐",
+          "amount": "1 盒"
+        },
+        {
+          "name": "咸鱼",
+          "amount": "1 小块"
+        },
+        {
+          "name": "鸡肉",
+          "amount": "半斤"
+        },
+        {
+          "name": "姜",
+          "amount": "适量"
+        }
+      ]
+    },
+    {
+      "dish_name": "花雕咸鸡髀菜饭",
+      "category": "主食",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 2,
+      "time_minutes": 30,
+      "taste": [
+        "咸香",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "鸡腿",
+        "米",
+        "姜"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "炒锅"
+      ],
+      "cooking_methods": [
+        "焖"
+      ],
+      "estimated_cost_level": "低",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [],
+      "steps": [
+        "鸡腿、米、姜切成大小接近的块，鸡腿先煎或炒香。",
+        "加入姜蒜和少许生抽翻匀，再加热水没过一半。",
+        "盖上锅盖中火焖到主料软熟。",
+        "开盖收汁，按家人口味补盐后出锅。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "鸡腿",
+          "amount": "2 个"
+        },
+        {
+          "name": "米",
+          "amount": "按人数"
+        },
+        {
+          "name": "姜",
+          "amount": "适量"
+        }
+      ]
+    },
+    {
+      "dish_name": "盐焗北菇滑鸡腊肠煲仔饭",
+      "category": "主食",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 2,
+      "time_minutes": 30,
+      "taste": [
+        "咸香",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "米",
+        "香菇",
+        "腊肠",
+        "姜"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "炒锅"
+      ],
+      "cooking_methods": [
+        "焖"
+      ],
+      "estimated_cost_level": "低",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [],
+      "steps": [
+        "米、香菇、腊肠、姜切成大小接近的块，米先煎或炒香。",
+        "加入姜蒜和少许生抽翻匀，再加热水没过一半。",
+        "盖上锅盖中火焖到主料软熟。",
+        "开盖收汁，按家人口味补盐后出锅。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "米",
+          "amount": "按人数"
+        },
+        {
+          "name": "香菇",
+          "amount": "6 朵"
+        },
+        {
+          "name": "腊肠",
+          "amount": "2 根"
+        },
+        {
+          "name": "姜",
+          "amount": "适量"
+        }
+      ]
+    },
+    {
+      "dish_name": "盐焗蜜糖鸡翼",
+      "category": "荤菜",
+      "cuisine": "广东家常",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 2,
+      "time_minutes": 30,
+      "taste": [
+        "清甜",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "鸡翅",
+        "姜"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "炒锅"
+      ],
+      "cooking_methods": [
+        "焖"
+      ],
+      "estimated_cost_level": "低",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [],
+      "steps": [
+        "鸡翅、姜切成大小接近的块，鸡翅先煎或炒香。",
+        "加入姜蒜和少许生抽翻匀，再加热水没过一半。",
+        "盖上锅盖中火焖到主料软熟。",
+        "开盖收汁，按家人口味补盐后出锅。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "鸡翅",
+          "amount": "8 个"
+        },
+        {
+          "name": "姜",
+          "amount": "适量"
+        }
+      ]
+    },
+    {
+      "dish_name": "黑麦酒鸡翼",
+      "category": "荤菜",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 2,
+      "time_minutes": 30,
+      "taste": [
+        "咸香",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "鸡翅",
+        "姜"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "炒锅"
+      ],
+      "cooking_methods": [
+        "焖"
+      ],
+      "estimated_cost_level": "低",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [],
+      "steps": [
+        "鸡翅、姜切成大小接近的块，鸡翅先煎或炒香。",
+        "加入姜蒜和少许生抽翻匀，再加热水没过一半。",
+        "盖上锅盖中火焖到主料软熟。",
+        "开盖收汁，按家人口味补盐后出锅。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "鸡翅",
+          "amount": "8 个"
+        },
+        {
+          "name": "姜",
+          "amount": "适量"
+        }
+      ]
+    },
+    {
+      "dish_name": "简易盐焗鸡翼",
+      "category": "荤菜",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 2,
+      "time_minutes": 30,
+      "taste": [
+        "咸香",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "鸡翅",
+        "姜",
+        "葱"
+      ],
+      "optional_ingredients": [
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "炒锅"
+      ],
+      "cooking_methods": [
+        "焖"
+      ],
+      "estimated_cost_level": "低",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [],
+      "steps": [
+        "鸡翅、姜、葱切成大小接近的块，鸡翅先煎或炒香。",
+        "加入姜蒜和少许生抽翻匀，再加热水没过一半。",
+        "盖上锅盖中火焖到主料软熟。",
+        "开盖收汁，按家人口味补盐后出锅。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "鸡翅",
+          "amount": "8 个"
+        },
+        {
+          "name": "姜",
+          "amount": "适量"
+        },
+        {
+          "name": "葱",
+          "amount": "适量"
+        }
+      ]
+    },
+    {
+      "dish_name": "咸鱼鸡粒豆腐煲二",
+      "category": "豆腐",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 2,
+      "time_minutes": 30,
+      "taste": [
+        "咸香",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "豆腐",
+        "咸鱼",
+        "鸡肉",
+        "姜"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "炒锅"
+      ],
+      "cooking_methods": [
+        "焖"
+      ],
+      "estimated_cost_level": "低",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [
+        "海鲜"
+      ],
+      "steps": [
+        "豆腐、咸鱼、鸡肉、姜切成大小接近的块，豆腐先煎或炒香。",
+        "加入姜蒜和少许生抽翻匀，再加热水没过一半。",
+        "盖上锅盖中火焖到主料软熟。",
+        "开盖收汁，按家人口味补盐后出锅。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "豆腐",
+          "amount": "1 盒"
+        },
+        {
+          "name": "咸鱼",
+          "amount": "1 小块"
+        },
+        {
+          "name": "鸡肉",
+          "amount": "半斤"
+        },
+        {
+          "name": "姜",
+          "amount": "适量"
+        }
+      ]
+    },
+    {
+      "dish_name": "经典咸鱼鸡粒豆腐煲",
+      "category": "豆腐",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 2,
+      "time_minutes": 30,
+      "taste": [
+        "咸香",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "豆腐",
+        "咸鱼",
+        "鸡肉",
+        "姜"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "炒锅"
+      ],
+      "cooking_methods": [
+        "焖"
+      ],
+      "estimated_cost_level": "低",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [
+        "海鲜"
+      ],
+      "steps": [
+        "豆腐、咸鱼、鸡肉、姜切成大小接近的块，豆腐先煎或炒香。",
+        "加入姜蒜和少许生抽翻匀，再加热水没过一半。",
+        "盖上锅盖中火焖到主料软熟。",
+        "开盖收汁，按家人口味补盐后出锅。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "豆腐",
+          "amount": "1 盒"
+        },
+        {
+          "name": "咸鱼",
+          "amount": "1 小块"
+        },
+        {
+          "name": "鸡肉",
+          "amount": "半斤"
+        },
+        {
+          "name": "姜",
+          "amount": "适量"
+        }
+      ]
+    },
+    {
+      "dish_name": "番茄麻辣豆腐煲",
+      "category": "豆腐",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "成人",
+        "年轻人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 2,
+      "time_minutes": 30,
+      "taste": [
+        "微辣",
+        "微辣"
+      ],
+      "main_ingredients": [
+        "豆腐",
+        "番茄",
+        "姜"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "炒锅"
+      ],
+      "cooking_methods": [
+        "焖"
+      ],
+      "estimated_cost_level": "低",
+      "kid_friendly": false,
+      "elder_friendly": false,
+      "avoid_tags": [
+        "辣"
+      ],
+      "steps": [
+        "豆腐、番茄、姜切成大小接近的块，豆腐先煎或炒香。",
+        "加入姜蒜和少许生抽翻匀，再加热水没过一半。",
+        "盖上锅盖中火焖到主料软熟。",
+        "开盖收汁，按家人口味补盐后出锅。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "豆腐",
+          "amount": "1 盒"
+        },
+        {
+          "name": "番茄",
+          "amount": "3 个"
+        },
+        {
+          "name": "姜",
+          "amount": "适量"
+        }
+      ]
+    },
+    {
+      "dish_name": "红酒鸡腿",
+      "category": "荤菜",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 2,
+      "time_minutes": 30,
+      "taste": [
+        "咸香",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "鸡腿",
+        "姜"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "炒锅"
+      ],
+      "cooking_methods": [
+        "焖"
+      ],
+      "estimated_cost_level": "低",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [],
+      "steps": [
+        "鸡腿、姜切成大小接近的块，鸡腿先煎或炒香。",
+        "加入姜蒜和少许生抽翻匀，再加热水没过一半。",
+        "盖上锅盖中火焖到主料软熟。",
+        "开盖收汁，按家人口味补盐后出锅。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "鸡腿",
+          "amount": "2 个"
+        },
+        {
+          "name": "姜",
+          "amount": "适量"
+        }
+      ]
+    },
+    {
+      "dish_name": "去骨鸡腿示范菜",
+      "category": "荤菜",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 2,
+      "time_minutes": 30,
+      "taste": [
+        "咸香",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "鸡腿",
+        "姜"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "炒锅"
+      ],
+      "cooking_methods": [
+        "焖"
+      ],
+      "estimated_cost_level": "低",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [],
+      "steps": [
+        "鸡腿、姜切成大小接近的块，鸡腿先煎或炒香。",
+        "加入姜蒜和少许生抽翻匀，再加热水没过一半。",
+        "盖上锅盖中火焖到主料软熟。",
+        "开盖收汁，按家人口味补盐后出锅。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "鸡腿",
+          "amount": "2 个"
+        },
+        {
+          "name": "姜",
+          "amount": "适量"
+        }
+      ]
+    },
+    {
+      "dish_name": "盐焗猪颈肉炒檬",
+      "category": "荤菜",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 2,
+      "time_minutes": 30,
+      "taste": [
+        "咸香",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "猪颈肉",
+        "米粉",
+        "姜"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "炒锅"
+      ],
+      "cooking_methods": [
+        "焖"
+      ],
+      "estimated_cost_level": "低",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [],
+      "steps": [
+        "猪颈肉、米粉、姜切成大小接近的块，猪颈肉先煎或炒香。",
+        "加入姜蒜和少许生抽翻匀，再加热水没过一半。",
+        "盖上锅盖中火焖到主料软熟。",
+        "开盖收汁，按家人口味补盐后出锅。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "猪颈肉",
+          "amount": "250g"
+        },
+        {
+          "name": "米粉",
+          "amount": "300g"
+        },
+        {
+          "name": "姜",
+          "amount": "适量"
+        }
+      ]
+    },
+    {
+      "dish_name": "客家咸鸡",
+      "category": "荤菜",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 2,
+      "time_minutes": 30,
+      "taste": [
+        "咸香",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "鸡肉",
+        "姜"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "炒锅"
+      ],
+      "cooking_methods": [
+        "焖"
+      ],
+      "estimated_cost_level": "低",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [],
+      "steps": [
+        "鸡肉、姜切成大小接近的块，鸡肉先煎或炒香。",
+        "加入姜蒜和少许生抽翻匀，再加热水没过一半。",
+        "盖上锅盖中火焖到主料软熟。",
+        "开盖收汁，按家人口味补盐后出锅。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "鸡肉",
+          "amount": "半斤"
+        },
+        {
+          "name": "姜",
+          "amount": "适量"
+        }
+      ]
+    },
+    {
+      "dish_name": "梅干扣肉煲",
+      "category": "荤菜",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 2,
+      "time_minutes": 18,
+      "taste": [
+        "咸香",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "五花肉",
+        "梅菜",
+        "姜"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "蒸锅"
+      ],
+      "cooking_methods": [
+        "蒸"
+      ],
+      "estimated_cost_level": "低",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [],
+      "steps": [
+        "五花肉、梅菜、姜处理干净，按入口大小切好。",
+        "主料用少许盐、生抽和姜葱抓匀，铺入浅盘。",
+        "水开后上锅蒸到熟透，出锅前倒掉多余水汽。",
+        "淋少许热油或蒸鱼豉油，保持咸香口味。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "五花肉",
+          "amount": "250g"
+        },
+        {
+          "name": "梅菜",
+          "amount": "80g"
+        },
+        {
+          "name": "姜",
+          "amount": "适量"
+        }
+      ]
+    },
+    {
+      "dish_name": "姜葱盐焗鸡翼",
+      "category": "荤菜",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 2,
+      "time_minutes": 30,
+      "taste": [
+        "咸香",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "鸡翅",
+        "姜",
+        "葱"
+      ],
+      "optional_ingredients": [
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "炒锅"
+      ],
+      "cooking_methods": [
+        "焖"
+      ],
+      "estimated_cost_level": "低",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [],
+      "steps": [
+        "鸡翅、姜、葱切成大小接近的块，鸡翅先煎或炒香。",
+        "加入姜蒜和少许生抽翻匀，再加热水没过一半。",
+        "盖上锅盖中火焖到主料软熟。",
+        "开盖收汁，按家人口味补盐后出锅。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "鸡翅",
+          "amount": "8 个"
+        },
+        {
+          "name": "姜",
+          "amount": "适量"
+        },
+        {
+          "name": "葱",
+          "amount": "适量"
+        }
+      ]
+    },
+    {
+      "dish_name": "姜葱霸王鸡",
+      "category": "荤菜",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 2,
+      "time_minutes": 30,
+      "taste": [
+        "咸香",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "鸡肉",
+        "姜",
+        "葱"
+      ],
+      "optional_ingredients": [
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "炒锅"
+      ],
+      "cooking_methods": [
+        "焖"
+      ],
+      "estimated_cost_level": "低",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [],
+      "steps": [
+        "鸡肉、姜、葱切成大小接近的块，鸡肉先煎或炒香。",
+        "加入姜蒜和少许生抽翻匀，再加热水没过一半。",
+        "盖上锅盖中火焖到主料软熟。",
+        "开盖收汁，按家人口味补盐后出锅。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "鸡肉",
+          "amount": "半斤"
+        },
+        {
+          "name": "姜",
+          "amount": "适量"
+        },
+        {
+          "name": "葱",
+          "amount": "适量"
+        }
+      ]
+    },
+    {
+      "dish_name": "黄酒鸡",
+      "category": "荤菜",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 2,
+      "time_minutes": 30,
+      "taste": [
+        "咸香",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "鸡肉",
+        "姜"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "炒锅"
+      ],
+      "cooking_methods": [
+        "焖"
+      ],
+      "estimated_cost_level": "低",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [],
+      "steps": [
+        "鸡肉、姜切成大小接近的块，鸡肉先煎或炒香。",
+        "加入姜蒜和少许生抽翻匀，再加热水没过一半。",
+        "盖上锅盖中火焖到主料软熟。",
+        "开盖收汁，按家人口味补盐后出锅。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "鸡肉",
+          "amount": "半斤"
+        },
+        {
+          "name": "姜",
+          "amount": "适量"
+        }
+      ]
+    },
+    {
+      "dish_name": "影音鲜虾豆腐煲",
+      "category": "豆腐",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 2,
+      "time_minutes": 30,
+      "taste": [
+        "鲜香",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "豆腐",
+        "虾仁",
+        "姜"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "炒锅"
+      ],
+      "cooking_methods": [
+        "焖"
+      ],
+      "estimated_cost_level": "中",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [
+        "海鲜"
+      ],
+      "steps": [
+        "豆腐、虾仁、姜切成大小接近的块，豆腐先煎或炒香。",
+        "加入姜蒜和少许生抽翻匀，再加热水没过一半。",
+        "盖上锅盖中火焖到主料软熟。",
+        "开盖收汁，按家人口味补盐后出锅。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "豆腐",
+          "amount": "1 盒"
+        },
+        {
+          "name": "虾仁",
+          "amount": "250g"
+        },
+        {
+          "name": "姜",
+          "amount": "适量"
+        }
+      ]
+    },
+    {
+      "dish_name": "玫瑰盐焗鸡全翼",
+      "category": "荤菜",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 2,
+      "time_minutes": 30,
+      "taste": [
+        "咸香",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "鸡翅",
+        "姜",
+        "葱"
+      ],
+      "optional_ingredients": [
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "炒锅"
+      ],
+      "cooking_methods": [
+        "焖"
+      ],
+      "estimated_cost_level": "低",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [],
+      "steps": [
+        "鸡翅、姜、葱切成大小接近的块，鸡翅先煎或炒香。",
+        "加入姜蒜和少许生抽翻匀，再加热水没过一半。",
+        "盖上锅盖中火焖到主料软熟。",
+        "开盖收汁，按家人口味补盐后出锅。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "鸡翅",
+          "amount": "8 个"
+        },
+        {
+          "name": "姜",
+          "amount": "适量"
+        },
+        {
+          "name": "葱",
+          "amount": "适量"
+        }
+      ]
+    },
+    {
+      "dish_name": "传统梅菜扣肉",
+      "category": "荤菜",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 2,
+      "time_minutes": 18,
+      "taste": [
+        "咸香",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "五花肉",
+        "梅菜",
+        "姜"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "蒸锅"
+      ],
+      "cooking_methods": [
+        "蒸"
+      ],
+      "estimated_cost_level": "低",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [],
+      "steps": [
+        "五花肉、梅菜、姜处理干净，按入口大小切好。",
+        "主料用少许盐、生抽和姜葱抓匀，铺入浅盘。",
+        "水开后上锅蒸到熟透，出锅前倒掉多余水汽。",
+        "淋少许热油或蒸鱼豉油，保持咸香口味。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "五花肉",
+          "amount": "250g"
+        },
+        {
+          "name": "梅菜",
+          "amount": "80g"
+        },
+        {
+          "name": "姜",
+          "amount": "适量"
+        }
+      ]
+    },
+    {
+      "dish_name": "川辣炸菜肾片",
+      "category": "荤菜",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "成人",
+        "年轻人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 2,
+      "time_minutes": 12,
+      "taste": [
+        "微辣",
+        "微辣"
+      ],
+      "main_ingredients": [
+        "鸡肾",
+        "炸菜"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "姜",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "炒锅"
+      ],
+      "cooking_methods": [
+        "煎"
+      ],
+      "estimated_cost_level": "低",
+      "kid_friendly": false,
+      "elder_friendly": false,
+      "avoid_tags": [
+        "辣"
+      ],
+      "steps": [
+        "鸡肾、炸菜洗净切好，肉类或水产提前用少许盐和淀粉抓匀。",
+        "热锅加油，先炒香姜蒜，再下不易熟的食材。",
+        "转大火快速翻炒，按顺序放入易熟食材。",
+        "加盐或生抽调味，保持微辣，断生后立刻出锅。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "鸡肾",
+          "amount": "200g"
+        },
+        {
+          "name": "炸菜",
+          "amount": "1 小包"
+        }
+      ]
+    },
+    {
+      "dish_name": "十三香盐焗鸡髀",
+      "category": "荤菜",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 2,
+      "time_minutes": 30,
+      "taste": [
+        "咸香",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "鸡腿",
+        "姜",
+        "葱"
+      ],
+      "optional_ingredients": [
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "炒锅"
+      ],
+      "cooking_methods": [
+        "焖"
+      ],
+      "estimated_cost_level": "低",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [],
+      "steps": [
+        "鸡腿、姜、葱切成大小接近的块，鸡腿先煎或炒香。",
+        "加入姜蒜和少许生抽翻匀，再加热水没过一半。",
+        "盖上锅盖中火焖到主料软熟。",
+        "开盖收汁，按家人口味补盐后出锅。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "鸡腿",
+          "amount": "2 个"
+        },
+        {
+          "name": "姜",
+          "amount": "适量"
+        },
+        {
+          "name": "葱",
+          "amount": "适量"
+        }
+      ]
+    },
+    {
+      "dish_name": "蒸盐焗鸡髀",
+      "category": "荤菜",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 2,
+      "time_minutes": 30,
+      "taste": [
+        "咸香",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "鸡腿",
+        "姜",
+        "葱"
+      ],
+      "optional_ingredients": [
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "炒锅"
+      ],
+      "cooking_methods": [
+        "焖"
+      ],
+      "estimated_cost_level": "低",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [],
+      "steps": [
+        "鸡腿、姜、葱切成大小接近的块，鸡腿先煎或炒香。",
+        "加入姜蒜和少许生抽翻匀，再加热水没过一半。",
+        "盖上锅盖中火焖到主料软熟。",
+        "开盖收汁，按家人口味补盐后出锅。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "鸡腿",
+          "amount": "2 个"
+        },
+        {
+          "name": "姜",
+          "amount": "适量"
+        },
+        {
+          "name": "葱",
+          "amount": "适量"
+        }
+      ]
+    },
+    {
+      "dish_name": "虫草花蒸酒鸡",
+      "category": "荤菜",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 2,
+      "time_minutes": 18,
+      "taste": [
+        "咸香",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "鸡肉",
+        "姜"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "蒸锅"
+      ],
+      "cooking_methods": [
+        "蒸"
+      ],
+      "estimated_cost_level": "低",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [],
+      "steps": [
+        "鸡肉、姜处理干净，按入口大小切好。",
+        "主料用少许盐、生抽和姜葱抓匀，铺入浅盘。",
+        "水开后上锅蒸到熟透，出锅前倒掉多余水汽。",
+        "淋少许热油或蒸鱼豉油，保持咸香口味。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "鸡肉",
+          "amount": "半斤"
+        },
+        {
+          "name": "姜",
+          "amount": "适量"
+        }
+      ]
+    },
+    {
+      "dish_name": "盐焗粉肠",
+      "category": "荤菜",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 2,
+      "time_minutes": 30,
+      "taste": [
+        "咸香",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "粉肠"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "姜",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "炒锅"
+      ],
+      "cooking_methods": [
+        "焖"
+      ],
+      "estimated_cost_level": "低",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [],
+      "steps": [
+        "粉肠切成大小接近的块，粉肠先煎或炒香。",
+        "加入姜蒜和少许生抽翻匀，再加热水没过一半。",
+        "盖上锅盖中火焖到主料软熟。",
+        "开盖收汁，按家人口味补盐后出锅。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "粉肠",
+          "amount": "半斤"
+        }
+      ]
+    },
+    {
+      "dish_name": "香脆盐焗鸡腿",
+      "category": "荤菜",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 2,
+      "time_minutes": 30,
+      "taste": [
+        "咸香",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "鸡腿",
+        "姜",
+        "葱"
+      ],
+      "optional_ingredients": [
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "炒锅"
+      ],
+      "cooking_methods": [
+        "焖"
+      ],
+      "estimated_cost_level": "低",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [],
+      "steps": [
+        "鸡腿、姜、葱切成大小接近的块，鸡腿先煎或炒香。",
+        "加入姜蒜和少许生抽翻匀，再加热水没过一半。",
+        "盖上锅盖中火焖到主料软熟。",
+        "开盖收汁，按家人口味补盐后出锅。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "鸡腿",
+          "amount": "2 个"
+        },
+        {
+          "name": "姜",
+          "amount": "适量"
+        },
+        {
+          "name": "葱",
+          "amount": "适量"
+        }
+      ]
+    },
+    {
+      "dish_name": "迷迭香盐焗鸡翼",
+      "category": "荤菜",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 2,
+      "time_minutes": 30,
+      "taste": [
+        "咸香",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "鸡翅",
+        "姜",
+        "葱"
+      ],
+      "optional_ingredients": [
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "炒锅"
+      ],
+      "cooking_methods": [
+        "焖"
+      ],
+      "estimated_cost_level": "低",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [],
+      "steps": [
+        "鸡翅、姜、葱切成大小接近的块，鸡翅先煎或炒香。",
+        "加入姜蒜和少许生抽翻匀，再加热水没过一半。",
+        "盖上锅盖中火焖到主料软熟。",
+        "开盖收汁，按家人口味补盐后出锅。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "鸡翅",
+          "amount": "8 个"
+        },
+        {
+          "name": "姜",
+          "amount": "适量"
+        },
+        {
+          "name": "葱",
+          "amount": "适量"
+        }
+      ]
+    },
+    {
+      "dish_name": "咸鸡髀煲仔饭",
+      "category": "主食",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 2,
+      "time_minutes": 30,
+      "taste": [
+        "咸香",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "鸡腿",
+        "米",
+        "姜"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "炒锅"
+      ],
+      "cooking_methods": [
+        "焖"
+      ],
+      "estimated_cost_level": "低",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [],
+      "steps": [
+        "鸡腿、米、姜切成大小接近的块，鸡腿先煎或炒香。",
+        "加入姜蒜和少许生抽翻匀，再加热水没过一半。",
+        "盖上锅盖中火焖到主料软熟。",
+        "开盖收汁，按家人口味补盐后出锅。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "鸡腿",
+          "amount": "2 个"
+        },
+        {
+          "name": "米",
+          "amount": "按人数"
+        },
+        {
+          "name": "姜",
+          "amount": "适量"
+        }
+      ]
+    },
+    {
+      "dish_name": "黄豆煎焖酿豆腐",
+      "category": "豆腐",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 2,
+      "time_minutes": 12,
+      "taste": [
+        "咸香",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "豆腐",
+        "猪肉末",
+        "姜"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "炒锅"
+      ],
+      "cooking_methods": [
+        "煎"
+      ],
+      "estimated_cost_level": "低",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [],
+      "steps": [
+        "豆腐、猪肉末、姜洗净切好，肉类或水产提前用少许盐和淀粉抓匀。",
+        "热锅加油，先炒香姜蒜，再下不易熟的食材。",
+        "转大火快速翻炒，按顺序放入易熟食材。",
+        "加盐或生抽调味，保持咸香，断生后立刻出锅。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "豆腐",
+          "amount": "1 盒"
+        },
+        {
+          "name": "猪肉末",
+          "amount": "200g"
+        },
+        {
+          "name": "姜",
+          "amount": "适量"
+        }
+      ]
+    },
+    {
+      "dish_name": "沙姜猪手",
+      "category": "荤菜",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 2,
+      "time_minutes": 30,
+      "taste": [
+        "咸香",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "猪蹄",
+        "姜"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "炒锅"
+      ],
+      "cooking_methods": [
+        "焖"
+      ],
+      "estimated_cost_level": "低",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [],
+      "steps": [
+        "猪蹄、姜切成大小接近的块，猪蹄先煎或炒香。",
+        "加入姜蒜和少许生抽翻匀，再加热水没过一半。",
+        "盖上锅盖中火焖到主料软熟。",
+        "开盖收汁，按家人口味补盐后出锅。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "猪蹄",
+          "amount": "半只"
+        },
+        {
+          "name": "姜",
+          "amount": "适量"
+        }
+      ]
+    },
+    {
+      "dish_name": "芝麻手撕鸡",
+      "category": "荤菜",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 2,
+      "time_minutes": 30,
+      "taste": [
+        "咸香",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "鸡肉",
+        "姜"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "炒锅"
+      ],
+      "cooking_methods": [
+        "焖"
+      ],
+      "estimated_cost_level": "低",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [],
+      "steps": [
+        "鸡肉、姜切成大小接近的块，鸡肉先煎或炒香。",
+        "加入姜蒜和少许生抽翻匀，再加热水没过一半。",
+        "盖上锅盖中火焖到主料软熟。",
+        "开盖收汁，按家人口味补盐后出锅。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "鸡肉",
+          "amount": "半斤"
+        },
+        {
+          "name": "姜",
+          "amount": "适量"
+        }
+      ]
+    },
+    {
+      "dish_name": "嫩滑盐焗鸡",
+      "category": "荤菜",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 2,
+      "time_minutes": 30,
+      "taste": [
+        "咸香",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "鸡肉",
+        "姜",
+        "葱"
+      ],
+      "optional_ingredients": [
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "炒锅"
+      ],
+      "cooking_methods": [
+        "焖"
+      ],
+      "estimated_cost_level": "低",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [],
+      "steps": [
+        "鸡肉、姜、葱切成大小接近的块，鸡肉先煎或炒香。",
+        "加入姜蒜和少许生抽翻匀，再加热水没过一半。",
+        "盖上锅盖中火焖到主料软熟。",
+        "开盖收汁，按家人口味补盐后出锅。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "鸡肉",
+          "amount": "半斤"
+        },
+        {
+          "name": "姜",
+          "amount": "适量"
+        },
+        {
+          "name": "葱",
+          "amount": "适量"
+        }
+      ]
+    },
+    {
+      "dish_name": "咸蛋炒苦瓜",
+      "category": "蛋类",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "成人",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 1,
+      "time_minutes": 12,
+      "taste": [
+        "咸香",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "苦瓜",
+        "鸡蛋"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "姜",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "炒锅"
+      ],
+      "cooking_methods": [
+        "炒"
+      ],
+      "estimated_cost_level": "低",
+      "kid_friendly": false,
+      "elder_friendly": true,
+      "avoid_tags": [
+        "鸡蛋过敏"
+      ],
+      "steps": [
+        "苦瓜、鸡蛋洗净切好，肉类或水产提前用少许盐和淀粉抓匀。",
+        "热锅加油，先炒香姜蒜，再下不易熟的食材。",
+        "转大火快速翻炒，按顺序放入易熟食材。",
+        "加盐或生抽调味，保持咸香，断生后立刻出锅。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "苦瓜",
+          "amount": "1 根"
+        },
+        {
+          "name": "鸡蛋",
+          "amount": "4 个"
+        }
+      ]
+    },
+    {
+      "dish_name": "芥菜豆腐煲鲩鱼",
+      "category": "豆腐",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 2,
+      "time_minutes": 30,
+      "taste": [
+        "鲜香",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "豆腐",
+        "鲩鱼",
+        "芥菜",
+        "姜"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "炒锅"
+      ],
+      "cooking_methods": [
+        "焖"
+      ],
+      "estimated_cost_level": "中",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [
+        "海鲜"
+      ],
+      "steps": [
+        "豆腐、鲩鱼、芥菜、姜切成大小接近的块，豆腐先煎或炒香。",
+        "加入姜蒜和少许生抽翻匀，再加热水没过一半。",
+        "盖上锅盖中火焖到主料软熟。",
+        "开盖收汁，按家人口味补盐后出锅。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "豆腐",
+          "amount": "1 盒"
+        },
+        {
+          "name": "鲩鱼",
+          "amount": "半条"
+        },
+        {
+          "name": "芥菜",
+          "amount": "1 斤"
+        },
+        {
+          "name": "姜",
+          "amount": "适量"
+        }
+      ]
+    },
+    {
+      "dish_name": "蒸酿豆腐",
+      "category": "豆腐",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 2,
+      "time_minutes": 12,
+      "taste": [
+        "咸香",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "豆腐",
+        "猪肉末",
+        "姜"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "炒锅"
+      ],
+      "cooking_methods": [
+        "煎"
+      ],
+      "estimated_cost_level": "低",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [],
+      "steps": [
+        "豆腐、猪肉末、姜洗净切好，肉类或水产提前用少许盐和淀粉抓匀。",
+        "热锅加油，先炒香姜蒜，再下不易熟的食材。",
+        "转大火快速翻炒，按顺序放入易熟食材。",
+        "加盐或生抽调味，保持咸香，断生后立刻出锅。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "豆腐",
+          "amount": "1 盒"
+        },
+        {
+          "name": "猪肉末",
+          "amount": "200g"
+        },
+        {
+          "name": "姜",
+          "amount": "适量"
+        }
+      ]
+    },
+    {
+      "dish_name": "沙葛黄酒鸡",
+      "category": "荤菜",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 2,
+      "time_minutes": 30,
+      "taste": [
+        "咸香",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "鸡肉",
+        "沙葛",
+        "姜"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "炒锅"
+      ],
+      "cooking_methods": [
+        "焖"
+      ],
+      "estimated_cost_level": "低",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [],
+      "steps": [
+        "鸡肉、沙葛、姜切成大小接近的块，鸡肉先煎或炒香。",
+        "加入姜蒜和少许生抽翻匀，再加热水没过一半。",
+        "盖上锅盖中火焖到主料软熟。",
+        "开盖收汁，按家人口味补盐后出锅。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "鸡肉",
+          "amount": "半斤"
+        },
+        {
+          "name": "沙葛",
+          "amount": "半个"
+        },
+        {
+          "name": "姜",
+          "amount": "适量"
+        }
+      ]
+    },
+    {
+      "dish_name": "盐猪五花客家小炒",
+      "category": "荤菜",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 1,
+      "time_minutes": 12,
+      "taste": [
+        "咸香",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "五花肉",
+        "豆干",
+        "鱿鱼干",
+        "芹菜"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "姜",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "炒锅"
+      ],
+      "cooking_methods": [
+        "炒"
+      ],
+      "estimated_cost_level": "低",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [
+        "海鲜"
+      ],
+      "steps": [
+        "五花肉、豆干、鱿鱼干、芹菜洗净切好，肉类或水产提前用少许盐和淀粉抓匀。",
+        "热锅加油，先炒香姜蒜，再下不易熟的食材。",
+        "转大火快速翻炒，按顺序放入易熟食材。",
+        "加盐或生抽调味，保持咸香，断生后立刻出锅。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "五花肉",
+          "amount": "250g"
+        },
+        {
+          "name": "豆干",
+          "amount": "4 块"
+        },
+        {
+          "name": "鱿鱼干",
+          "amount": "1 条"
+        },
+        {
+          "name": "芹菜",
+          "amount": "半斤"
+        }
+      ]
+    },
+    {
+      "dish_name": "梅菜扣肉饭",
+      "category": "主食",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 2,
+      "time_minutes": 30,
+      "taste": [
+        "咸香",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "五花肉",
+        "梅菜",
+        "米",
+        "姜"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "炒锅"
+      ],
+      "cooking_methods": [
+        "焖"
+      ],
+      "estimated_cost_level": "低",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [],
+      "steps": [
+        "五花肉、梅菜、米、姜切成大小接近的块，五花肉先煎或炒香。",
+        "加入姜蒜和少许生抽翻匀，再加热水没过一半。",
+        "盖上锅盖中火焖到主料软熟。",
+        "开盖收汁，按家人口味补盐后出锅。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "五花肉",
+          "amount": "250g"
+        },
+        {
+          "name": "梅菜",
+          "amount": "80g"
+        },
+        {
+          "name": "米",
+          "amount": "按人数"
+        },
+        {
+          "name": "姜",
+          "amount": "适量"
+        }
+      ]
+    },
+    {
+      "dish_name": "盐焗鸡",
+      "category": "荤菜",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 2,
+      "time_minutes": 30,
+      "taste": [
+        "咸香",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "鸡肉",
+        "姜",
+        "葱"
+      ],
+      "optional_ingredients": [
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "炒锅"
+      ],
+      "cooking_methods": [
+        "焖"
+      ],
+      "estimated_cost_level": "低",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [],
+      "steps": [
+        "鸡肉、姜、葱切成大小接近的块，鸡肉先煎或炒香。",
+        "加入姜蒜和少许生抽翻匀，再加热水没过一半。",
+        "盖上锅盖中火焖到主料软熟。",
+        "开盖收汁，按家人口味补盐后出锅。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "鸡肉",
+          "amount": "半斤"
+        },
+        {
+          "name": "姜",
+          "amount": "适量"
+        },
+        {
+          "name": "葱",
+          "amount": "适量"
+        }
+      ]
+    },
+    {
+      "dish_name": "鲮鱼肉酿豆腐泡",
+      "category": "豆腐",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 2,
+      "time_minutes": 12,
+      "taste": [
+        "咸香",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "豆腐泡",
+        "鲮鱼肉",
+        "姜"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "炒锅"
+      ],
+      "cooking_methods": [
+        "煎"
+      ],
+      "estimated_cost_level": "中",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [
+        "海鲜"
+      ],
+      "steps": [
+        "豆腐泡、鲮鱼肉、姜洗净切好，肉类或水产提前用少许盐和淀粉抓匀。",
+        "热锅加油，先炒香姜蒜，再下不易熟的食材。",
+        "转大火快速翻炒，按顺序放入易熟食材。",
+        "加盐或生抽调味，保持咸香，断生后立刻出锅。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "豆腐泡",
+          "amount": "8 个"
+        },
+        {
+          "name": "鲮鱼肉",
+          "amount": "200g"
+        },
+        {
+          "name": "姜",
+          "amount": "适量"
+        }
+      ]
+    },
+    {
+      "dish_name": "虾胶酿豆腐泡",
+      "category": "豆腐",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 2,
+      "time_minutes": 12,
+      "taste": [
+        "咸香",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "豆腐泡",
+        "虾仁",
+        "姜"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "炒锅"
+      ],
+      "cooking_methods": [
+        "煎"
+      ],
+      "estimated_cost_level": "中",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [
+        "海鲜"
+      ],
+      "steps": [
+        "豆腐泡、虾仁、姜洗净切好，肉类或水产提前用少许盐和淀粉抓匀。",
+        "热锅加油，先炒香姜蒜，再下不易熟的食材。",
+        "转大火快速翻炒，按顺序放入易熟食材。",
+        "加盐或生抽调味，保持咸香，断生后立刻出锅。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "豆腐泡",
+          "amount": "8 个"
+        },
+        {
+          "name": "虾仁",
+          "amount": "250g"
+        },
+        {
+          "name": "姜",
+          "amount": "适量"
+        }
+      ]
+    },
+    {
+      "dish_name": "夏日啤酒鸡翅",
+      "category": "荤菜",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 2,
+      "time_minutes": 30,
+      "taste": [
+        "咸香",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "鸡翅",
+        "姜"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "炒锅"
+      ],
+      "cooking_methods": [
+        "焖"
+      ],
+      "estimated_cost_level": "低",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [],
+      "steps": [
+        "鸡翅、姜切成大小接近的块，鸡翅先煎或炒香。",
+        "加入姜蒜和少许生抽翻匀，再加热水没过一半。",
+        "盖上锅盖中火焖到主料软熟。",
+        "开盖收汁，按家人口味补盐后出锅。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "鸡翅",
+          "amount": "8 个"
+        },
+        {
+          "name": "姜",
+          "amount": "适量"
+        }
+      ]
+    },
+    {
+      "dish_name": "盐焗鸡肾",
+      "category": "荤菜",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 2,
+      "time_minutes": 30,
+      "taste": [
+        "咸香",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "鸡肉",
+        "鸡肾",
+        "姜",
+        "葱"
+      ],
+      "optional_ingredients": [
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "炒锅"
+      ],
+      "cooking_methods": [
+        "焖"
+      ],
+      "estimated_cost_level": "低",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [],
+      "steps": [
+        "鸡肉、鸡肾、姜、葱切成大小接近的块，鸡肉先煎或炒香。",
+        "加入姜蒜和少许生抽翻匀，再加热水没过一半。",
+        "盖上锅盖中火焖到主料软熟。",
+        "开盖收汁，按家人口味补盐后出锅。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "鸡肉",
+          "amount": "半斤"
+        },
+        {
+          "name": "鸡肾",
+          "amount": "200g"
+        },
+        {
+          "name": "姜",
+          "amount": "适量"
+        },
+        {
+          "name": "葱",
+          "amount": "适量"
+        }
+      ]
+    },
+    {
+      "dish_name": "牛至红酒鸡肉",
+      "category": "荤菜",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 2,
+      "time_minutes": 30,
+      "taste": [
+        "咸香",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "鸡腿",
+        "姜"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "炒锅"
+      ],
+      "cooking_methods": [
+        "焖"
+      ],
+      "estimated_cost_level": "低",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [],
+      "steps": [
+        "鸡腿、姜切成大小接近的块，鸡腿先煎或炒香。",
+        "加入姜蒜和少许生抽翻匀，再加热水没过一半。",
+        "盖上锅盖中火焖到主料软熟。",
+        "开盖收汁，按家人口味补盐后出锅。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "鸡腿",
+          "amount": "2 个"
+        },
+        {
+          "name": "姜",
+          "amount": "适量"
+        }
+      ]
+    },
+    {
+      "dish_name": "家常鲜虾豆腐煲",
+      "category": "豆腐",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 2,
+      "time_minutes": 30,
+      "taste": [
+        "鲜香",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "豆腐",
+        "虾仁",
+        "姜"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "炒锅"
+      ],
+      "cooking_methods": [
+        "焖"
+      ],
+      "estimated_cost_level": "中",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [
+        "海鲜"
+      ],
+      "steps": [
+        "豆腐、虾仁、姜切成大小接近的块，豆腐先煎或炒香。",
+        "加入姜蒜和少许生抽翻匀，再加热水没过一半。",
+        "盖上锅盖中火焖到主料软熟。",
+        "开盖收汁，按家人口味补盐后出锅。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "豆腐",
+          "amount": "1 盒"
+        },
+        {
+          "name": "虾仁",
+          "amount": "250g"
+        },
+        {
+          "name": "姜",
+          "amount": "适量"
+        }
+      ]
+    },
+    {
+      "dish_name": "盐焗鸡脾饭",
+      "category": "主食",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 2,
+      "time_minutes": 30,
+      "taste": [
+        "咸香",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "鸡腿",
+        "米",
+        "姜",
+        "葱"
+      ],
+      "optional_ingredients": [
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "炒锅"
+      ],
+      "cooking_methods": [
+        "焖"
+      ],
+      "estimated_cost_level": "低",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [],
+      "steps": [
+        "鸡腿、米、姜、葱切成大小接近的块，鸡腿先煎或炒香。",
+        "加入姜蒜和少许生抽翻匀，再加热水没过一半。",
+        "盖上锅盖中火焖到主料软熟。",
+        "开盖收汁，按家人口味补盐后出锅。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "鸡腿",
+          "amount": "2 个"
+        },
+        {
+          "name": "米",
+          "amount": "按人数"
+        },
+        {
+          "name": "姜",
+          "amount": "适量"
+        },
+        {
+          "name": "葱",
+          "amount": "适量"
+        }
+      ]
+    },
+    {
+      "dish_name": "一品海皇豆腐煲",
+      "category": "豆腐",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 2,
+      "time_minutes": 30,
+      "taste": [
+        "鲜香",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "豆腐",
+        "虾仁",
+        "姜"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "炒锅"
+      ],
+      "cooking_methods": [
+        "焖"
+      ],
+      "estimated_cost_level": "中",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [
+        "海鲜"
+      ],
+      "steps": [
+        "豆腐、虾仁、姜切成大小接近的块，豆腐先煎或炒香。",
+        "加入姜蒜和少许生抽翻匀，再加热水没过一半。",
+        "盖上锅盖中火焖到主料软熟。",
+        "开盖收汁，按家人口味补盐后出锅。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "豆腐",
+          "amount": "1 盒"
+        },
+        {
+          "name": "虾仁",
+          "amount": "250g"
+        },
+        {
+          "name": "姜",
+          "amount": "适量"
+        }
+      ]
+    },
+    {
+      "dish_name": "东江豆腐煲",
+      "category": "豆腐",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 2,
+      "time_minutes": 30,
+      "taste": [
+        "咸香",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "豆腐",
+        "姜"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "炒锅"
+      ],
+      "cooking_methods": [
+        "焖"
+      ],
+      "estimated_cost_level": "低",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [],
+      "steps": [
+        "豆腐、姜切成大小接近的块，豆腐先煎或炒香。",
+        "加入姜蒜和少许生抽翻匀，再加热水没过一半。",
+        "盖上锅盖中火焖到主料软熟。",
+        "开盖收汁，按家人口味补盐后出锅。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "豆腐",
+          "amount": "1 盒"
+        },
+        {
+          "name": "姜",
+          "amount": "适量"
+        }
+      ]
+    },
+    {
+      "dish_name": "客家南乳炸腩肉",
+      "category": "荤菜",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 2,
+      "time_minutes": 12,
+      "taste": [
+        "咸香",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "五花肉"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "姜",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "炒锅"
+      ],
+      "cooking_methods": [
+        "煎"
+      ],
+      "estimated_cost_level": "低",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [],
+      "steps": [
+        "五花肉洗净切好，肉类或水产提前用少许盐和淀粉抓匀。",
+        "热锅加油，先炒香姜蒜，再下不易熟的食材。",
+        "转大火快速翻炒，按顺序放入易熟食材。",
+        "加盐或生抽调味，保持咸香，断生后立刻出锅。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "五花肉",
+          "amount": "250g"
+        }
+      ]
+    },
+    {
+      "dish_name": "红烧豆腐煲",
+      "category": "豆腐",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 2,
+      "time_minutes": 30,
+      "taste": [
+        "咸香",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "豆腐",
+        "姜"
+      ],
+      "optional_ingredients": [
+        "葱",
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "炒锅"
+      ],
+      "cooking_methods": [
+        "焖"
+      ],
+      "estimated_cost_level": "低",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [],
+      "steps": [
+        "豆腐、姜切成大小接近的块，豆腐先煎或炒香。",
+        "加入姜蒜和少许生抽翻匀，再加热水没过一半。",
+        "盖上锅盖中火焖到主料软熟。",
+        "开盖收汁，按家人口味补盐后出锅。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "豆腐",
+          "amount": "1 盒"
+        },
+        {
+          "name": "姜",
+          "amount": "适量"
+        }
+      ]
+    },
+    {
+      "dish_name": "姜葱海鲈豆腐煲",
+      "category": "豆腐",
+      "cuisine": "家常菜",
+      "region_style": [
+        "深圳家常",
+        "广东家常"
+      ],
+      "suitable_people": [
+        "家庭",
+        "儿童",
+        "老人"
+      ],
+      "meal_type": [
+        "午餐",
+        "晚餐"
+      ],
+      "difficulty": 2,
+      "time_minutes": 30,
+      "taste": [
+        "鲜香",
+        "不辣"
+      ],
+      "main_ingredients": [
+        "豆腐",
+        "鲈鱼",
+        "姜",
+        "葱"
+      ],
+      "optional_ingredients": [
+        "蒜"
+      ],
+      "season": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "tools": [
+        "炒锅"
+      ],
+      "cooking_methods": [
+        "焖"
+      ],
+      "estimated_cost_level": "中",
+      "kid_friendly": true,
+      "elder_friendly": true,
+      "avoid_tags": [],
+      "steps": [
+        "豆腐、鲈鱼、姜、葱切成大小接近的块，豆腐先煎或炒香。",
+        "加入姜蒜和少许生抽翻匀，再加热水没过一半。",
+        "盖上锅盖中火焖到主料软熟。",
+        "开盖收汁，按家人口味补盐后出锅。"
+      ],
+      "shopping_amount_for_3_people": [
+        {
+          "name": "豆腐",
+          "amount": "1 盒"
+        },
+        {
+          "name": "鲈鱼",
+          "amount": "1 条"
+        },
+        {
+          "name": "姜",
+          "amount": "适量"
+        },
+        {
+          "name": "葱",
+          "amount": "适量"
         }
       ]
     }
@@ -21816,6 +30312,1124 @@ module.exports = {
           "葡萄"
         ]
       }
+    },
+    {
+      "standard_name": "猪蹄",
+      "aliases": [
+        "猪手"
+      ],
+      "category": "肉蛋",
+      "common_units": [
+        "斤",
+        "克",
+        "份"
+      ],
+      "storage_days": 2,
+      "season_months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "platform_keywords": {
+        "朴朴": [
+          "猪蹄",
+          "猪手"
+        ],
+        "沃尔玛": [
+          "猪蹄",
+          "猪手"
+        ],
+        "盒马": [
+          "猪蹄",
+          "猪手"
+        ],
+        "菜市场": [
+          "猪蹄",
+          "猪手"
+        ],
+        "美团买菜": [
+          "猪蹄",
+          "猪手"
+        ],
+        "楼下超市": [
+          "猪蹄",
+          "猪手"
+        ]
+      }
+    },
+    {
+      "standard_name": "牛奶",
+      "aliases": [
+        "鲜奶"
+      ],
+      "category": "乳制品",
+      "common_units": [
+        "斤",
+        "个",
+        "把",
+        "份"
+      ],
+      "storage_days": 7,
+      "season_months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "platform_keywords": {
+        "朴朴": [
+          "牛奶",
+          "鲜奶"
+        ],
+        "沃尔玛": [
+          "牛奶",
+          "鲜奶"
+        ],
+        "盒马": [
+          "牛奶",
+          "鲜奶"
+        ],
+        "菜市场": [
+          "牛奶",
+          "鲜奶"
+        ],
+        "美团买菜": [
+          "牛奶",
+          "鲜奶"
+        ],
+        "楼下超市": [
+          "牛奶",
+          "鲜奶"
+        ]
+      }
+    },
+    {
+      "standard_name": "梅菜",
+      "aliases": [
+        "梅干菜",
+        "甜梅菜"
+      ],
+      "category": "干货",
+      "common_units": [
+        "斤",
+        "个",
+        "把",
+        "份"
+      ],
+      "storage_days": 7,
+      "season_months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "platform_keywords": {
+        "朴朴": [
+          "梅菜",
+          "梅干菜",
+          "甜梅菜"
+        ],
+        "沃尔玛": [
+          "梅菜",
+          "梅干菜",
+          "甜梅菜"
+        ],
+        "盒马": [
+          "梅菜",
+          "梅干菜",
+          "甜梅菜"
+        ],
+        "菜市场": [
+          "梅菜",
+          "梅干菜",
+          "甜梅菜"
+        ],
+        "美团买菜": [
+          "梅菜",
+          "梅干菜",
+          "甜梅菜"
+        ],
+        "楼下超市": [
+          "梅菜",
+          "梅干菜",
+          "甜梅菜"
+        ]
+      }
+    },
+    {
+      "standard_name": "眉豆",
+      "aliases": [
+        "饭豆"
+      ],
+      "category": "干货",
+      "common_units": [
+        "斤",
+        "个",
+        "把",
+        "份"
+      ],
+      "storage_days": 7,
+      "season_months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "platform_keywords": {
+        "朴朴": [
+          "眉豆",
+          "饭豆"
+        ],
+        "沃尔玛": [
+          "眉豆",
+          "饭豆"
+        ],
+        "盒马": [
+          "眉豆",
+          "饭豆"
+        ],
+        "菜市场": [
+          "眉豆",
+          "饭豆"
+        ],
+        "美团买菜": [
+          "眉豆",
+          "饭豆"
+        ],
+        "楼下超市": [
+          "眉豆",
+          "饭豆"
+        ]
+      }
+    },
+    {
+      "standard_name": "艾叶",
+      "aliases": [
+        "艾草"
+      ],
+      "category": "蔬菜",
+      "common_units": [
+        "斤",
+        "个",
+        "把",
+        "份"
+      ],
+      "storage_days": 3,
+      "season_months": [
+        2,
+        3,
+        4,
+        5
+      ],
+      "platform_keywords": {
+        "朴朴": [
+          "艾叶",
+          "艾草"
+        ],
+        "沃尔玛": [
+          "艾叶",
+          "艾草"
+        ],
+        "盒马": [
+          "艾叶",
+          "艾草"
+        ],
+        "菜市场": [
+          "艾叶",
+          "艾草"
+        ],
+        "美团买菜": [
+          "艾叶",
+          "艾草"
+        ],
+        "楼下超市": [
+          "艾叶",
+          "艾草"
+        ]
+      }
+    },
+    {
+      "standard_name": "糯米粉",
+      "aliases": [
+        "糯米面"
+      ],
+      "category": "主食",
+      "common_units": [
+        "斤",
+        "个",
+        "把",
+        "份"
+      ],
+      "storage_days": 7,
+      "season_months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "platform_keywords": {
+        "朴朴": [
+          "糯米粉",
+          "糯米面"
+        ],
+        "沃尔玛": [
+          "糯米粉",
+          "糯米面"
+        ],
+        "盒马": [
+          "糯米粉",
+          "糯米面"
+        ],
+        "菜市场": [
+          "糯米粉",
+          "糯米面"
+        ],
+        "美团买菜": [
+          "糯米粉",
+          "糯米面"
+        ],
+        "楼下超市": [
+          "糯米粉",
+          "糯米面"
+        ]
+      }
+    },
+    {
+      "standard_name": "粘米粉",
+      "aliases": [
+        "大米粉"
+      ],
+      "category": "主食",
+      "common_units": [
+        "斤",
+        "个",
+        "把",
+        "份"
+      ],
+      "storage_days": 7,
+      "season_months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "platform_keywords": {
+        "朴朴": [
+          "粘米粉",
+          "大米粉"
+        ],
+        "沃尔玛": [
+          "粘米粉",
+          "大米粉"
+        ],
+        "盒马": [
+          "粘米粉",
+          "大米粉"
+        ],
+        "菜市场": [
+          "粘米粉",
+          "大米粉"
+        ],
+        "美团买菜": [
+          "粘米粉",
+          "大米粉"
+        ],
+        "楼下超市": [
+          "粘米粉",
+          "大米粉"
+        ]
+      }
+    },
+    {
+      "standard_name": "鱿鱼干",
+      "aliases": [
+        "干鱿鱼"
+      ],
+      "category": "干货",
+      "common_units": [
+        "斤",
+        "个",
+        "把",
+        "份"
+      ],
+      "storage_days": 7,
+      "season_months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "platform_keywords": {
+        "朴朴": [
+          "鱿鱼干",
+          "干鱿鱼"
+        ],
+        "沃尔玛": [
+          "鱿鱼干",
+          "干鱿鱼"
+        ],
+        "盒马": [
+          "鱿鱼干",
+          "干鱿鱼"
+        ],
+        "菜市场": [
+          "鱿鱼干",
+          "干鱿鱼"
+        ],
+        "美团买菜": [
+          "鱿鱼干",
+          "干鱿鱼"
+        ],
+        "楼下超市": [
+          "鱿鱼干",
+          "干鱿鱼"
+        ]
+      }
+    },
+    {
+      "standard_name": "咸酸菜",
+      "aliases": [
+        "酸菜"
+      ],
+      "category": "加工食品",
+      "common_units": [
+        "斤",
+        "个",
+        "把",
+        "份"
+      ],
+      "storage_days": 7,
+      "season_months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "platform_keywords": {
+        "朴朴": [
+          "咸酸菜",
+          "酸菜"
+        ],
+        "沃尔玛": [
+          "咸酸菜",
+          "酸菜"
+        ],
+        "盒马": [
+          "咸酸菜",
+          "酸菜"
+        ],
+        "菜市场": [
+          "咸酸菜",
+          "酸菜"
+        ],
+        "美团买菜": [
+          "咸酸菜",
+          "酸菜"
+        ],
+        "楼下超市": [
+          "咸酸菜",
+          "酸菜"
+        ]
+      }
+    },
+    {
+      "standard_name": "猪肠",
+      "aliases": [
+        "大肠"
+      ],
+      "category": "肉蛋",
+      "common_units": [
+        "斤",
+        "克",
+        "份"
+      ],
+      "storage_days": 2,
+      "season_months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "platform_keywords": {
+        "朴朴": [
+          "猪肠",
+          "大肠"
+        ],
+        "沃尔玛": [
+          "猪肠",
+          "大肠"
+        ],
+        "盒马": [
+          "猪肠",
+          "大肠"
+        ],
+        "菜市场": [
+          "猪肠",
+          "大肠"
+        ],
+        "美团买菜": [
+          "猪肠",
+          "大肠"
+        ],
+        "楼下超市": [
+          "猪肠",
+          "大肠"
+        ]
+      }
+    },
+    {
+      "standard_name": "粉肠",
+      "aliases": [
+        "猪粉肠"
+      ],
+      "category": "肉蛋",
+      "common_units": [
+        "斤",
+        "克",
+        "份"
+      ],
+      "storage_days": 2,
+      "season_months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "platform_keywords": {
+        "朴朴": [
+          "粉肠",
+          "猪粉肠"
+        ],
+        "沃尔玛": [
+          "粉肠",
+          "猪粉肠"
+        ],
+        "盒马": [
+          "粉肠",
+          "猪粉肠"
+        ],
+        "菜市场": [
+          "粉肠",
+          "猪粉肠"
+        ],
+        "美团买菜": [
+          "粉肠",
+          "猪粉肠"
+        ],
+        "楼下超市": [
+          "粉肠",
+          "猪粉肠"
+        ]
+      }
+    },
+    {
+      "standard_name": "鸡肾",
+      "aliases": [
+        "鸡胗"
+      ],
+      "category": "肉蛋",
+      "common_units": [
+        "斤",
+        "克",
+        "份"
+      ],
+      "storage_days": 2,
+      "season_months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "platform_keywords": {
+        "朴朴": [
+          "鸡肾",
+          "鸡胗"
+        ],
+        "沃尔玛": [
+          "鸡肾",
+          "鸡胗"
+        ],
+        "盒马": [
+          "鸡肾",
+          "鸡胗"
+        ],
+        "菜市场": [
+          "鸡肾",
+          "鸡胗"
+        ],
+        "美团买菜": [
+          "鸡肾",
+          "鸡胗"
+        ],
+        "楼下超市": [
+          "鸡肾",
+          "鸡胗"
+        ]
+      }
+    },
+    {
+      "standard_name": "豆腐泡",
+      "aliases": [
+        "豆卜",
+        "油豆腐"
+      ],
+      "category": "豆制品",
+      "common_units": [
+        "斤",
+        "个",
+        "把",
+        "份"
+      ],
+      "storage_days": 7,
+      "season_months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "platform_keywords": {
+        "朴朴": [
+          "豆腐泡",
+          "豆卜",
+          "油豆腐"
+        ],
+        "沃尔玛": [
+          "豆腐泡",
+          "豆卜",
+          "油豆腐"
+        ],
+        "盒马": [
+          "豆腐泡",
+          "豆卜",
+          "油豆腐"
+        ],
+        "菜市场": [
+          "豆腐泡",
+          "豆卜",
+          "油豆腐"
+        ],
+        "美团买菜": [
+          "豆腐泡",
+          "豆卜",
+          "油豆腐"
+        ],
+        "楼下超市": [
+          "豆腐泡",
+          "豆卜",
+          "油豆腐"
+        ]
+      }
+    },
+    {
+      "standard_name": "鲮鱼肉",
+      "aliases": [
+        "鲮鱼滑"
+      ],
+      "category": "水产",
+      "common_units": [
+        "斤",
+        "克",
+        "份"
+      ],
+      "storage_days": 1,
+      "season_months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "platform_keywords": {
+        "朴朴": [
+          "鲮鱼肉",
+          "鲮鱼滑"
+        ],
+        "沃尔玛": [
+          "鲮鱼肉",
+          "鲮鱼滑"
+        ],
+        "盒马": [
+          "鲮鱼肉",
+          "鲮鱼滑"
+        ],
+        "菜市场": [
+          "鲮鱼肉",
+          "鲮鱼滑"
+        ],
+        "美团买菜": [
+          "鲮鱼肉",
+          "鲮鱼滑"
+        ],
+        "楼下超市": [
+          "鲮鱼肉",
+          "鲮鱼滑"
+        ]
+      }
+    },
+    {
+      "standard_name": "鲩鱼",
+      "aliases": [
+        "草鱼"
+      ],
+      "category": "水产",
+      "common_units": [
+        "斤",
+        "克",
+        "份"
+      ],
+      "storage_days": 1,
+      "season_months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "platform_keywords": {
+        "朴朴": [
+          "鲩鱼",
+          "草鱼"
+        ],
+        "沃尔玛": [
+          "鲩鱼",
+          "草鱼"
+        ],
+        "盒马": [
+          "鲩鱼",
+          "草鱼"
+        ],
+        "菜市场": [
+          "鲩鱼",
+          "草鱼"
+        ],
+        "美团买菜": [
+          "鲩鱼",
+          "草鱼"
+        ],
+        "楼下超市": [
+          "鲩鱼",
+          "草鱼"
+        ]
+      }
+    },
+    {
+      "standard_name": "沙葛",
+      "aliases": [
+        "豆薯"
+      ],
+      "category": "蔬菜",
+      "common_units": [
+        "斤",
+        "个",
+        "把",
+        "份"
+      ],
+      "storage_days": 3,
+      "season_months": [
+        1,
+        2,
+        3,
+        4,
+        11,
+        12
+      ],
+      "platform_keywords": {
+        "朴朴": [
+          "沙葛",
+          "豆薯"
+        ],
+        "沃尔玛": [
+          "沙葛",
+          "豆薯"
+        ],
+        "盒马": [
+          "沙葛",
+          "豆薯"
+        ],
+        "菜市场": [
+          "沙葛",
+          "豆薯"
+        ],
+        "美团买菜": [
+          "沙葛",
+          "豆薯"
+        ],
+        "楼下超市": [
+          "沙葛",
+          "豆薯"
+        ]
+      }
+    },
+    {
+      "standard_name": "炸菜",
+      "aliases": [
+        "榨菜"
+      ],
+      "category": "加工食品",
+      "common_units": [
+        "斤",
+        "个",
+        "把",
+        "份"
+      ],
+      "storage_days": 7,
+      "season_months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "platform_keywords": {
+        "朴朴": [
+          "炸菜",
+          "榨菜"
+        ],
+        "沃尔玛": [
+          "炸菜",
+          "榨菜"
+        ],
+        "盒马": [
+          "炸菜",
+          "榨菜"
+        ],
+        "菜市场": [
+          "炸菜",
+          "榨菜"
+        ],
+        "美团买菜": [
+          "炸菜",
+          "榨菜"
+        ],
+        "楼下超市": [
+          "炸菜",
+          "榨菜"
+        ]
+      }
+    },
+    {
+      "standard_name": "咸鱼",
+      "aliases": [
+        "咸鱼干"
+      ],
+      "category": "水产",
+      "common_units": [
+        "斤",
+        "克",
+        "份"
+      ],
+      "storage_days": 1,
+      "season_months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "platform_keywords": {
+        "朴朴": [
+          "咸鱼",
+          "咸鱼干"
+        ],
+        "沃尔玛": [
+          "咸鱼",
+          "咸鱼干"
+        ],
+        "盒马": [
+          "咸鱼",
+          "咸鱼干"
+        ],
+        "菜市场": [
+          "咸鱼",
+          "咸鱼干"
+        ],
+        "美团买菜": [
+          "咸鱼",
+          "咸鱼干"
+        ],
+        "楼下超市": [
+          "咸鱼",
+          "咸鱼干"
+        ]
+      }
+    },
+    {
+      "standard_name": "猪颈肉",
+      "aliases": [
+        "猪颈"
+      ],
+      "category": "肉蛋",
+      "common_units": [
+        "斤",
+        "克",
+        "份"
+      ],
+      "storage_days": 2,
+      "season_months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "platform_keywords": {
+        "朴朴": [
+          "猪颈肉",
+          "猪颈"
+        ],
+        "沃尔玛": [
+          "猪颈肉",
+          "猪颈"
+        ],
+        "盒马": [
+          "猪颈肉",
+          "猪颈"
+        ],
+        "菜市场": [
+          "猪颈肉",
+          "猪颈"
+        ],
+        "美团买菜": [
+          "猪颈肉",
+          "猪颈"
+        ],
+        "楼下超市": [
+          "猪颈肉",
+          "猪颈"
+        ]
+      }
+    },
+    {
+      "standard_name": "米粉",
+      "aliases": [
+        "檬粉"
+      ],
+      "category": "主食",
+      "common_units": [
+        "斤",
+        "个",
+        "把",
+        "份"
+      ],
+      "storage_days": 7,
+      "season_months": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "platform_keywords": {
+        "朴朴": [
+          "米粉",
+          "檬粉"
+        ],
+        "沃尔玛": [
+          "米粉",
+          "檬粉"
+        ],
+        "盒马": [
+          "米粉",
+          "檬粉"
+        ],
+        "菜市场": [
+          "米粉",
+          "檬粉"
+        ],
+        "美团买菜": [
+          "米粉",
+          "檬粉"
+        ],
+        "楼下超市": [
+          "米粉",
+          "檬粉"
+        ]
+      }
+    },
+    {
+      "standard_name": "柚子皮",
+      "aliases": [
+        "柚皮"
+      ],
+      "category": "蔬菜",
+      "common_units": [
+        "斤",
+        "个",
+        "把",
+        "份"
+      ],
+      "storage_days": 3,
+      "season_months": [
+        9,
+        10,
+        11,
+        12
+      ],
+      "platform_keywords": {
+        "朴朴": [
+          "柚子皮",
+          "柚皮"
+        ],
+        "沃尔玛": [
+          "柚子皮",
+          "柚皮"
+        ],
+        "盒马": [
+          "柚子皮",
+          "柚皮"
+        ],
+        "菜市场": [
+          "柚子皮",
+          "柚皮"
+        ],
+        "美团买菜": [
+          "柚子皮",
+          "柚皮"
+        ],
+        "楼下超市": [
+          "柚子皮",
+          "柚皮"
+        ]
+      }
     }
   ],
   "nutrition": [
@@ -24214,6 +33828,216 @@ module.exports = {
       "cheap_threshold": 11.2,
       "expensive_threshold": 17,
       "current_price": 13.6,
+      "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
+    },
+    {
+      "name": "猪蹄",
+      "category": "肉蛋",
+      "unit": "斤",
+      "normal_price": 22.8,
+      "cheap_threshold": 18.7,
+      "expensive_threshold": 28.5,
+      "current_price": 22.8,
+      "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
+    },
+    {
+      "name": "牛奶",
+      "category": "乳制品",
+      "unit": "斤",
+      "normal_price": 10,
+      "cheap_threshold": 8.2,
+      "expensive_threshold": 12.5,
+      "current_price": 7.8,
+      "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
+    },
+    {
+      "name": "梅菜",
+      "category": "干货",
+      "unit": "斤",
+      "normal_price": 11.2,
+      "cheap_threshold": 9.2,
+      "expensive_threshold": 14,
+      "current_price": 11.2,
+      "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
+    },
+    {
+      "name": "眉豆",
+      "category": "干货",
+      "unit": "斤",
+      "normal_price": 12.4,
+      "cheap_threshold": 10.2,
+      "expensive_threshold": 15.5,
+      "current_price": 16.4,
+      "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
+    },
+    {
+      "name": "艾叶",
+      "category": "蔬菜",
+      "unit": "斤",
+      "normal_price": 9.6,
+      "cheap_threshold": 7.9,
+      "expensive_threshold": 12,
+      "current_price": 9.6,
+      "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
+    },
+    {
+      "name": "糯米粉",
+      "category": "主食",
+      "unit": "斤",
+      "normal_price": 14.8,
+      "cheap_threshold": 12.1,
+      "expensive_threshold": 18.5,
+      "current_price": 14.8,
+      "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
+    },
+    {
+      "name": "粘米粉",
+      "category": "主食",
+      "unit": "斤",
+      "normal_price": 10,
+      "cheap_threshold": 8.2,
+      "expensive_threshold": 12.5,
+      "current_price": 7.8,
+      "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
+    },
+    {
+      "name": "鱿鱼干",
+      "category": "干货",
+      "unit": "斤",
+      "normal_price": 11.2,
+      "cheap_threshold": 9.2,
+      "expensive_threshold": 14,
+      "current_price": 11.2,
+      "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
+    },
+    {
+      "name": "咸酸菜",
+      "category": "加工食品",
+      "unit": "斤",
+      "normal_price": 12.4,
+      "cheap_threshold": 10.2,
+      "expensive_threshold": 15.5,
+      "current_price": 12.4,
+      "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
+    },
+    {
+      "name": "猪肠",
+      "category": "肉蛋",
+      "unit": "斤",
+      "normal_price": 21.6,
+      "cheap_threshold": 17.7,
+      "expensive_threshold": 27,
+      "current_price": 21.6,
+      "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
+    },
+    {
+      "name": "粉肠",
+      "category": "肉蛋",
+      "unit": "斤",
+      "normal_price": 22.8,
+      "cheap_threshold": 18.7,
+      "expensive_threshold": 28.5,
+      "current_price": 30.1,
+      "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
+    },
+    {
+      "name": "鸡肾",
+      "category": "肉蛋",
+      "unit": "斤",
+      "normal_price": 18,
+      "cheap_threshold": 14.8,
+      "expensive_threshold": 22.5,
+      "current_price": 14,
+      "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
+    },
+    {
+      "name": "豆腐泡",
+      "category": "豆制品",
+      "unit": "斤",
+      "normal_price": 9.2,
+      "cheap_threshold": 7.5,
+      "expensive_threshold": 11.5,
+      "current_price": 9.2,
+      "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
+    },
+    {
+      "name": "鲮鱼肉",
+      "category": "水产",
+      "unit": "斤",
+      "normal_price": 34.4,
+      "cheap_threshold": 28.2,
+      "expensive_threshold": 43,
+      "current_price": 34.4,
+      "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
+    },
+    {
+      "name": "鲩鱼",
+      "category": "水产",
+      "unit": "斤",
+      "normal_price": 35.6,
+      "cheap_threshold": 29.2,
+      "expensive_threshold": 44.5,
+      "current_price": 35.6,
+      "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
+    },
+    {
+      "name": "沙葛",
+      "category": "蔬菜",
+      "unit": "斤",
+      "normal_price": 10.8,
+      "cheap_threshold": 8.9,
+      "expensive_threshold": 13.5,
+      "current_price": 10.8,
+      "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
+    },
+    {
+      "name": "炸菜",
+      "category": "加工食品",
+      "unit": "斤",
+      "normal_price": 10,
+      "cheap_threshold": 8.2,
+      "expensive_threshold": 12.5,
+      "current_price": 7.8,
+      "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
+    },
+    {
+      "name": "咸鱼",
+      "category": "水产",
+      "unit": "斤",
+      "normal_price": 33.2,
+      "cheap_threshold": 27.2,
+      "expensive_threshold": 41.5,
+      "current_price": 43.8,
+      "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
+    },
+    {
+      "name": "猪颈肉",
+      "category": "肉蛋",
+      "unit": "斤",
+      "normal_price": 20.4,
+      "cheap_threshold": 16.7,
+      "expensive_threshold": 25.5,
+      "current_price": 20.4,
+      "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
+    },
+    {
+      "name": "米粉",
+      "category": "主食",
+      "unit": "斤",
+      "normal_price": 13.6,
+      "cheap_threshold": 11.2,
+      "expensive_threshold": 17,
+      "current_price": 13.6,
+      "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
+    },
+    {
+      "name": "柚子皮",
+      "category": "蔬菜",
+      "unit": "斤",
+      "normal_price": 10.8,
+      "cheap_threshold": 8.9,
+      "expensive_threshold": 13.5,
+      "current_price": 10.8,
       "source_note": "基线占位：后续接农业农村部主要菜篮子价格日动态"
     }
   ]
