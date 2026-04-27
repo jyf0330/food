@@ -5,63 +5,37 @@
 }
 
 .home-shell {
-  width: min(720px, 100%);
+  width: min(560px, 100%);
   min-height: 100svh;
   margin: 0 auto;
-  padding: 18px 14px calc(112px + env(safe-area-inset-bottom));
+  padding: 18px 16px calc(112px + env(safe-area-inset-bottom));
 }
 
 .home-topbar {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 70px;
-  gap: 14px;
-  align-items: start;
-  padding: 8px 0 16px;
+  padding: 10px 0 16px;
 }
 
 .home-kicker {
-  margin: 0 0 8px;
-  color: #2f725c;
+  margin: 0 0 7px;
+  color: var(--primary);
   font-size: 13px;
   font-weight: 800;
 }
 
 .home-topbar h1 {
   margin: 0;
-  color: #161f1a;
-  font-size: 32px;
-  line-height: 1.08;
+  color: #1a1a1a;
+  font-size: 30px;
+  line-height: 1.12;
   letter-spacing: 0;
 }
 
 .home-topbar p:not(.home-kicker) {
   max-width: 390px;
   margin: 10px 0 0;
-  color: #67716b;
+  color: var(--text-muted);
   font-size: 14px;
   line-height: 1.55;
-}
-
-.home-count {
-  min-height: 70px;
-  display: grid;
-  place-items: center;
-  align-content: center;
-  border: 1px solid rgba(47, 114, 92, 0.22);
-  border-radius: 18px;
-  background: #f4fbf0;
-  color: #245343;
-}
-
-.home-count strong {
-  font-size: 30px;
-  line-height: 0.95;
-}
-
-.home-count span {
-  margin-top: 4px;
-  font-size: 12px;
-  font-weight: 800;
 }
 
 .home-toolbar {
@@ -100,105 +74,104 @@
 }
 
 .home-filter button.active {
-  background: #245343;
+  background: var(--primary);
   color: #fff;
 }
 
 .home-link-btn {
-  border: 1px solid rgba(47, 114, 92, 0.2);
+  border: 1px solid var(--border);
   background: #fff;
-  color: #2f725c;
+  color: var(--primary);
 }
 
 .dish-picker-section {
   padding-top: 4px;
 }
 
-.dish-grid {
+.dish-list-home {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 10px;
+  gap: 12px;
 }
 
-.dish-card {
+.dish-row {
   min-width: 0;
   overflow: hidden;
-  border: 1px solid rgba(26, 26, 26, 0.08);
-  border-radius: 20px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
   background: #fff;
-  box-shadow: 0 8px 24px rgba(40, 30, 18, 0.05);
+  box-shadow: 0 2px 8px rgba(255, 107, 53, 0.05);
   transition: border-color 0.15s ease, background 0.15s ease, transform 0.15s ease;
 }
 
-.dish-card.selected {
-  border-color: #245343;
-  background: #f4fbf0;
+.dish-row.selected {
+  border-color: var(--primary);
+  background: #fff5ee;
 }
 
-.dish-select {
+.dish-main {
   width: 100%;
-  min-height: 126px;
+  min-height: 92px;
   display: grid;
-  align-content: start;
-  gap: 7px;
+  grid-template-columns: 54px minmax(0, 1fr);
+  gap: 7px 12px;
+  align-items: center;
   border: 0;
   background: transparent;
   color: var(--text);
-  padding: 13px 12px 10px;
+  padding: 14px 15px 12px;
   text-align: left;
 }
 
 .dish-status {
-  width: fit-content;
-  border-radius: 999px;
-  background: #f0ede8;
-  color: #7a7168;
+  grid-row: span 3;
+  width: 48px;
+  height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #fff1e8;
+  color: var(--primary);
   font-size: 11px;
   font-weight: 800;
   line-height: 1;
-  padding: 5px 8px;
 }
 
-.dish-card.selected .dish-status {
-  background: #245343;
+.dish-row.selected .dish-status {
+  background: var(--primary);
   color: #fff;
 }
 
-.dish-name {
-  min-height: 42px;
-  color: #171d19;
-  font-size: 18px;
+.dish-row .dish-name {
+  min-width: 0;
+  color: var(--text);
+  font-size: 19px;
   font-weight: 900;
-  line-height: 1.18;
+  line-height: 1.25;
   word-break: keep-all;
 }
 
-.dish-meta,
-.dish-note {
-  color: #66716c;
-  font-size: 12px;
-  line-height: 1.35;
-}
-
-.dish-note {
-  color: #9a542d;
-  font-weight: 700;
+.dish-row .dish-meta {
+  min-width: 0;
+  color: var(--text-muted);
+  font-size: 13px;
+  line-height: 1.45;
 }
 
 .dish-actions {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1px;
-  border-top: 1px solid rgba(26, 26, 26, 0.07);
-  background: rgba(26, 26, 26, 0.06);
+  border-top: 1px solid var(--border);
+  background: var(--border);
 }
 
 .dish-actions button {
-  min-height: 38px;
+  min-height: 42px;
   border: 0;
-  background: rgba(255, 255, 255, 0.86);
-  color: #626c66;
-  font-size: 12px;
+  background: rgba(255, 255, 255, 0.94);
+  color: var(--text-muted);
+  font-size: 13px;
   font-weight: 900;
 }
 
@@ -207,14 +180,19 @@
   color: #d95d24;
 }
 
+.dish-actions button:disabled {
+  cursor: default;
+  opacity: 1;
+}
+
 .empty-saved {
   min-height: 260px;
   display: grid;
   place-items: center;
   align-content: center;
   gap: 10px;
-  border: 1px dashed rgba(47, 114, 92, 0.24);
-  border-radius: 22px;
+  border: 1px dashed var(--border);
+  border-radius: 16px;
   background: rgba(255, 255, 255, 0.62);
   padding: 24px;
   text-align: center;
@@ -226,7 +204,7 @@
 
 .empty-saved p {
   margin: 0;
-  color: #66716c;
+  color: var(--text-muted);
   font-size: 14px;
   line-height: 1.55;
 }
@@ -235,7 +213,7 @@
   min-height: 38px;
   border: 0;
   border-radius: 999px;
-  background: #245343;
+  background: var(--primary);
   color: #fff;
   font-size: 14px;
   font-weight: 800;
@@ -252,10 +230,10 @@
   grid-template-columns: minmax(0, 1fr) 128px;
   gap: 12px;
   align-items: center;
-  max-width: 720px;
+  max-width: 560px;
   margin: 0 auto;
   padding: 12px 14px calc(12px + env(safe-area-inset-bottom));
-  border-top: 1px solid rgba(26, 26, 26, 0.08);
+  border-top: 1px solid var(--border);
   background: rgba(255, 248, 242, 0.95);
   backdrop-filter: blur(16px);
 }
@@ -267,14 +245,14 @@
 }
 
 .home-submit-copy strong {
-  color: #171d19;
+  color: var(--text);
   font-size: 14px;
   line-height: 1.2;
 }
 
 .home-submit-copy span {
   overflow: hidden;
-  color: #66716c;
+  color: var(--text-muted);
   font-size: 12px;
   line-height: 1.25;
   text-overflow: ellipsis;
@@ -284,15 +262,15 @@
 .home-submit-bar .submit-btn {
   min-height: 50px;
   margin: 0;
-  border-radius: 999px;
-  background: #245343;
+  border-radius: 14px;
+  background: var(--primary);
   font-size: 15px;
   font-weight: 900;
   padding: 0 16px;
 }
 
 .home-submit-bar .submit-btn:hover {
-  background: #1d4437;
+  background: var(--primary-dark);
 }
 
 .copy-recipe-btn {
@@ -315,10 +293,6 @@
   .home-shell {
     padding-top: 28px;
   }
-
-  .dish-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
 }
 
 @media (max-width: 370px) {
@@ -327,18 +301,20 @@
     padding-left: 10px;
   }
 
-  .dish-grid {
-    gap: 8px;
-  }
-
-  .dish-select {
-    min-height: 122px;
+  .dish-main {
+    grid-template-columns: 48px minmax(0, 1fr);
+    min-height: 88px;
     padding-right: 10px;
     padding-left: 10px;
   }
 
-  .dish-name {
-    font-size: 16px;
+  .dish-status {
+    width: 44px;
+    height: 44px;
+  }
+
+  .dish-row .dish-name {
+    font-size: 17px;
   }
 }
 

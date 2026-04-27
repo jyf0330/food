@@ -7,63 +7,49 @@ import {
   toggleDishEngagement,
   type DishEngagement,
 } from "@/lib/dishEngagement";
+import {
+  DEFAULT_HOME_DISH_NAMES,
+  HOME_DISH_POOL,
+  homeDishesFromNames,
+  refreshUnselectedHomeDishes,
+} from "@/lib/homeDishes";
 import { nextResultVariant } from "@/lib/resultVariant";
 
-type HomeDish = {
-  name: string;
-  category: string;
-  time: number;
-  note: string;
-};
-
-const HOME_DISHES: HomeDish[] = [
-  { name: "番茄炒蛋", category: "蛋类", time: 12, note: "酸甜快手" },
-  { name: "土豆焖鸡", category: "荤菜", time: 35, note: "下饭一锅出" },
-  { name: "清蒸鲈鱼", category: "荤菜", time: 18, note: "清淡高蛋白" },
-  { name: "蒜蓉菜心", category: "素菜", time: 8, note: "深圳家常" },
-  { name: "肉末蒸蛋", category: "蛋类", time: 18, note: "嫩滑友好" },
-  { name: "番茄牛肉", category: "荤菜", time: 18, note: "开胃不腻" },
-  { name: "紫菜蛋花汤", category: "汤", time: 8, note: "最快热汤" },
-  { name: "虾仁滑蛋", category: "蛋类", time: 12, note: "嫩滑鲜甜" },
-  { name: "白灼芥兰", category: "素菜", time: 10, note: "清爽脆嫩" },
-  { name: "丝瓜蛋花汤", category: "汤", time: 12, note: "清甜润口" },
-  { name: "玉米胡萝卜排骨汤", category: "汤", time: 45, note: "汤水足" },
-  { name: "家常豆腐", category: "豆腐", time: 15, note: "便宜下饭" },
-];
-
-const DEFAULT_SELECTED_DISHES = ["番茄炒蛋", "蒜蓉菜心", "紫菜蛋花汤", "土豆焖鸡"];
 const SELECTED_DISHES_KEY = "san-zhuo-cai:home-selected-dishes";
+const VISIBLE_DISHES_KEY = "san-zhuo-cai:home-visible-dishes";
+const HOME_USER_ID_KEY = "san-zhuo-cai:home-user-id";
+const HOME_DISH_COUNT = 12;
 
-const knownHomeDishes = new Set(HOME_DISHES.map((dish) => dish.name));
+const knownHomeDishes = new Set(HOME_DISH_POOL.map((dish) => dish.name));
 
-const normalizeSelectedDishes = (value: unknown) => {
-  if (!Array.isArray(value)) return DEFAULT_SELECTED_DISHES;
+const normalizeDishNames = (value: unknown, fallback: string[]) => {
+  if (!Array.isArray(value)) return fallback;
 
-  const selected = Array.from(
+  const names = Array.from(
     new Set(
       value
         .filter((item): item is string => typeof item === "string")
         .map((item) => item.trim())
         .filter((name) => knownHomeDishes.has(name))
     )
-  ).slice(0, 12);
+  ).slice(0, HOME_DISH_COUNT);
 
-  return selected.length ? selected : DEFAULT_SELECTED_DISHES;
+  return names.length ? names : fallback;
 };
 
-const readSelectedDishes = () => {
+const readJsonList = (key: string, fallback: string[]) => {
   try {
-    return normalizeSelectedDishes(JSON.parse(localStorage.getItem(SELECTED_DISHES_KEY) ?? "null"));
+    return normalizeDishNames(JSON.parse(localStorage.getItem(key) ?? "null"), fallback);
   } catch {
-    return DEFAULT_SELECTED_DISHES;
+    return fallback;
   }
 };
 
-const writeSelectedDishes = (selectedDishes: string[]) => {
+const writeJsonList = (key: string, value: string[]) => {
   try {
-    localStorage.setItem(SELECTED_DISHES_KEY, JSON.stringify(selectedDishes));
+    localStorage.setItem(key, JSON.stringify(value));
   } catch {
-    // Storage can be unavailable; selection should still work for the current session.
+    // Storage can be unavailable; current-session state still works.
   }
 };
 
@@ -75,15 +61,55 @@ const buildResultUrl = (selectedDishes: string[]) => {
   return `/result?${params.toString()}`;
 };
 
+const todayKey = () => {
+  const now = new Date();
+  return `${now.getFullYear()}-${String(now.getMonth() + 1).padStart(2, "0")}-${String(
+    now.getDate()
+  ).padStart(2, "0")}`;
+};
+
+const getHomeUserId = () => {
+  try {
+    const existing = localStorage.getItem(HOME_USER_ID_KEY);
+    if (existing) return existing;
+    const next =
+      typeof crypto !== "undefined" && "randomUUID" in crypto
+        ? crypto.randomUUID()
+        : `${Date.now()}-${Math.random().toString(16).slice(2)}`;
+    localStorage.setItem(HOME_USER_ID_KEY, next);
+    return next;
+  } catch {
+    return "anonymous";
+  }
+};
+
 export default function HomePage() {
   const router = useRouter();
-  const [selectedDishes, setSelectedDishes] = useState<string[]>(DEFAULT_SELECTED_DISHES);
+  const [visibleDishNames, setVisibleDishNames] = useState<string[]>(DEFAULT_HOME_DISH_NAMES);
+  const [selectedDishes, setSelectedDishes] = useState<string[]>(DEFAULT_HOME_DISH_NAMES.slice(0, 4));
   const [engagement, setEngagement] = useState<DishEngagement>({ liked: [], saved: [] });
+  const [likeCounts, setLikeCounts] = useState<Record<string, number>>({});
+  const [likedToday, setLikedToday] = useState<string[]>([]);
   const [filter, setFilter] = useState<"all" | "saved">("all");
+  const [userId, setUserId] = useState("");
   const [loading, setLoading] = useState(false);
 
+  const visibleDishes = useMemo(() => homeDishesFromNames(visibleDishNames), [visibleDishNames]);
+  const filteredDishes = useMemo(
+    () =>
+      filter === "saved"
+        ? visibleDishes.filter((dish) => engagement.saved.includes(dish.name))
+        : visibleDishes,
+    [engagement.saved, filter, visibleDishes]
+  );
+  const selectedSummary = selectedDishes.slice(0, 2).join("、");
+  const selectedMoreCount = Math.max(0, selectedDishes.length - 2);
+
   useEffect(() => {
-    setSelectedDishes(readSelectedDishes());
+    const nextVisible = readJsonList(VISIBLE_DISHES_KEY, DEFAULT_HOME_DISH_NAMES);
+    setVisibleDishNames(nextVisible);
+    setSelectedDishes(readJsonList(SELECTED_DISHES_KEY, DEFAULT_HOME_DISH_NAMES.slice(0, 4)));
+    setUserId(getHomeUserId());
     try {
       setEngagement(readDishEngagement(localStorage));
     } catch {
@@ -91,47 +117,85 @@ export default function HomePage() {
     }
   }, []);
 
-  const visibleDishes = useMemo(
-    () =>
-      filter === "saved"
-        ? HOME_DISHES.filter((dish) => engagement.saved.includes(dish.name))
-        : HOME_DISHES,
-    [engagement.saved, filter]
-  );
+  useEffect(() => {
+    if (!userId || visibleDishNames.length === 0) return;
+    const params = new URLSearchParams({
+      dishes: visibleDishNames.join(","),
+      userId,
+      date: todayKey(),
+    });
 
-  const selectedSummary = selectedDishes.slice(0, 2).join("、");
-  const selectedMoreCount = Math.max(0, selectedDishes.length - 2);
+    fetch(`/api/dish-likes?${params.toString()}`, { cache: "no-store" })
+      .then((response) => (response.ok ? response.json() : null))
+      .then((data: { counts?: Record<string, number>; liked?: string[] } | null) => {
+        if (!data) return;
+        setLikeCounts(data.counts ?? {});
+        setLikedToday(Array.isArray(data.liked) ? data.liked : []);
+      })
+      .catch(() => {
+        // Like counts are social proof; menu selection should still work without them.
+      });
+  }, [userId, visibleDishNames]);
 
   const setAndPersistSelectedDishes = (next: string[]) => {
     setSelectedDishes(next);
-    writeSelectedDishes(next);
+    writeJsonList(SELECTED_DISHES_KEY, next);
+  };
+
+  const setAndPersistVisibleDishes = (next: string[]) => {
+    setVisibleDishNames(next);
+    writeJsonList(VISIBLE_DISHES_KEY, next);
   };
 
   const toggleDish = (dishName: string) => {
     setAndPersistSelectedDishes(
       selectedDishes.includes(dishName)
         ? selectedDishes.filter((name) => name !== dishName)
-        : [...selectedDishes, dishName].slice(0, 12)
+        : [...selectedDishes, dishName].slice(0, HOME_DISH_COUNT)
     );
   };
 
-  const restoreRecommendation = () => {
-    setAndPersistSelectedDishes(DEFAULT_SELECTED_DISHES);
+  const refreshDishes = () => {
+    setAndPersistVisibleDishes(
+      refreshUnselectedHomeDishes(visibleDishNames, selectedDishes, Date.now())
+    );
   };
 
-  const toggleEngagement = (key: keyof DishEngagement, dishName: string) => {
+  const toggleSaved = (dishName: string) => {
     try {
-      setEngagement(toggleDishEngagement(localStorage, key, dishName));
+      setEngagement(toggleDishEngagement(localStorage, "saved", dishName));
     } catch {
       setEngagement((current) => {
-        const exists = current[key].includes(dishName);
+        const exists = current.saved.includes(dishName);
         return {
           ...current,
-          [key]: exists
-            ? current[key].filter((name) => name !== dishName)
-            : [...current[key], dishName],
+          saved: exists
+            ? current.saved.filter((name) => name !== dishName)
+            : [...current.saved, dishName],
         };
       });
+    }
+  };
+
+  const likeDish = async (dishName: string) => {
+    if (!userId || likedToday.includes(dishName)) return;
+
+    try {
+      const response = await fetch("/api/dish-likes", {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({ dishName, userId, date: todayKey() }),
+      });
+      if (!response.ok) return;
+      const data = (await response.json()) as { accepted?: boolean; count?: number };
+      if (typeof data.count === "number") {
+        setLikeCounts((current) => ({ ...current, [dishName]: data.count! }));
+      }
+      if (data.accepted) {
+        setLikedToday((current) => [...current, dishName]);
+      }
+    } catch {
+      // Ignore transient network errors; the user can try again.
     }
   };
 
@@ -144,18 +208,12 @@ export default function HomePage() {
   return (
     <main className="home-shell">
       <header className="home-topbar">
-        <div>
-          <p className="home-kicker">今天吃什么</p>
-          <h1>点几道想吃的菜</h1>
-          <p>选菜、点赞、收藏，马上生成一份能照着做的菜谱。</p>
-        </div>
-        <div className="home-count" aria-label={`当前已选 ${selectedDishes.length} 道菜`}>
-          <strong>{selectedDishes.length}</strong>
-          <span>已选</span>
-        </div>
+        <p className="home-kicker">今天吃什么</p>
+        <h1>点几道想吃的菜</h1>
+        <p>选中要做的，没选中的可以刷新；每天每道菜能点一次赞。</p>
       </header>
 
-      <section className="home-toolbar" aria-label="菜品筛选">
+      <section className="home-toolbar" aria-label="菜品操作">
         <div className="home-filter">
           <button
             type="button"
@@ -172,33 +230,33 @@ export default function HomePage() {
             收藏
           </button>
         </div>
-        <button type="button" className="home-link-btn" onClick={restoreRecommendation}>
-          推荐组合
+        <button type="button" className="home-link-btn" onClick={refreshDishes}>
+          刷新
         </button>
       </section>
 
       <section className="dish-picker-section" aria-label="选择今天想吃的菜">
-        {visibleDishes.length ? (
-          <div className="dish-grid">
-            {visibleDishes.map((dish) => {
+        {filteredDishes.length ? (
+          <div className="dish-list-home">
+            {filteredDishes.map((dish) => {
               const selected = selectedDishes.includes(dish.name);
-              const liked = engagement.liked.includes(dish.name);
               const saved = engagement.saved.includes(dish.name);
+              const liked = likedToday.includes(dish.name);
+              const count = likeCounts[dish.name] ?? 0;
 
               return (
-                <article key={dish.name} className={`dish-card${selected ? " selected" : ""}`}>
+                <article key={dish.name} className={`dish-row${selected ? " selected" : ""}`}>
                   <button
                     type="button"
-                    className="dish-select"
+                    className="dish-main"
                     aria-pressed={selected}
                     onClick={() => toggleDish(dish.name)}
                   >
                     <span className="dish-status">{selected ? "已选" : "可选"}</span>
                     <span className="dish-name">{dish.name}</span>
                     <span className="dish-meta">
-                      {dish.category} · {dish.time} 分钟
+                      {dish.category} · {dish.time} 分钟 · {dish.note}
                     </span>
-                    <span className="dish-note">{dish.note}</span>
                   </button>
 
                   <div className="dish-actions">
@@ -206,17 +264,18 @@ export default function HomePage() {
                       type="button"
                       className={liked ? "active" : ""}
                       aria-pressed={liked}
-                      aria-label={`${liked ? "取消点赞" : "点赞"}${dish.name}`}
-                      onClick={() => toggleEngagement("liked", dish.name)}
+                      aria-label={`${dish.name} 今日点赞 ${count} 次`}
+                      disabled={liked}
+                      onClick={() => likeDish(dish.name)}
                     >
-                      赞
+                      赞 {count}
                     </button>
                     <button
                       type="button"
                       className={saved ? "active" : ""}
                       aria-pressed={saved}
                       aria-label={`${saved ? "取消收藏" : "收藏"}${dish.name}`}
-                      onClick={() => toggleEngagement("saved", dish.name)}
+                      onClick={() => toggleSaved(dish.name)}
                     >
                       收藏
                     </button>
@@ -242,7 +301,7 @@ export default function HomePage() {
           <span>
             {selectedDishes.length
               ? `${selectedSummary}${selectedMoreCount ? ` 等 ${selectedDishes.length} 道` : ""}`
-              : "点菜卡就能加入菜单"}
+              : "点菜名就能加入菜单"}
           </span>
         </div>
         <button
