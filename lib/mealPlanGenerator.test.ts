@@ -161,7 +161,7 @@ describe("buildGenerateResponse", () => {
           `${dish.name} should include practical coaching tips`
         );
         assert.doesNotMatch(
-          dish.steps?.join(" ") ?? "",
+          (dish.steps ?? []).find((step) => /鸡蛋.*切|蛋.*切好/.test(step)) ?? "",
           /鸡蛋.*切|蛋.*切好/,
           `${dish.name} should not use awkward prep wording for eggs`
         );

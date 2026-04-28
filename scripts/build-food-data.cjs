@@ -745,6 +745,291 @@ const dishStepOverrides = {
   ]
 };
 
+function hasIngredient(ingredients, pattern) {
+  return ingredients.some((item) => pattern.test(item));
+}
+
+function hasChickenIngredient(ingredients) {
+  return ingredients.some((item) => /鸡|鸡翅|鸡翼|鸡腿|鸡肉|白条鸡/.test(item) && !/鸡蛋|鸭蛋|鹅蛋|鹌鹑蛋/.test(item));
+}
+
+function detailRole(ingredients) {
+  const protein =
+    ingredients.find((item) => /猪肝|猪肉末|猪肉|肉片|瘦肉|五花肉|猪里脊|牛肉|牛腩|羊肉|鸡|鸭|排骨|鱼|虾|蟹|贝|蛤|鱿|生蚝|鲍鱼|海参|肥牛|牛蛙|甲鱼|猪蹄|猪肠|粉肠|鸡肾/.test(item) && !/鸡蛋|鸭蛋|鹅蛋|鹌鹑蛋/.test(item)) ?? "";
+  const vegetable =
+    ingredients.find((item) => /菜|瓜|豆角|茄子|番茄|土豆|萝卜|莲藕|山药|玉米|芦笋|莴笋|木耳|香菇|金针菇|平菇|口蘑|菇|海带|笋|芹|韭|椒|洋葱/.test(item)) ?? "";
+  const egg = ingredients.find((item) => item === "鸡蛋") ?? "";
+  const tofu = ingredients.find((item) => /豆腐|豆干|腐竹|豆腐泡/.test(item)) ?? "";
+
+  return { protein, vegetable, egg, tofu };
+}
+
+function seasoningLine(name, ingredients, taste) {
+  if (/盐焗|咸鸡/.test(name)) return "调味以盐焗粉、姜粉或少量盐为主，先腌透再下锅，后面基本不用再补盐。";
+  if (/梅菜|咸酸菜|炸菜|咸鱼|咸蛋/.test(name) || hasIngredient(ingredients, /梅菜|咸酸菜|炸菜|咸鱼/)) {
+    return "咸味食材本身有盐，先用生抽和少许糖吊味，最后尝过再决定要不要补盐。";
+  }
+  if (/酸甜/.test(taste)) return "酸甜汁先在碗里调好，糖、醋和生抽要先化开，下锅后才能快速挂汁。";
+  if (/清甜|清淡|鲜/.test(taste)) return "调味保持轻，先用姜片去腥，最后只用盐或少许生抽收味，别把本味压住。";
+
+  return "调味用生抽、少许糖和白胡椒打底，盐最后少量多次补，避免越煮越咸。";
+}
+
+function detailedFishSteamSteps(name, ingredients, taste) {
+  const fish = ingredients.find((item) => /鱼/.test(item)) ?? ingredients[0];
+  return [
+    `${name}先处理${fish}：去鳞、鳃、内脏和鱼肚黑膜，靠骨的血水冲干净，这是去腥的第一步。`,
+    "鱼身两面斜划几刀，抹少许盐或料酒后静置 5-8 分钟，不要腌太久，久了鱼肉会紧。",
+    "盘底垫姜片和葱段，把鱼稍微架起来，蒸汽能从底部走，鱼肉受热更均匀。",
+    "蒸锅水一定烧开后再上鱼，中大火保持足蒸汽；1 斤左右的鱼通常 8-10 分钟。",
+    "判断熟度看鱼肉能被筷子轻轻拨开、靠骨处没有血色；不熟再补 1 分钟，不要一直硬蒸。",
+    "出锅后倒掉盘里的腥水和旧姜葱，这一步很关键，不然汤汁会腥。",
+    "重新铺葱姜丝，淋蒸鱼豉油或淡生抽，再浇一勺热油激香。",
+    `成品要${taste}、鱼肉嫩滑，热的时候马上吃；放久了鱼肉会老，香气也会散。`
+  ];
+}
+
+function detailedEggSteps(name, ingredients, method, taste) {
+  const { vegetable, protein } = detailRole(ingredients);
+  if (method === "蒸" || name.includes("蒸蛋")) {
+    return [
+      `${name}先把鸡蛋充分打散，按蛋液 1 份、温水约 1.5 份的比例加水，口感最稳。`,
+      protein ? `${protein}先用少许盐、生抽和淀粉抓匀，铺得薄一点，别堆成厚块。` : "如果加虾仁、肉末或蔬菜，先处理到小块，厚料不要直接压在蛋液里。",
+      "蛋液加一点盐后过筛，倒入浅碗，表面的泡沫撇掉，蒸出来才平滑。",
+      "碗口盖盘子或耐热保鲜膜，防止水汽滴进去形成蜂窝。",
+      "蒸锅水开后转中小火再上锅，保持微微冒汽，别用猛火冲。",
+      "蒸到表面凝固、轻晃像嫩豆腐，中心没有明显水波纹就关火焖 1-2 分钟。",
+      "出锅淋少许生抽或香油，葱花最后撒；给孩子吃可以少放酱油。",
+      "如果蒸老了通常是火太大或水太少；下次把火调小、碗换浅一点。"
+    ];
+  }
+
+  return [
+    `${name}先把鸡蛋打散，加少许盐和一小勺温水，炒出来会更嫩。`,
+    vegetable ? `${vegetable}洗净后沥干，切成容易入口的大小；水分太多会把蛋炒散。` : "配菜提前切好，调料放手边，蛋类下锅后节奏很快。",
+    protein ? `${protein}先用少许盐、白胡椒和淀粉抓匀，热锅快炒到变色后盛出。` : "锅要先烧热再倒油，蛋液下锅后边缘会快速定型。",
+    "先炒蛋到半凝固就盛出，不要等完全干硬；后面合锅还会继续受热。",
+    vegetable ? `锅里补一点油，先炒${vegetable}到断生，再把鸡蛋倒回去。` : "锅里补一点油，下配料炒香后再倒回鸡蛋。",
+    "合锅后用铲子轻推，不要反复压碎；看到蛋块还带一点湿润就可以调味。",
+    `${seasoningLine(name, ingredients, taste)}出锅前尝一口，蛋菜类宁可淡一点。`,
+    "成品要蛋嫩、配菜断生；如果锅里出水，说明菜没沥干或炒太久。"
+  ];
+}
+
+function detailedVegetableSteps(name, ingredients, method, taste) {
+  const main = ingredients[0];
+  if (method === "焯" || name.includes("白灼")) {
+    return [
+      `${name}先把${main}洗净，老梗削皮或对半切开，粗细尽量一致。`,
+      "锅里水要宽，水开后加盐和几滴油，能让颜色更亮、底味更稳。",
+      "先下粗梗，再下嫩叶或嫩尖；叶菜通常 30-60 秒，粗梗 1-2 分钟。",
+      "捞出后立刻沥水摆盘，水分太多会冲淡酱汁。",
+      "蒜末或姜丝用热油小火激香，别炒黑，焦蒜会发苦。",
+      "淋生抽、蚝油水或蒜香热油，酱汁不要盖过蔬菜本味。",
+      "判断熟度看颜色变翠、梗部能轻夹弯，仍有脆感就是最好。",
+      "如果芥兰、菜心这类梗比较粗，出锅前可以纵向切一刀，方便老人和孩子咬。",
+      "如果给老人吃，可以多焯 20 秒；想清爽就少油少蚝油。"
+    ];
+  }
+
+  if (method === "蒸") {
+    return [
+      `${name}先把${ingredients.join("、")}处理好，茄子、南瓜、山药这类切成厚薄接近的块。`,
+      "容易氧化或吸油的食材切好后先泡清水或抹少许油，颜色更好看。",
+      "蒜末或酱汁提前调好，蒸菜上锅后就不要临时找调料。",
+      "蒸锅水开后再上锅，中火保持蒸汽，食材铺开不要堆太厚。",
+      "蒸到筷子能轻松戳进主料就够，别蒸到出一盘水。",
+      "出锅后把多余水汽倒掉，再淋蒜蓉汁、生抽或热油。",
+      `${seasoningLine(name, ingredients, taste)}蒸菜最后调味，味道会更干净。`,
+      "成品要软而不烂；如果水汽太多，下次换浅盘或缩短 1-2 分钟。"
+    ];
+  }
+
+  return [
+    `${name}先把${ingredients.join("、")}洗净沥干，叶菜一定要甩干水，湿着下锅会变成煮菜。`,
+    "菜梗、厚片和叶子分开放，难熟的先下，易熟的最后下。",
+    "锅先烧热再倒油，蒜末用中小火炒香，闻到蒜香就转大火。",
+    "先下菜梗或厚片快速翻炒，沿锅边淋一点点水帮助断生，但不要倒成汤。",
+    "再下菜叶或嫩的部分，大火翻 30-60 秒，看到颜色变亮就准备调味。",
+    `${seasoningLine(name, ingredients, taste)}盐要最后放，太早放容易出水。`,
+    "判断熟度看菜梗能轻轻弯、叶片刚塌下去，锅底没有大量水。",
+    "出锅要快，盘子提前准备好；继续在锅里停留会发黄、变软。"
+  ];
+}
+
+function detailedSoupSteps(name, ingredients, method, taste) {
+  if (hasIngredient(ingredients, /猪肝/)) {
+    return [
+      `${name}要好喝，先把猪肝切薄片，越薄越嫩，厚片很容易外熟内腥。`,
+      "猪肝放清水里浸泡 20-30 分钟，中途换水 2 次，把血水泡出来。",
+      "沥干后加料酒、姜丝、白胡椒粉、淀粉和一点食用油抓匀，腌 10 分钟。",
+      "锅里加水和姜片，大火煮开；如果有瘦肉、菠菜梗或枸杞叶梗，可以先煮 2-3 分钟出底味。",
+      "转中火，把猪肝一片片放进去，不要一坨倒进去，防止粘成团。",
+      "猪肝变色后再煮 30 秒-1 分钟就够，不要久煮，久了会老、柴、腥。",
+      hasIngredient(ingredients, /枸杞/) ? "枸杞最后放，煮 30 秒就关火，早放会发酸发苦。" : "青菜或葱花最后放，颜色刚变绿就关火。",
+      "关火后加盐和少许白胡椒调味；汤要清甜不浑，关键就是泡血水和短时间煮。"
+    ];
+  }
+
+  const { protein, vegetable, tofu } = detailRole(ingredients);
+  const main = protein || tofu || vegetable || ingredients[0];
+  return [
+    `${name}先把${ingredients.join("、")}处理好，耐煮的切大一点，易熟的切小一点分开放。`,
+    protein && /排骨|鸡|鸭|牛腩|猪蹄/.test(protein)
+      ? `${protein}冷水下锅焯水，煮出浮沫后捞出冲净，汤才清。`
+      : protein
+        ? `${protein}切薄片或小块，用姜丝、少许盐和淀粉抓匀，后下锅会更嫩。`
+        : "汤底先用姜片或少许油把主料香味带出来，不需要重调味。",
+    method === "炖" ? "汤锅加足热水，先下耐煮主料，大火煮开后转中小火慢炖。" : "锅里加水和姜片，先下耐煮食材煮出清甜底味。",
+    vegetable ? `${vegetable}这类蔬菜后放，煮到刚软就好，久煮会发黄。` : `${main}煮到能被筷子轻松戳进，再放易熟配料。`,
+    tofu ? `${tofu}容易碎，汤小滚时再滑入锅里，少搅动。` : "中途如果水少，只补热水，不要加冷水打断汤味。",
+    `${seasoningLine(name, ingredients, taste)}汤类最后调盐，味道更清。`,
+    "判断到位看汤面清亮、主料熟透、蔬菜颜色还干净；浮沫要及时撇掉。",
+    "关火后撒葱花或滴几滴香油即可，家常汤不要用重酱料抢味。"
+  ];
+}
+
+function detailedMeatSteps(name, ingredients, method, taste) {
+  const { protein, vegetable, tofu } = detailRole(ingredients);
+  const main = protein || tofu || ingredients[0];
+  if (method === "蒸") {
+    return [
+      `${name}先把${ingredients.join("、")}处理好，肉类切成厚薄一致，方便同时熟。`,
+      /排骨|鸡|肉|牛|虾|鱼/.test(main) ? `${main}用姜丝、少许盐、生抽、淀粉和油抓匀，腌 10-15 分钟。` : "主料先沥干水分，蒸出来味道才不会淡。",
+      vegetable ? `${vegetable}铺盘底或切块垫底，既吸汁也防止主料粘盘。` : "盘子用浅盘，食材摊开，不要堆成小山。",
+      "蒸锅水开后再上锅，中火或中大火保持蒸汽，期间少开盖。",
+      "薄片、虾仁 6-8 分钟，鸡块或排骨 15-25 分钟，厚肉要看筷子能否戳透。",
+      "出锅后看盘底汤汁，清亮是正常，浑浊带血色说明还要补蒸。",
+      `${seasoningLine(name, ingredients, taste)}需要热油激香的，出锅后再淋。`,
+      "成品要嫩而熟透；如果口感柴，多半是腌制不够或蒸太久。"
+    ];
+  }
+
+  if (method === "焖" || method === "烧" || method === "炖") {
+    return [
+      `${name}先把${ingredients.join("、")}切成大小接近的块，耐煮主料和易熟配菜分开放。`,
+      /排骨|鸡|鸭|牛腩|猪蹄|羊/.test(main)
+        ? `${main}先焯水或煎香，去掉浮沫和腥味，表面收紧后再焖。`
+        : `${main}先用少许盐、生抽、淀粉和油抓匀，热锅快炒到变色。`,
+      "锅里下姜蒜炒香，再放主料翻到表面有香味，沿锅边淋生抽或米酒。",
+      "加热水到食材一半到八分高，盖盖中火焖；硬食材用热水，肉不会突然收缩。",
+      vegetable || tofu ? `${vegetable || tofu}后半段再放，避免主料还没软、配菜已经烂。` : "中途每 8-10 分钟看一次锅底，快干就补少量热水。",
+      `${seasoningLine(name, ingredients, taste)}颜色不够再用少许老抽，不要靠久煮上色。`,
+      "判断熟度看主料能轻松戳进、锅底还有一点汤汁；最后开盖大火收浓。",
+      "出锅前静置 2 分钟，汤汁会重新挂住食材，吃起来更入味。"
+    ];
+  }
+
+  if (method === "煎") {
+    return [
+      `${name}先把${ingredients.join("、")}处理好，表面水分擦干，煎的时候才不会溅油。`,
+      /豆腐/.test(main) ? "豆腐切厚块后轻压出水，肉馅或配料先调味，避免煎时散开。" : `${main}用少许盐、白胡椒和淀粉抓匀，静置 10 分钟。`,
+      "锅烧热后再倒油，油热再下主料；刚下锅不要急着翻。",
+      "看到边缘定型、底面金黄再翻面，鱼、豆腐、肉饼才不容易碎。",
+      vegetable ? `${vegetable}容易熟，等主料定型后再下，保持口感。` : "两面煎香后可以沿锅边淋少许热水或生抽，帮助内部熟透。",
+      `${seasoningLine(name, ingredients, taste)}煎菜调味要少量，汁太多会把香脆感泡掉。`,
+      "判断熟度看中心无生色、表面微焦但不黑；不确定就转小火多煎 1 分钟。",
+      "出锅前用厨房纸或锅边控一下油，入口更清爽。"
+    ];
+  }
+
+  return [
+    `${name}先把${ingredients.join("、")}分开处理：肉类逆纹切，水产去腥，蔬菜充分沥干，厚薄尽量一致。`,
+    protein ? `${protein}用少许盐、生抽、淀粉和油抓匀，腌 10 分钟，炒出来更嫩。` : "主料下锅前水分要擦干，锅气才出得来。",
+    vegetable ? `${vegetable}按难熟程度切好，厚片先下，薄片或叶子后下。` : "姜蒜、葱段和调味料提前放手边，炒菜节奏很快。",
+    "锅热后倒油，先下姜蒜或主料爆香；肉类变色就先盛出，避免炒老。",
+    vegetable ? `锅里补一点油炒${vegetable}，看到边缘变亮、略微变软时倒回主料。` : "再下配料快速翻炒，保持大火让香味出来。",
+    `${seasoningLine(name, ingredients, taste)}合锅后 30-60 秒内完成调味。`,
+    "判断到位看主料熟透、配菜断生、锅底没有大量水；如果出水就开大火快速收。",
+    "马上出锅装盘，别在锅里等人；家常炒菜的嫩和香都靠最后这几十秒。"
+  ];
+}
+
+function enrichOverrideSteps(name, category, ingredients, method, taste, overrideSteps) {
+  if (overrideSteps.length >= 7 && overrideSteps.join("").length >= 220) return overrideSteps;
+
+  const fallback = detailedGenericStepsFor(name, category, ingredients, method, taste);
+  const merged = [...overrideSteps];
+  for (const step of fallback) {
+    if (merged.length >= 12 && merged.join("").length >= 260) break;
+    if (!merged.some((existing) => existing.includes(step.slice(0, 8)))) {
+      merged.push(step);
+    }
+  }
+  return merged;
+}
+
+function detailedGenericStepsFor(name, category, ingredients, method, taste) {
+  if (method === "蒸" && hasIngredient(ingredients, /鱼/)) {
+    return detailedFishSteamSteps(name, ingredients, taste);
+  }
+  if (category === "蛋类" || ingredients.includes("鸡蛋")) {
+    return detailedEggSteps(name, ingredients, method, taste);
+  }
+  if (category === "素菜") {
+    return detailedVegetableSteps(name, ingredients, method, taste);
+  }
+  if (category === "汤" || method === "炖" || method === "煮") {
+    return detailedSoupSteps(name, ingredients, method, taste);
+  }
+
+  return detailedMeatSteps(name, ingredients, method, taste);
+}
+
+function extraRiskReminder(name, category, ingredients, method) {
+  if (hasIngredient(ingredients, /猪肝/)) {
+    return "额外提醒：猪肝最怕腥和老，必须泡出血水、薄切、用淀粉和油腌，入锅后变色再 30 秒-1 分钟就关火。";
+  }
+  if (/盐焗|咸鸡|鸡翼|鸡翅|鸡腿|白切鸡|滑鸡|鸡肉|白条鸡/.test(name) || hasChickenIngredient(ingredients)) {
+    return "额外提醒：鸡肉最怕外熟内生或久焗发柴，厚处要划开腌透，判断熟度看最厚处汁水清亮、没有血色。";
+  }
+  if (hasIngredient(ingredients, /鱼|鲈鱼|桂花鱼|鲫鱼|鲤鱼|带鱼|鲳鱼|黄骨鱼|鲩鱼|鲮鱼/)) {
+    return method === "蒸"
+      ? "额外提醒：鱼类最怕腥和蒸老，黑膜、血水和蒸出的腥水都要处理掉，水开上锅，熟了立刻离火。"
+      : "额外提醒：鱼类最怕腥和碎，血水要冲净，煎或焖时少翻动，靠骨处无血色就不要继续久煮。";
+  }
+  if (hasIngredient(ingredients, /虾|蟹|贝|蛤|鱿|生蚝|鲍鱼|海参/)) {
+    return "额外提醒：海鲜最怕腥和老，先去虾线、砂和内脏，变色或开口后就尽快收尾，久煮会缩水发韧。";
+  }
+  if (hasIngredient(ingredients, /牛肉|肥牛|牛排|羊肉|羊排/)) {
+    return "额外提醒：牛羊肉最怕柴，切片要逆纹，腌制要有淀粉和油，下锅大火快熟，变色后不要反复久炒。";
+  }
+  if (hasIngredient(ingredients, /猪肠|粉肠|鸡肾|猪蹄|猪手/)) {
+    return "额外提醒：内脏和猪手最怕异味，盐、面粉、姜酒和焯水不要省；猪手要焖到胶质出来，内脏断生后别久炒。";
+  }
+  if (/扣肉|五花|腩肉|梅菜/.test(name) || hasIngredient(ingredients, /五花肉|梅菜/)) {
+    return "额外提醒：扣肉类最怕油腻和夹硬，梅菜要泡洗炒干，肉要蒸到筷子能轻松戳进，汤汁最后单独收浓再淋回。";
+  }
+  if (category === "蛋类" || hasIngredient(ingredients, /鸡蛋|牛奶/)) {
+    return method === "蒸"
+      ? "额外提醒：蒸蛋最怕蜂窝和变老，蛋液要过筛、盖住碗口，中小火蒸，中心刚凝固就停。"
+      : "额外提醒：蛋类最怕炒老，蛋液半凝固就盛出或合锅，表面还带一点湿润时关火最嫩。";
+  }
+  if (hasIngredient(ingredients, /豆腐|豆干|腐竹|豆腐泡/)) {
+    return "额外提醒：豆腐最怕碎和淡，表面水分先按干，煎定型或小滚入味，翻动要轻，最后让汁挂住豆腐。";
+  }
+  if (/茶果|茶粿|艾糍|麻糬|糍粑|粄粽|汤丸|粉|面|饭/.test(name) || hasIngredient(ingredients, /糯米粉|粘米粉|粉丝|米粉|面条|米/)) {
+    return "额外提醒：粉米类最怕夹生、开裂或粘成团，水量要分次加，粉团要醒，粉丝和米饭下锅前要抖散。";
+  }
+  if (category === "素菜" || hasIngredient(ingredients, /菜|瓜|芥兰|生菜|菜心|空心菜|油麦菜|菠菜|上海青/)) {
+    return "额外提醒：青菜最怕出水发黄，洗完一定沥干，大火快炒或短时间焯水，盐最后放，断生立刻出锅。";
+  }
+  if (method === "蒸") {
+    return "额外提醒：蒸菜最怕水汽重和过火，水开后再上锅，食材摊薄，出锅倒掉多余水汽再调味。";
+  }
+  if (method === "焖" || method === "烧" || method === "炖") {
+    return "额外提醒：焖烧类最怕糊底和主料发硬，全程用热水，中途看锅底，快干就少量补水，最后再收汁。";
+  }
+
+  return "额外提醒：这道菜最怕火候拖太久、主料变老或过火，主料熟透、配菜断生后就收尾，出锅前先尝味再补盐。";
+}
+
+function withExtraRiskReminder(name, category, ingredients, method, steps) {
+  const next = steps.filter((step) => !step.startsWith("额外提醒："));
+  next.push(extraRiskReminder(name, category, ingredients, method));
+  return next;
+}
+
 function detailedHakkaStepsFor(name, category, ingredients, method, taste) {
   const has = (pattern) => pattern.test(name);
   const includes = (item) => ingredients.includes(item);
@@ -981,53 +1266,16 @@ function detailedHakkaStepsFor(name, category, ingredients, method, taste) {
 }
 
 function stepsFor(name, category, ingredients, method, taste) {
+  let steps;
   if (dishStepOverrides[name]) {
-    return dishStepOverrides[name];
+    steps = enrichOverrideSteps(name, category, ingredients, method, taste, dishStepOverrides[name]);
+  } else if (cook1cookHakkaDishNameSet.has(name)) {
+    steps = detailedHakkaStepsFor(name, category, ingredients, method, taste);
+  } else {
+    steps = detailedGenericStepsFor(name, category, ingredients, method, taste);
   }
 
-  if (cook1cookHakkaDishNameSet.has(name)) {
-    return detailedHakkaStepsFor(name, category, ingredients, method, taste);
-  }
-
-  const main = ingredients[0];
-  if (method === "蒸") {
-    return [
-      `${ingredients.join("、")}处理干净，按入口大小切好。`,
-      `主料用少许盐、生抽和姜葱抓匀，铺入浅盘。`,
-      `水开后上锅蒸到熟透，出锅前倒掉多余水汽。`,
-      `淋少许热油或蒸鱼豉油，保持${taste}口味。`
-    ];
-  }
-  if (method === "煮" || method === "炖") {
-    return [
-      `${ingredients.join("、")}洗净切好，肉类先焯水或简单腌制。`,
-      `锅里加水和姜片，先下耐煮食材煮出底味。`,
-      `再放易熟食材，中小火煮到软熟。`,
-      `最后加盐调味，尝味后撒葱花出锅。`
-    ];
-  }
-  if (method === "焖" || method === "烧") {
-    return [
-      `${ingredients.join("、")}切成大小接近的块，${main}先煎或炒香。`,
-      `加入姜蒜和少许生抽翻匀，再加热水没过一半。`,
-      `盖上锅盖中火焖到主料软熟。`,
-      `开盖收汁，按家人口味补盐后出锅。`
-    ];
-  }
-  if (method === "拌") {
-    return [
-      `${ingredients.join("、")}洗净处理，能生吃的切条，需断生的先焯水。`,
-      `蒜末、生抽、少许醋和香油调成料汁。`,
-      `食材沥干后和料汁拌匀。`,
-      `放 3 分钟入味，开饭前再装盘。`
-    ];
-  }
-  return [
-    `${ingredients.join("、")}洗净切好，肉类或水产提前用少许盐和淀粉抓匀。`,
-    `热锅加油，先炒香姜蒜，再下不易熟的食材。`,
-    `转大火快速翻炒，按顺序放入易熟食材。`,
-    `加盐或生抽调味，保持${taste}，断生后立刻出锅。`
-  ];
+  return withExtraRiskReminder(name, category, ingredients, method, steps);
 }
 
 function dishTime(category, method) {

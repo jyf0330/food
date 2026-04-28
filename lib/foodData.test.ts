@@ -171,7 +171,32 @@ describe("curated food data", () => {
     for (const dish of dishes) {
       assert.ok(dish.dish_name, "dish should have a name");
       assert.ok(dish.main_ingredients.length >= 1, `${dish.dish_name} needs ingredients`);
-      assert.ok(dish.steps.length >= 3, `${dish.dish_name} needs original steps`);
+      assert.ok(dish.steps.length >= 7, `${dish.dish_name} needs detailed original steps`);
+      assert.ok(
+        dish.steps.join("").length >= 220,
+        `${dish.dish_name} should be detailed enough for user review`
+      );
+      assert.doesNotMatch(
+        dish.steps.join("\n"),
+        /洗净切好|按入口大小切好|再下不易熟的食材|快速翻炒，按顺序|水开后上锅蒸到熟透|盖上锅盖中火焖到主料软熟/,
+        `${dish.dish_name} should not use generic placeholder steps`
+      );
+      assert.ok(
+        dish.steps.some((step) => /^额外提醒：/.test(step)),
+        `${dish.dish_name} needs an extra risk reminder`
+      );
+      assert.match(
+        dish.steps.find((step) => /^额外提醒：/.test(step)) ?? "",
+        /腥|老|柴|出水|糊底|碎|苦|硬|散|粘|夹生|过火|蜂窝|久煮|异味|缩水|发韧/,
+        `${dish.dish_name} risk reminder should name a real failure mode`
+      );
+      if (dish.main_ingredients.includes("鸡蛋") && !dish.main_ingredients.some((item) => /鸡翅|鸡翼|鸡腿|鸡肉|白条鸡/.test(item))) {
+        assert.doesNotMatch(
+          dish.steps.join("\n"),
+          /鸡肉最怕|汁水清亮、没有血色|鸡蛋先用.*淀粉抓匀/,
+          `${dish.dish_name} should not treat eggs as chicken meat`
+        );
+      }
       assert.ok(
         dish.shopping_amount_for_3_people?.length,
         `${dish.dish_name} needs shopping amounts`
