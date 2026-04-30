@@ -15,7 +15,7 @@ const priceRows = priceBaseline as PriceRow[];
 const nutritionRows = nutrition as { name: string; tags?: string[] }[];
 const ingredientRows = ingredients as { standard_name: string; season_months: number[] }[];
 const monthlySeason = shenzhenSeason.monthly as Record<string, string[]>;
-const greenhouseBackups = ["番茄", "青瓜", "生菜", "上海青", "西兰花", "金针菇", "绿豆芽", "黄豆芽"];
+const greenhouseBackups = ["菜心", "番茄", "青瓜", "生菜", "上海青", "西兰花", "金针菇", "绿豆芽", "黄豆芽"];
 const priceByName = new Map(priceRows.map((item) => [item.name, item]));
 
 type PriceTier = "便宜" | "正常" | "偏贵" | "很贵";

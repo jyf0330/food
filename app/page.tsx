@@ -1,7 +1,7 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import {
   readDishEngagement,
   toggleDishEngagement,
@@ -11,7 +11,9 @@ import {
   DEFAULT_HOME_DISH_NAMES,
   HOME_DISH_POOL,
   homeDishesFromNames,
+  normalizeHomeDishNames,
   refreshUnselectedHomeDishes,
+  searchHomeDishes,
 } from "@/lib/homeDishes";
 import { nextResultVariant } from "@/lib/resultVariant";
 
@@ -20,26 +22,16 @@ const VISIBLE_DISHES_KEY = "san-zhuo-cai:home-visible-dishes";
 const HOME_USER_ID_KEY = "san-zhuo-cai:home-user-id";
 const HOME_DISH_COUNT = 12;
 
-const knownHomeDishes = new Set(HOME_DISH_POOL.map((dish) => dish.name));
-
-const normalizeDishNames = (value: unknown, fallback: string[]) => {
-  if (!Array.isArray(value)) return fallback;
-
-  const names = Array.from(
-    new Set(
-      value
-        .filter((item): item is string => typeof item === "string")
-        .map((item) => item.trim())
-        .filter((name) => knownHomeDishes.has(name))
-    )
-  ).slice(0, HOME_DISH_COUNT);
-
-  return names.length ? names : fallback;
-};
-
-const readJsonList = (key: string, fallback: string[]) => {
+const readJsonList = (
+  key: string,
+  fallback: string[],
+  options: { allowEmpty?: boolean } = {}
+) => {
   try {
-    return normalizeDishNames(JSON.parse(localStorage.getItem(key) ?? "null"), fallback);
+    return normalizeHomeDishNames(JSON.parse(localStorage.getItem(key) ?? "null"), fallback, {
+      ...options,
+      limit: HOME_DISH_COUNT,
+    });
   } catch {
     return fallback;
   }
@@ -91,16 +83,32 @@ export default function HomePage() {
   const [likeCounts, setLikeCounts] = useState<Record<string, number>>({});
   const [likedToday, setLikedToday] = useState<string[]>([]);
   const [filter, setFilter] = useState<"all" | "saved">("all");
+  const [searchOpen, setSearchOpen] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
   const [userId, setUserId] = useState("");
   const [loading, setLoading] = useState(false);
+  const searchInputRef = useRef<HTMLInputElement>(null);
 
   const visibleDishes = useMemo(() => homeDishesFromNames(visibleDishNames), [visibleDishNames]);
-  const filteredDishes = useMemo(
-    () =>
+  const trimmedSearchQuery = searchQuery.trim();
+  const filteredDishes = useMemo(() => {
+    const sourceDishes = trimmedSearchQuery ? HOME_DISH_POOL : visibleDishes;
+    const baseDishes =
       filter === "saved"
-        ? visibleDishes.filter((dish) => engagement.saved.includes(dish.name))
-        : visibleDishes,
-    [engagement.saved, filter, visibleDishes]
+        ? sourceDishes.filter((dish) => engagement.saved.includes(dish.name))
+        : sourceDishes;
+
+    if (!trimmedSearchQuery) return baseDishes;
+
+    return searchHomeDishes(baseDishes, trimmedSearchQuery);
+  }, [engagement.saved, filter, trimmedSearchQuery, visibleDishes]);
+  const likeDishNamesParam = useMemo(
+    () =>
+      filteredDishes
+        .slice(0, 80)
+        .map((dish) => dish.name)
+        .join(","),
+    [filteredDishes]
   );
   const selectedSummary = selectedDishes.slice(0, 2).join("、");
   const selectedMoreCount = Math.max(0, selectedDishes.length - 2);
@@ -108,7 +116,9 @@ export default function HomePage() {
   useEffect(() => {
     const nextVisible = readJsonList(VISIBLE_DISHES_KEY, DEFAULT_HOME_DISH_NAMES);
     setVisibleDishNames(nextVisible);
-    setSelectedDishes(readJsonList(SELECTED_DISHES_KEY, DEFAULT_HOME_DISH_NAMES.slice(0, 4)));
+    setSelectedDishes(
+      readJsonList(SELECTED_DISHES_KEY, DEFAULT_HOME_DISH_NAMES.slice(0, 4), { allowEmpty: true })
+    );
     setUserId(getHomeUserId());
     try {
       setEngagement(readDishEngagement(localStorage));
@@ -118,9 +128,9 @@ export default function HomePage() {
   }, []);
 
   useEffect(() => {
-    if (!userId || visibleDishNames.length === 0) return;
+    if (!userId || !likeDishNamesParam) return;
     const params = new URLSearchParams({
-      dishes: visibleDishNames.join(","),
+      dishes: likeDishNamesParam,
       userId,
       date: todayKey(),
     });
@@ -135,7 +145,12 @@ export default function HomePage() {
       .catch(() => {
         // Like counts are social proof; menu selection should still work without them.
       });
-  }, [userId, visibleDishNames]);
+  }, [likeDishNamesParam, userId]);
+
+  useEffect(() => {
+    if (!searchOpen) return;
+    searchInputRef.current?.focus();
+  }, [searchOpen]);
 
   const setAndPersistSelectedDishes = (next: string[]) => {
     setSelectedDishes(next);
@@ -159,6 +174,15 @@ export default function HomePage() {
     setAndPersistVisibleDishes(
       refreshUnselectedHomeDishes(visibleDishNames, selectedDishes, Date.now())
     );
+  };
+
+  const toggleSearch = () => {
+    setSearchOpen((current) => {
+      if (current) {
+        setSearchQuery("");
+      }
+      return !current;
+    });
   };
 
   const toggleSaved = (dishName: string) => {
@@ -213,26 +237,58 @@ export default function HomePage() {
         <p>选中要做的，没选中的可以刷新；每天每道菜能点一次赞。</p>
       </header>
 
-      <section className="home-toolbar" aria-label="菜品操作">
-        <div className="home-filter">
-          <button
-            type="button"
-            className={filter === "all" ? "active" : ""}
-            onClick={() => setFilter("all")}
-          >
-            全部
-          </button>
-          <button
-            type="button"
-            className={filter === "saved" ? "active" : ""}
-            onClick={() => setFilter("saved")}
-          >
-            收藏
-          </button>
+      <section className={`home-toolbar${searchOpen ? " searching" : ""}`} aria-label="菜品操作">
+        <div className="home-toolbar-row">
+          <div className="home-filter">
+            <button
+              type="button"
+              className={filter === "all" ? "active" : ""}
+              onClick={() => setFilter("all")}
+            >
+              全部
+            </button>
+            <button
+              type="button"
+              className={filter === "saved" ? "active" : ""}
+              onClick={() => setFilter("saved")}
+            >
+              收藏
+            </button>
+          </div>
+          <div className="home-toolbar-actions">
+            <button
+              type="button"
+              className={`home-link-btn${searchOpen ? " active" : ""}`}
+              aria-expanded={searchOpen}
+              aria-controls="home-dish-search"
+              onClick={toggleSearch}
+            >
+              {searchOpen ? "收起" : "搜索"}
+            </button>
+            <button type="button" className="home-link-btn" onClick={refreshDishes}>
+              刷新
+            </button>
+          </div>
         </div>
-        <button type="button" className="home-link-btn" onClick={refreshDishes}>
-          刷新
-        </button>
+
+        {searchOpen ? (
+          <label className="home-search" htmlFor="home-dish-search">
+            <span className="sr-only">搜索菜名</span>
+            <input
+              id="home-dish-search"
+              ref={searchInputRef}
+              type="search"
+              value={searchQuery}
+              placeholder="搜菜名、分类或口味"
+              onChange={(event) => setSearchQuery(event.target.value)}
+            />
+            {searchQuery ? (
+              <button type="button" aria-label="清空搜索" onClick={() => setSearchQuery("")}>
+                清空
+              </button>
+            ) : null}
+          </label>
+        ) : null}
       </section>
 
       <section className="dish-picker-section" aria-label="选择今天想吃的菜">
@@ -283,6 +339,14 @@ export default function HomePage() {
                 </article>
               );
             })}
+          </div>
+        ) : trimmedSearchQuery ? (
+          <div className="empty-saved">
+            <strong>没找到这道菜</strong>
+            <p>换个菜名、分类或口味试试，比如“汤”“快手”“番茄”。</p>
+            <button type="button" onClick={() => setSearchQuery("")}>
+              清空搜索
+            </button>
           </div>
         ) : (
           <div className="empty-saved">

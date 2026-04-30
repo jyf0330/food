@@ -129,7 +129,7 @@ const MONTHLY_SEASON = {
   12: ["白萝卜", "白菜", "菜心", "芥兰", "莴笋"]
 };
 
-const GREENHOUSE_BACKUPS = ["番茄", "青瓜", "生菜", "上海青", "西兰花", "金针菇", "绿豆芽", "黄豆芽"];
+const GREENHOUSE_BACKUPS = ["菜心", "番茄", "青瓜", "生菜", "上海青", "西兰花", "金针菇", "绿豆芽", "黄豆芽"];
 
 function currentMonth() {
   return new Date().getMonth() + 1;

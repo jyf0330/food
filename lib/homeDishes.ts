@@ -40,9 +40,38 @@ export const HOME_DISH_POOL: HomeDish[] = (dishesSeed as SeedDish[]).map((dish) 
 }));
 
 const dishByName = new Map(HOME_DISH_POOL.map((dish) => [dish.name, dish]));
+const knownHomeDishNames = new Set(HOME_DISH_POOL.map((dish) => dish.name));
 
 export function homeDishesFromNames(names: string[]): HomeDish[] {
   return names.map((name) => dishByName.get(name)).filter((dish): dish is HomeDish => Boolean(dish));
+}
+
+export function normalizeHomeDishNames(
+  value: unknown,
+  fallback: string[],
+  options: { allowEmpty?: boolean; limit?: number } = {}
+): string[] {
+  if (!Array.isArray(value)) return fallback;
+
+  const names = Array.from(
+    new Set(
+      value
+        .filter((item): item is string => typeof item === "string")
+        .map((item) => item.trim())
+        .filter((name) => knownHomeDishNames.has(name))
+    )
+  ).slice(0, options.limit ?? DEFAULT_HOME_DISH_NAMES.length);
+
+  return names.length || options.allowEmpty ? names : fallback;
+}
+
+export function searchHomeDishes(dishes: HomeDish[], query: string): HomeDish[] {
+  const keyword = query.trim().toLowerCase();
+  if (!keyword) return dishes;
+
+  return dishes.filter((dish) =>
+    [dish.name, dish.category, dish.note].some((value) => value.toLowerCase().includes(keyword))
+  );
 }
 
 function rotatePool(seed: number): HomeDish[] {
