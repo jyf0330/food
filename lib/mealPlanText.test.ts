@@ -1,6 +1,6 @@
 import assert from "node:assert/strict";
 import { describe, it } from "node:test";
-import { formatMealPlanCopyText } from "./mealPlanText";
+import { formatMealPlanCopyHtml, formatMealPlanCopyText } from "./mealPlanText";
 import type { MealPlan } from "./types";
 
 const plan: MealPlan = {
@@ -50,5 +50,33 @@ describe("formatMealPlanCopyText", () => {
     assert.match(text, /【每道菜做法】\n## 番茄炒蛋\n\n材料：番茄 3 个、鸡蛋 4 个/);
     assert.match(text, /做法：\n1\. 番茄切块，鸡蛋打散。/);
     assert.match(text, /小技巧：\n- 鸡蛋别炒老。/);
+  });
+});
+
+describe("formatMealPlanCopyHtml", () => {
+  it("formats a standalone HTML recipe page and escapes dynamic content", () => {
+    const html = formatMealPlanCopyHtml({
+      ...plan,
+      title: "番茄炒蛋 < 蒜蓉菜心",
+      dishes: [
+        {
+          ...plan.dishes[0],
+          name: "番茄炒蛋 & 菜心",
+          reason: "快手 < 下饭",
+        },
+      ],
+    });
+
+    assert.match(html, /^<!doctype html>/);
+    assert.match(html, /<title>今天吃什么：番茄炒蛋 &lt; 蒜蓉菜心<\/title>/);
+    assert.match(html, /<h1>番茄炒蛋 &lt; 蒜蓉菜心<\/h1>/);
+    assert.match(html, /<h2>菜单<\/h2>/);
+    assert.match(html, /番茄炒蛋 &amp; 菜心/);
+    assert.match(html, /快手 &lt; 下饭/);
+    assert.match(html, /<h2>买菜清单<\/h2>/);
+    assert.match(html, /<h2>按点上桌<\/h2>/);
+    assert.match(html, /<h2>每道菜做法<\/h2>/);
+    assert.match(html, /材料：番茄 3 个、鸡蛋 4 个/);
+    assert.doesNotMatch(html, /快手 < 下饭/);
   });
 });

@@ -16,6 +16,7 @@ import {
   searchHomeDishes,
 } from "@/lib/homeDishes";
 import { nextResultVariant } from "@/lib/resultVariant";
+import { buildResultUrl } from "@/lib/resultUrl";
 
 const SELECTED_DISHES_KEY = "san-zhuo-cai:home-selected-dishes";
 const VISIBLE_DISHES_KEY = "san-zhuo-cai:home-visible-dishes";
@@ -43,14 +44,6 @@ const writeJsonList = (key: string, value: string[]) => {
   } catch {
     // Storage can be unavailable; current-session state still works.
   }
-};
-
-const buildResultUrl = (selectedDishes: string[]) => {
-  const params = new URLSearchParams({
-    selectedDishes: selectedDishes.join(","),
-    variant: String(nextResultVariant()),
-  });
-  return `/result?${params.toString()}`;
 };
 
 const todayKey = () => {
@@ -226,7 +219,7 @@ export default function HomePage() {
   const generateRecipe = () => {
     if (selectedDishes.length === 0) return;
     setLoading(true);
-    router.push(buildResultUrl(selectedDishes));
+    router.push(buildResultUrl(selectedDishes, nextResultVariant()));
   };
 
   return (
@@ -272,22 +265,30 @@ export default function HomePage() {
         </div>
 
         {searchOpen ? (
-          <label className="home-search" htmlFor="home-dish-search">
-            <span className="sr-only">搜索菜名</span>
-            <input
-              id="home-dish-search"
-              ref={searchInputRef}
-              type="search"
-              value={searchQuery}
-              placeholder="搜菜名、分类或口味"
-              onChange={(event) => setSearchQuery(event.target.value)}
-            />
-            {searchQuery ? (
-              <button type="button" aria-label="清空搜索" onClick={() => setSearchQuery("")}>
-                清空
-              </button>
+          <div className="home-search-wrap">
+            <label className="home-search" htmlFor="home-dish-search">
+              <span className="sr-only">搜索菜名</span>
+              <input
+                id="home-dish-search"
+                ref={searchInputRef}
+                type="search"
+                value={searchQuery}
+                placeholder="搜菜名、分类、口味或食材"
+                onChange={(event) => setSearchQuery(event.target.value)}
+              />
+              {searchQuery ? (
+                <button type="button" aria-label="清空搜索" onClick={() => setSearchQuery("")}>
+                  清空
+                </button>
+              ) : null}
+            </label>
+            {trimmedSearchQuery ? (
+              <p className="home-search-status">
+                全部菜库找到 {filteredDishes.length} 道
+                {filter === "saved" ? "收藏菜" : "菜"}
+              </p>
             ) : null}
-          </label>
+          </div>
         ) : null}
       </section>
 

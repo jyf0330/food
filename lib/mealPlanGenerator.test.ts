@@ -141,12 +141,17 @@ describe("buildGenerateResponse", () => {
           `${dish.name} should include a material line`
         );
         assert.ok(
-          dish.steps?.some((step) => /^处理：/.test(step)),
+          dish.steps?.some((step) => /切|腌|沥干|打散|浸泡|分开放|调料/.test(step)),
           `${dish.name} should include prep guidance`
         );
         assert.ok(
-          dish.steps?.some((step) => /^下锅：/.test(step)),
+          dish.steps?.some((step) => /锅|蒸|煮|炒|焖|煎|焯/.test(step)),
           `${dish.name} should include cooking guidance`
+        );
+        assert.doesNotMatch(
+          dish.steps?.join("\n") ?? "",
+          /^(处理|下锅)：/m,
+          `${dish.name} should not use mechanical step prefixes`
         );
         assert.ok(
           dish.steps?.some((step) => /^判断：/.test(step)),

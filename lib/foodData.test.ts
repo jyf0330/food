@@ -129,6 +129,16 @@ describe("curated food data", () => {
     assert.match(sourceText, /category\/312/);
   });
 
+  it("keeps Cook1Cook imported dish names free of source-page prefixes", () => {
+    const hakkaNames = cook1cookHakkaDishNames();
+    const noisyPrefix = /^(经典|家常|简易|影音|传统|省火|有心|懒人|不失败|夏日|一品)/;
+
+    for (const name of hakkaNames) {
+      assert.doesNotMatch(name, noisyPrefix, `${name} should not keep source-page wording`);
+      assert.doesNotMatch(name, /示范|影片|影音|食谱|料理|之[一二三]|二$/, `${name} should read like a dish name`);
+    }
+  });
+
   it("gives every Cook1Cook Hakka candidate detailed project-style cooking steps", () => {
     const hakkaNames = cook1cookHakkaDishNames();
     const byName = new Map(dishes.map((dish) => [dish.dish_name, dish]));
@@ -175,6 +185,11 @@ describe("curated food data", () => {
       assert.ok(
         dish.steps.join("").length >= 220,
         `${dish.dish_name} should be detailed enough for user review`
+      );
+      assert.doesNotMatch(
+        dish.steps.join("\n"),
+        /处理：|下锅：/,
+        `${dish.dish_name} should not use mechanical cooking-step labels`
       );
       assert.doesNotMatch(
         dish.steps.join("\n"),

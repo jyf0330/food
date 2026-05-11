@@ -5,6 +5,7 @@ export type HomeDish = {
   category: string;
   time: number;
   note: string;
+  searchKeywords: string[];
 };
 
 type SeedDish = (typeof dishesSeed)[number];
@@ -32,12 +33,36 @@ const noteForDish = (dish: SeedDish) => {
   return `${taste}下饭`;
 };
 
-export const HOME_DISH_POOL: HomeDish[] = (dishesSeed as SeedDish[]).map((dish) => ({
-  name: dish.dish_name,
-  category: dish.category,
-  time: dish.time_minutes,
-  note: noteForDish(dish),
-}));
+const compactSearchText = (value: string) => value.trim().toLowerCase().replace(/\s+/g, "");
+
+const searchKeywordsForDish = (dish: SeedDish, note: string) =>
+  [
+    dish.dish_name,
+    dish.category,
+    dish.cuisine,
+    note,
+    ...(dish.taste ?? []),
+    ...(dish.main_ingredients ?? []),
+    ...(dish.optional_ingredients ?? []),
+    ...(dish.region_style ?? []),
+    ...(dish.suitable_people ?? []),
+    ...(dish.cooking_methods ?? []),
+    ...(dish.avoid_tags ?? []),
+  ]
+    .filter((value): value is string => typeof value === "string" && value.trim().length > 0)
+    .map(compactSearchText);
+
+export const HOME_DISH_POOL: HomeDish[] = (dishesSeed as SeedDish[]).map((dish) => {
+  const note = noteForDish(dish);
+
+  return {
+    name: dish.dish_name,
+    category: dish.category,
+    time: dish.time_minutes,
+    note,
+    searchKeywords: searchKeywordsForDish(dish, note),
+  };
+});
 
 const dishByName = new Map(HOME_DISH_POOL.map((dish) => [dish.name, dish]));
 const knownHomeDishNames = new Set(HOME_DISH_POOL.map((dish) => dish.name));
@@ -66,11 +91,16 @@ export function normalizeHomeDishNames(
 }
 
 export function searchHomeDishes(dishes: HomeDish[], query: string): HomeDish[] {
-  const keyword = query.trim().toLowerCase();
-  if (!keyword) return dishes;
+  const keywords = query
+    .split(/\s+/)
+    .map(compactSearchText)
+    .filter(Boolean);
+  if (!keywords.length) return dishes;
 
   return dishes.filter((dish) =>
-    [dish.name, dish.category, dish.note].some((value) => value.toLowerCase().includes(keyword))
+    keywords.every((keyword) =>
+      dish.searchKeywords.some((value) => value.includes(keyword))
+    )
   );
 }
 

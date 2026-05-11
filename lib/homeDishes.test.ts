@@ -38,9 +38,27 @@ describe("home dishes", () => {
 
   it("searches dishes by name, category and note", () => {
     const dishes: HomeDish[] = [
-      { name: "番茄炒蛋", category: "快手菜", time: 10, note: "酸甜下饭" },
-      { name: "紫菜蛋花汤", category: "汤", time: 8, note: "热乎有汤" },
-      { name: "白灼芥兰", category: "蔬菜", time: 12, note: "清爽快手" },
+      {
+        name: "番茄炒蛋",
+        category: "快手菜",
+        time: 10,
+        note: "酸甜下饭",
+        searchKeywords: ["番茄炒蛋", "快手菜", "酸甜下饭", "番茄", "鸡蛋"],
+      },
+      {
+        name: "紫菜蛋花汤",
+        category: "汤",
+        time: 8,
+        note: "热乎有汤",
+        searchKeywords: ["紫菜蛋花汤", "汤", "热乎有汤", "紫菜", "鸡蛋"],
+      },
+      {
+        name: "白灼芥兰",
+        category: "蔬菜",
+        time: 12,
+        note: "清爽快手",
+        searchKeywords: ["白灼芥兰", "蔬菜", "清爽快手", "芥兰"],
+      },
     ];
 
     assert.deepEqual(searchHomeDishes(dishes, "番茄").map((dish) => dish.name), ["番茄炒蛋"]);
@@ -48,6 +66,13 @@ describe("home dishes", () => {
     assert.deepEqual(searchHomeDishes(dishes, "快手").map((dish) => dish.name), [
       "番茄炒蛋",
       "白灼芥兰",
+    ]);
+    assert.deepEqual(searchHomeDishes(dishes, "鸡蛋").map((dish) => dish.name), [
+      "番茄炒蛋",
+      "紫菜蛋花汤",
+    ]);
+    assert.deepEqual(searchHomeDishes(dishes, "鸡蛋 汤").map((dish) => dish.name), [
+      "紫菜蛋花汤",
     ]);
   });
 });

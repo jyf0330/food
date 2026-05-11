@@ -594,18 +594,18 @@ function buildPrepStep(dish, request) {
   }
 
   if (dish.category === "蛋类" && hasEgg) {
-    return `${beginnerPrefix}鸡蛋先打散，${mainWithoutEgg || "配菜"}洗净处理好；下锅前把盐和生抽放在手边，别炒到一半才找调料。`;
+    return `${beginnerPrefix}鸡蛋先打散，${mainWithoutEgg || "配菜"}洗净备好；盐和生抽放在手边，别炒到一半才找调料。`;
   }
 
   if (hasFish) {
-    return `${beginnerPrefix}${ingredients.join("、")}处理干净，鱼肚黑膜和血水要冲掉；盘底垫姜葱，腥味会轻很多。`;
+    return `${beginnerPrefix}${ingredients.join("、")}收拾干净，鱼肚黑膜和血水要冲掉；盘底垫姜葱，腥味会轻很多。`;
   }
 
   if (dish.category === "素菜") {
-    return `${beginnerPrefix}${ingredients.join("、")}洗净沥干，菜梗和菜叶尽量分开；水太多会变成煮菜，别湿着下锅。`;
+    return `${beginnerPrefix}${ingredients.join("、")}洗净沥干，菜梗和菜叶尽量分开；水太多会变成煮菜，入锅前要甩干。`;
   }
 
-  return `${beginnerPrefix}${ingredients.join("、")}提前处理好，容易熟的和耐煮的分开放；肉类可以先用少许盐、淀粉和油抓匀。`;
+  return `${beginnerPrefix}${ingredients.join("、")}先备好，容易熟的和耐煮的分开放；肉类可以先用少许盐、淀粉和油抓匀。`;
 }
 
 function buildMethodStep(dish) {
@@ -625,14 +625,14 @@ function buildMethodStep(dish) {
 
   if (method === "炒") {
     if (dish.category === "素菜") {
-      return "锅热后再倒油，先下蒜末炒香，再放菜梗，最后放菜叶；看到菜色变亮、边缘变软就说明快好了，别一直炒到出水。";
+      return "锅热后再倒油，先用蒜末炒香，再放菜梗，最后放菜叶；看到菜色变亮、边缘变软就说明快好了，别一直炒到出水。";
     }
 
-    return "锅热后再倒油，先下蒜姜或肉类打底，再放蔬菜；看到菜色变亮、边缘变软就说明快好了，别一直炒到出水。";
+    return "锅热后再倒油，先用蒜姜或肉类打底，再放蔬菜；看到菜色变亮、边缘变软就说明快好了，别一直炒到出水。";
   }
 
   if (method === "煮" || method === "炖") {
-    return "先下耐煮食材煮出底味，再下易熟食材；看到汤面小滚、食材能被筷子轻松戳进，就可以准备调味。";
+    return "耐煮食材先煮出底味，再放易熟食材；看到汤面小滚、食材能被筷子轻松戳进，就可以准备调味。";
   }
 
   if (method === "焖" || method === "烧") {
@@ -640,14 +640,14 @@ function buildMethodStep(dish) {
   }
 
   if (method === "煎") {
-    return "锅和油都热了再下锅，先别急着翻面；看到边缘定型、底面金黄再翻，鱼肉和豆腐才不容易碎。";
+    return "锅和油都热了再放主料，先别急着翻面；看到边缘定型、底面金黄再翻，鱼肉和豆腐才不容易碎。";
   }
 
   if (method === "焯") {
-    return "水开后加一点盐和油再下菜；看到颜色变翠、梗部略软就捞出，不要久煮。";
+    return "水开后加一点盐和油再放菜；看到颜色变翠、梗部略软就捞出，不要久煮。";
   }
 
-  return "按从难熟到易熟的顺序下锅；看到食材颜色和质地明显变化，再进入调味收尾。";
+  return "按从难熟到易熟的顺序入锅；看到食材颜色和质地明显变化，再进入调味收尾。";
 }
 
 function buildCoachSteps(dish, request) {

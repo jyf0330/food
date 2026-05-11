@@ -1,7 +1,8 @@
 "use client";
 
 import type { MealPlan } from "@/lib/types";
-import { formatMealPlanCopyText } from "@/lib/mealPlanText";
+import { formatMealPlanCopyHtml, formatMealPlanCopyText } from "@/lib/mealPlanText";
+import { appendResultPlanIndex } from "@/lib/resultUrl";
 import type { PlanMemoryForm } from "./PlanMemoryActions";
 import { useState } from "react";
 
@@ -21,7 +22,7 @@ export default function PlanSwitcher({
   plans,
   initialSelectedIndex,
 }: PlanSwitcherProps) {
-  const [copied, setCopied] = useState(false);
+  const [copiedAction, setCopiedAction] = useState<"text" | "html" | "link" | null>(null);
   const plan = plans[initialSelectedIndex] as PlanWithOptionalSchedule | undefined;
 
   if (!plan) {
@@ -40,8 +41,12 @@ export default function PlanSwitcher({
     document.body.removeChild(textarea);
   };
 
-  const copyPlan = async () => {
-    const text = formatMealPlanCopyText(plan as MealPlan);
+  const markCopied = (action: "text" | "html" | "link") => {
+    setCopiedAction(action);
+    window.setTimeout(() => setCopiedAction(null), 1400);
+  };
+
+  const writeTextToClipboard = async (text: string) => {
     try {
       if (navigator.clipboard?.writeText) {
         await navigator.clipboard.writeText(text);
@@ -51,16 +56,51 @@ export default function PlanSwitcher({
     } catch {
       copyWithFallback(text);
     }
-    setCopied(true);
-    window.setTimeout(() => setCopied(false), 1400);
+  };
+
+  const copyPlanText = async () => {
+    await writeTextToClipboard(formatMealPlanCopyText(plan as MealPlan));
+    markCopied("text");
+  };
+
+  const copyPlanHtml = async () => {
+    const html = formatMealPlanCopyHtml(plan as MealPlan);
+    try {
+      if (navigator.clipboard?.write && typeof ClipboardItem !== "undefined") {
+        await navigator.clipboard.write([
+          new ClipboardItem({
+            "text/html": new Blob([html], { type: "text/html" }),
+            "text/plain": new Blob([html], { type: "text/plain" }),
+          }),
+        ]);
+      } else {
+        await writeTextToClipboard(html);
+      }
+    } catch {
+      await writeTextToClipboard(html);
+    }
+    markCopied("html");
+  };
+
+  const copyShareLink = async () => {
+    await writeTextToClipboard(appendResultPlanIndex(window.location.href, initialSelectedIndex));
+    markCopied("link");
   };
 
   return (
     <>
       <article className="plan-card">
-        <button type="button" className="copy-recipe-btn" onClick={copyPlan}>
-          {copied ? "已复制菜谱文字" : "一键复制菜谱文字"}
-        </button>
+        <div className="recipe-copy-actions" aria-label="菜谱导出">
+          <button type="button" className="copy-recipe-btn" onClick={copyPlanText}>
+            {copiedAction === "text" ? "已复制文字" : "复制文字"}
+          </button>
+          <button type="button" className="copy-recipe-btn secondary" onClick={copyPlanHtml}>
+            {copiedAction === "html" ? "已复制 HTML" : "复制 HTML"}
+          </button>
+          <button type="button" className="copy-recipe-btn secondary" onClick={copyShareLink}>
+            {copiedAction === "link" ? "已复制链接" : "复制分享链接"}
+          </button>
+        </div>
 
         <div className="section-title">🍲 菜单</div>
         <ul className="dish-list">
