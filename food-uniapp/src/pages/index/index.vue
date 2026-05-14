@@ -245,6 +245,20 @@ function openLastChoice() {
 </script>
 
 <style scoped>
+button {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+}
+
+button::after {
+  border: 0;
+}
+
 .phone-page {
   position: relative;
   box-sizing: border-box;
