@@ -1,5 +1,5 @@
 {
-  "appid": "wx7b730fa79ce57b66",
+  "appid": "wxfb6cf95afe861b5c",
   "compileType": "miniprogram",
   "libVersion": "latest",
   "miniprogramRoot": "miniprogram/",
@@ -9,6 +9,7 @@
     "es6": true,
     "postcss": true,
     "minified": true,
-    "enhance": true
+    "enhance": true,
+    "minifyWXML": true
   }
 }

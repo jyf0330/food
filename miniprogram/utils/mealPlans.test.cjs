@@ -108,4 +108,18 @@ describe("mini program meal plan generator", () => {
     assert.ok(dishes.some((dish) => dish.name.includes("豆腐")));
     assert.ok(dishes.some((dish) => dish.reason.includes("喜欢")));
   });
+
+  it("uses selected home page dishes for the first generated plan", () => {
+    const response = buildGenerateResponse({
+      ...baseRequest,
+      selected_dishes: ["番茄炒蛋", "蒜蓉菜心", "紫菜蛋花汤"]
+    });
+
+    assert.equal(response.plans[0].type, "营养均衡型");
+    assert.deepEqual(
+      response.plans[0].dishes.map((dish) => dish.name),
+      ["番茄炒蛋", "蒜蓉菜心", "紫菜蛋花汤"]
+    );
+    assert.match(response.plans[0].reason, /首页选的 3 道菜/);
+  });
 });

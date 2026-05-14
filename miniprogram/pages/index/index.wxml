@@ -1,105 +1,56 @@
-<view class="page safe-bottom">
-  <view class="header">
+<view class="page home-page safe-bottom">
+  <view class="home-header">
     <view class="brand">今天吃什么</view>
-    <view class="subtitle">帮你想好买什么、做什么、怎么做</view>
+    <view class="headline">点几道想吃的菜</view>
+    <view class="subtitle">选好后直接生成买菜清单、按点上桌计划和每道菜做法</view>
   </view>
 
-  <view class="section">
-    <text class="section-title">你的代号（可中文）</text>
-    <input class="text-input" value="{{form.userId}}" maxlength="32" placeholder="例如 小王 / 龙岗妈妈" bindinput="updateUserId" />
+  <view wx:if="{{lastChoice}}" class="memory-card">
+    <view class="memory-title">上次选了：{{lastChoiceTitle}}</view>
+    <button class="secondary-btn compact-btn" bindtap="useLastChoice">继续看这桌</button>
   </view>
 
-  <view wx:if="{{lastChoice || lastForm}}" class="memory-wrap">
-    <view wx:if="{{lastChoice}}" class="memory-card">
-      <view class="memory-title">上次选了：{{lastChoice.planTitle || lastChoice.planType}}</view>
-      <view class="actions">
-        <button class="primary-btn" bindtap="useLastChoice">直接用这桌</button>
-        <button class="secondary-btn" bindtap="editLastChoice">修改条件</button>
-      </view>
+  <view class="toolbar">
+    <view class="filter-tabs">
+      <button data-filter="all" bindtap="setFilter" class="filter-tab {{filter === 'all' ? 'filter-tab-active' : ''}}">全部</button>
+      <button data-filter="saved" bindtap="setFilter" class="filter-tab {{filter === 'saved' ? 'filter-tab-active' : ''}}">收藏</button>
     </view>
-    <view wx:if="{{lastForm}}" class="memory-card">
-      <view class="memory-title">上次设置</view>
-      <view class="memory-desc">{{lastForm.people}} 人 · {{lastForm.finishTime}} 前做好</view>
-      <view class="actions">
-        <button class="primary-btn" bindtap="useLastForm">直接用</button>
-        <button class="secondary-btn" bindtap="applyLastForm">修改</button>
-      </view>
+    <view class="toolbar-actions">
+      <button class="link-btn {{searchOpen ? 'link-btn-active' : ''}}" bindtap="toggleSearch">{{searchOpen ? '收起' : '搜索'}}</button>
+      <button class="link-btn" bindtap="refreshDishes">刷新</button>
     </view>
   </view>
 
-  <view class="section">
-    <text class="section-title">几个人吃饭？</text>
-    <view class="chip-row">
-      <button wx:for="{{people}}" wx:key="id" data-field="people" data-value="{{item.id}}" bindtap="selectOne" class="chip {{form.people === item.id ? 'chip-active' : ''}}">{{item.label}}</button>
+  <view wx:if="{{searchOpen}}" class="search-wrap {{searchQuery ? '' : 'search-wrap-solo'}}">
+    <input class="search-input" value="{{searchQuery}}" placeholder="搜菜名、分类、口味或食材" bindinput="updateSearch" />
+    <button wx:if="{{searchQuery}}" class="clear-btn" bindtap="clearSearch">清空</button>
+    <view wx:if="{{dishCountLabel}}" class="search-status">{{dishCountLabel}}</view>
+  </view>
+
+  <view class="dish-list">
+    <view wx:for="{{dishes}}" wx:key="name" class="dish-row {{item.selected ? 'dish-row-selected' : ''}}">
+      <button class="dish-main" data-name="{{item.name}}" bindtap="toggleDish">
+        <text class="dish-status">{{item.selected ? '已选' : '可选'}}</text>
+        <text class="dish-name">{{item.name}}</text>
+        <text class="dish-meta">{{item.category}} · {{item.time}} 分钟 · {{item.note}}</text>
+      </button>
+      <button class="dish-save {{item.saved ? 'dish-save-active' : ''}}" data-name="{{item.name}}" bindtap="toggleSaved">
+        <text>{{item.saved ? '已收藏' : '收藏'}}</text>
+      </button>
     </view>
   </view>
 
-  <view class="section">
-    <text class="section-title">有没有小孩/老人？</text>
-    <view class="chip-row">
-      <button wx:for="{{family}}" wx:key="id" data-field="family" data-value="{{item.id}}" bindtap="selectOne" class="chip {{form.family === item.id ? 'chip-active' : ''}}">{{item.label}}</button>
-    </view>
+  <view wx:if="{{!dishes.length}}" class="empty-card">
+    <view class="empty-title">{{emptyTitle}}</view>
+    <view class="empty-desc">{{emptyDesc}}</view>
+    <button class="empty-action" bindtap="showAllDishes">去全部看看</button>
   </view>
 
-  <view class="section">
-    <text class="section-title">预算？</text>
-    <view class="chip-row">
-      <button wx:for="{{budget}}" wx:key="id" data-field="budget" data-value="{{item.id}}" bindtap="selectOne" class="chip {{form.budget === item.id ? 'chip-active' : ''}}">{{item.label}}</button>
+  <view class="submit-bar">
+    <view class="submit-copy">
+      <view class="submit-title">{{submitTitle}}</view>
+      <view class="submit-desc">{{submitDesc}}</view>
     </view>
+    <button class="primary-btn submit-btn {{canSubmit ? '' : 'submit-btn-disabled'}}" disabled="{{canSubmit ? false : true}}" bindtap="generateRecipe">生成菜谱</button>
   </view>
-
-  <view class="section">
-    <text class="section-title">想做多久？</text>
-    <view class="chip-row">
-      <button wx:for="{{time}}" wx:key="id" data-field="time" data-value="{{item.id}}" bindtap="selectOne" class="chip {{form.time === item.id ? 'chip-active' : ''}}">{{item.label}}</button>
-    </view>
-  </view>
-
-  <view class="section">
-    <text class="section-title">几点前做好？</text>
-    <view class="chip-row">
-      <button wx:for="{{finishTime}}" wx:key="id" data-field="finishTime" data-value="{{item.id}}" bindtap="selectOne" class="chip {{form.finishTime === item.id ? 'chip-active' : ''}}">{{item.label}}</button>
-    </view>
-  </view>
-
-  <view class="section">
-    <text class="section-title">做饭速度？</text>
-    <view class="chip-row">
-      <button wx:for="{{cookSpeed}}" wx:key="id" data-field="cookSpeed" data-value="{{item.id}}" bindtap="selectOne" class="chip {{form.cookSpeed === item.id ? 'chip-active' : ''}}">{{item.label}}</button>
-    </view>
-  </view>
-
-  <view class="section">
-    <text class="section-title">口味？（可多选）</text>
-    <view class="chip-row">
-      <button wx:for="{{tasteOptions}}" wx:key="id" data-field="taste" data-value="{{item.id}}" bindtap="toggleMulti" class="chip {{item.active ? 'chip-active' : ''}}">{{item.label}}</button>
-    </view>
-  </view>
-
-  <view class="section">
-    <text class="section-title">不吃什么？（可多选）</text>
-    <view class="chip-row">
-      <button wx:for="{{avoidOptions}}" wx:key="id" data-field="avoid" data-value="{{item.id}}" bindtap="toggleMulti" class="chip {{item.active ? 'chip-active' : ''}}">{{item.label}}</button>
-    </view>
-  </view>
-
-  <view class="section advanced-section">
-    <button class="advanced-toggle" bindtap="toggleAdvanced">
-      <text>高级功能</text>
-      <text class="advanced-toggle-state">{{advancedOpen ? '收起' : '展开'}}</text>
-    </button>
-    <view wx:if="{{advancedOpen}}" class="advanced-panel">
-      <text class="section-title">喜欢的食物</text>
-      <view class="favorite-input-row">
-        <input class="text-input" value="{{favoriteFoodInput}}" maxlength="24" placeholder="例如 豆腐 / 番茄炒蛋" bindinput="updateFavoriteFoodInput" />
-        <button class="secondary-btn add-food-btn" bindtap="addFavoriteFood">添加</button>
-      </view>
-      <view wx:if="{{form.favoriteFoods.length}}" class="chip-row favorite-list">
-        <button wx:for="{{form.favoriteFoods}}" wx:key="*this" data-value="{{item}}" bindtap="removeFavoriteFood" class="chip chip-active">{{item}} ×</button>
-      </view>
-      <view wx:else class="advanced-hint">设置后，每天有 50% 概率把其中一个放进推荐菜单。</view>
-    </view>
-  </view>
-
-  <button class="primary-btn submit" bindtap="submit">看看今天吃什么</button>
 </view>

@@ -6,6 +6,29 @@
   font-size: 42rpx;
 }
 
+.selected-strip {
+  display: grid;
+  gap: 8rpx;
+  margin-bottom: 20rpx;
+  padding: 22rpx 24rpx;
+  border: 2rpx solid #ffe4d3;
+  border-radius: 22rpx;
+  background: #fff;
+}
+
+.selected-strip-label {
+  color: #6b6b6b;
+  font-size: 23rpx;
+  font-weight: 700;
+}
+
+.selected-strip-copy {
+  color: #1a1a1a;
+  font-size: 28rpx;
+  font-weight: 800;
+  line-height: 1.45;
+}
+
 .summary {
   background: #fff5ee;
 }
@@ -117,8 +140,22 @@
 }
 
 .plan-actions {
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14rpx;
   margin: 16rpx 0 22rpx;
+}
+
+.action-primary {
+  grid-column: 1 / -1;
+}
+
+.action-primary,
+.action-secondary {
+  min-height: 82rpx;
+  border-radius: 20rpx;
+  font-size: 29rpx;
+  line-height: 82rpx;
 }
 
 .block-title {

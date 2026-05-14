@@ -36,6 +36,7 @@ function parseForm(options) {
     channel: options.channel ? decodeURIComponent(options.channel) : "菜市场",
     avoid: splitList(options.avoid),
     favoriteFoods: splitList(options.favoriteFoods),
+    selectedDishes: splitList(options.selectedDishes),
     finishTime: options.finishTime ? decodeURIComponent(options.finishTime) : "12:00",
     cookSpeed: options.cookSpeed || "normal",
     variant: Math.max(0, Number(options.variant) || 0),
@@ -54,6 +55,7 @@ function buildRequest(form) {
     taste: form.taste,
     avoid: form.avoid,
     favorite_foods: form.favoriteFoods || [],
+    selected_dishes: form.selectedDishes || [],
     time_limit: form.time,
     finish_time: form.finishTime,
     cook_speed: form.cookSpeed,
@@ -76,6 +78,7 @@ function buildResultUrl(form) {
     ["finishTime", form.finishTime],
     ["cookSpeed", form.cookSpeed],
     ["favoriteFoods", (form.favoriteFoods || []).join(",")],
+    ["selectedDishes", (form.selectedDishes || []).join(",")],
     ["variant", form.variant || 0]
   ];
   const userId = getUserIdDisplay(form.userId);
@@ -146,6 +149,9 @@ Page({
   data: {
     form: null,
     request: null,
+    resultSubtitle: "",
+    selectedDishSummary: "",
+    hasSelectedDishes: false,
     dailyRecommended: [],
     dailyNotRecommended: [],
     currentPlanIndex: 0,
@@ -169,6 +175,11 @@ Page({
     this.setData({
       form,
       request,
+      resultSubtitle: form.selectedDishes.length
+        ? `按首页已选 ${form.selectedDishes.length} 道生成`
+        : `${request.people_count} 人 · 约 ${request.budget} 元 · ${request.time_limit} 分钟`,
+      selectedDishSummary: form.selectedDishes.join("、"),
+      hasSelectedDishes: form.selectedDishes.length > 0,
       dailyRecommended: response.daily_recommended.join("、"),
       dailyNotRecommended: response.daily_not_recommended,
       currentPlanIndex,

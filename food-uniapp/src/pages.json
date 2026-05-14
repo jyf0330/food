@@ -1,0 +1,24 @@
+{
+  "pages": [
+    {
+      "path": "pages/index/index",
+      "style": {
+        "navigationBarTitleText": "今天吃什么",
+        "navigationStyle": "custom"
+      }
+    },
+    {
+      "path": "pages/result/result",
+      "style": {
+        "navigationBarTitleText": "今天吃什么",
+        "navigationStyle": "custom"
+      }
+    }
+  ],
+  "globalStyle": {
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "今天吃什么",
+    "navigationBarBackgroundColor": "#fffaf3",
+    "backgroundColor": "#fffaf3"
+  }
+}

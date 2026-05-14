@@ -756,14 +756,70 @@ function buildCuratedPlan(request, type, used) {
   return addSchedule(plan, request);
 }
 
+function selectedSeedDishes(request) {
+  const selectedNames = Array.from(
+    new Set((request.selected_dishes || []).map((name) => String(name).trim()).filter(Boolean))
+  ).slice(0, 12);
+  if (!selectedNames.length) return [];
+
+  const byName = new Map(curatedData.dishes.map((dish) => [dish.dish_name, dish]));
+  return selectedNames.map((name) => byName.get(name)).filter(Boolean);
+}
+
+function buildSelectedDishPlan(request, selected) {
+  const estimatedCost = selected.reduce(
+    (sum, dish) => sum + (costScore[dish.estimated_cost_level] || 18),
+    0
+  );
+  const totalTime = Math.max(
+    12,
+    selected.reduce((sum, dish) => sum + Math.ceil(dish.time_minutes * 0.6), 10)
+  );
+  const plan = {
+    type: "营养均衡型",
+    title: selected.map((dish) => dish.dish_name).slice(0, 2).join(" + "),
+    estimated_cost: Math.min(Math.max(estimatedCost, 18), request.budget + 60),
+    total_time: totalTime,
+    dishes: selected.map((dish) => ({
+      name: dish.dish_name,
+      category: dish.category,
+      reason: `${dish.cuisine} · ${dish.time_minutes} 分钟 · ${dish.taste.join("/")}`,
+      ingredients: dish.shopping_amount_for_3_people,
+      steps: buildCoachSteps(dish, request),
+      tips: buildCoachTips(dish, request)
+    })),
+    shopping_list: curatedShoppingList(selected),
+    cooking_order: [
+      "先洗米煮饭，顺手把所有食材按菜名分好",
+      ...selected
+        .slice()
+        .sort((a, b) => b.time_minutes - a.time_minutes)
+        .map((dish) => `${dish.dish_name}：${dish.steps[0]}`),
+      "最后集中做快手青菜和蛋类，所有菜上桌前统一尝咸淡"
+    ],
+    reason: `按你在首页选的 ${selected.length} 道菜生成，买菜清单和做法都围绕这组菜单整理。`
+  };
+
+  return addSchedule(plan, request);
+}
+
 function buildCuratedPlans(request) {
   const used = new Set();
+  const selected = selectedSeedDishes(request);
+  const selectedPlan = selected.length ? buildSelectedDishPlan(request, selected) : null;
+  selected.forEach((dish) => used.add(dish.dish_name));
   const thirdType = request.has_child || request.has_elder ? "孩子老人友好型" : "改善伙食型";
-  return withDailyFavorite([
+  const generated = [
     buildCuratedPlan(request, "省钱快手型", used),
     buildCuratedPlan(request, "营养均衡型", used),
     buildCuratedPlan(request, thirdType, used)
-  ], request);
+  ];
+
+  if (selectedPlan) {
+    return [selectedPlan, ...withDailyFavorite(generated.slice(0, 2), request)];
+  }
+
+  return withDailyFavorite(generated, request);
 }
 
 module.exports = {
