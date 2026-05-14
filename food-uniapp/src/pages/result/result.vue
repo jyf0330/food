@@ -175,15 +175,25 @@ function editConditions() {
 
 .back-button,
 .icon-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 44px;
   min-width: 44px;
   min-height: 44px;
+  margin: 0;
   border-radius: 22px;
   background: #ffffff;
   color: #e85d3f;
   font-size: 28px;
   font-weight: 700;
+  line-height: 1;
   box-shadow: 0 8px 20px rgba(31, 41, 51, 0.08);
+}
+
+.back-button::after,
+.icon-button::after {
+  border: 0;
 }
 
 .icon-button {
@@ -529,11 +539,21 @@ function editConditions() {
 
 .ghost-button,
 .primary-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   flex: 1;
   min-height: 48px;
+  margin: 0;
   border-radius: 8px;
   font-size: 17px;
   font-weight: 850;
+  line-height: 1;
+}
+
+.ghost-button::after,
+.primary-button::after {
+  border: 0;
 }
 
 .ghost-button {

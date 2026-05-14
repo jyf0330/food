@@ -284,9 +284,24 @@ function openLastChoice() {
 
 .icon-button,
 .refresh-button,
+.segment,
+.generate-button,
 .save-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   min-width: 44px;
   min-height: 44px;
+  margin: 0;
+  line-height: 1;
+}
+
+.icon-button::after,
+.refresh-button::after,
+.segment::after,
+.generate-button::after,
+.save-button::after {
+  border: 0;
 }
 
 .icon-button {
