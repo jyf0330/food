@@ -10,7 +10,9 @@ export type HomeDish = {
 
 type SeedDish = (typeof dishesSeed)[number];
 
-export const DEFAULT_HOME_DISH_NAMES = [
+export const HOME_DISH_COUNT = 7;
+
+const DEFAULT_HOME_DISH_CANDIDATES = [
   "番茄炒蛋",
   "土豆焖鸡",
   "清蒸鲈鱼",
@@ -18,11 +20,6 @@ export const DEFAULT_HOME_DISH_NAMES = [
   "肉末蒸蛋",
   "番茄牛肉",
   "紫菜蛋花汤",
-  "虾仁滑蛋",
-  "白灼芥兰",
-  "丝瓜蛋花汤",
-  "玉米胡萝卜排骨汤",
-  "家常豆腐",
 ];
 
 const noteForDish = (dish: SeedDish) => {
@@ -67,6 +64,10 @@ export const HOME_DISH_POOL: HomeDish[] = (dishesSeed as SeedDish[]).map((dish) 
 const dishByName = new Map(HOME_DISH_POOL.map((dish) => [dish.name, dish]));
 const knownHomeDishNames = new Set(HOME_DISH_POOL.map((dish) => dish.name));
 
+export const DEFAULT_HOME_DISH_NAMES = DEFAULT_HOME_DISH_CANDIDATES.filter((name) =>
+  knownHomeDishNames.has(name)
+).slice(0, HOME_DISH_COUNT);
+
 export function homeDishesFromNames(names: string[]): HomeDish[] {
   return names.map((name) => dishByName.get(name)).filter((dish): dish is HomeDish => Boolean(dish));
 }
@@ -107,6 +108,23 @@ export function searchHomeDishes(dishes: HomeDish[], query: string): HomeDish[] 
 function rotatePool(seed: number): HomeDish[] {
   const offset = Math.abs(Math.floor(seed)) % HOME_DISH_POOL.length;
   return HOME_DISH_POOL.slice(offset).concat(HOME_DISH_POOL.slice(0, offset));
+}
+
+export function getHomeDishDateKey(date = new Date()): string {
+  const year = date.getFullYear();
+  const month = String(date.getMonth() + 1).padStart(2, "0");
+  const day = String(date.getDate()).padStart(2, "0");
+  return `${year}-${month}-${day}`;
+}
+
+function seedFromDateKey(dateKey: string): number {
+  return Array.from(dateKey).reduce((sum, char) => sum * 31 + char.charCodeAt(0), 0);
+}
+
+export function dailyHomeDishNames(date = new Date()): string[] {
+  return rotatePool(seedFromDateKey(getHomeDishDateKey(date)))
+    .slice(0, HOME_DISH_COUNT)
+    .map((dish) => dish.name);
 }
 
 export function refreshUnselectedHomeDishes(

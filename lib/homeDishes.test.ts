@@ -2,6 +2,8 @@ import assert from "node:assert/strict";
 import { describe, it } from "node:test";
 import {
   DEFAULT_HOME_DISH_NAMES,
+  HOME_DISH_COUNT,
+  dailyHomeDishNames,
   normalizeHomeDishNames,
   refreshUnselectedHomeDishes,
   searchHomeDishes,
@@ -10,23 +12,32 @@ import {
 
 describe("home dishes", () => {
   it("refreshes only dishes that are not selected", () => {
-    const current = DEFAULT_HOME_DISH_NAMES.slice(0, 12);
-    const selected = [current[0], current[3], current[8]];
+    const current = DEFAULT_HOME_DISH_NAMES;
+    const selected = [current[0], current[3]];
     const refreshed = refreshUnselectedHomeDishes(current, selected, 7);
 
     assert.equal(refreshed.length, current.length);
     assert.equal(refreshed[0], current[0]);
     assert.equal(refreshed[3], current[3]);
-    assert.equal(refreshed[8], current[8]);
     assert.notDeepEqual(refreshed, current);
   });
 
   it("keeps a full unique list after refresh", () => {
-    const current = DEFAULT_HOME_DISH_NAMES.slice(0, 12);
-    const refreshed = refreshUnselectedHomeDishes(current, current.slice(0, 4), 18);
+    const current = DEFAULT_HOME_DISH_NAMES;
+    const refreshed = refreshUnselectedHomeDishes(current, current.slice(0, 2), 18);
 
     assert.equal(new Set(refreshed).size, refreshed.length);
-    assert.equal(refreshed.length, 12);
+    assert.equal(refreshed.length, HOME_DISH_COUNT);
+  });
+
+  it("keeps daily home dishes stable for a day and different across days", () => {
+    const firstDay = dailyHomeDishNames(new Date(2026, 4, 15));
+    const sameDay = dailyHomeDishNames(new Date(2026, 4, 15, 20));
+    const nextDay = dailyHomeDishNames(new Date(2026, 4, 16));
+
+    assert.equal(firstDay.length, HOME_DISH_COUNT);
+    assert.deepEqual(firstDay, sameDay);
+    assert.notDeepEqual(firstDay, nextDay);
   });
 
   it("keeps an explicitly empty selected list empty when restoring", () => {

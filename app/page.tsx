@@ -9,7 +9,10 @@ import {
 } from "@/lib/dishEngagement";
 import {
   DEFAULT_HOME_DISH_NAMES,
+  HOME_DISH_COUNT,
   HOME_DISH_POOL,
+  dailyHomeDishNames,
+  getHomeDishDateKey,
   homeDishesFromNames,
   normalizeHomeDishNames,
   refreshUnselectedHomeDishes,
@@ -18,10 +21,10 @@ import {
 import { nextResultVariant } from "@/lib/resultVariant";
 import { buildResultUrl } from "@/lib/resultUrl";
 
-const SELECTED_DISHES_KEY = "san-zhuo-cai:home-selected-dishes";
-const VISIBLE_DISHES_KEY = "san-zhuo-cai:home-visible-dishes";
+const SELECTED_DISHES_KEY = "san-zhuo-cai:home-selected-dishes:v2";
+const VISIBLE_DISHES_KEY = "san-zhuo-cai:home-visible-dishes:v2";
+const VISIBLE_DISHES_DATE_KEY = "san-zhuo-cai:home-visible-dishes-date:v2";
 const HOME_USER_ID_KEY = "san-zhuo-cai:home-user-id";
-const HOME_DISH_COUNT = 12;
 
 const readJsonList = (
   key: string,
@@ -71,12 +74,11 @@ const getHomeUserId = () => {
 export default function HomePage() {
   const router = useRouter();
   const [visibleDishNames, setVisibleDishNames] = useState<string[]>(DEFAULT_HOME_DISH_NAMES);
-  const [selectedDishes, setSelectedDishes] = useState<string[]>(DEFAULT_HOME_DISH_NAMES.slice(0, 4));
+  const [selectedDishes, setSelectedDishes] = useState<string[]>([]);
   const [engagement, setEngagement] = useState<DishEngagement>({ liked: [], saved: [] });
   const [likeCounts, setLikeCounts] = useState<Record<string, number>>({});
   const [likedToday, setLikedToday] = useState<string[]>([]);
   const [filter, setFilter] = useState<"all" | "saved">("all");
-  const [searchOpen, setSearchOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
   const [userId, setUserId] = useState("");
   const [loading, setLoading] = useState(false);
@@ -107,11 +109,15 @@ export default function HomePage() {
   const selectedMoreCount = Math.max(0, selectedDishes.length - 2);
 
   useEffect(() => {
-    const nextVisible = readJsonList(VISIBLE_DISHES_KEY, DEFAULT_HOME_DISH_NAMES);
+    const dateKey = getHomeDishDateKey();
+    const storedDateKey = localStorage.getItem(VISIBLE_DISHES_DATE_KEY);
+    const dailyNames = dailyHomeDishNames();
+    const nextVisible =
+      storedDateKey === dateKey ? readJsonList(VISIBLE_DISHES_KEY, dailyNames) : dailyNames;
     setVisibleDishNames(nextVisible);
-    setSelectedDishes(
-      readJsonList(SELECTED_DISHES_KEY, DEFAULT_HOME_DISH_NAMES.slice(0, 4), { allowEmpty: true })
-    );
+    writeJsonList(VISIBLE_DISHES_KEY, nextVisible.length ? nextVisible : dailyNames);
+    localStorage.setItem(VISIBLE_DISHES_DATE_KEY, dateKey);
+    setSelectedDishes(readJsonList(SELECTED_DISHES_KEY, [], { allowEmpty: true }));
     setUserId(getHomeUserId());
     try {
       setEngagement(readDishEngagement(localStorage));
@@ -140,11 +146,6 @@ export default function HomePage() {
       });
   }, [likeDishNamesParam, userId]);
 
-  useEffect(() => {
-    if (!searchOpen) return;
-    searchInputRef.current?.focus();
-  }, [searchOpen]);
-
   const setAndPersistSelectedDishes = (next: string[]) => {
     setSelectedDishes(next);
     writeJsonList(SELECTED_DISHES_KEY, next);
@@ -167,15 +168,11 @@ export default function HomePage() {
     setAndPersistVisibleDishes(
       refreshUnselectedHomeDishes(visibleDishNames, selectedDishes, Date.now())
     );
+    localStorage.setItem(VISIBLE_DISHES_DATE_KEY, getHomeDishDateKey());
   };
 
-  const toggleSearch = () => {
-    setSearchOpen((current) => {
-      if (current) {
-        setSearchQuery("");
-      }
-      return !current;
-    });
+  const focusSearch = () => {
+    searchInputRef.current?.focus();
   };
 
   const toggleSaved = (dishName: string) => {
@@ -230,7 +227,7 @@ export default function HomePage() {
         <p>选中要做的，没选中的可以刷新；每天每道菜能点一次赞。</p>
       </header>
 
-      <section className={`home-toolbar${searchOpen ? " searching" : ""}`} aria-label="菜品操作">
+      <section className="home-toolbar" aria-label="菜品操作">
         <div className="home-toolbar-row">
           <div className="home-filter">
             <button
@@ -251,12 +248,11 @@ export default function HomePage() {
           <div className="home-toolbar-actions">
             <button
               type="button"
-              className={`home-link-btn${searchOpen ? " active" : ""}`}
-              aria-expanded={searchOpen}
+              className="home-link-btn"
               aria-controls="home-dish-search"
-              onClick={toggleSearch}
+              onClick={focusSearch}
             >
-              {searchOpen ? "收起" : "搜索"}
+              搜索
             </button>
             <button type="button" className="home-link-btn" onClick={refreshDishes}>
               刷新
@@ -264,32 +260,30 @@ export default function HomePage() {
           </div>
         </div>
 
-        {searchOpen ? (
-          <div className="home-search-wrap">
-            <label className="home-search" htmlFor="home-dish-search">
-              <span className="sr-only">搜索菜名</span>
-              <input
-                id="home-dish-search"
-                ref={searchInputRef}
-                type="search"
-                value={searchQuery}
-                placeholder="搜菜名、分类、口味或食材"
-                onChange={(event) => setSearchQuery(event.target.value)}
-              />
-              {searchQuery ? (
-                <button type="button" aria-label="清空搜索" onClick={() => setSearchQuery("")}>
-                  清空
-                </button>
-              ) : null}
-            </label>
-            {trimmedSearchQuery ? (
-              <p className="home-search-status">
-                全部菜库找到 {filteredDishes.length} 道
-                {filter === "saved" ? "收藏菜" : "菜"}
-              </p>
+        <div className="home-search-wrap">
+          <label className="home-search" htmlFor="home-dish-search">
+            <span className="sr-only">搜索菜名</span>
+            <input
+              id="home-dish-search"
+              ref={searchInputRef}
+              type="search"
+              value={searchQuery}
+              placeholder="搜索菜名、口味、食材"
+              onChange={(event) => setSearchQuery(event.target.value)}
+            />
+            {searchQuery ? (
+              <button type="button" aria-label="清空搜索" onClick={() => setSearchQuery("")}>
+                清空
+              </button>
             ) : null}
-          </div>
-        ) : null}
+          </label>
+          {trimmedSearchQuery ? (
+            <p className="home-search-status">
+              全部菜库找到 {filteredDishes.length} 道
+              {filter === "saved" ? "收藏菜" : "菜"}
+            </p>
+          ) : null}
+        </div>
       </section>
 
       <section className="dish-picker-section" aria-label="选择今天想吃的菜">
