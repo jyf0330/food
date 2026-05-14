@@ -12,7 +12,6 @@ type IngredientRow = {
 const dishes = dishesSeed as Dish[];
 const ingredients = ingredientsSeed as IngredientRow[];
 const dishByName = new Map(dishes.map((dish) => [dish.dish_name, dish]));
-const ingredientCategory = new Map(ingredients.map((item) => [item.standard_name, item.category]));
 const ingredientKeywords = new Map(
   ingredients.map((item) => [
     item.standard_name,
@@ -124,24 +123,14 @@ function toPlanDish(dish: Dish, req: GenerateRequest) {
 }
 
 function buildShoppingList(selected: Dish[]) {
-  const groups = new Map<string, { name: string; amount: string; search_keywords?: string[] }[]>();
-
-  for (const dish of selected) {
-    for (const item of dish.shopping_amount_for_3_people ?? []) {
-      const category = ingredientCategory.get(item.name) ?? "其他";
-      const list = groups.get(category) ?? [];
-      if (!list.some((existing) => existing.name === item.name)) {
-        list.push({
-          name: item.name,
-          amount: item.amount,
-          search_keywords: ingredientKeywords.get(item.name),
-        });
-      }
-      groups.set(category, list);
-    }
-  }
-
-  return Array.from(groups, ([category, items]) => ({ category, items }));
+  return selected.map((dish) => ({
+    category: dish.dish_name,
+    items: (dish.shopping_amount_for_3_people ?? []).map((item) => ({
+      name: item.name,
+      amount: item.amount,
+      search_keywords: ingredientKeywords.get(item.name),
+    })),
+  }));
 }
 
 function parseClockTime(value: string | undefined): number | null {

@@ -8,35 +8,12 @@
         <text class="title">今天吃什么</text>
         <text class="subtitle">{{ subtitle }}</text>
       </view>
-      <button class="icon-button" @tap="swapTable">↻</button>
+      <view class="topbar-spacer" />
     </view>
 
     <scroll-view v-if="selectedDishes.length" class="selected-strip" scroll-x>
       <text v-for="name in selectedDishes" :key="name" class="selected-chip">{{ name }}</text>
     </scroll-view>
-
-    <view class="insights">
-      <view class="insight-block">
-        <text class="insight-label">今日推荐买</text>
-        <text class="insight-copy">{{ response.daily_recommended.slice(0, 4).join("、") }}</text>
-      </view>
-      <view class="insight-block">
-        <text class="insight-label">今天先避开</text>
-        <text class="insight-copy">{{ response.daily_not_recommended[0]?.name }}：{{ response.daily_not_recommended[0]?.reason }}</text>
-      </view>
-    </view>
-
-    <view class="tabs">
-      <button
-        v-for="(plan, index) in response.plans"
-        :key="`${plan.type}-${index}`"
-        :class="['tab', activePlanIndex === index ? 'active' : '']"
-        @tap="selectPlan(index)"
-      >
-        <text class="tab-type">{{ plan.type }}</text>
-        <text class="tab-meta">约 {{ plan.estimated_cost }} 元</text>
-      </button>
-    </view>
 
     <scroll-view class="plan-scroll" scroll-y>
       <view class="plan-card">
@@ -57,15 +34,17 @@
 
         <view class="section">
           <text class="section-title">菜单</text>
-          <view v-for="dish in activePlan.dishes" :key="dish.name" class="dish-card">
+          <view
+            v-for="dish in activePlan.dishes"
+            :key="dish.name"
+            :class="['dish-card', activeCookingDish?.name === dish.name ? 'active' : '']"
+            @tap="openCookingDish(dish.name)"
+          >
             <view class="dish-head">
               <text class="dish-name">{{ dish.name }}</text>
-              <text class="dish-category">{{ dish.category }}</text>
+              <text class="dish-category">看做法 ›</text>
             </view>
             <text class="dish-reason">{{ dish.reason }}</text>
-            <view class="mini-list">
-              <text v-for="item in dish.ingredients" :key="`${dish.name}-${item.name}`" class="mini-pill">{{ item.name }} {{ item.amount }}</text>
-            </view>
           </view>
         </view>
 
@@ -95,36 +74,39 @@
           </view>
         </view>
 
-        <view class="section">
-          <text class="section-title">每道菜做法</text>
-          <view v-for="dish in activePlan.dishes" :key="`${dish.name}-steps`" class="recipe-block">
-            <text class="recipe-name">{{ dish.name }}</text>
-            <text v-for="(step, index) in dish.steps" :key="`${dish.name}-${index}`" class="recipe-step">{{ index + 1 }}. {{ step }}</text>
-            <text v-for="tip in dish.tips" :key="`${dish.name}-${tip}`" class="recipe-tip">{{ tip }}</text>
+        <view v-if="activeCookingDish" class="section">
+          <text class="section-title">单道做法</text>
+          <view class="recipe-block">
+            <text class="recipe-name">{{ activeCookingDish.name }}</text>
+            <text
+              v-for="(step, index) in activeCookingDish.steps"
+              :key="`${activeCookingDish.name}-${index}`"
+              class="recipe-step"
+            >
+              {{ index + 1 }}. {{ step }}
+            </text>
           </view>
         </view>
       </view>
     </scroll-view>
 
     <view class="bottom-bar">
-      <button class="ghost-button" @tap="swapTable">换一桌</button>
-      <button class="primary-button" @tap="rememberPlan">就用这桌</button>
+      <button class="primary-button share-button" open-type="share" @tap="shareCurrentPage">分享这一页</button>
     </view>
   </view>
 </template>
 
 <script setup lang="ts">
 import { computed, ref } from "vue";
-import { onLoad } from "@dcloudio/uni-app";
-import { navigateBackToHome, redirectTo } from "@/adapters/navigation";
-import { writeStorage } from "@/adapters/storage";
+import { onLoad, onShareAppMessage } from "@dcloudio/uni-app";
+import { navigateBackToHome } from "@/adapters/navigation";
 import { buildGenerateResponse } from "@/domain/mealPlans";
 import { initialPlanIndex } from "@/domain/planSelection";
 import { buildResultPageUrl, DEFAULT_GENERATE_REQUEST, parseResultQuery, type ResultQuery } from "@/domain/resultUrl";
-import { LAST_CHOICE_KEY, type LastChoice } from "@/domain/storageKeys";
 
 const params = ref<ResultQuery>({ ...DEFAULT_GENERATE_REQUEST });
 const activePlanIndex = ref(0);
+const activeCookingDishName = ref<string | null>(null);
 const response = computed(() => buildGenerateResponse(params.value));
 const selectedDishes = computed(() => params.value.selected_dishes ?? []);
 const subtitle = computed(() =>
@@ -133,41 +115,36 @@ const subtitle = computed(() =>
     : `${params.value.people_count} 人 · 约 ${params.value.budget} 元 · ${params.value.time_limit} 分钟`
 );
 const activePlan = computed(() => response.value.plans[activePlanIndex.value] ?? response.value.plans[0]);
+const activeCookingDish = computed(() =>
+  activePlan.value.dishes.find((dish) => dish.name === activeCookingDishName.value) ?? null
+);
+const sharePath = computed(() => buildResultPageUrl({ ...params.value, planIndex: activePlanIndex.value }));
+const shareTitle = computed(() => `${activePlan.value.title}｜今天吃什么`);
 
 onLoad((options) => {
   params.value = parseResultQuery((options ?? {}) as Record<string, string | string[] | undefined>);
   activePlanIndex.value = initialPlanIndex(response.value.plans, params.value.budget, params.value.planIndex);
 });
 
-function selectPlan(index: number) {
-  activePlanIndex.value = index;
+onShareAppMessage(() => ({
+  title: shareTitle.value,
+  path: sharePath.value,
+}));
+
+function openCookingDish(name: string) {
+  activeCookingDishName.value = name;
 }
 
-function rememberPlan() {
-  const plan = activePlan.value;
-  const resultUrl = buildResultPageUrl({ ...params.value, planIndex: activePlanIndex.value });
-  const choice: LastChoice = {
-    title: plan.title,
-    type: plan.type,
-    planIndex: activePlanIndex.value,
-    resultUrl,
-    selectedDishes: selectedDishes.value,
-    savedAt: new Date().toISOString(),
-  };
-
-  writeStorage(LAST_CHOICE_KEY, choice);
-  uni.showToast({ title: "已记住这桌", icon: "success" });
-}
-
-function swapTable() {
-  const nextVariant = (params.value.variant ?? 0) + 1;
-  const nextUrl = buildResultPageUrl({
-    ...params.value,
-    variant: nextVariant,
-    planIndex: 0,
+function shareCurrentPage() {
+  // #ifdef H5
+  const h5ShareUrl = typeof window === "undefined" ? sharePath.value : `${window.location.origin}/#${sharePath.value}`;
+  uni.setClipboardData({
+    data: h5ShareUrl,
+    success: () => {
+      uni.showToast({ title: "链接已复制", icon: "none" });
+    },
   });
-
-  redirectTo(nextUrl);
+  // #endif
 }
 
 function editConditions() {
@@ -203,7 +180,7 @@ function editConditions() {
   min-height: 44px;
   border-radius: 22px;
   background: #ffffff;
-  color: #1f8a4c;
+  color: #e85d3f;
   font-size: 28px;
   font-weight: 700;
   box-shadow: 0 8px 20px rgba(31, 41, 51, 0.08);
@@ -211,6 +188,11 @@ function editConditions() {
 
 .icon-button {
   font-size: 22px;
+}
+
+.topbar-spacer {
+  width: 44px;
+  min-width: 44px;
 }
 
 .title-block {
@@ -249,8 +231,8 @@ function editConditions() {
   margin-right: 8px;
   padding: 0 10px;
   border-radius: 15px;
-  background: #f2fff7;
-  color: #1f8a4c;
+  background: #fff3e1;
+  color: #8a4f1d;
   font-size: 13px;
   font-weight: 700;
 }
@@ -309,8 +291,8 @@ function editConditions() {
 }
 
 .tab.active {
-  border-color: #1f8a4c;
-  background: #f2fff7;
+  border-color: #e85d3f;
+  background: #fff3e1;
 }
 
 .tab-type,
@@ -334,7 +316,7 @@ function editConditions() {
 }
 
 .plan-scroll {
-  height: calc(100vh - 290px);
+  height: calc(100vh - 164px);
   min-height: 350px;
 }
 
@@ -405,6 +387,11 @@ function editConditions() {
   padding: 12px;
 }
 
+.dish-card.active {
+  border-color: #e85d3f;
+  background: #fff6ec;
+}
+
 .dish-head {
   display: flex;
   align-items: center;
@@ -420,7 +407,8 @@ function editConditions() {
 }
 
 .dish-category {
-  color: #1f8a4c;
+  flex: 0 0 auto;
+  color: #e85d3f;
   font-size: 13px;
   font-weight: 800;
 }
@@ -493,7 +481,7 @@ function editConditions() {
 .timeline-time,
 .order-index {
   flex: 0 0 48px;
-  color: #1f8a4c;
+  color: #e85d3f;
   font-size: 14px;
   font-weight: 850;
 }
@@ -506,7 +494,7 @@ function editConditions() {
   height: 28px;
   flex-basis: 28px;
   border-radius: 14px;
-  background: #1f8a4c;
+  background: #e85d3f;
   color: #ffffff;
 }
 
@@ -549,12 +537,16 @@ function editConditions() {
 }
 
 .ghost-button {
-  border: 1px solid #1f8a4c;
-  color: #1f8a4c;
+  border: 1px solid #e85d3f;
+  color: #e85d3f;
 }
 
 .primary-button {
-  background: #1f8a4c;
+  background: #e85d3f;
   color: #ffffff;
+}
+
+.share-button {
+  width: 100%;
 }
 </style>
