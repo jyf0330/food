@@ -9,6 +9,8 @@ export type HomeDish = {
   searchKeywords: string[];
 };
 
+export const HOME_DISH_COUNT = 7;
+
 export const DEFAULT_HOME_DISH_NAMES = [
   "番茄炒蛋",
   "土豆焖鸡",
@@ -17,11 +19,6 @@ export const DEFAULT_HOME_DISH_NAMES = [
   "肉末蒸蛋",
   "番茄牛肉",
   "紫菜蛋花汤",
-  "虾仁滑蛋",
-  "白灼芥兰",
-  "丝瓜蛋花汤",
-  "玉米胡萝卜排骨汤",
-  "家常豆腐",
 ];
 
 const seedDishes = dishesSeed as Dish[];
@@ -72,6 +69,23 @@ export function homeDishesFromNames(names: string[]): HomeDish[] {
   return names.map((name) => dishByName.get(name)).filter((dish): dish is HomeDish => Boolean(dish));
 }
 
+export function homeDateKey(date = new Date()): string {
+  const year = date.getFullYear();
+  const month = String(date.getMonth() + 1).padStart(2, "0");
+  const day = String(date.getDate()).padStart(2, "0");
+  return `${year}-${month}-${day}`;
+}
+
+function seedFromDateKey(dateKey: string): number {
+  return Array.from(dateKey).reduce((seed, char) => seed * 31 + char.charCodeAt(0), 0);
+}
+
+export function getDailyHomeDishNames(date = new Date(), limit = HOME_DISH_COUNT): string[] {
+  return rotatePool(seedFromDateKey(homeDateKey(date)))
+    .slice(0, limit)
+    .map((dish) => dish.name);
+}
+
 export function normalizeHomeDishNames(
   value: unknown,
   fallback: string[],
@@ -86,7 +100,7 @@ export function normalizeHomeDishNames(
         .map((item) => item.trim())
         .filter((name) => knownHomeDishNames.has(name))
     )
-  ).slice(0, options.limit ?? DEFAULT_HOME_DISH_NAMES.length);
+  ).slice(0, options.limit ?? HOME_DISH_COUNT);
 
   return names.length || options.allowEmpty ? names : fallback;
 }
