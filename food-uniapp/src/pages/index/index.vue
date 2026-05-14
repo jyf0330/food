@@ -7,7 +7,7 @@
         <text class="eyebrow">深圳家常晚餐</text>
         <text class="title">今天吃什么</text>
       </view>
-      <button class="icon-button" aria-label="搜索" @tap="toggleSearch">⌕</button>
+      <button class="icon-button" aria-label="清空搜索" @tap="clearSearch">⌕</button>
     </view>
 
     <view v-if="lastChoice" class="last-choice" @tap="openLastChoice">
@@ -26,12 +26,12 @@
       <button class="refresh-button" @tap="refreshDishes">刷新</button>
     </view>
 
-    <view v-if="searchOpen" class="search-shell">
+    <view class="search-shell">
       <input
         v-model="searchQuery"
         class="search-input"
         confirm-type="search"
-        placeholder="搜菜名、汤、快手、番茄"
+        placeholder="搜索菜名、口味、食材"
         placeholder-class="search-placeholder"
       />
     </view>
@@ -90,7 +90,10 @@ import { navigateTo } from "@/adapters/navigation";
 import { readStorage, writeStorage } from "@/adapters/storage";
 import {
   DEFAULT_HOME_DISH_NAMES,
+  HOME_DISH_COUNT,
   HOME_DISH_POOL,
+  dailyHomeDishNames,
+  getHomeDishDateKey,
   homeDishesFromNames,
   normalizeHomeDishNames,
   refreshUnselectedHomeDishes,
@@ -102,32 +105,38 @@ import {
   SAVED_DISHES_KEY,
   SELECTED_DISHES_KEY,
   VISIBLE_DISHES_KEY,
+  VISIBLE_DISHES_DATE_KEY,
   type LastChoice,
 } from "@/domain/storageKeys";
 import { DEFAULT_GENERATE_REQUEST, buildResultPageUrl } from "@/domain/resultUrl";
 
 type TabName = "all" | "saved";
 
-const defaultSelected = DEFAULT_HOME_DISH_NAMES.slice(0, 4);
 const activeTab = ref<TabName>("all");
-const searchOpen = ref(false);
 const searchQuery = ref("");
-const selectedNames = ref<string[]>(defaultSelected);
+const selectedNames = ref<string[]>([]);
 const visibleNames = ref<string[]>(DEFAULT_HOME_DISH_NAMES);
 const savedNames = ref<string[]>([]);
 const lastChoice = ref<LastChoice | null>(null);
 
 function loadState() {
   selectedNames.value = normalizeHomeDishNames(
-    readStorage<unknown>(SELECTED_DISHES_KEY, null),
-    defaultSelected,
+    readStorage<unknown>(SELECTED_DISHES_KEY, []),
+    [],
     { allowEmpty: true, limit: 12 }
   );
+
+  const todayKey = getHomeDishDateKey();
+  const storedDateKey = readStorage<string | null>(VISIBLE_DISHES_DATE_KEY, null);
+  const dailyNames = dailyHomeDishNames();
   visibleNames.value = normalizeHomeDishNames(
-    readStorage<unknown>(VISIBLE_DISHES_KEY, null),
-    DEFAULT_HOME_DISH_NAMES,
-    { limit: 12 }
+    storedDateKey === todayKey ? readStorage<unknown>(VISIBLE_DISHES_KEY, null) : null,
+    dailyNames,
+    { limit: HOME_DISH_COUNT }
   );
+  writeStorage(VISIBLE_DISHES_KEY, visibleNames.value);
+  writeStorage(VISIBLE_DISHES_DATE_KEY, todayKey);
+
   savedNames.value = normalizeHomeDishNames(
     readStorage<unknown>(SAVED_DISHES_KEY, []),
     [],
@@ -176,9 +185,8 @@ function isSaved(name: string): boolean {
   return savedNames.value.includes(name);
 }
 
-function toggleSearch() {
-  searchOpen.value = !searchOpen.value;
-  if (!searchOpen.value) searchQuery.value = "";
+function clearSearch() {
+  searchQuery.value = "";
 }
 
 function toggleSelected(name: string) {
@@ -207,6 +215,7 @@ function toggleSaved(name: string) {
 function refreshDishes() {
   visibleNames.value = refreshUnselectedHomeDishes(visibleNames.value, selectedNames.value, Date.now());
   writeStorage(VISIBLE_DISHES_KEY, visibleNames.value);
+  writeStorage(VISIBLE_DISHES_DATE_KEY, getHomeDishDateKey());
 }
 
 function generateRecipe() {
