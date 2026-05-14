@@ -7,8 +7,9 @@
 - 项目名称：今天吃什么
 - 技术栈：Next.js 14 App Router + React 18 + TypeScript
 - Web 入口：`app/`
-- 小程序入口：`miniprogram/`
-- uni-app 重写入口：`food-uniapp/`
+- 小程序主入口：`food-uniapp/`
+- 微信开发者工具入口：先运行 `npm run build:mp-weixin`，再导入仓库根目录或 `food-uniapp/dist/build/mp-weixin`
+- 旧原生小程序归档：`legacy/miniprogram-native/`（仅作参考，不再作为默认交付入口）
 - 主要业务逻辑：`lib/`
 - 数据种子：`data/`
 
@@ -70,7 +71,7 @@ pm2 restart food
 - 修改 nginx 前先备份配置，并执行 `sudo nginx -t`，通过后再 reload。
 - 如果用户说“上传”“发布”“部署”“同步”“交付”或期待别人能访问/使用，不能只本地改完或只 `git push`；必须同时处理云服务器和微信小程序两个交付面，除非用户明确排除其中一个。
 - 云服务器交付：如果代码已经推送到 Git，并且用户期待线上也更新，必须同步执行云端部署/更新步骤；不要把 `git push` 当作交付终点。
-- 微信小程序交付：涉及 `miniprogram/` 或 `food-uniapp/` 小程序能力时，必须至少构建/导入微信开发者工具验证首页到结果页主流程。uni-app 版本使用 `npm run build:mp-weixin`，产物在 `food-uniapp/dist/build/mp-weixin`，用微信开发者工具导入/打开该目录验证。
+- 微信小程序交付：当前主线是 `food-uniapp/`。涉及小程序能力时，必须至少运行 `npm run build:mp-weixin`，并导入微信开发者工具验证首页到结果页主流程。微信产物在 `food-uniapp/dist/build/mp-weixin`；旧原生版本在 `legacy/miniprogram-native/`，只作迁移参考。
 - 交付说明必须分别报告：Git 是否已 push、云服务器是否已更新并公网回读、微信小程序是否已构建/导入/主流程验证；没有完成的项要明确写出原因。
 - 改动完成后至少验证公网首页和接口：
 

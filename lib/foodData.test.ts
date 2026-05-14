@@ -356,7 +356,7 @@ describe("curated food data", () => {
 describe("home form filters", () => {
   it("does not expose shopping channel as a user-facing filter", () => {
     const webHome = fs.readFileSync("app/page.tsx", "utf8");
-    const miniHome = fs.readFileSync("miniprogram/pages/index/index.wxml", "utf8");
+    const miniHome = fs.readFileSync("food-uniapp/src/pages/index/index.vue", "utf8");
 
     assert.doesNotMatch(webHome, /买菜方式？/);
     assert.doesNotMatch(miniHome, /买菜方式？/);

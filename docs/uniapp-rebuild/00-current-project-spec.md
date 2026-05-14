@@ -13,8 +13,8 @@
 - Web API：`app/api/meal-plans/generate/route.ts`、`app/api/dish-likes/route.ts`。
 - 业务核心：`lib/homeDishes.ts`、`lib/mockPlans.ts`、`lib/types.ts`、`lib/resultUrl.ts`、`lib/planSelection.ts`。
 - 数据源：`data/*.json` 全量迁移，核心包括 `dishes.seed.json`、`ingredients.seed.json`、`nutrition.seed.json`、`season-shenzhen.json`、`price-baseline.json`、`platform-keywords.json`、`data-sources.json`。
-- 数据生成脚本：`scripts/build-food-data.cjs` 是当前数据生成链路的维护入口；`miniprogram/utils/curatedData.js` 是给原生小程序使用的生成产物，不应作为新项目唯一真相源。
-- 微信小程序原生版本：`miniprogram/pages/index/*`、`miniprogram/pages/result/*`、`miniprogram/utils/*`。
+- 数据生成脚本：`scripts/build-food-data.cjs` 是当前数据生成链路的维护入口；`legacy/miniprogram-native/utils/curatedData.js` 是旧原生小程序使用的生成产物，不应作为新项目唯一真相源。
+- 微信小程序当前主线：`food-uniapp/`。旧原生版本已迁移到 `legacy/miniprogram-native/`，只作为迁移参考。
 - 当前菜品库规模：302 道菜，165 个食材。
 - 当前菜品分类：蛋类、荤菜、汤、素菜、豆腐、主食、凉菜、蒸菜。
 - 当前主要菜系标签：家常菜、广东家常。

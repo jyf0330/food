@@ -12,6 +12,7 @@
 
 - **前端**：Next.js 14 (App Router) + TypeScript + React 18
 - **后端**：Next.js Route Handlers（`/app/api`）
+- **小程序**：uni-app Vue 3 + TypeScript（`food-uniapp/`）
 - **数据库**：Supabase (Postgres)
 - **大模型**：DeepSeek / 通义千问 / 腾讯混元（任选）
 - **数据**：菜品库 + 食材库 + 深圳时令表 + 去年同期价格基线（种子文件见 `data/`）
@@ -39,7 +40,11 @@ food/
 ├── supabase/
 │   └── schema.sql          12 张表的 DDL
 ├── docs/
-│   └── PRD.md              完整产品 Wiki
+│   ├── PRD.md              完整产品 Wiki
+│   └── uniapp-rebuild/     uni-app 重写规格与交互文档
+├── food-uniapp/            小程序主线，uni-app 重写版本
+├── legacy/
+│   └── miniprogram-native/ 旧原生微信小程序归档，只作参考
 └── package.json
 ```
 
@@ -77,6 +82,20 @@ cat supabase/schema.sql | pbcopy
 
 ---
 
+## 微信小程序
+
+```bash
+# 构建 uni-app 微信小程序产物
+npm run build:mp-weixin
+
+# 微信开发者工具导入仓库根目录，或直接导入：
+# /Users/macminim4/Documents/New project/food/food-uniapp/dist/build/mp-weixin
+```
+
+旧原生小程序已经迁移到 `legacy/miniprogram-native/`，不再作为默认上传入口。
+
+---
+
 ## 下一步 TODO
 
 - [ ] 接 DeepSeek / 通义千问 API，实现 `/api/meal-plans/generate`
@@ -86,7 +105,7 @@ cat supabase/schema.sql | pbcopy
 - [ ] 买菜清单按平台搜索词渲染
 - [ ] 做饭顺序页
 - [ ] 用户反馈收集
-- [ ] 微信小程序版本
+- [x] 微信小程序版本（uni-app 主线）
 
 ---
 

@@ -2,8 +2,8 @@
   "appid": "wxfb6cf95afe861b5c",
   "compileType": "miniprogram",
   "libVersion": "latest",
-  "miniprogramRoot": "miniprogram/",
-  "projectname": "jin-tian-chi-shenme",
+  "miniprogramRoot": "food-uniapp/dist/build/mp-weixin/",
+  "projectname": "jin-tian-chi-shenme-uniapp",
   "setting": {
     "coverView": true,
     "es6": true,

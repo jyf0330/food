@@ -1,11 +1,15 @@
-# 今天吃什么微信小程序
+# 今天吃什么微信小程序（旧原生归档）
+
+这个目录是旧的原生微信小程序实现，已经从主入口迁移到 `legacy/miniprogram-native/`。
+
+当前小程序主线在 `food-uniapp/`，微信开发者工具默认应导入仓库根目录或 `food-uniapp/dist/build/mp-weixin`。
 
 ## 打开方式
 
 1. 打开微信开发者工具。
 2. 选择“导入项目”。
-3. 项目目录选择：`/Users/macminim4/Documents/New project/food`
-4. AppID 使用：`wxd857b60bd7f2b44b`
+3. 项目目录选择：`/Users/macminim4/Documents/New project/food/legacy/miniprogram-native`
+4. AppID 按当前微信后台项目配置填写。
 5. 导入后编译预览。
 
 ## 当前功能

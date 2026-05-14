@@ -8,8 +8,11 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "test": "tsx --test \"lib/*.test.ts\" && node --test \"miniprogram/**/*.test.cjs\"",
-    "typecheck": "tsc --noEmit"
+    "test": "tsx --test \"lib/*.test.ts\" && npm --prefix food-uniapp test",
+    "test:legacy-miniprogram": "node --test \"legacy/miniprogram-native/**/*.test.cjs\"",
+    "typecheck": "tsc --noEmit",
+    "typecheck:uniapp": "npm --prefix food-uniapp run type-check",
+    "build:mp-weixin": "npm --prefix food-uniapp run build:mp-weixin"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.104.1",

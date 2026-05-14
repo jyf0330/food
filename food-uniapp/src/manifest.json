@@ -1,6 +1,6 @@
 {
     "name" : "今天吃什么",
-    "appid" : "",
+    "appid" : "wxfb6cf95afe861b5c",
     "description" : "深圳家庭买菜做饭助手",
     "versionName" : "1.0.0",
     "versionCode" : "100",
@@ -50,7 +50,7 @@
     "quickapp" : {},
     /* 小程序特有相关 */
     "mp-weixin" : {
-        "appid" : "",
+        "appid" : "wxfb6cf95afe861b5c",
         "setting" : {
             "urlCheck" : false
         },
